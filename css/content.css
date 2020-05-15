@@ -40,6 +40,11 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .ip_check.type2 label {padding-left:26px; font-size:16px; color:#13161a; background-image:url(../images/check.svg); background-size:16px;}
 .ip_check.type2 input:checked+label {background-image:url(../images/checked.svg); }
 
+.ip_txt.readonly, textarea.readonly {background-color:#e6ebf1;}
+.ip_txt:disabled, textarea:disabled, .select:disabled {color:#9298a2; background-color:#e6ebf1;}
+.ip_check input:disabled+label {color:#9298a2; }
+.radio_item input:disabled+label {color:#9298a2; }
+
 .select.sm {padding:0 15px; height:38px;}
 .radio_group {display:block; font-size:0;}
 .radio_group>li {display:inline-block; vertical-align:middle; position:relative; font-size:14px;}
