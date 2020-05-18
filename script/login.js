@@ -39,8 +39,10 @@ function inputIcon() {
 // popup
 function popupOpenClose(){
     $('.btn_login_search').on('click', function(){
-        $('.login_popup').addClass('open');
-        // login_popup();
+        $('.login_popup.search').addClass('open');
+    });
+    $('.btn_forgot').on('click', function(){
+        $('.login_popup.find').addClass('open');
     });
     $('.btn_close').on('click', function(){
     	$('.login_popup').removeClass('open');

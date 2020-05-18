@@ -11,83 +11,9 @@
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/ui_common.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            /*
-            $('.yj_wrap .btn_yj1').click(function(){
-                if($('.pop1').hasClass('on')){
-                    $('.pop').removeClass('on');
-                }else{
-                    $('.pop').removeClass('on');
-                    $('.pop1').addClass('on');
-                }
-            });
-            $('.yj_wrap .btn_yj2').click(function(){
-                if($('.pop2').hasClass('on')){
-                    $('.pop').removeClass('on');
-                }else{
-                    $('.pop').removeClass('on');
-                    $('.pop2').addClass('on');
-                }
-            });
-            $('.yj_wrap .btn_yj3').click(function(){
-                if($('.pop3').hasClass('on')){
-                    $('.pop').removeClass('on');
-                }else{
-                    $('.pop').removeClass('on');
-                    $('.pop3').addClass('on');
-                }
-            });
-            */
 
-
-            $('.yj_wrap .btn_yj1').click(function(e){
-                $('.pop1').toggleClass('on');
-            });
-            $('.yj_wrap .btn_yj2').click(function(e){
-                $('.pop2').toggleClass('on');
-            });
-            $('.yj_wrap .btn_yj3').click(function(e){
-                $('.pop3').toggleClass('on');
-            });
-
-            popOtherClick(".pop1", ".btn_yj1");
-            popOtherClick(".pop2", ".btn_yj2");
-            popOtherClick(".pop3", ".btn_yj3");
-
-
-        });
-
-
-
-        function popOtherClick (selector, selector2) {
-          $(document).on("click", function(e){
-            if(!($(selector).is(e.target) || $(selector).has(e.target).length>0) && !($(selector2).is(e.target))) {
-              $(selector).removeClass("on");
-            }
-          });
-        }
-
-    </script>
   </head>
   <body>
-
-
-    <div class="yj_wrap">
-        <a href="javascript:" class="btn_yj1">111111111111</a>
-        <a href="javascript:" class="btn_yj2">2222222</a>
-        <a href="javascript:" class="btn_yj3">3333333</a>
-    </div>
-
-    <div class="pop_wrap">
-        <div class="pop pop1"></div>
-        <div class="pop pop2"></div>
-        <div class="pop pop3"></div>
-    </div>
-
-
-
-
 
 
   </body>

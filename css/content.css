@@ -801,8 +801,8 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 /* ////// popup detail ////// */
 .btn_join {display: block;text-align: center;position: absolute;right: 0;top: 1px;width: 40px;height: 40px;}
 .btn_join img {margin-top:10px;}
-.list_form_wrap.chk_form .list_form .ip_txt {background: #f6f8fa;border:none;}
-.list_form_wrap.chk_form .list_form .chk_div {background: #f6f8fa;border:none;}
+.list_form.chk_form .ip_txt {background: #f6f8fa;border:none;}
+.list_form.chk_form .chk_div {background: #f6f8fa;border:none;}
 
 .event_pop>div.btns {padding:0 14px;}
 .event_pop .left {width:700px;}
@@ -842,7 +842,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .humidity_inner .hum_calender tbody tr td.off {opacity: 0.3;}
 .humidity_inner .hum_calender tbody tr td.today {outline:1px solid #8b919c;}
 .humidity_inner .hum_calender tbody tr td .date {display: block;padding:15px 20px 7px 20px;box-sizing:border-box;}
-.humidity_inner .hum_calender tbody tr td .flag {width:100%;background: #e6ebf1;margin-top:1px;}
+.humidity_inner .hum_calender tbody tr td .flag {width:99.8%;background: #e6ebf1;margin-top:1px;}
 .humidity_inner .hum_calender tbody tr td .flag .close {z-index: 1;position:absolute;right:10px;top:10px;width:14px;height:14px;background: url(../images/ico_closed.svg) no-repeat;background-size:100%;}
 .humidity_inner .hum_calender tbody tr td .temp {position: relative;display: block;font-size: 14px;font-weight: 400;padding: 10px 0 10px 41px;box-sizing: border-box;color: #45474e;}
 .humidity_inner .hum_calender tbody tr td .hum {position: relative;display: block;font-size: 14px;font-weight: 400;padding: 10px 0 10px 41px;box-sizing: border-box;color: #45474e;}
