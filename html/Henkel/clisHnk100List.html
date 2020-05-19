@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Henkel</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption);
+        $(".ip_del").inputTextFocus();
+    });
+    </script>
+  </head>
+  <body>
+
+    <div class="detail_wrap">
+
+      <div class="tit_wrap tit_h1">
+        <div class="tit_left">
+          <h2>헨켈 재고관리</h2>
+        </div>
+        <div class="tit_right">
+          <div class="btn_list">
+            <a href="#" class="btn line ico_excel">Excel</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 검색 -->
+      <div class="search_wrap">
+        <ul class="search_form">
+          <li>
+            <label for="" class="lb_txt">Date</label>
+            <select class="select" name="" style="width:100px">
+              <option value="">입고일</option>
+              <option value="">출고일</option>
+            </select>
+          </li>
+          <li style="width:330px">
+              <label for="" class="lb_txt">기간</label>
+              <ul class="ip_group ip_from_to">
+                <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                <li class="line">~</li>
+                <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+              </ul>
+          </li>
+          <li>
+            <label for="" class="lb_txt">출고여부</label>
+            <select class="select" name="" style="width:120px">
+              <option value="">전체</option>
+              <option value="">출고</option>
+              <option value="">미출고</option>
+            </select>
+          </li>
+          <li>
+            <label for="" class="lb_txt">분할여부</label>
+            <select class="select" name="" style="width:120px">
+              <option value="">전체</option>
+              <option value="">분할</option>
+              <option value="">미분할</option>
+            </select>
+          </li>
+          <li>
+            <label for="" class="lb_txt">B/L No.</label>
+            <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+          <li>
+            <label for="" class="lb_txt">Item No.</label>
+            <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+          <li class="btns">
+            <a href="#" class="btn lg line ico_search">검색</a>
+          </li>
+        </ul>
+      </div>
+      <!-- //검색 -->
+
+
+      <!--  타이틀 박스 -->
+      <div class="tit_box">
+        <div class="con_area">
+          <div class=""  style="height:550px">
+            그리드영역  height : 550px;
+          </div>
+        </div>
+        <div class="foot_area">
+          <div class="comm_paging">
+              <!-- select -->
+              <div class="box_select">
+                  <select class='opt_select'>
+                      <option>5</option>
+                      <option>4</option>
+                      <option>3</option>
+                      <option>2</option>
+                      <option>1</option>
+                  </select>
+              </div>
+              <!--// select -->
+              <!-- pagination -->
+              <div class="pagination">
+                  <a href="javascript:" class="arr prev first"></a>
+                  <a href="javascript:" class="active">1</a>
+                  <a href="javascript:" class="">2</a>
+                  <a href="javascript:" class="">3</a>
+                  <a href="javascript:" class="">4</a>
+                  <a href="javascript:" class="">5</a>
+                  <a href="javascript:" class="arr next"></a>
+              </div>
+              <!--// pagination -->
+          </div>
+        </div>
+      </div>
+      <!--  //타이틀 박스 -->
+
+
+      <a href="#" class="btn sm line ico_add">추가</a>
+      <a href="#" class="btn sm">Save</a>
+      <a href="#" class="btn sm gray">Delete</a>
+
+
+
+    </div>
+
+  </body>
+</html>
