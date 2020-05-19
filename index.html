@@ -25,6 +25,9 @@
       $("#tbGuide tbody tr").each(function(i){
         $(this).find("td").eq(0).text(i+1).css("text-align", "center");
       });
+      $("#HkGuide tbody tr").each(function(i){
+        $(this).find("td").eq(0).text(i+1).css("text-align", "center");
+      });
     });
     </script>
   </head>
@@ -150,12 +153,12 @@
             <td></td>
             <td></td>
             <td>패스워드 찾기</td>
-            <td>패스워드 찾기</td>
+            <td><a href="html/COMM/COMM001.html" target="_blank">패스워드 찾기</td>
             <td>COMM007</td>
+            <td>html/COMM/COMM001.html</td>
+            <td>완료</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Forgot your password 버튼 클릭시 팝업</td>
           </tr>
           <tr>
             <td></td>
@@ -1365,7 +1368,7 @@
     -->
 
     <h2 class="mt30">헨켈</h2>
-    <table class="tbl_guide">
+    <table class="tbl_guide" id="HkGuide">
       <colgroup>
         <col style="width:50px;">
         <col style="width:150px;">
