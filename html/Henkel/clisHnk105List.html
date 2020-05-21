@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Henkel</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption);
+            $(".ip_del").inputTextFocus();
+        });
+    </script>
+</head>
+<body>
+
+    <div class="manage_wrap">
+        <!-- 제목 -->
+        <div class="tit_wrap tit_h1">
+            <div class="tit_left">
+                <h2>헨켈 일자별 입출고 현황</h2>
+            </div>
+            <div class="tit_right">
+                <div class="btn_list">
+                    <a href="#" class="btn line ico_excel">Excel</a>
+                </div>
+            </div>
+        </div>
+        <!-- //제목 -->
+        <!-- 검색 -->
+        <div class="search_wrap">
+            <ul class="search_form">
+                <li style="width:330px">
+                    <label for="" class="lb_txt">Date</label>
+                    <ul class="ip_group ip_from_to">
+                        <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                        <li class="line">~</li>
+                        <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                    </ul>
+                </li>
+                <li class="btns">
+                    <a href="#" class="btn lg line ico_search">검색</a>
+                </li>
+            </ul>
+        </div>
+        <!-- //검색 -->
+        <!--  타이틀 박스 -->
+        <div class="tit_box">
+            <div class="con_area">
+                <div class="chart_area" style="height:450px">
+                    차트영역 height : 450px;
+                </div>
+            </div>
+        </div>
+        <div class="tit_box">
+            <div class="con_area">
+                <div class="grid_wrap" style="height:542px">
+                    그리드영역 height : 542px;
+                </div>
+            </div>
+            <div class="foot_area">
+                <!-- result -->
+                <div class="grid_result">
+                    <p><span>201</span>개의 자료가 조회되었습니다.</p>
+                </div>
+                <!--// result -->
+                <!-- (기존에는 페이징 X) 필요시 주석 풀어서 페이징 처리, 불필요시 삭제 -->
+                <!-- <div class="comm_paging">
+                    <div class="box_select">
+                        <select class='opt_select'>
+                            <option>5</option>
+                            <option>4</option>
+                            <option>3</option>
+                            <option>2</option>
+                            <option>1</option>
+                        </select>
+                    </div>
+
+                    <div class="pagination">
+                        <a href="javascript:" class="arr prev first"></a>
+                        <a href="javascript:" class="active">1</a>
+                        <a href="javascript:" class="">2</a>
+                        <a href="javascript:" class="">3</a>
+                        <a href="javascript:" class="">4</a>
+                        <a href="javascript:" class="">5</a>
+                        <a href="javascript:" class="arr next"></a>
+                    </div>
+                </div>
+
+                <div class="btn_bottom type2">
+                    <a href="javascript:" class="btn line add_line">행추가</a>
+                    <a href="javascript:" class="btn line del_line">행삭제</a>
+                    <a href="javascript:" class="btn">저장</a>
+                    <a href="javascript:" class="btn gray">삭제</a>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
