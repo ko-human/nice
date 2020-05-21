@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Henkel</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <link href="../../css/yj.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".ip_del").inputTextFocus();
+        });
+    </script>
+  </head>
+  <body>
+
+    <!-- layer -->
+    <div class="layer_pop_wrap type1" style="">
+      <a href="#" class="btn_closed">닫기</a>
+      <div class="pop_header">
+        <div class="tit">
+          Item List
+        </div>
+      </div>
+      <div class="pop_con">
+
+        <div class="search_wrap">
+          <ul class="search_form">
+            <li style="width:360px">
+              <label for="" class="lb_txt">Item No.</label>
+              <span class="ip_del"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+            </li>
+            <li class="btns">
+              <a href="javascript:" class="btn lg line ico_search">검색</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tit_box">
+            <div class="con_area">
+                <div class="grid_wrap" style="height:485px;">
+                    그리드영역 height : 485px;
+                </div>
+            </div>
+            <div class="foot_area">
+                <div class="comm_paging">
+                    <!-- pagination -->
+                    <div class="pagination"><!-- 화살표 상태 : 아래의 class 추가 · 제거 -->
+                        <a href="javascript:" class="arr prev first current cur_exist"></a>
+                        <a href="javascript:" class="arr prev first"></a>
+                        <a href="javascript:" class="active">1</a>
+                        <a href="javascript:" class="">2</a>
+                        <a href="javascript:" class="">3</a>
+                        <a href="javascript:" class="">4</a>
+                        <a href="javascript:" class="">5</a>
+                        <a href="javascript:" class="arr next"></a>
+                        <a href="javascript:" class="arr next last ancient anc_exist"></a>
+                    </div>
+                    <!--// pagination -->
+
+                </div>
+                <!--  //타이틀 박스 -->
+            </div>
+        </div>
+
+        <div class="btn_pop_bottom">
+          <div class="btn_list">
+            <a href="javascript:" class="btn sm">Save</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- //layer -->
+
+
+
+  </body>
+</html>

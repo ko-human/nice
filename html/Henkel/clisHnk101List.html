@@ -28,6 +28,10 @@
             </div>
             <div class="tit_right">
                 <div class="btn_list">
+                    <a href="#" class="btn line add_line">Add Row</a>
+                    <a href="#" class="btn line del_line">Delete Row</a>
+                    <a href="#" class="btn save">Save</a>
+                    <a href="#" class="btn delete gray">Delete</a>
                     <a href="#" class="btn line ico_excel">Excel</a>
                 </div>
             </div>
@@ -58,7 +62,7 @@
                         <option value="">원부자재</option>
                     </select>
                 </li>
-                <li>
+                <!-- <li>
                     <label for="" class="lb_txt">Row Count / Page</label>
                     <select class="select" name="" style="width:150px">
                         <option value="">20개</option>
@@ -66,7 +70,7 @@
                         <option value="">2000개</option>
                         <option value="">20000개</option>
                     </select>
-                </li>
+                </li> -->
                 <li class="btns">
                     <a href="#" class="btn lg line ico_search">검색</a>
                 </li>
@@ -78,8 +82,8 @@
         <!--  타이틀 박스 -->
         <div class="tit_box">
             <div class="con_area">
-                <div class="" style="height:550px">
-                    그리드영역 height : 550px;
+                <div class="" style="height:580px">
+                    그리드영역 height : 580px;
                 </div>
             </div>
             <div class="foot_area">
@@ -88,7 +92,7 @@
                     <p><span>201</span>개의 자료가 조회되었습니다.</p>
                 </div>
                 <!--// result -->
-                <!-- 디폴트: 페이징 노출 X, Count/Page 숫자 초과시 하단 페이징 -->
+                <!-- 디폴트: 페이징 X, Count/Page 숫자 초과시 하단 페이징 -->
                 <div class="comm_paging">
                     <!-- select -->
                     <div class="box_select">
@@ -102,29 +106,26 @@
                     </div>
                     <!--// select -->
                     <!-- pagination -->
-                    <div class="pagination">
+                    <div class="pagination"><!-- 화살표 상태 : 아래의 class 추가 · 제거 -->
+                        <a href="javascript:" class="arr prev first current cur_exist"></a>
                         <a href="javascript:" class="arr prev first"></a>
                         <a href="javascript:" class="active">1</a>
                         <a href="javascript:" class="">2</a>
                         <a href="javascript:" class="">3</a>
                         <a href="javascript:" class="">4</a>
                         <a href="javascript:" class="">5</a>
-                        <a href="javascript:" class="arr next"></a>
+                        <a href="javascript:" class="">6</a>
+                        <a href="javascript:" class="">7</a>
+                        <a href="javascript:" class="">8</a>
+                        <a href="javascript:" class="">9</a>
+                        <a href="javascript:" class="">10</a>
+                        <a href="javascript:" class="arr next last"></a>
+                        <a href="javascript:" class="arr next last ancient anc_exist"></a>
                     </div>
                     <!--// pagination -->
-                    <div>
-                    </div>
+
                 </div>
                 <!--  //타이틀 박스 -->
-
-                <!-- 하단 버튼 -->
-                <div class="btn_bottom type2">
-                    <a href="javascript:" class="btn line add_line">행추가</a>
-                    <a href="javascript:" class="btn line del_line">행삭제</a>
-                    <a href="javascript:" class="btn">저장</a>
-                    <a href="javascript:" class="btn gray">삭제</a>
-                </div>
-                <!-- //하단 버튼 -->
             </div>
         </div>
     <!-- //하단 버튼 -->
