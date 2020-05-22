@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="34" viewBox="0 0 260 34">
+    <g fill="none" fill-rule="evenodd">
+        <text fill="#000" font-family="CJONLYONENEWtitleBold, CJ ONLYONE NEW title" font-size="27" font-weight="bold">
+            <tspan x="0" y="26">비밀번호 재설정 안내</tspan>
+        </text>
+        <path d="M0 0H260V34H0z"/>
+    </g>
+</svg>
