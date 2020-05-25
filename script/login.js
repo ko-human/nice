@@ -44,6 +44,9 @@ function popupOpenClose(){
     $('.btn_forgot').on('click', function(){
         $('.login_popup.find').addClass('open');
     });
+    $('.btn_sign').on('click', function(){
+        $('.login_popup.change').addClass('open');
+    });
     $('.btn_close').on('click', function(){
     	$('.login_popup').removeClass('open');
     });

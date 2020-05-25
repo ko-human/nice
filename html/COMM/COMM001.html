@@ -71,7 +71,7 @@
                             <input type="checkbox" id="saveLogin">
                             <span>Remember me</span>
                         </label>
-                        <div class="box_sign"><a href="javascript:">SIGN IN</a></div>
+                        <div class="box_sign"><a href="javascript:" class="btn_sign">SIGN IN</a></div>
                         <div class="txt_forgot"><a href="javascript:" class='btn_forgot'>Forgot your password ?</a></div>
                     </div>
                     <!-- //SIGN IN -->
@@ -181,6 +181,61 @@
             </div>
         </div>
         <!-- //Find password -->
+        <!-- Change password -->
+        <div class="login_popup change">
+            <div class="change_wrap">
+                <div class="change_left">
+                    <h2>Change Password</h2>
+                    <p>
+                        Enter your current password and choose a new password.<br><br>
+                        Please be sure new password not to include the personal information such as Date of birth, telephone or social security number.
+                    </p>
+                    <img src="../../images/login/ico_change.svg" alt="change password">
+                </div>
+                <div class="change_right">
+                    <ul class="change_list">
+                        <li>
+                            <label for="" class="lb_txt">Current Password</label>
+                            <span class="ip_del"><input type="password" class="ip_txt" value=""><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                        </li>
+                        <li>
+                            <label for="" class="lb_txt">New Password</label>
+                            <span class="ip_del"><input type="password" class="ip_txt" value=""><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                            <!-- 보안강도 class = "strength1 ~ 5" -->
+                            <div class="strength_wrap mt10 strength1">
+                                <span></span><span></span><span></span><span></span>
+                                <p class='strengh_txt tar'>Not Rated</p>
+                            </div>
+                            <!-- <div class="strength_wrap mt10 strength2">
+                                <span></span><span></span><span></span><span></span>
+                                <p class='strengh_txt tar'>Weak</p>
+                            </div>
+                            <div class="strength_wrap mt10 strength3">
+                                <span></span><span></span><span></span><span></span>
+                                <p class='strengh_txt tar'>Medium</p>
+                            </div>
+                            <div class="strength_wrap mt10 strength4">
+                                <span></span><span></span><span></span><span></span>
+                                <p class='strengh_txt tar'>Strong</p>
+                            </div>
+                            <div class="strength_wrap mt10 strength5">
+                                <span></span><span></span><span></span><span></span>
+                                <p class='strengh_txt tar'>BEST</p>
+                            </div> -->
+                        </li>
+                        <li>
+                            <label for="" class="lb_txt">Verify Password</label>
+                            <span class="ip_del"><input type="password" class="ip_txt" value=""><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                        </li>
+                    </ul>
+                    <div class="box_pw">
+                        <a href="javascript:" class="btn_pw">Change Password</a>
+                    </div>
+                </div>
+                <a href="javascript:" class="btn_close">닫기</a>
+            </div>
+        </div>
+        <!-- //Change password -->
     </div>
 </body>
 </html>

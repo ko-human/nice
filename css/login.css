@@ -399,3 +399,7 @@ input:-webkit-autofill:active {font-family: 'Gotham';-webkit-box-shadow: 0 0 0px
 .login_wrap .login_popup .find_wrap .box_pw {float: right;width: 220px;height: 45px;background: #0080C6;margin-top: 12px;}
 .login_wrap.normal .login_popup .find_wrap .box_pw {border-radius:8px;}
 .login_wrap .login_popup .find_wrap .box_pw a{display: block;font-size: 16px;font-weight: 500;color: #fff;text-align: center;line-height: 44px;}
+
+/* change password */
+.login_wrap .login_popup .change_wrap {position: relative;left: 50%;margin-left: -480px;top: 50%;margin-top: -275px;width: 960px;height: 550px;padding: 55px 80px 60px;box-sizing: border-box;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);background-color: #fff;}
+.login_wrap .login_popup .change_wrap .btn_close {position: absolute;right: 30px;top: 30px;width: 30px;height: 30px;text-indent: -9999px;font-size: 0;background: url(../images/ico_closed.svg);opacity: 0.8;background-size: contain;}
