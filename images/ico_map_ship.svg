@@ -1,0 +1,444 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="27" viewBox="0 0 31 27">
+    <defs>
+        <path id="prefix__a" d="M2.153 18.646c5.535.548 9.147.356 10.834-.576 1.966-1.126 7.486-4.27 16.562-9.43l-.409 2.494c-9.463 5.496-14.849 8.52-16.157 9.07-2.711 1.209-9.598.815-11.157.532-1.04-.188-.93-.885.327-2.09z"/>
+        <path id="prefix__b" d="M3.172 8.274c1.16-.673 6.203-3.43 15.13-8.274l9.153 5.234c-10.067 5.615-15.234 8.508-15.503 8.68C9.422 15.396.349 15.489.141 15.074c-.232-.517 1.094-5.515 3.03-6.8z"/>
+        <path id="prefix__e" d="M3.838 0L10.751 3.795 6.913 5.922 0 2.127z"/>
+        <path id="prefix__g" d="M0 0L6.913 3.795 6.913 8.244 0 4.449z"/>
+        <path id="prefix__i" d="M0 2.127L3.838 0 3.838 4.449 0 6.577z"/>
+        <path id="prefix__k" d="M3.838 0L10.751 3.795 6.913 5.922 0 2.127z"/>
+        <path id="prefix__m" d="M0 0L6.913 3.795 6.913 8.244 0 4.449z"/>
+        <path id="prefix__o" d="M0 2.127L3.838 0 3.838 4.449 0 6.577z"/>
+        <path id="prefix__q" d="M3.838 0L10.751 3.795 6.913 5.922 0 2.127z"/>
+        <path id="prefix__s" d="M0 0L6.913 3.795 6.913 8.244 0 4.449z"/>
+        <path id="prefix__u" d="M0 2.127L3.838 0 3.838 4.449 0 6.577z"/>
+        <path id="prefix__w" d="M3.489 0L9.774 3.45 6.284 5.384 0 1.934z"/>
+        <path id="prefix__y" d="M0 0L6.284 3.45 6.284 7.494 0 4.045z"/>
+        <path id="prefix__A" d="M0 1.934L3.489 0 3.489 4.045 0 5.979z"/>
+        <path id="prefix__C" d="M3.489 0L9.774 3.45 6.284 5.384 0 1.934z"/>
+        <path id="prefix__E" d="M0 0L6.284 3.45 6.284 7.494 0 4.045z"/>
+        <path id="prefix__G" d="M0 1.934L3.489 0 3.489 4.045 0 5.979z"/>
+        <path id="prefix__I" d="M2.617 0L7.33 2.623 4.713 4.094 0 1.471z"/>
+        <path id="prefix__K" d="M0 0L4.713 2.623 4.713 5.699 0 3.076z"/>
+        <path id="prefix__M" d="M0 1.471L2.617 0 2.617 3.076 0 4.546z"/>
+        <filter id="prefix__d" width="100%" height="100.7%" x="0%" y="0%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0H29.844V26H0z" transform="translate(.386 .786)"/>
+        <g transform="translate(.386 .786) translate(0 3.656)">
+            <path fill="#000" d="M7.202 14.441c1.185-.698 5.615-3.55 13.289-8.555l8.9 5.17c.144.084.193.267.11.41-.027.047-.066.085-.112.11-10.121 5.733-15.317 8.687-15.587 8.862-3.065 1.804-10.96 1.812-13.038.298-1.02-1.442 4.314-4.578 6.438-6.295z" opacity=".2"/>
+            <path fill="#D2D6DD" d="M.334 16.658c6.328.458 10.633.068 12.916-1.17 2.08-1.152 7.66-4.271 16.743-9.359l-.444 2.511c-9.302 5.293-14.823 8.437-16.562 9.43-1.687.932-5.299 1.124-10.834.576l-1.82-1.988z"/>
+            <use fill="#9A0309" xlink:href="#prefix__a"/>
+            <use fill="#01213C" xlink:href="#prefix__a"/>
+            <path fill="#FFF" d="M3.301 8.735C5.054 7.752 10.371 4.84 19.252 0l10.74 6.13c-10.875 6.092-16.456 9.211-16.742 9.358C9.826 17.346.785 17.402.334 16.658-.262 15.32 1.852 9.553 3.3 8.735z"/>
+            <g transform="translate(1.02 .895)">
+                <mask id="prefix__c" fill="#fff">
+                    <use xlink:href="#prefix__b"/>
+                </mask>
+                <use fill="#CAD0D7" xlink:href="#prefix__b"/>
+                <path fill="#8B919C" d="M3.172 8.274c.862-.503 5.906-3.26 15.13-8.274l9.153 5.234-1.062.615L18.152.982C8.706 6.24 3.818 8.968 3.49 9.167c-.995.599-1.89 2.663-2.684 6.194-.305-.04-.527-.136-.665-.288-.232-.516 1.094-5.514 3.03-6.799z" mask="url(#prefix__c)" opacity=".8"/>
+            </g>
+            <g fill="#FFF" fill-rule="nonzero" filter="url(#prefix__d)" transform="translate(4.317 17.316)">
+                <path d="M.964.775c.095.001.187.153.212.34.025.187-.108.338-.312.34-.202 0-.293-.152-.213-.34.08-.187.219-.34.313-.34zM.638.63v.025c0 .022-.015.037-.036.043L.582.7v.226c0 .081-.024.119-.024.119-.02.04-.06.064-.093.077l-.033.012-.036.009H.394L.393 1.14l.001-.016c.003-.019.01-.033.041-.048.04-.02.054-.057.058-.082L.495.967V.7H.418V.675C.419.653.432.638.45.632L.467.63h.17zm.876-.133c.176.069.245.26.147.436s-.276.181-.402.02C1.133.793 1.067.6 1.112.517c.045-.082.224-.09.402-.02zM.21.617L.244.62C.298.628.347.657.382.7L.37.713C.36.72.345.73.325.73.29.73.275.692.21.692c-.071 0-.13.063-.13.141 0 .078.059.138.13.138.073 0 .08-.037.118-.037.039 0 .05.025.055.03-.042.052-.106.081-.173.081-.12 0-.209-.092-.209-.212 0-.11.073-.198.177-.213L.21.618zm1.685 0v.378c.007-.011.018-.015.028-.016h.149V1c0 .023-.014.037-.034.042l-.017.002h-.21V.663c0-.024.011-.038.033-.043l.018-.002h.033zm.378 0l.035.004c.076.013.129.068.149.132l.006.026.001-.015c.013-.085.078-.145.175-.145.056 0 .1.022.13.065l-.015.014c-.008.006-.019.012-.033.012-.01 0-.015-.003-.021-.006L2.69.698l-.02-.009C2.664.687 2.654.686 2.64.686c-.031 0-.057.012-.074.032-.018.02-.027.047-.027.075 0 .039.013.067.032.086.014.014.032.023.052.026l.02.002.023-.002c.029-.004.046-.015.056-.028.008-.01.011-.022.013-.03V.834H2.66V.81c0-.011.007-.02.016-.026.007-.004.015-.007.023-.008l.013-.001h.09l.001.02c0 .027-.003.074-.024.106-.035.054-.08.073-.137.073-.095 0-.162-.064-.176-.149l-.002.016c-.013.09-.086.162-.19.162-.115 0-.195-.092-.195-.192 0-.089.06-.174.16-.19l.035-.003zm.8.002c.033 0 .061.012.081.035l.014.02.007.012-.022.012-.02.003c-.013 0-.022-.003-.028-.006L3.101.69C3.093.686 3.085.684 3.074.684c-.018 0-.038.012-.038.03 0 .006.002.015.019.025l.05.02c.037.016.086.043.086.11 0 .06-.049.105-.116.105-.053 0-.095-.028-.11-.07L2.959.882 2.958.869 2.98.865c.022 0 .036.013.043.021l.005.007c.01.013.021.017.033.019h.017c.026 0 .045-.019.045-.044 0-.016-.008-.028-.028-.038l-.05-.023C3.007.79 2.968.767 2.968.714c0-.062.055-.095.107-.095zm1.011 0c.033 0 .06.012.08.035l.014.02.007.012-.021.012L4.144.7c-.008 0-.015-.001-.02-.003L4.11.69C4.104.686 4.096.684 4.085.684c-.019 0-.039.012-.039.03 0 .006.003.015.02.025l.065.028c.034.016.071.044.071.101 0 .062-.05.106-.117.106-.052 0-.094-.028-.11-.07L3.969.882V.869L3.99.865c.021 0 .035.013.043.021l.005.007c.009.013.02.017.033.019h.016c.026 0 .046-.019.046-.044 0-.016-.008-.028-.028-.038l-.05-.023C4.016.79 3.977.767 3.977.714c0-.062.055-.095.107-.095zm-.276 0c.056 0 .107.024.142.068L3.936.7c-.008.006-.019.011-.033.011-.027 0-.04-.032-.094-.032-.06 0-.108.052-.108.117s.049.115.108.115c.06 0 .067-.03.098-.03.032 0 .042.02.045.024-.034.043-.087.068-.143.068-.1 0-.174-.077-.174-.177 0-.1.073-.179.174-.179zm-.335.01v.036c0 .018-.01.03-.027.034l-.013.002h-.053v.227c0 .019-.01.03-.026.034l-.014.002H3.31V.701h-.092V.664c0-.017.01-.03.027-.034l.013-.002h.217zm-.55 0v.3c0 .011-.005.02-.011.026-.005.004-.01.007-.018.008l-.012.001h-.035V.667c0-.017.011-.032.027-.037l.013-.002h.035zm.658 0v.3c0 .011-.003.02-.01.026-.004.004-.01.007-.018.008l-.011.001h-.035V.667c0-.017.01-.032.026-.037l.013-.002h.035zM2.273.694c-.064 0-.111.044-.111.116 0 .067.043.115.111.115s.111-.043.111-.115c0-.067-.046-.116-.11-.116zM.963.164c.086.185.108.389.045.458C.946.692.77.66.612.552.456.447.432.245.566.096c.135-.15.31-.116.397.069z"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <g transform="translate(.386 .786) translate(3.451) translate(12.6 2.303)">
+                    <mask id="prefix__f" fill="#fff">
+                        <use xlink:href="#prefix__e"/>
+                    </mask>
+                    <use fill="#D4252C" xlink:href="#prefix__e"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__f)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M2.193 -1.182L2.361 -1.182 2.35 3.86 2.182 3.86z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 2.272 1.34)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.265 -0.653L3.433 -0.653 3.421 4.388 3.254 4.389z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 3.343 1.868)"/>
+                            <path style="mix-blend-mode:multiply" d="M4.399 0.039L4.567 0.039 4.555 5.081 4.388 5.081z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 4.477 2.56)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.511 0.714L5.679 0.714 5.668 5.756 5.5 5.756z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 5.59 3.235)"/>
+                            <path style="mix-blend-mode:multiply" d="M6.727 1.334L6.895 1.333 6.883 6.375 6.716 6.375z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 6.805 3.854)"/>
+                            <path style="mix-blend-mode:multiply" d="M8.011 1.916L8.179 1.916 8.167 6.958 8 6.958z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 8.09 4.437)"/>
+                            <path style="mix-blend-mode:screen" d="M2.275 -1.035L2.443 -1.036 2.431 4.006 2.264 4.007z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 2.353 1.485)"/>
+                            <path style="mix-blend-mode:screen" d="M3.347 -0.507L3.514 -0.507 3.503 4.535 3.335 4.535z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 3.425 2.014)"/>
+                            <path style="mix-blend-mode:screen" d="M4.481 0.186L4.648 0.185 4.637 5.227 4.469 5.228z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 4.559 2.706)"/>
+                            <path style="mix-blend-mode:screen" d="M5.593 0.861L5.76 0.86 5.749 5.902 5.582 5.903z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 5.671 3.382)"/>
+                            <path style="mix-blend-mode:screen" d="M6.809 1.48L6.976 1.48 6.965 6.521 6.797 6.522z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 6.887 4)"/>
+                            <path style="mix-blend-mode:screen" d="M8.093 2.063L8.26 2.062 8.249 7.104 8.081 7.105z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 8.17 4.583)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(12.6 2.303) translate(0 2.127)">
+                    <mask id="prefix__h" fill="#fff">
+                        <use xlink:href="#prefix__g"/>
+                    </mask>
+                    <use fill="#99323E" xlink:href="#prefix__g"/>
+                    <use fill="#740207" fill-opacity=".93" xlink:href="#prefix__g"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__h)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M1.01.502L1.178.502 1.178 5.524 1.01 5.524zM0 0L.168 0 .168 5.022 0 5.022z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M.168 0L.337 0 .337 5.022.168 5.022zM1.178.502L1.346.502 1.346 5.524 1.178 5.524z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.188 1.339L2.356 1.339 2.356 6.361 2.188 6.361z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M2.356 1.339L2.524 1.339 2.524 6.361 2.356 6.361z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.365 2.009L3.534 2.009 3.534 7.03 3.365 7.03z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M3.534 2.009L3.702 2.009 3.702 7.03 3.534 7.03z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M4.543 2.678L4.712 2.678 4.712 7.7 4.543 7.7z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M4.712 2.678L4.88 2.678 4.88 7.7 4.712 7.7z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.721 3.18L5.889 3.18 5.889 8.202 5.721 8.202z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M5.889 3.18L6.058 3.18 6.058 8.202 5.889 8.202z" opacity=".2" transform="translate(-.046 -.237)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(12.6 2.303) translate(6.913 3.795)">
+                    <mask id="prefix__j" fill="#fff">
+                        <use xlink:href="#prefix__i"/>
+                    </mask>
+                    <use fill="#B4525E" xlink:href="#prefix__i"/>
+                    <use fill="#A70B12" xlink:href="#prefix__i"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__j)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M2.362 -1.182L2.529 -1.182 2.518 3.86 2.35 3.86z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.44 1.34)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 -0.311L2.361 -0.312 2.35 4.73 2.182 4.731z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 2.21)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 0.559L2.361 0.559 2.35 5.601 2.182 5.601z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 3.08)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 1.43L2.361 1.429 2.35 6.471 2.182 6.471z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 3.95)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 2.3L2.361 2.3 2.35 7.341 2.182 7.342z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 4.82)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 3.17L2.361 3.17 2.35 8.212 2.182 8.212z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 5.691)"/>
+                            <path style="mix-blend-mode:screen" d="M2.443 -1.035L2.611 -1.036 2.6 4.006 2.432 4.007z" opacity=".2" transform="translate(-.562 -.156) rotate(60.9 2.521 1.485)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.353 1.098L2.521 1.098 2.521 6.12 2.353 6.12z" transform="translate(-.562 -.156)"/>
+                            <path style="mix-blend-mode:screen" d="M2.521 0.931L2.689 0.931 2.689 5.952 2.521 5.952z" opacity=".2" transform="translate(-.562 -.156)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(.386 .786) translate(3.451) translate(7.8 5.063)">
+                    <mask id="prefix__l" fill="#fff">
+                        <use xlink:href="#prefix__k"/>
+                    </mask>
+                    <use fill="#D4252C" xlink:href="#prefix__k"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__l)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M2.193 -1.182L2.361 -1.182 2.35 3.86 2.182 3.86z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 2.272 1.34)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.265 -0.653L3.433 -0.653 3.421 4.388 3.254 4.389z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 3.343 1.868)"/>
+                            <path style="mix-blend-mode:multiply" d="M4.399 0.039L4.567 0.039 4.555 5.081 4.388 5.081z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 4.477 2.56)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.511 0.714L5.679 0.714 5.668 5.756 5.5 5.756z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 5.59 3.235)"/>
+                            <path style="mix-blend-mode:multiply" d="M6.727 1.334L6.895 1.333 6.883 6.375 6.716 6.375z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 6.805 3.854)"/>
+                            <path style="mix-blend-mode:multiply" d="M8.011 1.916L8.179 1.916 8.167 6.958 8 6.958z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 8.09 4.437)"/>
+                            <path style="mix-blend-mode:screen" d="M2.275 -1.035L2.443 -1.036 2.431 4.006 2.264 4.007z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 2.353 1.485)"/>
+                            <path style="mix-blend-mode:screen" d="M3.347 -0.507L3.514 -0.507 3.503 4.535 3.335 4.535z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 3.425 2.014)"/>
+                            <path style="mix-blend-mode:screen" d="M4.481 0.186L4.648 0.185 4.637 5.227 4.469 5.228z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 4.559 2.706)"/>
+                            <path style="mix-blend-mode:screen" d="M5.593 0.861L5.76 0.86 5.749 5.902 5.582 5.903z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 5.671 3.382)"/>
+                            <path style="mix-blend-mode:screen" d="M6.809 1.48L6.976 1.48 6.965 6.521 6.797 6.522z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 6.887 4)"/>
+                            <path style="mix-blend-mode:screen" d="M8.093 2.063L8.26 2.062 8.249 7.104 8.081 7.105z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 8.17 4.583)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(7.8 5.063) translate(0 2.127)">
+                    <mask id="prefix__n" fill="#fff">
+                        <use xlink:href="#prefix__m"/>
+                    </mask>
+                    <use fill="#99323E" xlink:href="#prefix__m"/>
+                    <use fill="#740207" fill-opacity=".93" xlink:href="#prefix__m"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__n)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M1.01.502L1.178.502 1.178 5.524 1.01 5.524zM0 0L.168 0 .168 5.022 0 5.022z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M.168 0L.337 0 .337 5.022.168 5.022zM1.178.502L1.346.502 1.346 5.524 1.178 5.524z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.188 1.339L2.356 1.339 2.356 6.361 2.188 6.361z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M2.356 1.339L2.524 1.339 2.524 6.361 2.356 6.361z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.365 2.009L3.534 2.009 3.534 7.03 3.365 7.03z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M3.534 2.009L3.702 2.009 3.702 7.03 3.534 7.03z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M4.543 2.678L4.712 2.678 4.712 7.7 4.543 7.7z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M4.712 2.678L4.88 2.678 4.88 7.7 4.712 7.7z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.721 3.18L5.889 3.18 5.889 8.202 5.721 8.202z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M5.889 3.18L6.058 3.18 6.058 8.202 5.889 8.202z" opacity=".2" transform="translate(-.046 -.237)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(7.8 5.063) translate(6.913 3.795)">
+                    <mask id="prefix__p" fill="#fff">
+                        <use xlink:href="#prefix__o"/>
+                    </mask>
+                    <use fill="#B4525E" xlink:href="#prefix__o"/>
+                    <use fill="#A70B12" xlink:href="#prefix__o"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__p)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M2.362 -1.182L2.529 -1.182 2.518 3.86 2.35 3.86z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.44 1.34)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 -0.311L2.361 -0.312 2.35 4.73 2.182 4.731z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 2.21)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 0.559L2.361 0.559 2.35 5.601 2.182 5.601z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 3.08)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 1.43L2.361 1.429 2.35 6.471 2.182 6.471z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 3.95)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 2.3L2.361 2.3 2.35 7.341 2.182 7.342z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 4.82)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 3.17L2.361 3.17 2.35 8.212 2.182 8.212z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 5.691)"/>
+                            <path style="mix-blend-mode:screen" d="M2.443 -1.035L2.611 -1.036 2.6 4.006 2.432 4.007z" opacity=".2" transform="translate(-.562 -.156) rotate(60.9 2.521 1.485)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.353 1.098L2.521 1.098 2.521 6.12 2.353 6.12z" transform="translate(-.562 -.156)"/>
+                            <path style="mix-blend-mode:screen" d="M2.521 0.931L2.689 0.931 2.689 5.952 2.521 5.952z" opacity=".2" transform="translate(-.562 -.156)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(.386 .786) translate(3.451) translate(3 7.822)">
+                    <mask id="prefix__r" fill="#fff">
+                        <use xlink:href="#prefix__q"/>
+                    </mask>
+                    <use fill="#D4252C" xlink:href="#prefix__q"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__r)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M2.193 -1.182L2.361 -1.182 2.35 3.86 2.182 3.86z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 2.272 1.34)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.265 -0.653L3.433 -0.653 3.421 4.388 3.254 4.389z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 3.343 1.868)"/>
+                            <path style="mix-blend-mode:multiply" d="M4.399 0.039L4.567 0.039 4.555 5.081 4.388 5.081z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 4.477 2.56)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.511 0.714L5.679 0.714 5.668 5.756 5.5 5.756z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 5.59 3.235)"/>
+                            <path style="mix-blend-mode:multiply" d="M6.727 1.334L6.895 1.333 6.883 6.375 6.716 6.375z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 6.805 3.854)"/>
+                            <path style="mix-blend-mode:multiply" d="M8.011 1.916L8.179 1.916 8.167 6.958 8 6.958z" opacity=".8" transform="translate(-.256 -.297) rotate(60.9 8.09 4.437)"/>
+                            <path style="mix-blend-mode:screen" d="M2.275 -1.035L2.443 -1.036 2.431 4.006 2.264 4.007z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 2.353 1.485)"/>
+                            <path style="mix-blend-mode:screen" d="M3.347 -0.507L3.514 -0.507 3.503 4.535 3.335 4.535z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 3.425 2.014)"/>
+                            <path style="mix-blend-mode:screen" d="M4.481 0.186L4.648 0.185 4.637 5.227 4.469 5.228z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 4.559 2.706)"/>
+                            <path style="mix-blend-mode:screen" d="M5.593 0.861L5.76 0.86 5.749 5.902 5.582 5.903z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 5.671 3.382)"/>
+                            <path style="mix-blend-mode:screen" d="M6.809 1.48L6.976 1.48 6.965 6.521 6.797 6.522z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 6.887 4)"/>
+                            <path style="mix-blend-mode:screen" d="M8.093 2.063L8.26 2.062 8.249 7.104 8.081 7.105z" opacity=".2" transform="translate(-.256 -.297) rotate(60.9 8.17 4.583)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(3 7.822) translate(0 2.127)">
+                    <mask id="prefix__t" fill="#fff">
+                        <use xlink:href="#prefix__s"/>
+                    </mask>
+                    <use fill="#99323E" xlink:href="#prefix__s"/>
+                    <use fill="#740207" fill-opacity=".93" xlink:href="#prefix__s"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__t)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M1.01.502L1.178.502 1.178 5.524 1.01 5.524zM0 0L.168 0 .168 5.022 0 5.022z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M.168 0L.337 0 .337 5.022.168 5.022zM1.178.502L1.346.502 1.346 5.524 1.178 5.524z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.188 1.339L2.356 1.339 2.356 6.361 2.188 6.361z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M2.356 1.339L2.524 1.339 2.524 6.361 2.356 6.361z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.365 2.009L3.534 2.009 3.534 7.03 3.365 7.03z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M3.534 2.009L3.702 2.009 3.702 7.03 3.534 7.03z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M4.543 2.678L4.712 2.678 4.712 7.7 4.543 7.7z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M4.712 2.678L4.88 2.678 4.88 7.7 4.712 7.7z" opacity=".2" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.721 3.18L5.889 3.18 5.889 8.202 5.721 8.202z" transform="translate(-.046 -.237)"/>
+                            <path style="mix-blend-mode:screen" d="M5.889 3.18L6.058 3.18 6.058 8.202 5.889 8.202z" opacity=".2" transform="translate(-.046 -.237)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(3 7.822) translate(6.913 3.795)">
+                    <mask id="prefix__v" fill="#fff">
+                        <use xlink:href="#prefix__u"/>
+                    </mask>
+                    <use fill="#B4525E" xlink:href="#prefix__u"/>
+                    <use fill="#A70B12" xlink:href="#prefix__u"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__v)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M2.362 -1.182L2.529 -1.182 2.518 3.86 2.35 3.86z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.44 1.34)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 -0.311L2.361 -0.312 2.35 4.73 2.182 4.731z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 2.21)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 0.559L2.361 0.559 2.35 5.601 2.182 5.601z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 3.08)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 1.43L2.361 1.429 2.35 6.471 2.182 6.471z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 3.95)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 2.3L2.361 2.3 2.35 7.341 2.182 7.342z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 4.82)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.193 3.17L2.361 3.17 2.35 8.212 2.182 8.212z" opacity=".6" transform="translate(-.562 -.156) rotate(60.9 2.272 5.691)"/>
+                            <path style="mix-blend-mode:screen" d="M2.443 -1.035L2.611 -1.036 2.6 4.006 2.432 4.007z" opacity=".2" transform="translate(-.562 -.156) rotate(60.9 2.521 1.485)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.353 1.098L2.521 1.098 2.521 6.12 2.353 6.12z" transform="translate(-.562 -.156)"/>
+                            <path style="mix-blend-mode:screen" d="M2.521 0.931L2.689 0.931 2.689 5.952 2.521 5.952z" opacity=".2" transform="translate(-.562 -.156)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(.386 .786) translate(3.451) translate(10.7)">
+                    <mask id="prefix__x" fill="#fff">
+                        <use xlink:href="#prefix__w"/>
+                    </mask>
+                    <use fill="#F33535" xlink:href="#prefix__w"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__x)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M1.994 -1.074L2.146 -1.075 2.136 3.509 1.984 3.509z" transform="translate(-.232 -.27) rotate(60.9 2.065 1.217)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.968 -0.594L3.121 -0.594 3.11 3.989 2.958 3.99z" transform="translate(-.232 -.27) rotate(60.9 3.04 1.698)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.999 0.036L4.151 0.035 4.141 4.619 3.989 4.619z" transform="translate(-.232 -.27) rotate(60.9 4.07 2.327)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.01 0.649L5.163 0.649 5.152 5.233 5 5.233z" transform="translate(-.232 -.27) rotate(60.9 5.081 2.941)"/>
+                            <path style="mix-blend-mode:multiply" d="M6.115 1.212L6.268 1.212 6.258 5.795 6.105 5.796z" transform="translate(-.232 -.27) rotate(60.9 6.186 3.504)"/>
+                            <path style="mix-blend-mode:multiply" d="M7.283 1.742L7.435 1.742 7.425 6.325 7.272 6.326z" transform="translate(-.232 -.27) rotate(60.9 7.354 4.034)"/>
+                            <path style="mix-blend-mode:screen" d="M2.068 -0.941L2.221 -0.941 2.21 3.642 2.058 3.642z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 2.14 1.35)"/>
+                            <path style="mix-blend-mode:screen" d="M3.042 -0.461L3.195 -0.461 3.184 4.123 3.032 4.123z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 3.113 1.831)"/>
+                            <path style="mix-blend-mode:screen" d="M4.073 0.169L4.226 0.169 4.215 4.752 4.063 4.752z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 4.144 2.46)"/>
+                            <path style="mix-blend-mode:screen" d="M5.084 0.783L5.237 0.782 5.227 5.366 5.074 5.366z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 5.156 3.074)"/>
+                            <path style="mix-blend-mode:screen" d="M6.19 1.345L6.342 1.345 6.332 5.929 6.179 5.929z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 6.26 3.637)"/>
+                            <path style="mix-blend-mode:screen" d="M7.357 1.875L7.509 1.875 7.499 6.458 7.347 6.459z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 7.428 4.167)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(10.7) translate(0 1.934)">
+                    <mask id="prefix__z" fill="#fff">
+                        <use xlink:href="#prefix__y"/>
+                    </mask>
+                    <use fill="#C0091E" xlink:href="#prefix__y"/>
+                    <use fill="#92070D" fill-opacity=".93" xlink:href="#prefix__y"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__z)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M.918.457L1.071.457 1.071 5.022.918 5.022zM0 0L.153 0 .153 4.565 0 4.565z" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:screen" d="M.153 0L.306 0 .306 4.565.153 4.565zM1.071.457L1.224.457 1.224 5.022 1.071 5.022z" opacity=".2" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.989 1.217L2.142 1.217 2.142 5.782 1.989 5.782z" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:screen" d="M2.142 1.217L2.295 1.217 2.295 5.782 2.142 5.782z" opacity=".2" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.059 1.826L3.212 1.826 3.212 6.391 3.059 6.391z" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:screen" d="M3.212 1.826L3.365 1.826 3.365 6.391 3.212 6.391z" opacity=".2" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:multiply" d="M4.13 2.435L4.283 2.435 4.283 7 4.13 7z" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:screen" d="M4.283 2.435L4.436 2.435 4.436 7 4.283 7z" opacity=".2" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.201 2.891L5.354 2.891 5.354 7.456 5.201 7.456z" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:screen" d="M5.354 2.891L5.507 2.891 5.507 7.456 5.354 7.456z" opacity=".2" transform="translate(-.042 -.215)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(10.7) translate(6.284 3.45)">
+                    <mask id="prefix__B" fill="#fff">
+                        <use xlink:href="#prefix__A"/>
+                    </mask>
+                    <use fill="#DE3F52" xlink:href="#prefix__A"/>
+                    <use fill="#C3181F" xlink:href="#prefix__A"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__B)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M2.147 -1.074L2.299 -1.075 2.289 3.509 2.137 3.509z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.218 1.217)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.994 -0.283L2.146 -0.283 2.136 4.3 1.984 4.3z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.065 2.009)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.994 0.508L2.146 0.508 2.136 5.091 1.984 5.092z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.065 2.8)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.994 1.3L2.146 1.299 2.136 5.883 1.984 5.883z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.065 3.591)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.994 2.091L2.146 2.091 2.136 6.674 1.984 6.674z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.065 4.382)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.994 2.882L2.146 2.882 2.136 7.465 1.984 7.466z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.065 5.174)"/>
+                            <path style="mix-blend-mode:screen" d="M2.221 -0.941L2.374 -0.941 2.363 3.642 2.211 3.642z" opacity=".2" transform="translate(-.51 -.142) rotate(60.9 2.292 1.35)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.139 0.998L2.292 0.998 2.292 5.563 2.139 5.563z" transform="translate(-.51 -.142)"/>
+                            <path style="mix-blend-mode:screen" d="M2.292 0.846L2.445 0.846 2.445 5.411 2.292 5.411z" opacity=".2" transform="translate(-.51 -.142)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(.386 .786) translate(3.451) translate(5.9 2.76)">
+                    <mask id="prefix__D" fill="#fff">
+                        <use xlink:href="#prefix__C"/>
+                    </mask>
+                    <use fill="#F33535" xlink:href="#prefix__C"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__D)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M1.994 -1.074L2.146 -1.075 2.136 3.509 1.984 3.509z" transform="translate(-.232 -.27) rotate(60.9 2.065 1.217)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.968 -0.594L3.121 -0.594 3.11 3.989 2.958 3.99z" transform="translate(-.232 -.27) rotate(60.9 3.04 1.698)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.999 0.036L4.151 0.035 4.141 4.619 3.989 4.619z" transform="translate(-.232 -.27) rotate(60.9 4.07 2.327)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.01 0.649L5.163 0.649 5.152 5.233 5 5.233z" transform="translate(-.232 -.27) rotate(60.9 5.081 2.941)"/>
+                            <path style="mix-blend-mode:multiply" d="M6.115 1.212L6.268 1.212 6.258 5.795 6.105 5.796z" transform="translate(-.232 -.27) rotate(60.9 6.186 3.504)"/>
+                            <path style="mix-blend-mode:multiply" d="M7.283 1.742L7.435 1.742 7.425 6.325 7.272 6.326z" transform="translate(-.232 -.27) rotate(60.9 7.354 4.034)"/>
+                            <path style="mix-blend-mode:screen" d="M2.068 -0.941L2.221 -0.941 2.21 3.642 2.058 3.642z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 2.14 1.35)"/>
+                            <path style="mix-blend-mode:screen" d="M3.042 -0.461L3.195 -0.461 3.184 4.123 3.032 4.123z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 3.113 1.831)"/>
+                            <path style="mix-blend-mode:screen" d="M4.073 0.169L4.226 0.169 4.215 4.752 4.063 4.752z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 4.144 2.46)"/>
+                            <path style="mix-blend-mode:screen" d="M5.084 0.783L5.237 0.782 5.227 5.366 5.074 5.366z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 5.156 3.074)"/>
+                            <path style="mix-blend-mode:screen" d="M6.19 1.345L6.342 1.345 6.332 5.929 6.179 5.929z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 6.26 3.637)"/>
+                            <path style="mix-blend-mode:screen" d="M7.357 1.875L7.509 1.875 7.499 6.458 7.347 6.459z" opacity=".2" transform="translate(-.232 -.27) rotate(60.9 7.428 4.167)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(5.9 2.76) translate(0 1.934)">
+                    <mask id="prefix__F" fill="#fff">
+                        <use xlink:href="#prefix__E"/>
+                    </mask>
+                    <use fill="#C0091E" xlink:href="#prefix__E"/>
+                    <use fill="#92070D" fill-opacity=".93" xlink:href="#prefix__E"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__F)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M.918.457L1.071.457 1.071 5.022.918 5.022zM0 0L.153 0 .153 4.565 0 4.565z" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:screen" d="M.153 0L.306 0 .306 4.565.153 4.565zM1.071.457L1.224.457 1.224 5.022 1.071 5.022z" opacity=".2" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.989 1.217L2.142 1.217 2.142 5.782 1.989 5.782z" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:screen" d="M2.142 1.217L2.295 1.217 2.295 5.782 2.142 5.782z" opacity=".2" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.059 1.826L3.212 1.826 3.212 6.391 3.059 6.391z" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:screen" d="M3.212 1.826L3.365 1.826 3.365 6.391 3.212 6.391z" opacity=".2" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:multiply" d="M4.13 2.435L4.283 2.435 4.283 7 4.13 7z" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:screen" d="M4.283 2.435L4.436 2.435 4.436 7 4.283 7z" opacity=".2" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.201 2.891L5.354 2.891 5.354 7.456 5.201 7.456z" transform="translate(-.042 -.215)"/>
+                            <path style="mix-blend-mode:screen" d="M5.354 2.891L5.507 2.891 5.507 7.456 5.354 7.456z" opacity=".2" transform="translate(-.042 -.215)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(5.9 2.76) translate(6.284 3.45)">
+                    <mask id="prefix__H" fill="#fff">
+                        <use xlink:href="#prefix__G"/>
+                    </mask>
+                    <use fill="#DE3F52" xlink:href="#prefix__G"/>
+                    <use fill="#C3181F" xlink:href="#prefix__G"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__H)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M2.147 -1.074L2.299 -1.075 2.289 3.509 2.137 3.509z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.218 1.217)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.994 -0.283L2.146 -0.283 2.136 4.3 1.984 4.3z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.065 2.009)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.994 0.508L2.146 0.508 2.136 5.091 1.984 5.092z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.065 2.8)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.994 1.3L2.146 1.299 2.136 5.883 1.984 5.883z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.065 3.591)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.994 2.091L2.146 2.091 2.136 6.674 1.984 6.674z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.065 4.382)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.994 2.882L2.146 2.882 2.136 7.465 1.984 7.466z" opacity=".6" transform="translate(-.51 -.142) rotate(60.9 2.065 5.174)"/>
+                            <path style="mix-blend-mode:screen" d="M2.221 -0.941L2.374 -0.941 2.363 3.642 2.211 3.642z" opacity=".2" transform="translate(-.51 -.142) rotate(60.9 2.292 1.35)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.139 0.998L2.292 0.998 2.292 5.563 2.139 5.563z" transform="translate(-.51 -.142)"/>
+                            <path style="mix-blend-mode:screen" d="M2.292 0.846L2.445 0.846 2.445 5.411 2.292 5.411z" opacity=".2" transform="translate(-.51 -.142)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(.386 .786) translate(3.451) translate(.6 12.114)">
+                    <mask id="prefix__J" fill="#fff">
+                        <use xlink:href="#prefix__I"/>
+                    </mask>
+                    <use fill="#0080C6" xlink:href="#prefix__I"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__J)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M1.485 -0.799L1.6 -0.799 1.613 2.65 1.497 2.65z" transform="translate(-.174 -.205) rotate(60.9 1.549 .926)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.215 -0.433L2.331 -0.433 2.343 3.016 2.228 3.015z" transform="translate(-.174 -.205) rotate(60.9 2.28 1.291)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.989 0.045L3.104 0.046 3.117 3.494 3.001 3.494z" transform="translate(-.174 -.205) rotate(60.9 3.053 1.77)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.747 0.512L3.862 0.512 3.875 3.961 3.76 3.961z" transform="translate(-.174 -.205) rotate(60.9 3.811 2.236)"/>
+                            <path style="mix-blend-mode:multiply" d="M4.576 0.94L4.691 0.94 4.704 4.389 4.588 4.389z" transform="translate(-.174 -.205) rotate(60.9 4.64 2.664)"/>
+                            <path style="mix-blend-mode:multiply" d="M5.451 1.343L5.567 1.343 5.579 4.792 5.464 4.792z" transform="translate(-.174 -.205) rotate(60.9 5.515 3.067)"/>
+                            <path style="mix-blend-mode:screen" d="M1.54 -0.698L1.656 -0.697 1.668 2.752 1.553 2.751z" opacity=".2" transform="translate(-.174 -.205) rotate(60.9 1.604 1.027)"/>
+                            <path style="mix-blend-mode:screen" d="M2.271 -0.332L2.387 -0.332 2.399 3.117 2.284 3.117z" opacity=".2" transform="translate(-.174 -.205) rotate(60.9 2.335 1.392)"/>
+                            <path style="mix-blend-mode:screen" d="M3.044 0.146L3.16 0.147 3.172 3.596 3.057 3.595z" opacity=".2" transform="translate(-.174 -.205) rotate(60.9 3.108 1.87)"/>
+                            <path style="mix-blend-mode:screen" d="M3.803 0.613L3.918 0.613 3.931 4.062 3.815 4.062z" opacity=".2" transform="translate(-.174 -.205) rotate(60.9 3.867 2.338)"/>
+                            <path style="mix-blend-mode:screen" d="M4.631 1.041L4.747 1.041 4.759 4.49 4.644 4.49z" opacity=".2" transform="translate(-.174 -.205) rotate(60.9 4.695 2.766)"/>
+                            <path style="mix-blend-mode:screen" d="M5.507 1.444L5.622 1.444 5.635 4.893 5.519 4.893z" opacity=".2" transform="translate(-.174 -.205) rotate(60.9 5.571 3.169)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(.6 12.114) translate(0 1.47)">
+                    <mask id="prefix__L" fill="#fff">
+                        <use xlink:href="#prefix__K"/>
+                    </mask>
+                    <use fill="#99323E" xlink:href="#prefix__K"/>
+                    <use fill="#01213C" xlink:href="#prefix__K"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__L)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M.688.347L.803.347.803 3.818.688 3.818zM0 0L.115 0 .115 3.471 0 3.471z" transform="translate(-.032 -.164)"/>
+                            <path style="mix-blend-mode:screen" d="M.115 0L.229 0 .229 3.471.115 3.471zM.803.347L.918.347.918 3.818.803 3.818z" opacity=".2" transform="translate(-.032 -.164)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.491 0.926L1.606 0.926 1.606 4.397 1.491 4.397z" transform="translate(-.032 -.164)"/>
+                            <path style="mix-blend-mode:screen" d="M1.606 0.926L1.721 0.926 1.721 4.397 1.606 4.397z" opacity=".2" transform="translate(-.032 -.164)"/>
+                            <path style="mix-blend-mode:multiply" d="M2.295 1.389L2.409 1.389 2.409 4.86 2.295 4.86z" transform="translate(-.032 -.164)"/>
+                            <path style="mix-blend-mode:screen" d="M2.409 1.389L2.524 1.389 2.524 4.86 2.409 4.86z" opacity=".2" transform="translate(-.032 -.164)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.098 1.851L3.212 1.851 3.212 5.323 3.098 5.323z" transform="translate(-.032 -.164)"/>
+                            <path style="mix-blend-mode:screen" d="M3.212 1.851L3.327 1.851 3.327 5.323 3.212 5.323z" opacity=".2" transform="translate(-.032 -.164)"/>
+                            <path style="mix-blend-mode:multiply" d="M3.901 2.198L4.016 2.198 4.016 5.67 3.901 5.67z" transform="translate(-.032 -.164)"/>
+                            <path style="mix-blend-mode:screen" d="M4.016 2.198L4.13 2.198 4.13 5.67 4.016 5.67z" opacity=".2" transform="translate(-.032 -.164)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(.386 .786) translate(3.451) translate(.6 12.114) translate(4.713 2.623)">
+                    <mask id="prefix__N" fill="#fff">
+                        <use xlink:href="#prefix__M"/>
+                    </mask>
+                    <use fill="#B4525E" xlink:href="#prefix__M"/>
+                    <use fill="#055886" xlink:href="#prefix__M"/>
+                    <g fill="#D8D8D8" mask="url(#prefix__N)">
+                        <g>
+                            <path style="mix-blend-mode:multiply" d="M1.6 -0.799L1.715 -0.799 1.728 2.65 1.612 2.65z" opacity=".6" transform="translate(-.383 -.108) rotate(60.9 1.664 .926)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.485 -0.197L1.6 -0.197 1.613 3.252 1.497 3.252z" opacity=".6" transform="translate(-.383 -.108) rotate(60.9 1.549 1.527)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.485 0.404L1.6 0.405 1.613 3.854 1.497 3.853z" opacity=".6" transform="translate(-.383 -.108) rotate(60.9 1.549 2.13)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.485 1.006L1.6 1.007 1.613 4.455 1.497 4.455z" opacity=".6" transform="translate(-.383 -.108) rotate(60.9 1.549 2.73)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.485 1.608L1.6 1.608 1.613 5.057 1.497 5.057z" opacity=".6" transform="translate(-.383 -.108) rotate(60.9 1.549 3.332)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.485 2.21L1.6 2.21 1.613 5.659 1.497 5.658z" opacity=".6" transform="translate(-.383 -.108) rotate(60.9 1.549 3.934)"/>
+                            <path style="mix-blend-mode:screen" d="M1.655 -0.698L1.771 -0.697 1.783 2.752 1.668 2.751z" opacity=".2" transform="translate(-.383 -.108) rotate(60.9 1.72 1.027)"/>
+                            <path style="mix-blend-mode:multiply" d="M1.604 0.759L1.719 0.759 1.719 4.23 1.604 4.23z" transform="translate(-.383 -.108)"/>
+                            <path style="mix-blend-mode:screen" d="M1.719 0.643L1.833 0.643 1.833 4.115 1.719 4.115z" opacity=".2" transform="translate(-.383 -.108)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
