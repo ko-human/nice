@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Change Password</title>
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/login.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script src="../../script/login.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".ip_del").inputTextFocus();
+        });
+    </script>
+</head>
+<body>
+    <!-- Change password -->
+    <div class="change_wrap">
+        <div class="change_left">
+            <h2>Change Password</h2>
+            <p>
+                Enter your current password and choose a new password.<br><br>
+                Please be sure new password not to include the personal information such as Date of birth, telephone or social security number.
+            </p>
+            <img src="../../images/login/ico_change.svg" alt="change password">
+        </div>
+        <div class="change_right">
+            <ul class="change_list">
+                <li>
+                    <label for="" class="lb_txt">Current Password</label>
+                    <span class="ip_del"><input type="password" class="ip_txt" value=""><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">New Password</label>
+                    <span class="ip_del"><input type="password" class="ip_txt" value=""><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                    <!-- 보안강도 class = "strength1 ~ 5" -->
+                    <div class="strength_wrap mt10 strength1">
+                        <span></span><span></span><span></span><span></span>
+                        <p class='strengh_txt tar'>Not Rated</p>
+                    </div>
+                    <!-- <div class="strength_wrap mt10 strength2">
+                        <span></span><span></span><span></span><span></span>
+                        <p class='strengh_txt tar'>Weak</p>
+                    </div>
+                    <div class="strength_wrap mt10 strength3">
+                        <span></span><span></span><span></span><span></span>
+                        <p class='strengh_txt tar'>Medium</p>
+                    </div>
+                    <div class="strength_wrap mt10 strength4">
+                        <span></span><span></span><span></span><span></span>
+                        <p class='strengh_txt tar'>Strong</p>
+                    </div>
+                    <div class="strength_wrap mt10 strength5">
+                        <span></span><span></span><span></span><span></span>
+                        <p class='strengh_txt tar'>BEST</p>
+                    </div> -->
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Verify Password</label>
+                    <span class="ip_del"><input type="password" class="ip_txt" value=""><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                </li>
+            </ul>
+            <div class="box_pw">
+                <a href="javascript:" class="btn_pw">Change Password</a>
+            </div>
+        </div>
+        <a href="javascript:" class="btn_close">닫기</a>
+    </div>
+    <!-- //Change password -->
+</body>
+</html>

@@ -890,7 +890,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .manage_wrap .btn_bottom.type2 .btn+.btn {margin-left: 8px;}
 .add_line {background: #fff url(../images/ico_plus.svg) no-repeat 13px 7px;background-size: 20px;padding:0 16px 0 37px;}
 .del_line {position: relative;padding:0 16px 0 39px;}
-.btn.save, .btn.delete, .btn.mail {width:100px;}
+.btn.save, .btn.delete, .btn.mail, .btn.new {width:100px;}
 
 .foot_area .grid_result {position: absolute;left:30px;}
 .foot_area .grid_result p {font-size: 14px;line-height: 50px;color: #6b6e72;}

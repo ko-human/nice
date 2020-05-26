@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>ECOPRO</title>
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $(".ip_date input").datepicker(uiCommon.datepickerOption);
+      $(".ip_del").inputTextFocus();
+    });
+    </script>
+  </head>
+  <body>
+
+    <div class="manage_wrap">
+
+      <div class="tit_wrap tit_h1">
+        <div class="tit_left">
+          <h2>Operation Board</h2>
+        </div>
+      </div>
+
+      <!-- 검색 -->
+      <div class="search_wrap">
+        <ul class="search_form">
+            <li>
+                <label for="" class="lb_txt">제목</label>
+                <span class="ip_del" style="width:1025px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+            </li>
+        </ul>
+      </div>
+      <!-- //검색 -->
+
+      <!--  타이틀 박스 -->
+      <div class="tit_box" style="width:1025px;">
+        <div class="con_area">
+          <div class="" style="height:440px;">
+            온라인 HTML Editor영역 height : 440px;
+          </div>
+        </div>
+        <div class="foot_area">
+            <!-- result -->
+            <div class="grid_result">
+                <p><span>201</span>개의 자료가 조회되었습니다.</p>
+            </div>
+            <!--// result -->
+            <!-- 필요시 주석풀어서 페이징 처리 -->
+            <!--<div class="comm_paging">
+
+                <div class="box_select">
+                    <select class='opt_select'>
+                        <option>5</option>
+                        <option>4</option>
+                        <option>3</option>
+                        <option>2</option>
+                        <option>1</option>
+                    </select>
+                </div>
+
+                <div class="pagination">
+                    <a href="javascript:" class="arr prev first current cur_exist"></a>
+                    <a href="javascript:" class="arr prev first"></a>
+                    <a href="javascript:" class="active">1</a>
+                    <a href="javascript:" class="">2</a>
+                    <a href="javascript:" class="">3</a>
+                    <a href="javascript:" class="">4</a>
+                    <a href="javascript:" class="">5</a>
+                    <a href="javascript:" class="">6</a>
+                    <a href="javascript:" class="">7</a>
+                    <a href="javascript:" class="">8</a>
+                    <a href="javascript:" class="">9</a>
+                    <a href="javascript:" class="">10</a>
+                    <a href="javascript:" class="arr next"></a>
+                    <a href="javascript:" class="arr next last ancient anc_exist"></a>
+                </div>
+            </div>-->
+
+        </div>
+      </div>
+      <!--  //타이틀 박스 -->
+
+    </div>
+
+  </body>
+</html>
