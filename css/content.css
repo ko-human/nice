@@ -897,16 +897,16 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .foot_area .grid_result {position: absolute;left:30px;}
 .foot_area .grid_result p {display: none;font-size: 14px;line-height: 50px;}
 .foot_area .grid_result p span {font-weight: 500;color: #45474e;margin-right:2px;}
-.foot_area .grid_result.after .txt_af {display: block;color: #6b6e72;}
-.foot_area .grid_result.before .txt_bf {display: block;color: #e42f44;}
-.foot_area .grid_result.before .txt_bf i {width: 20px;height: 20px;padding: 0;margin: -3px 0 0 5px;background-size: 10px;}
 
 .tit_box .con_area .chart_area + .grid_wrap {margin-top:30px;}
 
 .manage_wrap.horizon_box .tit_box {display: inline-block;}
 .manage_wrap.horizon_box .tit_box+.tit_box {margin-left:20px;}
 
-
+/* 에코프로 */
+.foot_area .grid_result.after .txt_af {display: block;color: #6b6e72;}
+.foot_area .grid_result.before .txt_bf {display: block;color: #e42f44;}
+.foot_area .grid_result.before .txt_bf i {width: 20px;height: 20px;padding: 0;margin: -3px 0 0 5px;background-size: 10px;}
 
 
 /* ########################################### DARK ############################################### */

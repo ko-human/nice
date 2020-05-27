@@ -21,38 +21,56 @@
 
     <!-- layer -->
     <div class="layer_pop_wrap type1" style="">
-      <a href="#" class="btn_closed">닫기</a>
-      <div class="pop_header">
-        <div class="tit">
-          New Operation
-        </div>
-      </div>
-      <div class="pop_con">
-
-        <div class="search_wrap">
-          <ul class="search_form">
-            <li style="display:block;margin-right:0;">
-              <label for="" class="lb_txt">제목</label>
-              <span class="ip_del"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="contents">
-            <span class="lb_txt">내용</span>
-            <div class="editor_wrap" style="height:410px;">
-                에디터영역 height: 410px
+        <a href="#" class="btn_closed">닫기</a>
+        <div class="pop_header">
+            <div class="tit">
+                New Operation
             </div>
         </div>
+        <div class="pop_con">
 
-        <div class="btn_pop_bottom">
-          <div class="btn_list">
-            <a href="javascript:" class="btn sm">Save</a>
-            <a href="javascript:" class="btn gray sm">Cancel</a>
-          </div>
+            <div class="list_form_wrap">
+                <ul class="list_form">
+                    <li>
+                        <label for="" class="lb_txt">제목</label>
+                        <span class="ip_del"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    </li>
+                </ul>
+                <ul class="list_form">
+                    <li>
+                        <span class="lb_txt">내용</span>
+                        <div class="editor_wrap" style="height:410px;">
+                            에디터영역 height: 410px
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list_form">
+                    <li style="width:250px">
+                        <label for="" class="lb_txt">Department</label>
+                        <select class="select" name="" style="width:250px;">
+                            <option value="">주식회사에코프로</option>
+                            <option value="">에코</option>
+                            <option value="">프로</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="" class="lb_txt">첨부파일 (최대 100MB)</label>
+                        <div class="ip_file">
+                            <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt">
+                            <span class="bn_up">file..<input type="file" name="" value=""></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn_pop_bottom">
+                <div class="btn_list">
+                    <a href="#" class="btn sm">Save</a>
+                    <a href="#" class="btn gray sm">Cancel</a>
+                </div>
+            </div>
+
         </div>
-
-      </div>
     </div>
     <!-- //layer -->
 
