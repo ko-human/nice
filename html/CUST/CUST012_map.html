@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Cargo Tracking</title>
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <!-- 구글맵 테스트. 개발시 삭제 -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwlNqAEil52XRPHmSVb4Luk18qQG9GqcM&sensor=false&language=ko"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            // 구글 맵 테스트. 개발시 삭제
+            function initialize() {
+                var myLatlng = new google.maps.LatLng(37.562760, 126.970874); // 좌표값
+
+                var mapOptions = {
+                    zoom: 4,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: "순화빌딩"
+                });
+
+            }
+
+            window.onload = initialize;
+
+        });
+    </script>
+</head>
+<body>
+
+    <!-- tracking map -->
+    <div class="pop_map" id="popMap">
+        <div class="map_wrap">
+            <a href="javascript:" class="btn_closed">닫기</a>
+            <div class="pop_tit">
+                <p>H.B/L No.</p>
+                <h2>KMTCPNC3273874</h2>
+            </div>
+            <div class="pop_canvas">
+                <!-- 구글 맵 테스트. 개발시 삭제 -->
+                <div id="map_canvas" style="width: 100%; height: 600px; margin:0px;"></div>
+                <!-- as_is의 이미지를 각 해당 이미지로 교체 -->
+                <!-- <img src="../../images/ico_map_arr.svg" alt="arrival">
+                <img src="../../images/ico_map_pin.svg" alt="pin">
+                <img src="../../images/ico_map_ship.svg" alt="shipping">
+                <img src="../../images/ico_map_dep.svg" alt="departure"> -->
+            </div>
+        </div>
+    </div>
+    <!-- //tracking map -->
+
+</body>
+</html>
