@@ -503,6 +503,20 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .calendar_btns .btn_prev_month {background:url(../images/btn_prev_40.svg) no-repeat;}
 .calendar_btns .btn_next_month {background:url(../images/btn_next_40.svg) no-repeat;}
 
+/* calender month year */
+.ui-datepicker-select-month table {width: 100%;text-align: center;}
+.ui-datepicker-select-month table td {line-height: 4.2em !important;}
+.ui-datepicker-select-month table a.ui-state-default {width: 40px;height: 40px;padding-top: 12px;box-sizing: border-box;font-size: 1.1em;line-height: 1.1em;}
+
+.ui-datepicker-select-year table {width: 100%;text-align: center;}
+.ui-datepicker-select-year table td {line-height: 4.2em !important;}
+
+.ui-datepicker .ui-datepicker-select-month td span,
+.ui-datepicker .ui-datepicker-select-month td a,
+.ui-datepicker .ui-datepicker-select-year td span,
+.ui-datepicker .ui-datepicker-select-year td a {width: 45px;height: 45px;padding-top: 15px;box-sizing: border-box;font-size: 1.1em !important;line-height: 1.1em;}
+
+a.ui-datepicker-title {padding:0;}
 
 
 
