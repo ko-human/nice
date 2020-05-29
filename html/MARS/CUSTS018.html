@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Mars</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <link href="../../script/lib/jquery.ui.datepicker.monthyearpicker.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/lib/jquery.ui.datepicker.monthyearpicker.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption);
+            $(".ip_del").inputTextFocus();
+        });
+    </script>
+</head>
+<body>
+
+    <div class="manage_wrap">
+        <!-- 제목 -->
+        <div class="tit_wrap tit_h1">
+            <div class="tit_left">
+                <h2>FWD Operation</h2>
+            </div>
+            <div class="tit_right">
+                <div class="btn_list">
+                    <a href="#" class="btn save">Save</a>
+                    <a href="#" class="btn delete gray">Delete</a>
+                    <a href="#" class="btn line ico_excel">Excel</a>
+                </div>
+            </div>
+        </div>
+        <!-- //제목 -->
+        <!-- 검색 -->
+        <div class="search_wrap">
+            <ul class="search_form">
+                <li>
+                    <label for="" class="lb_txt">Period</label>
+                    <select class="select" name="" style="width:120px">
+                        <option value="">ETA</option>
+                        <option value="">ETA</option>
+                        <option value="">ETA</option>
+                    </select>
+                    <div class="inblock">
+                      <ul class="ip_group ip_from_to" style="width:320px;">
+                        <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                        <li class="line">~</li>
+                        <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                      </ul>
+                    </div>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">H.B/L No.</label>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Container No.</label>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">SHPR. INV. No.</label>
+                    <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">M.B/L No.</label>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Customer</label>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Item</label>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li class="btns">
+                    <a href="#" class="btn lg line ico_search">검색</a>
+                </li>
+            </ul>
+        </div>
+        <!-- //검색 -->
+        <!--  타이틀 박스 -->
+        <div class="tit_box">
+            <div class="con_area">
+                <div class="grid_wrap" style="height:580px">
+                    그리드영역 height : 580px;
+                </div>
+            </div>
+            <div class="foot_area">
+                <!-- result -->
+                <div class="grid_result">
+                    <p><span>201</span>개의 자료가 조회되었습니다.</p>
+                </div>
+                <!--// result -->
+                <!-- 필요시 주석풀어서 페이징 처리 -->
+                <!--<div class="comm_paging">
+
+                    <div class="box_select">
+                        <select class='opt_select'>
+                            <option>5</option>
+                            <option>4</option>
+                            <option>3</option>
+                            <option>2</option>
+                            <option>1</option>
+                        </select>
+                    </div>
+
+                    <div class="pagination">
+                        <a href="javascript:" class="arr prev first current cur_exist"></a>
+                        <a href="javascript:" class="arr prev first"></a>
+                        <a href="javascript:" class="active">1</a>
+                        <a href="javascript:" class="">2</a>
+                        <a href="javascript:" class="">3</a>
+                        <a href="javascript:" class="">4</a>
+                        <a href="javascript:" class="">5</a>
+                        <a href="javascript:" class="">6</a>
+                        <a href="javascript:" class="">7</a>
+                        <a href="javascript:" class="">8</a>
+                        <a href="javascript:" class="">9</a>
+                        <a href="javascript:" class="">10</a>
+                        <a href="javascript:" class="arr next"></a>
+                        <a href="javascript:" class="arr next last ancient anc_exist"></a>
+                    </div>
+                </div>-->
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
