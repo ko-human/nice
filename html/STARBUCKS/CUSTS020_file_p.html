@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>STARBUCKS</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".ip_del").inputTextFocus();
+            // 파일명
+            $(".ip_file").fileReady();
+            // 파일추가
+            var maxAppend = 1;
+            $(".file_upload_wrap .btn_cir.ico_add").on("click", function(e) {
+                var fileHtml = '<li><div class="ip_file">' +
+                    '<input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">' +
+                    '<span class="bn_up">file..<input type="file" name="" value=""></span>' +
+                    '</div> <a href="#" class="btn_cir ico_del"></a></li>';
+                var $file = $(fileHtml);
+                if (maxAppend >= 3) return;
+                maxAppend++;
+
+                //삭제 이벤트추가
+                $file.find(".btn_cir.ico_del").on("click", function(e) {
+                    $(this).parent().remove();
+                    e.preventDefault();
+                    maxAppend--;
+                });
+                $file.fileReady();
+                $(this).parent().parent().append($file);
+                e.preventDefault();
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+    <!-- layer -->
+    <div class="layer_pop_wrap type1" style="">
+        <a href="#" class="btn_closed">닫기</a>
+        <div class="pop_header">
+            <div class="tit">
+                첨부파일 등록
+            </div>
+        </div>
+        <div class="pop_con">
+
+            <div class="tit_box">
+                <div class="con_area">
+                    <div class="grid_wrap" style="height:325px;">
+                        그리드영역 height : 325px;
+                    </div>
+                </div>
+            </div>
+
+            <div class="list_form_wrap attach">
+                <ul class="list_form">
+                    <li>
+                        <label for="" class="lb_txt">B/L</label>
+                        <!-- 파일 리스트 -->
+                        <ul class="file_upload_wrap">
+                            <li>
+                                <div class="ip_file">
+                                    <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
+                                    <span class="bn_up">file..<input type="file" name="" value=""></span>
+                                </div>
+                                <a href="javascript:" class="btn_cir ico_add"><span>Add file</span></a>
+                            </li>
+                        </ul>
+                        <!-- //파일 리스트 -->
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn_pop_bottom">
+                <div class="btn_list">
+                    <a href="#" class="btn sm">Save</a>
+                    <a href="#" class="btn gray sm">Delete</a>
+                    <a href="#" class="btn gray sm">Close</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- //layer -->
+
+</body>
+</html>

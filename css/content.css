@@ -5,6 +5,7 @@
 .ip_txt::placeholder {font-size:14px; color:#9298a2; font-weight:400;}
 .ip_txt:-ms-input-placeholder {font-size:14px; color:#9298a2; font-weight:400 !important;}
 .ip_txt:disabled {background-color:#e6ebf1;}
+.emphasize .ip_txt {background-color: #fff7c7;}
 .ip_txt:focus, textarea:focus, .select:focus {border-color:#0080c6; outline:none;}
 .ip_search {width:100%; display:inline-block; position:relative; }
 .ip_search .ip_del {width:100%; box-sizing:border-box;}
@@ -17,6 +18,7 @@
 .ip_filter:before {content:""; display:inline-block; width:24px; height:24px; position:absolute; top:8px; left:8px; background:url(../images/ico_filter.svg) no-repeat;}
 .ip_filter .ip_txt {padding-left:38px;}
 .ip_filter .btn_txt_del, .ip_del .btn_txt_del {display:none; width:16px; height:16px; margin-top:-8px; font-size:0; position:absolute; top:50%; right:10px; background:url(../images/ico_txt_del.svg) no-repeat;}
+.emphasize .ip_del .btn_txt_del {background:url(../images/ico_closed.svg) no-repeat;background-size: contain;}
 .ip_filter.focus .btn_txt_del, .ip_del.focus .btn_txt_del {display:inline-block;}
 .ip_fixed {position:relative; width:100%; display:inline-block;}
 .ip_fixed .ftxt {color:#cad0d7; line-height:42px; position:absolute; top:0; right:10px;}
@@ -923,7 +925,7 @@ a.ui-datepicker-title {padding:0;}
 .manage_wrap.horizon_box .tit_box+.tit_box {margin-left:20px;}
 
 /* 에코프로 */
-.foot_area .grid_result .txt_af, .foot_area .grid_result .txt_bf {display: none;}
+.foot_area .grid_result .txt_af, .foot_area .grid_result .txt_bf, .foot_area .grid_result .txt_sf {display: none;}
 .foot_area .grid_result.after .txt_af {display: block;color: #6b6e72;}
 .foot_area .grid_result.before .txt_bf {display: block;color: #e42f44;}
 .foot_area .grid_result.before .txt_bf i {width: 20px;height: 20px;padding: 0;margin: -3px 0 0 5px;background-size: 10px;}
@@ -931,6 +933,12 @@ a.ui-datepicker-title {padding:0;}
 /* 마스 */
 .search_form li .ip_check label{margin-top: 13px;margin-right:8px;box-sizing: border-box;font-size: 0;}
 
+/* 스타벅스 */
+.foot_area .grid_result.before .txt_sf {display: block;color: #0080c6;}
+.foot_area .grid_result.after .txt_af em {margin-left:20px;color: #0080c6;}
+.list_form_wrap.attach {background-color: #f6f8fa;}
+.list_form_wrap.attach .list_form {margin-top:20px;padding:24px 30px 35px;}
+.list_form_wrap.attach .list_form .file_upload_wrap .ip_file {width:740px;}
 
 /* ########################################### DARK ############################################### */
 body.dark {background-color:#181d23; color:#fff;}

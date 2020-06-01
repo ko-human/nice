@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>ECOPRO</title>
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".ip_date input").datepicker(uiCommon.datepickerOption);
+            $(".ip_del").inputTextFocus();
+            $(".ip_file").fileReady();
+        });
+    </script>
+</head>
+<body>
+
+    <!-- layer -->
+    <div class="layer_pop_wrap type1" style="">
+        <a href="#" class="btn_closed">닫기</a>
+        <div class="pop_header">
+            <div class="tit">
+                Title
+            </div>
+        </div>
+        <div class="pop_con">
+
+            <div class="list_form_wrap">
+                <ul class="list_form chk_form">
+                    <li style="width:210px;">
+                        <label for="" class="lb_txt">Department</label>
+                        <span class="ip_del">
+                            <div class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></div>
+                        </span>
+                    </li>
+                    <li style="width:210px;">
+                        <label for="" class="lb_txt">Date</label>
+                        <span class="ip_del">
+                            <div class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></div>
+                        </span>
+                    </li>
+                    <li>
+                        <label for="" class="lb_txt">첨부파일 (최대 100MB)</label>
+                        <span class="ip_del">
+                            <div class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></div>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="list_form chk_form">
+                    <li>
+                        <label for="" class="lb_txt">내용</label>
+                        <div class="chk_div" style="height:500px;"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn_pop_bottom">
+                <div class="btn_list">
+                    <a href="#" class="btn sm">Modify</a>
+                    <a href="#" class="btn gray sm">Delete</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- //layer -->
+
+</body>
+</html>
