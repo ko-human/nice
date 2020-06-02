@@ -139,7 +139,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .tit_wrap+.search_wrap {margin-top:20px;}
 .search_wrap+.contents {margin-top:20px;}
 .search_wrap {font-size:0;}
-.search_form>li {margin-right:15px; padding:0; display:inline-block; position:relative; vertical-align:top; box-sizing:border-box;}
+.search_form>li {margin-right:15px; padding:0; display:inline-block; position:relative; box-sizing:border-box;}
 .search_form>li .lb_txt {display:block; height:21px; margin:0; }
 .search_form>li .ip_txt+.ip_txt, .search_form>li .select+.ip_txt, .search_form>li .select+.ip_from_to, .search_form>li .select+.ip_del, .search_form>li .ip_del+.ip_del, .search_form>li .ip_del+.ip_txt, .ip_del+.select, .select+.inblock, .select+.select {margin-left:10px;}
 .search_form>li.btns {padding-top:21px;margin-right:0;}
@@ -873,7 +873,7 @@ a.ui-datepicker-title {padding:0;}
 .profile_box .user_name {display:block; font-size:16px; font-weight:500;}
 .profile_box .user_email {margin-top:8px; display:block; font-size:14px; color:#8b919c; }
 
-/* ****************** 헨켈 ******************* */
+/* ****************** henkel ******************* */
 .humidity_wrap {padding:80px 10px 30px 120px; width:1900px; box-sizing:border-box;}
 .humidity_inner {position: relative;width:100%;margin-top:30px;background: #fff;}
 .humidity_inner .txt_date {position: absolute;left: 50%;top: -68px;margin-left: -100px;width: 200px;font-size: 35px;text-align: center;color: #13161a;}
@@ -924,21 +924,27 @@ a.ui-datepicker-title {padding:0;}
 .manage_wrap.horizon_box .tit_box {display: inline-block;}
 .manage_wrap.horizon_box .tit_box+.tit_box {margin-left:20px;}
 
-/* 에코프로 */
+/* ecopro */
 .foot_area .grid_result .txt_af, .foot_area .grid_result .txt_bf, .foot_area .grid_result .txt_sf {display: none;}
 .foot_area .grid_result.after .txt_af {display: block;color: #6b6e72;}
 .foot_area .grid_result.before .txt_bf {display: block;color: #e42f44;}
 .foot_area .grid_result.before .txt_bf i {width: 20px;height: 20px;padding: 0;margin: -3px 0 0 5px;background-size: 10px;}
 
-/* 마스 */
-.search_form li .ip_check label{margin-top: 13px;margin-right:8px;box-sizing: border-box;font-size: 0;}
+/* mars */
+.search_form li .ip_check label{vertical-align: middle;margin-right:8px;box-sizing: border-box;}
+.search_form li .ip_check label[for=goods] {font-size: 0;}
 
-/* 스타벅스 */
+/* starbucks */
 .foot_area .grid_result.before .txt_sf {display: block;color: #0080c6;}
 .foot_area .grid_result.after .txt_af em {margin-left:20px;color: #0080c6;}
-.list_form_wrap.attach {background-color: #f6f8fa;}
-.list_form_wrap.attach .list_form {margin-top:20px;padding:24px 30px 35px;}
+.list_form_wrap.attach .list_form {margin-top:20px;padding:24px 30px 35px;box-sizing: border-box;background-color: #f6f8fa;}
 .list_form_wrap.attach .list_form .file_upload_wrap .ip_file {width:740px;}
+
+/* JGC */
+.list_form_wrap.attached .list_form {margin-bottom:20px;padding:30px;box-sizing: border-box;background-color: #f6f8fa;}
+.list_form_wrap.attached .btn.lg.ico_excel {padding-left:41px;margin-right: 17px;}
+
+
 
 /* ########################################### DARK ############################################### */
 body.dark {background-color:#181d23; color:#fff;}
