@@ -506,7 +506,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .calendar_btns .btn_next_month {background:url(../images/btn_next_40.svg) no-repeat;}
 
 /* calender month year */
-.ui-datepicker-select-month table {width: 100%;text-align: center;}
+/* .ui-datepicker-select-month table {width: 100%;text-align: center;}
 .ui-datepicker-select-month table td {line-height: 4.2em !important;}
 .ui-datepicker-select-month table a.ui-state-default {width: 40px;height: 40px;padding-top: 12px;box-sizing: border-box;font-size: 1.1em;line-height: 1.1em;}
 
@@ -519,7 +519,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .ui-datepicker .ui-datepicker-select-year td a {width: 45px;height: 45px;padding-top: 15px;box-sizing: border-box;font-size: 1.1em !important;line-height: 1.1em;}
 
 a.ui-datepicker-title {padding:0;}
-.ui-datepicker-title a {color:#000;}
+.ui-datepicker-title a {color:#000;} */
 
 
 /* popup */
@@ -931,6 +931,7 @@ a.ui-datepicker-title {padding:0;}
 .foot_area .grid_result.before .txt_bf i {width: 20px;height: 20px;padding: 0;margin: -3px 0 0 5px;background-size: 10px;}
 
 /* mars */
+.search_form li {position: relative;}
 .search_form li .ip_check label{vertical-align: middle;margin-right:8px;box-sizing: border-box;}
 .search_form li .ip_check label[for=goods] {font-size: 0;}
 
@@ -944,7 +945,10 @@ a.ui-datepicker-title {padding:0;}
 .list_form_wrap.attached .list_form {margin-bottom:20px;padding:30px;box-sizing: border-box;background-color: #f6f8fa;}
 .list_form_wrap.attached .btn.lg.ico_excel {padding-left:41px;margin-right: 17px;}
 
-
+/* calender */
+.datepicker {position: absolute;width:300px;background: #fff;}
+.table-condensed {width:100%;}
+.datepicker td, .datepicker th {height:24px !important;}
 
 /* ########################################### DARK ############################################### */
 body.dark {background-color:#181d23; color:#fff;}

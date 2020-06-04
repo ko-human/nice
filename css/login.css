@@ -195,7 +195,7 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;margin
 
 @keyframes bg11 {
   from {top:187px; right:-199px;}
-right {top:226px; right:-131px;}
+  to {top:226px; right:-131px;}
 }
 
 /*

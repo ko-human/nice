@@ -4,7 +4,10 @@ var uiCommon = {
     buttonImage: "../../images/ip_date.png",
     buttonImageOnly: true,
     buttonText: "Select date",
-    dateFormat: "yy-mm-dd"
+    dateFormat: "yy-mm-dd",
+    minViewMode: 'years',
+
+format: 'yyyy'
   }
 };
 
