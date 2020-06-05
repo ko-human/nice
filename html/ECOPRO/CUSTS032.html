@@ -11,7 +11,6 @@
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
-            $(".ip_date input").datepicker(uiCommon.datepickerOption);
             $(".ip_del").inputTextFocus();
             $(".ip_file").fileReady();
         });
@@ -32,12 +31,32 @@
             <div class="list_form_wrap">
                 <ul class="list_form chk_form">
                     <li style="width:210px;">
+                        <label for="" class="lb_txt">Title</label>
+                        <span class="ip_del">
+                            <div class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></div>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="list_form chk_form">
+                    <li>
+                        <label for="" class="lb_txt">내용</label>
+                        <div class="chk_div" style="height:500px;"></div>
+                    </li>
+                </ul>
+                <ul class="list_form chk_form">
+                    <li style="width:240px;">
                         <label for="" class="lb_txt">Department</label>
                         <span class="ip_del">
                             <div class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></div>
                         </span>
                     </li>
-                    <li style="width:210px;">
+                    <li style="width:240px;">
+                        <label for="" class="lb_txt">Writer</label>
+                        <span class="ip_del">
+                            <div class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></div>
+                        </span>
+                    </li>
+                    <li style="width:150px;">
                         <label for="" class="lb_txt">Date</label>
                         <span class="ip_del">
                             <div class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></div>
@@ -48,12 +67,6 @@
                         <span class="ip_del">
                             <div class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></div>
                         </span>
-                    </li>
-                </ul>
-                <ul class="list_form chk_form">
-                    <li>
-                        <label for="" class="lb_txt">내용</label>
-                        <div class="chk_div" style="height:500px;"></div>
                     </li>
                 </ul>
             </div>

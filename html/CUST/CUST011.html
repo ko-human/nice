@@ -7,12 +7,12 @@
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
-    <link href="../../script/lib/jquery.ui.datepicker.monthyearpicker.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../script/lib/jquery.ui.datepicker.monthyearpicker.js"></script>
     <script src="../../script/ui_common.js"></script>
+    <script src="../../script/lib/bootstrap-datepicker.js"></script>
     <script type="text/javascript">
 
     $(function(){
@@ -20,19 +20,24 @@
       //input
       $(".ip_del").inputTextFocus();
 
-
       // 파일명
       $(".ip_file").fileReady();
 
       // 캘린더
-      var dateOption = {
-        onSelect : function(){
+      // var dateOption = {
+      //   onSelect : function(){
+      //     if($(this).siblings("i").length>0) {
+      //       $(this).siblings("i").addClass("on");
+      //     }
+      //   }
+      // };
+      // $(".ip_date input").datepicker($.extend(uiCommon.datepickerOption, dateOption));
+
+      $(".ip_date input").datepicker(uiCommon.datepickerOption).on('changeDate', function (selected) {
           if($(this).siblings("i").length>0) {
             $(this).siblings("i").addClass("on");
           }
-        }
-      };
-      $(".ip_date input").datepicker($.extend(uiCommon.datepickerOption, dateOption));
+     });
 
 
       // 파일추가

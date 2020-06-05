@@ -139,7 +139,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .tit_wrap+.search_wrap {margin-top:20px;}
 .search_wrap+.contents {margin-top:20px;}
 .search_wrap {font-size:0;}
-.search_form>li {margin-right:15px; padding:0; display:inline-block; position:relative; box-sizing:border-box;}
+.search_form>li {margin-right:15px; padding:0; display:inline-block; position:relative; box-sizing:border-box;vertical-align: middle;}
 .search_form>li .lb_txt {display:block; height:21px; margin:0; }
 .search_form>li .ip_txt+.ip_txt, .search_form>li .select+.ip_txt, .search_form>li .select+.ip_from_to, .search_form>li .select+.ip_del, .search_form>li .ip_del+.ip_del, .search_form>li .ip_del+.ip_txt, .ip_del+.select, .select+.inblock, .select+.select {margin-left:10px;}
 .search_form>li.btns {padding-top:21px;margin-right:0;}
@@ -931,7 +931,6 @@ a.ui-datepicker-title {padding:0;}
 .foot_area .grid_result.before .txt_bf i {width: 20px;height: 20px;padding: 0;margin: -3px 0 0 5px;background-size: 10px;}
 
 /* mars */
-.search_form li {position: relative;}
 .search_form li .ip_check label{vertical-align: middle;margin-right:8px;box-sizing: border-box;}
 .search_form li .ip_check label[for=goods] {font-size: 0;}
 
@@ -946,9 +945,22 @@ a.ui-datepicker-title {padding:0;}
 .list_form_wrap.attached .btn.lg.ico_excel {padding-left:41px;margin-right: 17px;}
 
 /* calender */
-.datepicker {position: absolute;width:300px;background: #fff;}
+.datepicker {position: absolute;width:290px;margin-top:5px;padding:8px !important;box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);background: #fff;}
+.datepicker-dropdown.datepicker-orient-right:before {right:15px !important;border-bottom-color: rgba(0, 0, 0, 0.1);}
+.datepicker-dropdown.datepicker-orient-right:after {right:16px !important;}
 .table-condensed {width:100%;}
 .datepicker td, .datepicker th {height:24px !important;}
+.datepicker th.dow {font-size:12px;padding: 5px 0 6px;color: #6b778c;font-weight: 500;}
+.datepicker table tr td.active {position: relative;}
+.datepicker table tr td.active:before {z-index: -1;position: absolute;left:50%;margin-left:-13px;top:50%;margin-top:-13px;content:'';width:26px;height:26px;background-color:#0080c6;border-radius: 50%;}
+.datepicker table tr td span.active {position: relative;}
+.datepicker table tr td span.active:before {z-index: -1;position: absolute;left:50%;margin-left:-25px;top:50%;margin-top:-25px;content:'';width:50px;height:50px;background-color:#0080c6;border-radius: 50%;}
+.datepicker-switch {color:#243757;}
+
+.ico_trig {position: absolute;right: 10px;top: 50%;margin-top: -8px;width:16px;height:16px;background: url(../../images/ip_date.png) no-repeat; background-size: contain;}
+.fa-long-arrow-left {display: inline-block;width: 25px;height: 25px;background: url(../images/ico_arr_24.svg) no-repeat;background-size: contain;}
+.fa-long-arrow-right {display: inline-block;width: 25px;height: 25px;background: url(../images/ico_arr_24.svg) no-repeat;background-size: contain;transform: rotate(180deg);}
+
 
 /* ########################################### DARK ############################################### */
 body.dark {background-color:#181d23; color:#fff;}
