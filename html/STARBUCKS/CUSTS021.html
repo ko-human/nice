@@ -7,15 +7,16 @@
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
-    <link href="../../script/lib/jquery.ui.datepicker.monthyearpicker.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../script/lib/jquery.ui.datepicker.monthyearpicker.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script src="../../script/lib/bootstrap-datepicker.js"></script>
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
-            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption);
+            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
             $(".ip_del").inputTextFocus();
         });
     </script>
@@ -79,40 +80,10 @@
                 <!-- result class추가 : before(조회 전), after(조회 후)-->
                 <div class="grid_result before">
                     <p class="txt_sf">※ 검색항목 중 Invoice No. 또는 B/L No. 는 필수 입력항목입니다. </p>
-                    <p class="txt_af"><span>201</span>개의 자료가 조회되었습니다. <em>※ 통관차수, 번호, 수량이 없으면 저장할 수 없습니다. 차수는 1부터 시작입니다.</em></p>
+                    <p class="txt_af"><span>201</span>개의 자료가 조회되었습니다.</p>
                 </div>
                 <!--// result -->
-                <!-- 필요시 주석풀어서 페이징 처리 -->
-                <!--<div class="comm_paging">
-
-                    <div class="box_select">
-                        <select class='opt_select'>
-                            <option>5</option>
-                            <option>4</option>
-                            <option>3</option>
-                            <option>2</option>
-                            <option>1</option>
-                        </select>
-                    </div>
-
-                    <div class="pagination">
-                        <a href="javascript:" class="arr prev first current cur_exist"></a>
-                        <a href="javascript:" class="arr prev first"></a>
-                        <a href="javascript:" class="active">1</a>
-                        <a href="javascript:" class="">2</a>
-                        <a href="javascript:" class="">3</a>
-                        <a href="javascript:" class="">4</a>
-                        <a href="javascript:" class="">5</a>
-                        <a href="javascript:" class="">6</a>
-                        <a href="javascript:" class="">7</a>
-                        <a href="javascript:" class="">8</a>
-                        <a href="javascript:" class="">9</a>
-                        <a href="javascript:" class="">10</a>
-                        <a href="javascript:" class="arr next"></a>
-                        <a href="javascript:" class="arr next last ancient anc_exist"></a>
-                    </div>
-                </div>-->
-
+                <em class="foot_info">※ 통관차수, 번호, 수량이 없으면 저장할 수 없습니다. 차수는 1부터 시작입니다.</em>
             </div>
         </div>
     </div>

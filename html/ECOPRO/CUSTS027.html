@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=no" />
-    <title>ECOPRO</title>
-    <link href="../../css/common.css" rel="stylesheet">
-    <link href="../../css/content.css" rel="stylesheet">
-    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
-    <script src="../../script/lib/jquery-ui.js"></script>
-    <script src="../../script/ui_common.js"></script>
-    <script type="text/javascript">
-    $(function(){
-      $(".ip_date input").datepicker(uiCommon.datepickerOption);
-      $(".ip_del").inputTextFocus();
-    });
-    </script>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no" />
+  <title>Henkel</title>
+  <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+  <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <link href="../../css/content.css" rel="stylesheet">
+  <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+  <script src="../../script/lib/jquery-ui.js"></script>
+  <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../../script/lib/bootstrap-datepicker.js"></script>
+  <script src="../../script/ui_common.js"></script>
+  <script type="text/javascript">
+      $(function() {
+          $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
+          $(".ip_del").inputTextFocus();
+      });
+  </script>
+</head>
+<body>
 
     <div class="manage_wrap">
 
@@ -42,9 +46,9 @@
             </select>
             <div class="inblock">
               <ul class="ip_group ip_from_to" style="width:320px;">
-                <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
                 <li class="line">~</li>
-                <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
               </ul>
             </div>
           </li>
@@ -117,5 +121,5 @@
 
     </div>
 
-  </body>
+</body>
 </html>

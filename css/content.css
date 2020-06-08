@@ -936,7 +936,7 @@ a.ui-datepicker-title {padding:0;}
 
 /* starbucks */
 .foot_area .grid_result.before .txt_sf {display: block;color: #0080c6;}
-.foot_area .grid_result.after .txt_af em {margin-left:20px;color: #0080c6;}
+.foot_area .foot_info {position: absolute;right: 30px;top: 0;line-height: 50px;color: #0080c6;}
 .list_form_wrap.attach .list_form {margin-top:20px;padding:24px 30px 35px;box-sizing: border-box;background-color: #f6f8fa;}
 .list_form_wrap.attach .list_form .file_upload_wrap .ip_file {width:740px;}
 

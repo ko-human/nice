@@ -5,15 +5,17 @@
     <meta name="format-detection" content="telephone=no" />
     <title>Henkel</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/lib/bootstrap-datepicker.js"></script>
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
-            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption);
+            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
             $(".ip_del").inputTextFocus();
         });
     </script>
@@ -39,9 +41,9 @@
                 <li style="width:330px">
                     <label for="" class="lb_txt">Date</label>
                     <ul class="ip_group ip_from_to">
-                        <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                        <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
                         <li class="line">~</li>
-                        <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                        <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
                     </ul>
                 </li>
                 <li class="btns">

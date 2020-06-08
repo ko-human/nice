@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>input</title>
-    <link href="../../script/lib/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
-    <script src="../../script/lib/jquery-ui-timepicker-addon.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../script/ui_common.js"></script>
-
+    <script src="../../script/lib/bootstrap-datepicker.js"></script>
+    <script src="../../script/ui_common.js"></script>
     <style type="text/css">
 
     .code {padding:10px; margin-top:5px; background:#fffce4;}
@@ -21,7 +23,7 @@
 
     $(function(){
 
-      $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption);
+      $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
       $(".ip_del").inputTextFocus();
       $(".ip_filter").inputTextFocus();
       $(".ip_file").fileReady();
@@ -99,6 +101,10 @@
                     <label for="" class="lb_txt">Input Disabled</label>
                     <input type="text" name="" value="Disabled" class="ip_txt" disabled="true">
                   </td>
+                  <td class="emphasize">
+                    <label for="" class="lb_txt">스타벅스 input Color</label>
+                    <span class="ip_del"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                  </td>
                   <td>
 
                   </td>
@@ -133,7 +139,7 @@
                 <tr>
                   <td>
                     <label for="" class="lb_txt">날짜</label>
-                    <span class="ip_date"><input type="text" class="ip_txt"></span>
+                    <span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></span>
                     <div class="code">
                       $("선택자").datepicker(uiCommon.datepickerOption);
                     </div>
@@ -141,14 +147,14 @@
                   <td>
                     <label for="" class="lb_txt">기간</label>
                     <ul class="ip_group ip_from_to">
-                      <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                      <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
                       <li class="line">~</li>
-                      <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                      <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
                     </ul>
                   </td>
                   <td>
                     <label for="" class="lb_txt">시간선택</label>
-                    <span class="ip_date"><input type="text" class="ip_txt type_time"></span>
+                    <span class="ip_date"><input type="text" class="ip_txt type_time"><i class="ico_trig"></i></span>
                     <div class="code">
                       $(선택자).datetimepicker(옵션);
                     </div>
