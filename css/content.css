@@ -958,8 +958,8 @@ a.ui-datepicker-title {padding:0;}
 .datepicker-switch {color:#243757;}
 
 .ico_trig {position: absolute;right: 10px;top: 50%;margin-top: -8px;width:16px;height:16px;background: url(../../images/ip_date.png) no-repeat; background-size: contain;}
-.fa-long-arrow-left {display: inline-block;width: 25px;height: 25px;background: url(../images/ico_arr_24.svg) no-repeat;background-size: contain;}
-.fa-long-arrow-right {display: inline-block;width: 25px;height: 25px;background: url(../images/ico_arr_24.svg) no-repeat;background-size: contain;transform: rotate(180deg);}
+.fa-long-arrow-left {display: inline-block;width: 25px;height: 25px;background: url(../images/ico_arr_24.svg) no-repeat;background-size: contain;vertical-align: middle;}
+.fa-long-arrow-right {display: inline-block;width: 25px;height: 25px;background: url(../images/ico_arr_24.svg) no-repeat;background-size: contain;transform: rotate(180deg);vertical-align: middle;}
 
 
 /* ########################################### DARK ############################################### */
