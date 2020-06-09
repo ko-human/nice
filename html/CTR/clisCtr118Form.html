@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
-    <title>Henkel</title>
+    <title>CTR</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
-    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../script/ui_common.js"></script>
     <script src="../../script/lib/bootstrap-datepicker.js"></script>
+    <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
             $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
@@ -21,16 +21,20 @@
     </script>
 </head>
 <body>
-    
-    <div class="manage_wrap horizon_box">
+
+    <div class="manage_wrap">
         <!-- 제목 -->
         <div class="tit_wrap tit_h1">
             <div class="tit_left">
-                <h2>헨켈 아이템별 재고 현황</h2>
+                <h2>Issue Pallet by Scan</h2>
             </div>
             <div class="tit_right">
                 <div class="btn_list">
-                    <a href="#" class="btn line ico_excel">Excel</a>
+                    <a href="#" class="btn line ico_excel">Excel Upload</a>
+                    <a href="#" class="btn line del_line">Delete Row</a>
+                    <a href="#" class="btn ">Check</a>
+                    <a href="#" class="btn ">Commit</a>
+                    <a href="#" class="btn line ">Reset</a>
                 </div>
             </div>
         </div>
@@ -39,14 +43,12 @@
         <div class="search_wrap">
             <ul class="search_form">
                 <li>
-                    <label for="" class="lb_txt">Date</label>
-                    <select class="select" name="" style="width:200px">
-                        <option value="">Category</option>
-                        <option value="">Item</option>
-                    </select>
+                    <label for="" class="lb_txt check">Door Date</label>
+                    <span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span>
                 </li>
-                <li class="btns">
-                    <a href="#" class="btn lg line ico_search">검색</a>
+                <li>
+                    <label for="" class="lb_txt">Pallet No.</label>
+                    <span class="ip_del" style="width:400px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                 </li>
             </ul>
         </div>
@@ -54,15 +56,8 @@
         <!--  타이틀 박스 -->
         <div class="tit_box">
             <div class="con_area">
-                <div class="chart_area" style="width:870px;height:630px">
-                    차트영역 870*630
-                </div>
-            </div>
-        </div>
-        <div class="tit_box">
-            <div class="con_area">
-                <div class="grid_wrap" style="width:870px;height:580px">
-                    그리드영역 870*580
+                <div class="grid_wrap" style="height:580px">
+                    그리드영역 height : 580px;
                 </div>
             </div>
             <div class="foot_area">

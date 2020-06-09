@@ -5,15 +5,17 @@
     <meta name="format-detection" content="telephone=no" />
     <title>Henkel</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/lib/bootstrap-datepicker.js"></script>
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
-            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption);
+            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
             $(".ip_del").inputTextFocus();
         });
     </script>
@@ -89,43 +91,9 @@
             <div class="foot_area">
                 <!-- result -->
                 <div class="grid_result">
-                    <p><span>201</span>개의 자료가 조회되었습니다.</p>
+                    <p>Count :<span>201</span></p>
                 </div>
                 <!--// result -->
-                <!-- 디폴트: 페이징 X, Count/Page 숫자 초과시 하단 페이징 -->
-                <div class="comm_paging">
-                    <!-- select -->
-                    <div class="box_select">
-                        <select class='opt_select'>
-                            <option>5</option>
-                            <option>4</option>
-                            <option>3</option>
-                            <option>2</option>
-                            <option>1</option>
-                        </select>
-                    </div>
-                    <!--// select -->
-                    <!-- pagination -->
-                    <div class="pagination"><!-- 화살표 상태 : 아래의 class 추가 · 제거 -->
-                        <a href="javascript:" class="arr prev first current cur_exist"></a>
-                        <a href="javascript:" class="arr prev first"></a>
-                        <a href="javascript:" class="active">1</a>
-                        <a href="javascript:" class="">2</a>
-                        <a href="javascript:" class="">3</a>
-                        <a href="javascript:" class="">4</a>
-                        <a href="javascript:" class="">5</a>
-                        <a href="javascript:" class="">6</a>
-                        <a href="javascript:" class="">7</a>
-                        <a href="javascript:" class="">8</a>
-                        <a href="javascript:" class="">9</a>
-                        <a href="javascript:" class="">10</a>
-                        <a href="javascript:" class="arr next last"></a>
-                        <a href="javascript:" class="arr next last ancient anc_exist"></a>
-                    </div>
-                    <!--// pagination -->
-
-                </div>
-                <!--  //타이틀 박스 -->
             </div>
         </div>
     <!-- //하단 버튼 -->
