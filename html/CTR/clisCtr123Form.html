@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>CTR</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/lib/bootstrap-datepicker.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
+            $(".ip_del").inputTextFocus();
+        });
+    </script>
+</head>
+<body>
+
+    <div class="manage_wrap">
+        <!-- 제목 -->
+        <div class="tit_wrap tit_h1">
+            <div class="tit_left">
+                <h2>Daily Inventory</h2>
+            </div>
+            <div class="tit_right">
+                <div class="btn_list">
+                    <a href="javascript:" class="btn w100">Save</a>
+                    <a href="javascript:" class="btn line ico_excel">Excel</a>
+                </div>
+            </div>
+        </div>
+        <!-- //제목 -->
+        <!-- 검색 -->
+        <div class="search_wrap">
+            <ul class="search_form">
+                <li>
+                    <label for="" class="lb_txt"></label>
+                    <select class="select" name="" style="width:140px">
+                        <option value="">Load Date</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
+                    <div class="inblock">
+                      <span class="ip_date" style="width:140px"><input type="text" class="ip_txt"><i class="ico_trig"></i></span>
+                    </div>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">ABR. Center</label>
+                    <select class="select" name="" style="width:260px">
+                        <option value="">ALL</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Item Status</label>
+                    <select class="select" name="" style="width:120px">
+                        <option value="">ALL</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Item Type</label>
+                    <select class="select" name="" style="width:150px">
+                        <option value="">ALL</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Item No.</label>
+                    <span class="ip_del" style="width:110px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+
+                <li>
+                    <label for="" class="lb_txt">Inv. No.</label>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Pallet No.</label>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">View Type</label>
+                    <select class="select" name="" style="width:125px">
+                        <option value="">Inventory</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Buyer</label>
+                    <span class="ip_del" style="width:120px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li class="btns">
+                    <a href="javascript:" class="btn lg line ico_search">검색</a>
+                </li>
+            </ul>
+        </div>
+        <!-- //검색 -->
+        <!--  타이틀 박스 -->
+        <div class="tit_box">
+            <div class="con_area">
+                <div class="grid_wrap" style="height:430px">
+                    그리드영역 height : 430px;
+                </div>
+            </div>
+            <div class="foot_area">
+                <!-- result -->
+                <div class="grid_result">
+                    <p>Count :<span>201</span></p>
+                </div>
+                <!--// result -->
+            </div>
+        </div>
+        <!-- // 타이틀 박스 -->
+
+        <div class="tit_right tar mt30">
+            <div class="btn_list">
+                <a href="javascript:" class="btn line ico_excel">Excel</a>
+            </div>
+        </div>
+        <!--  타이틀 박스 -->
+        <div class="tit_box">
+            <div class="con_area">
+                <div class="grid_wrap" style="height:430px">
+                    그리드영역 height : 430px;
+                </div>
+            </div>
+            <div class="foot_area">
+                <!-- result -->
+                <div class="grid_result">
+                    <p>Count :<span>201</span></p>
+                </div>
+                <!--// result -->
+            </div>
+        </div>
+        <!-- // 타이틀 박스 -->
+    </div>
+</body>
+
+</html>

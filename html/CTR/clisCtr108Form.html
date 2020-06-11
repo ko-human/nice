@@ -17,9 +17,6 @@
         $(function() {
             $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
             $(".ip_del").inputTextFocus();
-
-            // 비활성화 상태인 버튼의 경우, 배경색 gray로 변경 (개발 시, 하단 스크립트 삭제)
-            $('.btn_scan').on("click",function(){$(this).toggleClass('active');});
         });
     </script>
 </head>
@@ -29,10 +26,12 @@
         <!-- 제목 -->
         <div class="tit_wrap tit_h1">
             <div class="tit_left">
-                <h2>In-transit Inventory by Item</h2>
+                <h2>기준정보관리</h2>
             </div>
             <div class="tit_right">
                 <div class="btn_list">
+                    <a href="javascript:" class="btn line add_line">Add Row</a>
+                    <a href="javascript:" class="btn line del_line">Delete Row</a>
                     <a href="javascript:" class="btn save">Save</a>
                     <a href="javascript:" class="btn line ico_excel">Excel</a>
                 </div>
@@ -43,20 +42,12 @@
         <div class="search_wrap">
             <ul class="search_form">
                 <li>
-                    <label for="" class="lb_txt check">Item No.</label>
-                    <span class="ip_del" style="width:200px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <label for="" class="lb_txt check">CODE GB</label>
+                    <span class="ip_del" style="width:250px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                 </li>
                 <li>
-                    <label for="" class="lb_txt">Buyer</label>
-                    <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
-                </li>
-                <li>
-                    <label for="" class="lb_txt">ABR. Center</label>
-                    <select class="select" name="" style="width:320px">
-                        <option value="">ALL</option>
-                        <option value="">OO No.</option>
-                        <option value="">OO No.</option>
-                    </select>
+                    <label for="" class="lb_txt">CODE ID</label>
+                    <span class="ip_del" style="width:250px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                 </li>
                 <li class="btns">
                     <a href="javascript:" class="btn lg line ico_search">검색</a>
@@ -72,14 +63,14 @@
                 </div>
             </div>
             <div class="foot_area">
-                <!-- result (조회 후, grid_result에 class 추가 : after) -->
+                <!-- result -->
                 <div class="grid_result">
                     <p>Count :<span>201</span></p>
-                    <em class="foot_info">※ This page is not searched at first.</em>
                 </div>
                 <!--// result -->
             </div>
         </div>
     </div>
 </body>
+
 </html>

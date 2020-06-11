@@ -17,9 +17,6 @@
         $(function() {
             $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
             $(".ip_del").inputTextFocus();
-
-            // 비활성화 상태인 버튼의 경우, 배경색 gray로 변경 (개발 시, 하단 스크립트 삭제)
-            $('.btn_scan').on("click",function(){$(this).toggleClass('active');});
         });
     </script>
 </head>
@@ -29,11 +26,20 @@
         <!-- 제목 -->
         <div class="tit_wrap tit_h1">
             <div class="tit_left">
-                <h2>In-transit Inventory by Item</h2>
+                <h2>In/Out List by Day (재무)</h2>
             </div>
             <div class="tit_right">
                 <div class="btn_list">
-                    <a href="javascript:" class="btn save">Save</a>
+                    <div class="btn_personal">
+                        <select class="select opt_personal" name="" style="width:120px">
+                            <option value="">2020-06</option>
+                            <option value="">2020-05</option>
+                            <option value="">2020-04</option>
+                        </select>
+                        <a href="javascript:" class="btn w100">재무확정</a>
+                        <a href="javascript:" class="btn w100 gray">확정취소</a>
+                    </div>
+                    <a href="javascript:" class="btn w100">Save</a>
                     <a href="javascript:" class="btn line ico_excel">Excel</a>
                 </div>
             </div>
@@ -43,16 +49,36 @@
         <div class="search_wrap">
             <ul class="search_form">
                 <li>
-                    <label for="" class="lb_txt check">Item No.</label>
-                    <span class="ip_del" style="width:200px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
-                </li>
-                <li>
-                    <label for="" class="lb_txt">Buyer</label>
-                    <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <label for="" class="lb_txt check">Load Date</label>
+                    <span class="ip_date"><input style="width:150px;" type="text" class="ip_txt"><i class="ico_trig"></i></span>
                 </li>
                 <li>
                     <label for="" class="lb_txt">ABR. Center</label>
-                    <select class="select" name="" style="width:320px">
+                    <select class="select" name="" style="width:300px">
+                        <option value="">ALL</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Inv. No.</label>
+                    <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Part No.</label>
+                    <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Nation</label>
+                    <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">거래처코드</label>
+                    <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">종료여부</label>
+                    <select class="select" name="" style="width:120px">
                         <option value="">ALL</option>
                         <option value="">OO No.</option>
                         <option value="">OO No.</option>
@@ -72,14 +98,14 @@
                 </div>
             </div>
             <div class="foot_area">
-                <!-- result (조회 후, grid_result에 class 추가 : after) -->
+                <!-- result -->
                 <div class="grid_result">
                     <p>Count :<span>201</span></p>
-                    <em class="foot_info">※ This page is not searched at first.</em>
                 </div>
                 <!--// result -->
             </div>
         </div>
     </div>
 </body>
+
 </html>

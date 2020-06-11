@@ -977,8 +977,11 @@ a.ui-datepicker-title {padding:0;}
 
 .btn_list .btn_personal {display: inline-block;margin-right: 30px;}
 .btn_list .btn_personal .select.opt_personal {height:36px;margin-right: 8px;}
-.search_form li .ip_check {margin-left:10px;}
+.search_form li .ip_check {display: inline-block;margin-left:10px;}
+.search_form li.chk_only {height:63px;}
+.search_form li.chk_only .ip_check {display: inline-block;margin-top: 13px;}
 
+.tit_right + .tit_box {margin-top: 10px;}
 
 
 /* ########################################### DARK ############################################### */
