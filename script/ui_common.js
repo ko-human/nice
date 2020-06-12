@@ -1,27 +1,23 @@
 var uiCommon = {
   datepickerOption : {
-      orientation: "bottom left",
-      format: "yyyy-mm-dd",
-      autoclose: true,
-      templates: {
-          leftArrow: '<i class="fa fa-long-arrow-left"></i>',
-          rightArrow: '<i class="fa fa-long-arrow-right"></i>'
-      },
+      // orientation: "bottom right",
+      // autoclose: true,
+      // templates: {
+      //     leftArrow: '<i class="fa fa-long-arrow-left"></i>',
+      //     rightArrow: '<i class="fa fa-long-arrow-right"></i>'
+      // },
+      pickerPosition: "bottom-left",
+      weekStart: 1,
+      todayBtn:  1,
+      autoclose: 1,
+      todayHighlight: 1,
+      // startView: 2,
+      forceParse: 0,
+      showMeridian: 1
   }
 };
 
-// var uiCommon = {
-//   datepickerOption : {
-//     showOn: "button",
-//     buttonImage: "../../images/ip_date.png",
-//     buttonImageOnly: true,
-//     buttonText: "Select date",
-//     dateFormat: "yy-mm-dd",
-//   }
-// };
-
-
-
+// 삭제예정
 $(function(){
   // datepicker
   /*
@@ -47,7 +43,7 @@ $(function(){
 
 
 (function($){
- // 달력 이모티콘
+ // 달력 아이콘
   $.fn.icoTrigger = function() {
       this.each(function(i){
           $(".ip_date").find('.ico_trig').on('click', function(){
