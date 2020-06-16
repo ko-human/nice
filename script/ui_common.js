@@ -6,14 +6,15 @@ var uiCommon = {
       //     leftArrow: '<i class="fa fa-long-arrow-left"></i>',
       //     rightArrow: '<i class="fa fa-long-arrow-right"></i>'
       // },
-      pickerPosition: "bottom-left",
-      weekStart: 1,
-      todayBtn:  1,
+      // pickerPosition: "bottom-left",
+      // weekStart: 1,
+      // todayBtn:  1,
       autoclose: 1,
-      todayHighlight: 1,
+      // todayHighlight: 1,
       // startView: 2,
       forceParse: 0,
-      showMeridian: 1
+      showMeridian: 1,
+      daysMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
   }
 };
 

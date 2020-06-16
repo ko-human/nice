@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
-    <title>CTR</title>
+    <title>MARS</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
@@ -26,11 +26,10 @@
         <!-- 제목 -->
         <div class="tit_wrap tit_h1">
             <div class="tit_left">
-                <h2>W.H. Balance On Hand</h2>
+                <h2>Customs Tracking Entry</h2>
             </div>
             <div class="tit_right">
                 <div class="btn_list">
-                    <a href="javascript:" class="btn w100">Save</a>
                     <a href="javascript:" class="btn line ico_excel">Excel</a>
                 </div>
             </div>
@@ -40,28 +39,46 @@
         <div class="search_wrap">
             <ul class="search_form">
                 <li>
-                    <label for="" class="lb_txt">Item No.</label>
-                    <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <label for="" class="lb_txt">Period</label>
+                    <select class="select" name="" style="width:120px">
+                        <option value="">ETA</option>
+                        <option value="">OO Date</option>
+                        <option value="">OO Date</option>
+                    </select>
+                    <div class="inblock">
+                      <ul class="ip_group ip_from_to" style="width:320px;">
+                        <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
+                        <li class="line">~</li>
+                        <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
+                      </ul>
+                    </div>
                 </li>
                 <li>
-                    <label for="" class="lb_txt">ABR. Center</label>
-                    <select class="select" name="" style="width:300px">
-                        <option value="">ALL</option>
+                    <label for="" class="lb_txt"></label>
+                    <select class="select" name="" style="width:120px">
+                        <option value="">H.B/L</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
+                    <div class="inblock">
+                      <span class="ip_del" style="width:250px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    </div>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Transit Type</label>
+                    <select class="select" name="" style="width:150px">
+                        <option value="">Ocean</option>
                         <option value="">OO No.</option>
                         <option value="">OO No.</option>
                     </select>
                 </li>
                 <li>
-                    <label for="" class="lb_txt">Pallet No.</label>
-                    <span class="ip_del" style="width:250px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
-                </li>
-                <li class="chk_only">
-                    <label for="" class="lb_txt check">Buyer View</label>
-                    <span class="ip_check"><input type="checkbox" name="" value="" id="goods"><label for="goods">Checkbox</label></span>
-                </li>
-                <li>
-                    <label for="" class="lb_txt">Buyer.</label>
-                    <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <label for="" class="lb_txt">EX/IM</label>
+                    <select class="select" name="" style="width:150px">
+                        <option value="">Import</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
                 </li>
                 <li class="btns">
                     <a href="javascript:" class="btn lg line ico_search">검색</a>
@@ -88,9 +105,14 @@
 
         <!-- 두번째 제목 -->
         <div class="tit_wrap tit_h4">
+            <div class="tit_left">
+                <h4>Customs Tracking Entry Detail</h4>
+            </div>
             <div class="tit_right">
                 <div class="btn_list">
-                    <a href="javascript:" class="btn line ico_excel">Excel</a>
+                    <a href="javascript:" class="btn line add_line">Add Row</a>
+                    <a href="javascript:" class="btn line del_line">Delete Row</a>
+                    <a href="javascript:" class="btn w100">Save</a>
                 </div>
             </div>
         </div>
