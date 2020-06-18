@@ -288,8 +288,8 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 
 .sub_box {height:198px; position:relative; padding:22px 20px; box-sizing:border-box;}
 .sub_box .tit {color:#45474e;}
-.sub_box .tit strong {display:block; width:260px; overflow:hidden; font-size:20px; font-weight:500; white-space:nowrap; }
-.sub_box .tit span {display:block; margin-top:10px;font-size:12px;font-weight: 300;color: #45474e;}
+.sub_box .tit strong {display:block; width:260px; overflow:hidden; font-size:20px; font-weight:500; white-space:nowrap; padding-bottom:2px;}
+.sub_box .tit span {display:block; margin-top:8px;font-size:12px;font-weight: 300;color: #45474e;}
 .sub_box .btn_setting {display:none; position:absolute; top:18px; right:53px; width:24px; height:24px; background:url(../images/ico_setting.svg) no-repeat;}
 .sub_box .btn_setting:hover {background-image:url(../images/ico_setting_over.svg);}
 .sub_box .btn_bell {position:absolute; top:18px; right:18px; width:24px; height:24px; background:url(../images/ico_alarm.svg) no-repeat;}
@@ -301,6 +301,17 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .sub_box .con_data .btn_data>img {vertical-align: middle;margin-left: 3px;}
 .box.no_chart .sub_box .con {display: none;}
 .box.no_chart .sub_box .con_data {display: block;}
+
+.box .con .result .index_list li {height:38px;border-bottom:1px solid #f6f8fa;}
+.box .con .result .index_list li dt {display:inline-block;width:50%;font-size: 14px;text-indent: 10px;line-height: 38px;font-weight: 500;}
+.box .con .result .index_list li dd {display:inline-block;width:50%;font-size: 16px;text-indent: 10px;line-height: 38px;color:#45474e;}
+.box .con .result .index_list li dd em {font-size: 30px;font-weight: 500;max-width:90px;text-indent: 0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;display: inline-block;vertical-align: -26%;}
+.box .con .result .index_list li dt.active, .box .con .result .index_list li dd.active {color:#0080c6;}
+
+.box .con .result .desc_num {display: inline-block;color: #45474e;}
+.box .con .result .desc_num.money {color:#0080c6;}
+.box .con .result .desc_num em {display: block;text-align: right;padding-right: 7px;font-size: 16px;}
+.box .con .result .desc_num + .desc_num {margin-left:30px;}
 
 .sub_box .result {padding-left: 10px;}
 .sub_box .result strong {font-size:50px; font-weight:500;margin-right: 5px;}
