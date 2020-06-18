@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* input */
-.ip_txt {padding:0 11px; width:100%; height:42px; color:#45474e; font-size:14px; border:solid 1px #dde2ea; background-color:#fff; box-sizing:border-box;}
+.ip_txt {padding:0 35px 0 11px; width:100%; height:42px; color:#45474e; font-size:14px; border:solid 1px #dde2ea; background-color:#fff; box-sizing:border-box;}
 .ip_txt::placeholder {font-size:14px; color:#9298a2; font-weight:400;}
 .ip_txt:-ms-input-placeholder {font-size:14px; color:#9298a2; font-weight:400 !important;}
 .ip_txt:disabled {background-color:#e6ebf1;}
@@ -854,8 +854,8 @@ a.ui-datepicker-title {padding:0;}
 .btn_join {display: block;text-align: center;position: absolute;right: 0;top: 1px;width: 40px;height: 40px;}
 .btn_join img {margin-top:10px;}
 .list_form.chk_form.num_blue .ip_txt {font-size: 18px;letter-spacing: 0.8px;color:#0080c6;}
-.list_form.chk_form .ip_txt {line-height: 42px;padding: 0 20px;box-sizing: border-box;background: #f6f8fa;border:none;}
-.list_form.chk_form .chk_div {padding:15px;box-sizing: border-box;background: #f6f8fa;border:none;}
+.list_form.chk_form .ip_txt {min-height: 42px;height:auto;line-height: 42px;line-height: 1.8;padding: 10px 20px;box-sizing: border-box;background: #f6f8fa;border:none;}
+.list_form.chk_form .chk_div {line-height: 1.8;padding:15px;box-sizing: border-box;background: #f6f8fa;border:none;overflow: hidden;word-break: break-all;}
 
 .event_pop>div.btns {padding:0 14px;}
 .event_pop .left {width:700px;}

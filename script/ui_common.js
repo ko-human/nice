@@ -14,7 +14,6 @@ var uiCommon = {
       // startView: 2,
       forceParse: 0,
       showMeridian: 1,
-      daysMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
   }
 };
 
