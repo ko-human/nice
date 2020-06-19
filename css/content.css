@@ -799,13 +799,13 @@ a.ui-datepicker-title {padding:0;}
 
 
 /* 자동완성 */
-.list_form .port {box-sizing:border-box; padding:0 20px;}
-.list_form .port .box_port {position: relative; height:105px;padding:0 5px;border: 1px solid #dde2ea;background: #fff;}
+.list_form .port {position: relative;box-sizing:border-box; padding:0 20px;}
+.list_form .port .box_port {position: relative; padding:0 5px;border: 1px solid #dde2ea;background: #fff;}
 .list_form .port .box_port .ip_txt {border:0;}
-.list_form .port .box_port .ip_date i {position: absolute;left: 120px;top:50%;margin-top:-6px;width: 23px;height: 12px;text-align: center;font-size: 9px;color:#fff;background: #cad0d7;border-radius: 3px;}
+.list_form .port .box_port .ip_date i {position: absolute;left: 120px;top:50%;margin-top:-6px;padding:1px 3px;line-height: 11.5px;text-align: center;font-size: 9px;color:#fff;background: #cad0d7;border-radius: 3px;}
 .list_form .port .box_port .ip_date i.on {background: #ec8922;}
 .list_form .port .box_port .inp_port {font-weight:500; height:62px;border-bottom:1px solid #dde2ea;}
-.list_form .port:nth-child(1) .box_port:after {content:'';position: absolute;right:-32px;top:42px;width:22px;height:22px;background: url(../images/ico_arr_cir.svg) no-repeat;background-size: 100%;}
+.list_form .port + .port:after {content:'';position: absolute;left:-11px;top:52%;width:22px;height:22px;background: url(../images/ico_arr_cir.svg) no-repeat;background-size: 100%;}
 .list_form .port .result {position:absolute; width:100%; top:10px; left:0; height:40px; line-height:40px; background-color:#fff;}
 .list_form .port .result>strong {display:inline-block; padding:0 5px; width:90px; font-size:25px; font-weight:500; position:relative;}
 .list_form .port .result>strong:after {content:""; display:inline-block; position:absolute; top:13px; left:98px; width:1px; height:11px; background-color:#cad0d7;}
@@ -1003,8 +1003,18 @@ a.ui-datepicker-title {padding:0;}
 .tit_wrap.tit_h4 {margin-top:30px;}
 .tit_h4 .tit_left h4 {font-size: 16px;font-weight: 500;}
 
+/* partner */
+.detail_pick {height: 50px;padding: 19px 34px 14px;background-color: #e6ebf1;box-sizing: border-box;}
+.detail_pick .ip_check + .ip_check {margin-left:28px;}
+.detail_pick .ip_check label {font-size: 14px;color: #45474e;font-weight: 400;}
 
+.shipment_list .detail_info {padding:20px 30px 19px;box-sizing:border-box;border-top:1px solid #e6ebf1;}
+.shipment_list .clause {display: inline-block;width: 290px;vertical-align: top;}
+.shipment_list .clause h3 {display: inline-block;font-size: 14px;font-weight: 500;line-height: 1.5;color: #45474e;}
+.shipment_list .clause h3 span {display:block;font-weight: 300;color: #6b6e72;}
 
+.shipment_list .desc_clause {display: inline-block;width: calc(100% - 320px);}
+.shipment_list .desc_clause .list_form>li .lb_txt {height: auto;margin-bottom: 10px;}
 
 
 /* ########################################### DARK ############################################### */
