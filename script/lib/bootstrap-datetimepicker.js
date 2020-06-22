@@ -691,7 +691,7 @@
       var dowCnt = this.weekStart,
         html = '<tr>';
       while (dowCnt < this.weekStart + 7) {
-        html += '<th class="dow">' + dates[this.language].daysMin[(dowCnt++) % 7] + '</th>';
+        html += '<th class="dow">' + dates[this.language].daysShort[(dowCnt++) % 7] + '</th>';
       }
       html += '</tr>';
       this.picker.find('.datetimepicker-days thead').append(html);
@@ -1857,7 +1857,7 @@
                 '</tr>' +
       '</thead>',
     contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',
-    footTemplate: '<tfoot>' + 
+    footTemplate: '<tfoot>' +
                     '<tr><th colspan="7" class="today"></th></tr>' +
                     '<tr><th colspan="7" class="clear"></th></tr>' +
                   '</tfoot>'

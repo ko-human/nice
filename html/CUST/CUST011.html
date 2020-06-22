@@ -25,15 +25,6 @@
       $(".ip_file").fileReady();
 
       // 캘린더
-      // var dateOption = {
-      //   onSelect : function(){
-      //     if($(this).siblings("i").length>0) {
-      //       $(this).siblings("i").addClass("on");
-      //     }
-      //   }
-      // };
-      // $(".ip_date input").datepicker($.extend(uiCommon.datepickerOption, dateOption));
-
       var dateOption = {
           startView: 2,
           minView: 2,
@@ -44,7 +35,7 @@
           if($(this).siblings("i").length>0) {
             $(this).siblings("i").addClass("on");
           }
-     });
+     }).icoTrigger();
 
 
       // 파일추가
@@ -155,7 +146,7 @@
             <ul class="list_form">
               <li>
                 <label for="" class="lb_txt req">Release Date</label>
-                <span class="ip_date" style="width:312px;"><input type="text" class="ip_txt bold"></span>
+                <span class="ip_date" style="width:312px;"><input type="text" class="ip_txt bold"><i class="ico_trig"></i></span>
                 <span class="ip_check type2 ml30"><input type="checkbox" name="" value="" id="check01"><label for="check01">Fast Track (Urgent)</label></span>
               </li>
             </ul>

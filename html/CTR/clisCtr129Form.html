@@ -16,8 +16,14 @@
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
+            var dateOption = {
+                startView: 2,
+                minView: 2,
+                maxView: 4,
+                format: 'yyyy-mm-dd'
+            };
+            $(".ip_date input").datetimepicker($.extend(uiCommon.datepickerOption, dateOption)).icoTrigger();
             $(".ip_del").inputTextFocus();
-            $('.ip_date input').datetimepicker(uiCommon.datepickerOption).icoTrigger();
         });
     </script>
 </head>

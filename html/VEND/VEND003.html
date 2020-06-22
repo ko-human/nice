@@ -5,18 +5,21 @@
     <meta name="format-detection" content="telephone=no" />
     <title></title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
-    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-3.4.1.min.js" charset="UTF-8"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
     $(function(){
       // input
       $(".ip_del").inputTextFocus();
 
-      $(".ip_date input").datepicker(uiCommon.datepickerOption);
+      $(".ip_date input").datetimepicker(uiCommon.datepickerOption).icoTrigger();
 
       // tab select
       $('ul.tab_list li').click(function(){
@@ -59,7 +62,7 @@
           </li>
           <li>
             <label for="" class="lb_txt">Period</label>
-            <span class="ip_date" style="width:220px;"><input type="text" class="ip_txt"></span>
+            <span class="ip_date" style="width:220px;"><input type="text" class="ip_txt"><i class="ico_trig"></i></span>
           </li>
           <li>
             <label for="" class="lb_txt">M. B/L No.</label>

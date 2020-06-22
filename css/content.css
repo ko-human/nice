@@ -972,7 +972,7 @@ a.ui-datepicker-title {padding:0;}
 /* calender */
 .datetimepicker {position: absolute;width:290px;margin-top:5px;padding:8px !important;box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);background: #fff;}
 .table-condensed {width:100%;}
-.datetimepicker td, .datetimepicker th {height:24px !important;}
+.datetimepicker td, .datetimepicker th {height:auto;padding:7px 5px !important;}
 .datetimepicker th.dow {font-size:11px;padding: 5px 0 6px;color: #6b778c;font-weight: 500;}
 .datetimepicker table tr td.active {position: relative;background: transparent;}
 .datetimepicker table tr td.active:before {z-index: -1;position: absolute;left:50%;margin-left:-13px;top:50%;margin-top:-13px;content:'';width:26px;height:26px;background-color:#0080c6;border-radius: 50%;}

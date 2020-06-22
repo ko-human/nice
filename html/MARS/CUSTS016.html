@@ -5,17 +5,24 @@
     <meta name="format-detection" content="telephone=no" />
     <title>Mars</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
-    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-3.4.1.min.js" charset="UTF-8"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../script/lib/bootstrap-datepicker.js"></script>
+    <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
-            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
+            var dateOption = {
+                startView: 2,
+                minView: 2,
+                maxView: 4,
+                format: 'yyyy-mm-dd'
+            };
+            $(".ip_date input").datetimepicker($.extend(uiCommon.datepickerOption, dateOption)).icoTrigger();
             $(".ip_del").inputTextFocus();
         });
     </script>

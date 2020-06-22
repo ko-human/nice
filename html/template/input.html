@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title>input</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
-    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
-    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-3.4.1.min.js" charset="UTF-8"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../script/ui_common.js"></script>
-    <script src="../../script/lib/bootstrap-datepicker.js"></script>
+    <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script src="../../script/ui_common.js"></script>
     <style type="text/css">
 
@@ -22,21 +22,21 @@
     <script type="text/javascript">
 
     $(function(){
-
-      $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
+      // $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
+      $(".ip_date input").datetimepicker(uiCommon.datepickerOption).icoTrigger();
       $(".ip_del").inputTextFocus();
       $(".ip_filter").inputTextFocus();
       $(".ip_file").fileReady();
 
 
       // 시간선택
-      var timeOpt = $.extend(uiCommon.datepickerOption , {
-        // timepicker 설정
-        timeFormat:'HH:mm:ss',
-        controlType:'select',
-        oneLine:true
-      });
-      $(".ip_date input.type_time").datetimepicker(timeOpt);
+      // var timeOpt = $.extend(uiCommon.datepickerOption , {
+      //   // timepicker 설정
+      //   timeFormat:'HH:mm:ss',
+      //   controlType:'select',
+      //   oneLine:true
+      // });
+      // $(".ip_date input.type_time").datetimepicker(timeOpt);
 
 
     });
