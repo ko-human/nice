@@ -1033,7 +1033,12 @@ a.ui-datepicker-title {padding:0;}
 .shipment_list .desc_clause .box_port .date_info .est_date {position: relative;display: inline-block;font-size: 14px;line-height: 30px;color: #45474e;vertical-align: middle;}
 .shipment_list .desc_clause .box_port .date_info .est_date i.on {position: absolute;left:105px;top: 50%;margin-top: -6px;padding: 1px 3px;line-height: 11.5px;text-align: center;font-size: 9px;color: #fff;background: #ec8922;border-radius: 3px;white-space: nowrap;}
 
-.shipment_list .desc_clause .list_form.remark .ip_txt .inner_list {width:100%;}
+.shipment_list .desc_clause .remark_list {min-height: 42px;padding: 12px 25px;box-sizing: border-box;background: #f6f8fa;}
+.shipment_list .desc_clause .remark_list li {display: inline-block;width:50%;margin: 8px 0;}
+.shipment_list .desc_clause .remark_list li dl dt {display: inline-block;width:150px;margin-right: 7px;font-size: 14px;line-height: 1;font-weight: 400;color: #8b919c;}
+.shipment_list .desc_clause .remark_list li dl dd {display: inline-block;font-size: 14px;}
+
+
 
 
 
