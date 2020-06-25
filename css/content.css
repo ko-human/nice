@@ -173,13 +173,15 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .btn.gray {background-color:#8b919c;}
 .btn.line {border:1px solid #dde2ea; color:#0080c6; background-color:#fff;}
 .btn.sm {line-height:32px; padding:0 14px; font-size:13px;  height:32px; }
-.btn.sm.ico_add, .btn.sm.ico_remove {width:32px; padding:0; font-size:0; position:relative;}
+.btn.sm.ico_add, .btn.sm.ico_remove, .btn.sm.ico_pdf {width:32px; padding:0; font-size:0; position:relative;}
 .btn.sm.ico_add:before, .btn.sm.ico_remove:before {content:""; position:absolute; top:50%; left:50%; margin:-1px 0 0 -6px; width:12px; height:2px; background:#0080c6;}
 .btn.sm.ico_add:after {content:""; position:absolute; top:50%; left:50%; margin:-6px 0 0 -1px; width:2px; height:12px; background:#0080c6;}
-.btn.ico_view_map, .btn.ico_download, .btn.ico_excel, .btn.ico_add, .btn.ico_del, .btn.ico_copy {padding-left:38px; background-repeat:no-repeat;}
+.btn.ico_view_map, .btn.ico_download, .btn.ico_excel, .btn.ico_add, .btn.ico_del, .btn.ico_copy, .btn.ico_simple {padding-left:38px; background-repeat:no-repeat;}
 .btn.ico_view_map {background:#fff url(../images/ico_viewmap_b.svg) no-repeat 11px center; }
 .btn.ico_download {background:#fff url(../images/ico_file_b.svg) no-repeat 11px center; }
-.btn.ico_excel {background:#fff url(../images/ico_excel_b.svg) no-repeat 11px center; }
+.btn.ico_simple {background:#fff url(../images/ico_simpledown_b.svg) no-repeat 11px center; }
+.btn.ico_pdf {background:#fff url(../images/ico_pdf_b.svg) no-repeat 49% center;}
+.btn.ico_excel, .btn.ico_ex {background:#fff url(../images/ico_excel_b.svg) no-repeat 11px center; }
 .btn.ico_add {background-image:url(../images/ico_plus_w.svg); background-position:11px center;}
 .btn.ico_del {background-image:url(../images/ico_minus_w.svg); background-position:11px center;}
 .btn.ico_copy {background-image:url(../images/ico_copy_w.svg); background-position:11px center;}
@@ -937,7 +939,7 @@ a.ui-datepicker-title {padding:0;}
 .tit_box .con_area .chart_area + .grid_wrap {margin-top:30px;}
 
 .manage_wrap.horizon_box .tit_box {display: inline-block;vertical-align: top;}
-.manage_wrap.horizon_box .tit_box+.tit_box {margin-left:20px;}
+.manage_wrap.horizon_box .tit_box+.tit_box {margin-left:20px;margin-top:20px;}
 
 /* ecopro */
 .foot_area .foot_info .btn.line.ico_search {width: 20px;height: 20px;padding: 0;margin: -3px 0 0 5px;background-size: 10px;}
@@ -1003,13 +1005,25 @@ a.ui-datepicker-title {padding:0;}
 .tit_right + .tit_box {margin-top: 10px;}
 .tit_wrap.tit_h4 {margin-top:30px;}
 .tit_h4 .tit_left h4 {font-size: 16px;font-weight: 500;}
+.tit_wrap.tit_h3 {margin-bottom:10px;}
+.tit_wrap.tit_h3 .tit_left h3 {font-size: 20px;font-weight: 500;color: #13161a;}
 
-/* partner */
-.detail_pick {height: 50px;padding: 19px 34px 14px;background-color: #e6ebf1;box-sizing: border-box;}
+.whole_box {display:table;padding-top:30px;}
+.whole_box .inner_box {display: table-cell;}
+.whole_box .inner_box + .inner_box {padding-left:30px;}
+.whole_box .tit_wrap>div.tit_right {width:60%;}
+.whole_box .tit_wrap>div.tit_left {vertical-align: middle;}
+
+.search_wrap .search_form li .radio_group.type1>li {height: 42px;}
+.search_wrap .search_form li .radio_group.type1>li label {font-weight: 400;}
+
+/* partner portal */
+.detail_pick {height: 50px;padding: 17px 34px;background-color: #e6ebf1;box-sizing: border-box;}
 .detail_pick .ip_check + .ip_check {margin-left:28px;}
 .detail_pick .ip_check label {font-size: 14px;color: #45474e;font-weight: 400;}
 
 .shipment_list .detail_info {padding:20px 30px 19px;box-sizing:border-box;border-top:1px solid #e6ebf1;}
+.shipment_list .detail_info:nth-child(1) {border-top:0;}
 .shipment_list .clause {display: inline-block;width: 290px;vertical-align: top;}
 .shipment_list .clause h3 {display: inline-block;font-size: 14px;font-weight: 500;line-height: 1.5;color: #45474e;}
 .shipment_list .clause h3 span {display:block;font-weight: 300;color: #6b6e72;}
@@ -1037,6 +1051,18 @@ a.ui-datepicker-title {padding:0;}
 .shipment_list .desc_clause .remark_list li {display: inline-block;width:50%;margin: 8px 0;}
 .shipment_list .desc_clause .remark_list li dl dt {display: inline-block;width:150px;margin-right: 7px;font-size: 14px;line-height: 1;font-weight: 400;color: #8b919c;}
 .shipment_list .desc_clause .remark_list li dl dd {display: inline-block;font-size: 14px;}
+
+.tit_box .tit_area {position: relative;}
+.tit_box .tit_area .btn_door {position: absolute;left:0;top:0;width: 100%;height: 100%;font-size: 0;background: url(../images/arr_bg_40.svg) no-repeat;background-size: 40px;background-position: 10px;transform: rotate(180deg);}
+.tit_box.open .tit_area .btn_door {transform: rotate(0deg);background-position: calc(100% - 10px);}
+
+.tit_box .tit_wrap.tit_inner {padding:34px 30px 20px;box-sizing: border-box;}
+.tit_box .tit_wrap.tit_inner .tit_left h4 {font-size: 16px;font-weight: 500;line-height: 1.19;color: #000;}
+
+.tit_wrap.tit_inner .btn.ico_add, .tit_wrap.tit_inner .btn.ico_remove, .tit_wrap.tit_inner .btn.ico_pdf {width:36px;height:36px;}
+.btn.ico_ex , .tit_wrap.tit_inner .ico_pdf {font-size: 0;width: 36px;height: 36px;padding: 0;background-position: 6px;}
+
+
 
 
 

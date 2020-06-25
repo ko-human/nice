@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>CTR</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js" charset="UTF-8"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var dateOption = {
+                startView: 2,
+                minView: 2,
+                maxView: 4,
+                format: 'yyyy-mm-dd'
+            };
+            $(".ip_date input").datetimepicker($.extend(uiCommon.datepickerOption, dateOption)).icoTrigger();
+            $(".ip_del").inputTextFocus();
+        });
+    </script>
+</head>
+<body>
+
+    <div class="manage_wrap">
+        <!-- 제목 -->
+        <div class="tit_wrap tit_h1">
+            <div class="tit_left">
+                <h2>Partner B/L Registration</h2>
+            </div>
+            <div class="tit_right">
+                <div class="btn_list">
+                    <a href="javascript:" class="btn line add_line">Add Row</a>
+                    <a href="javascript:" class="btn line del_line">Delete Row</a>
+                    <a href="javascript:" class="btn save">Save</a>
+                    <a href="javascript:" class="btn line ico_excel">Excel</a>
+                </div>
+            </div>
+        </div>
+        <!-- //제목 -->
+        <!-- 검색 -->
+        <div class="search_wrap">
+            <ul class="search_form">
+                <li>
+                    <label for="" class="lb_txt check">Period</label>
+                    <select class="select" name="" style="width:100px">
+                        <option value="">ETA</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
+                    <div class="inblock">
+                      <ul class="ip_group ip_from_to" style="width:320px;">
+                        <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
+                        <li class="line">~</li>
+                        <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
+                      </ul>
+                    </div>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">House B/L</label>
+                    <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Master B/L</label>
+                    <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li class="btns">
+                    <a href="javascript:" class="btn lg line ico_search">검색</a>
+                </li>
+            </ul>
+        </div>
+        <!-- //검색 -->
+        <!--  타이틀 박스 -->
+        <div class="tit_box">
+            <div class="con_area">
+                <div class="grid_wrap" style="height:430px">
+                    그리드영역 height : 430px;
+                </div>
+            </div>
+            <div class="foot_area">
+                <!-- result -->
+                <div class="grid_result">
+                    <p>Count :<span>201</span></p>
+                </div>
+                <!--// result -->
+            </div>
+        </div>
+        <!-- // 타이틀 박스 -->
+
+        <!-- 가로나열형 박스 -->
+        <div class="whole_box">
+
+            <div class="inner_box" style="width:870px;">
+                <!-- 제목 -->
+                <div class="tit_wrap tit_h3">
+                    <div class="tit_left">
+                        <h3>Container Registration</h3>
+                    </div>
+                    <div class="tit_right">
+                        <div class="btn_list">
+                            <a href="javascript:" class="btn line add_line">Add Row</a>
+                            <a href="javascript:" class="btn line del_line">Delete Row</a>
+                            <a href="javascript:" class="btn save">Save</a>
+                            <a href="javascript:" class="btn line ico_excel">Excel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //제목 -->
+
+                <!--  타이틀 박스 -->
+                <div class="tit_box">
+                    <div class="con_area">
+                        <div class="grid_wrap" style="height:430px">
+                            그리드영역 height : 430px;
+                        </div>
+                    </div>
+                    <div class="foot_area">
+                        <!-- result -->
+                        <div class="grid_result">
+                            <p>Count :<span>201</span></p>
+                        </div>
+                        <!--// result -->
+                    </div>
+                </div>
+                <!-- // 타이틀 박스 -->
+            </div>
+
+            <div class="inner_box">
+                <!-- 제목 -->
+                <div class="tit_wrap tit_h3">
+                    <div class="tit_left">
+                        <h3>Invoice Registration</h3>
+                    </div>
+                    <div class="tit_right">
+                        <div class="btn_list">
+                            <a href="javascript:" class="btn line add_line">Add Row</a>
+                            <a href="javascript:" class="btn line del_line">Delete Row</a>
+                            <a href="javascript:" class="btn save">Save</a>
+                            <a href="javascript:" class="btn line ico_excel">Excel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //제목 -->
+
+                <!--  타이틀 박스 -->
+                <div class="tit_box">
+                    <div class="con_area">
+                        <div class="grid_wrap" style="height:430px">
+                            그리드영역 height : 430px;
+                        </div>
+                    </div>
+                    <div class="foot_area">
+                        <!-- result -->
+                        <div class="grid_result">
+                            <p>Count :<span>201</span></p>
+                        </div>
+                        <!--// result -->
+                    </div>
+                </div>
+                <!-- // 타이틀 박스 -->
+            </div>
+
+        </div>
+        <!-- //가로나열형 박스 -->
+    </div>
+</body>
+
+</html>

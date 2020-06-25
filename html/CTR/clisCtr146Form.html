@@ -16,7 +16,13 @@
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
-            $(".ip_date input").not(".type_time").datetimepicker(uiCommon.datepickerOption).icoTrigger();
+            var dateOption = {
+                startView: 2,
+                minView: 2,
+                maxView: 4,
+                format: 'yyyy-mm-dd'
+            };
+            $(".ip_date input").datetimepicker($.extend(uiCommon.datepickerOption, dateOption)).icoTrigger();
             $(".ip_del").inputTextFocus();
 
             // 비활성화 상태인 버튼의 경우, 배경색 gray로 변경 (개발 시, 하단 스크립트 삭제)
@@ -30,11 +36,11 @@
         <!-- 제목 -->
         <div class="tit_wrap tit_h1">
             <div class="tit_left">
-                <h2>In-transit Inventory by Item</h2>
+                <h2>재고관리 (포스코대우)</h2>
             </div>
             <div class="tit_right">
                 <div class="btn_list">
-                    <a href="javascript:" class="btn save">Save</a>
+                    <input type="button" value="Save" class="btn_scan" onClick=""><!-- 상단 스크립트 내용(버튼) 확인 필. -->
                     <a href="javascript:" class="btn line ico_excel">Excel</a>
                 </div>
             </div>
@@ -44,20 +50,31 @@
         <div class="search_wrap">
             <ul class="search_form">
                 <li>
-                    <label for="" class="lb_txt check">Item No.</label>
-                    <span class="ip_del" style="width:200px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
-                </li>
-                <li>
-                    <label for="" class="lb_txt">Buyer</label>
-                    <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
-                </li>
-                <li>
-                    <label for="" class="lb_txt">ABR. Center</label>
-                    <select class="select" name="" style="width:320px">
-                        <option value="">ALL</option>
+                    <label for="" class="lb_txt check">Date</label>
+                    <select class="select" name="" style="width:150px">
+                        <option value="">ERP 출고요청일</option>
                         <option value="">OO No.</option>
                         <option value="">OO No.</option>
                     </select>
+                    <div class="inblock">
+                      <ul class="ip_group ip_from_to" style="width:320px;">
+                        <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
+                        <li class="line">~</li>
+                        <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
+                      </ul>
+                    </div>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Item No. (SKU)</label>
+                    <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">출고센터</label>
+                    <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">출고오더번호</label>
+                    <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                 </li>
                 <li class="btns">
                     <a href="javascript:" class="btn lg line ico_search">검색</a>
@@ -73,14 +90,14 @@
                 </div>
             </div>
             <div class="foot_area">
-                <!-- result (조회 후, grid_result에 class 추가 : after) -->
+                <!-- result -->
                 <div class="grid_result">
                     <p>Count :<span>201</span></p>
-                    <em class="foot_info">※ This page is not searched at first.</em>
                 </div>
                 <!--// result -->
             </div>
         </div>
     </div>
 </body>
+
 </html>

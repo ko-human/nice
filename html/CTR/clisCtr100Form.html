@@ -27,11 +27,11 @@
         <!-- 제목 -->
         <div class="tit_wrap tit_h1">
             <div class="tit_left">
-                <h2>W.H. Balance On Hand</h2>
+                <h2>Goods Receipt by Pallet</h2>
             </div>
             <div class="tit_right">
                 <div class="btn_list">
-                    <a href="javascript:" class="btn w100">Save</a>
+                    <a href="javascript:" class="btn save">Save</a>
                     <a href="javascript:" class="btn line ico_excel">Excel</a>
                 </div>
             </div>
@@ -41,8 +41,27 @@
         <div class="search_wrap">
             <ul class="search_form">
                 <li>
-                    <label for="" class="lb_txt">Item No.</label>
-                    <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <label for="" class="lb_txt check">Period</label>
+                    <select class="select" name="" style="width:100px">
+                        <option value="">ETA</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
+                    <div class="inblock">
+                      <ul class="ip_group ip_from_to" style="width:320px;">
+                        <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
+                        <li class="line">~</li>
+                        <li><span class="ip_date"><input type="text" class="ip_txt"><i class="ico_trig"></i></span></li>
+                      </ul>
+                    </div>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Transit Type</label>
+                    <select class="select" name="" style="width:120px">
+                        <option value="">ALL</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
                 </li>
                 <li>
                     <label for="" class="lb_txt">ABR. Center</label>
@@ -53,15 +72,35 @@
                     </select>
                 </li>
                 <li>
-                    <label for="" class="lb_txt">Pallet No.</label>
-                    <span class="ip_del" style="width:250px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
-                </li>
-                <li class="chk_only">
-                    <label for="" class="lb_txt check">Buyer View</label>
-                    <span class="ip_check"><input type="checkbox" name="" value="" id="goods"><label for="goods">Checkbox</label></span>
+                    <label for="" class="lb_txt">Origin Issued</label>
+                    <select class="select" name="" style="width:120px">
+                        <option value="">ALL</option>
+                        <option value="">OO No.</option>
+                        <option value="">OO No.</option>
+                    </select>
                 </li>
                 <li>
-                    <label for="" class="lb_txt">Buyer.</label>
+                    <label for="" class="lb_txt">H.B/L</label>
+                    <span class="ip_del" style="width:250px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">M.B/L</label>
+                    <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">CNTR. Invoice</label>
+                    <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">CNTR. No.</label>
+                    <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Pallet No.</label>
+                    <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Buyer</label>
                     <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                 </li>
                 <li class="btns">
