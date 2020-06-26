@@ -203,7 +203,10 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .btn.lg.ico_search {width:42px; font-size:0; background-image:url(../images/ico_search_w.svg); background-repeat:no-repeat; background-position:center center;}
 .btn.lg.line.ico_reset {width:42px; font-size:0; background-image:url(../images/ico_reset.svg); background-repeat:no-repeat; background-position:center center;}
 .btn.line.ico_search {width:42px; font-size:0; background-image:url(../images/ico_search_g.svg); background-repeat:no-repeat; background-position:center center;}
-
+.btn.line.add_line {background: #fff url(../images/ico_plus.svg) no-repeat;background-position: 12px 50%;background-size: 20px;padding:0 16px 0 37px;}
+.del_line {position: relative;padding:0 16px 0 39px;}
+.reset {background: #fff url(../images/ico_reset_b.svg) no-repeat 19px 11px;background-size: 12px;padding:0 16px 0 37px;}
+.btn.save, .btn.delete, .btn.mail, .btn.new, .btn.w100 {width:100px;}
 .btn_ico {line-height:20px; display:inline-block; font-size:14px; color:#45474e; background-repeat:no-repeat;}
 .btn_ico.excel {padding-left:22px; background-image:url(../images/ico_bn_file.svg);}
 
@@ -338,7 +341,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .list_sub>li:nth-child(3n) {margin-right:0;}
 .list_sub>li:nth-child(1),.list_sub>li:nth-child(2), .list_sub>li:nth-child(3) {margin-top:0;}
 .list_sub>li .box.warning {border-color:#ec8922;}
-.list_sub>li .box.warning .btn_bell {background-image:url(../images/ico_alarm_warn.svg);}
+.list_sub>li .box.bell .btn_bell {background-image:url(../images/ico_alarm_warn.svg);}
 .list_sub>li .box.alarm .btn_bell {background-image:url(../images/ico_alarm_set.svg);}
 .list_sub>li.on .box .sub_box {border:solid 4px #0080c6; background-color:rgba(0, 128, 198, 0.1);padding: 18px 16px;}
 
@@ -586,7 +589,7 @@ a.ui-datepicker-title {padding:0;}
 .sub_main_wrap>div.main_left {width:1030px;}
 .sub_main_wrap>div.main_right {margin-left:45px; width:690px;}
 .sub_main_box {padding:30px; min-height:798px; box-sizing:border-box;}
-.sub_main_box.nodata {position:relative; height:798px;  background:url(../images/bg_sub_con.png) no-repeat;}
+.sub_main_box.nodata {position:relative; height:798px; background:url(../images/bg_sub_con.png) no-repeat;background-size: 100%;border-radius: 20px;}
 .sub_main_box.nodata:before {content:""; position:absolute; top:50%; left:50%; margin:-45px 0 0 -130px; width:261px; height:91px; background:url(../images/logo_gray.svg) no-repeat;}
 .sub_main_box .fc_btns {margin:10px 0 20px; text-align:right;}
 .sub_main_box .chart_box {margin-top:10px; margin-bottom:15px; background-color:#f1f1f1;}
@@ -671,7 +674,7 @@ a.ui-datepicker-title {padding:0;}
 
 .pop_tracking {top:80px; right:0; bottom:0; width:655px; }
 
-/* 트래킹 popup */
+/* tracking popup */
 .pop_map .map_wrap {position:relative;height:700px; box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);background-color: #fff;}
 .pop_map .btn_closed {position:absolute; top:25px; right:26px;width:30px; height:30px; font-size:0; background:url(../images/ico_closed.svg) no-repeat;}
 .pop_map .pop_tit {padding-top:20px;padding-left:30px;}
@@ -927,10 +930,6 @@ a.ui-datepicker-title {padding:0;}
 .manage_wrap .btn_bottom.type2 {text-align: right;margin-top: 30px;padding-top: 0;border-top:0;}
 .manage_wrap .btn_bottom.type2 .btn:not(.line) {width:100px;}
 .manage_wrap .btn_bottom.type2 .btn+.btn {margin-left: 8px;}
-.add_line {background: #fff url(../images/ico_plus.svg) no-repeat;background-position: 12px 50%;background-size: 20px;padding:0 16px 0 37px;}
-.del_line {position: relative;padding:0 16px 0 39px;}
-.reset {background: #fff url(../images/ico_reset_b.svg) no-repeat 19px 11px;background-size: 12px;padding:0 16px 0 37px;}
-.btn.save, .btn.delete, .btn.mail, .btn.new, .btn.w100 {width:100px;}
 
 .foot_area .grid_result {width: 100%;padding: 0 30px;box-sizing: border-box;}
 .foot_area .grid_result p {display: inline-block;font-size: 14px;color:#6b6e72;line-height: 50px;}
@@ -1017,6 +1016,21 @@ a.ui-datepicker-title {padding:0;}
 .search_wrap .search_form li .radio_group.type1>li {height: 42px;}
 .search_wrap .search_form li .radio_group.type1>li label {font-weight: 400;}
 
+.report_box {position:relative;margin-top:10px;padding:10px 40px 10px 30px;box-sizing: border-box;width:100%;border: 1px solid  #dde2ea;background: #fff;}
+.report_box .report_left {position:absolute;top: 50%;margin-top: -18px;}
+.report_box .report_left .txt_report {font-size: 14px;font-weight: 500;margin-right:18px;}
+
+.report_list {margin-left: 298px;padding:17px 40px 17px 61px;box-sizing: border-box;counter-reset: reportway;background-color: #f6f8fa;}
+.report_list li {position: relative;display: inline-block;line-height: 20px;}
+.report_list li:before {content:counter(reportway);counter-increment: reportway;position: absolute;left:-21px;top:50%;margin-top:-8px;width:16px;height:16px;background-color: #0080c6;color:#fff;border-radius: 2em;text-align: center;line-height: 16px;font-size: 12px;font-weight: 500;}
+.report_list li + li {margin-left: 56px;}
+.report_list li p {font-size: 14px;font-weight: normal;color: #6b6e72;}
+.report_list li p .btn_link {display:inline-block;font-weight: 500;color: #1f81cc;text-decoration: underline;}
+.report_list li p em {display:inline-block;font-weight: 500;color: #6b6e72;}
+
+
+
+
 /* partner portal */
 .detail_pick {height: 50px;padding: 17px 34px;background-color: #e6ebf1;box-sizing: border-box;}
 .detail_pick .ip_check + .ip_check {margin-left:28px;}
@@ -1055,7 +1069,6 @@ a.ui-datepicker-title {padding:0;}
 .tit_box .tit_area {position: relative;}
 .tit_box .tit_area .btn_door {position: absolute;left:0;top:0;width: 100%;height: 100%;font-size: 0;background: url(../images/arr_bg_40.svg) no-repeat;background-size: 40px;background-position: 10px;transform: rotate(180deg);}
 .tit_box.open .tit_area .btn_door {transform: rotate(0deg);background-position: calc(100% - 10px);}
-
 .tit_box .tit_wrap.tit_inner {padding:34px 30px 20px;box-sizing: border-box;}
 .tit_box .tit_wrap.tit_inner .tit_left h4 {font-size: 16px;font-weight: 500;line-height: 1.19;color: #000;}
 
