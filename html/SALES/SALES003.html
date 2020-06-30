@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>서브메인</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      //  정렬
+      $(".sort_list").on("click", function(){
+        $(this).toggleClass("desc");
+      });
+
+      // 타일선택
+      $(".list_sub>li").on("click", function(e) {
+        $(this).siblings(".on").removeClass("on").end().addClass("on");
+      });
+
+      // 타일 로드 (개발시 삭제)
+      $(".list_sub li:first").load("../tile/sub_live.html");
+      $(".sub_main_box").load("SALES004.html");
+    });
+    </script>
+  </head>
+  <body>
+
+    <div class="sub_main_wrap">
+      <div class="main_left">
+        <!-- 제목 -->
+        <div class="tit_wrap tit_h1">
+          <div class="tit_left">
+            <h2>Sales KPIs</h2>
+          </div>
+        </div>
+        <!-- //제목 -->
+
+        <!-- 검색 (Customer Portal의 서브메인과 다른 부분) -->
+        <div class="search_wrap sales">
+            <ul class="search_form">
+                <li>
+                    <label for="" class="lb_txt">TOP</label>
+                    <select class="select" name="" style="width:138px;">
+                        <option value="">CJ 대한통운</option>
+                        <option value="">type1</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">TNT</label>
+                    <select class="select" name="" style="width:138px;">
+                        <option value="">Global Forwarding</option>
+                        <option value="">type1</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">GRP</label>
+                    <select class="select" name="" style="width:138px;">
+                        <option value="">Global</option>
+                        <option value="">type1</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">RGN</label>
+                    <select class="select" name="" style="width:138px;">
+                        <option value="">DSC</option>
+                        <option value="">type1</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">DPT</label>
+                    <select class="select" name="" style="width:138px;">
+                        <option value="">Shanghai</option>
+                        <option value="">type1</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">TEM</label>
+                    <select class="select" name="" style="width:138px;">
+                        <option value="">Sales</option>
+                        <option value="">type1</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">USER</label>
+                    <select class="select" name="" style="width:138px;">
+                        <option value="">ALL</option>
+                        <option value="">type1</option>
+                    </select>
+                </li>
+                <li class="btns">
+                    <a href="javascript:" class="btn lg line ico_search">검색</a>
+                </li>
+            </ul>
+        </div>
+        <!-- //검색 -->
+
+        <!-- 서브 타일 -->
+        <ul class="list_sub">
+          <!-- 반복 -->
+          <li>
+            <!-- ../tile/sub_live.html -->
+          </li>
+          <!-- //반복 -->
+          <li class="on">
+            <div class="box line">
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>신규수주 달성액</strong>
+                  <span>총 16.6억 누적/년</span>
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                  <div class="result">
+                    <strong>96</strong><span>%</span>
+                  </div>
+                  <div class="chart_area">차트영역</div>
+                </div>
+                <span href="javascript:" class="con_data"><a href="javascript:" class="btn_data">데이터보기<img src="../../images/new_window.svg" alt="데이터보기"></a></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box line alarm">
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>수주 성공율</strong>
+                  <!-- <span>총 6건</span> -->
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                  <div class="result">
+                    <ul class="index_list">
+                        <li>
+                            <dl>
+                                <dt>Pending</dt>
+                                <dt class="active">Acitve</dt>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dd><em>22</em>건</dd>
+                                <dd class="active"><em>33</em>건</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dd><em>212</em>days</dd>
+                                <dd class="active"><em>32.3</em>days</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                <span href="javascript:" class="con_data"><a href="javascript:" class="btn_data">데이터보기<img src="../../images/new_window.svg" alt="데이터보기"></a></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box line warning bell">
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>Closed Opp.</strong>
+                  <!-- <span>총 157건</span> -->
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                  <div class="result tac">
+                      <div class="desc_num corp">
+                          <strong>123</strong>
+                          <em>개사</em>
+                      </div>
+                      <div class="desc_num money">
+                          <strong>3,120</strong>
+                          <em>억원</em>
+                      </div>
+                  </div>
+                </div>
+                <span href="javascript:" class="con_data"><a href="javascript:" class="btn_data">데이터보기<img src="../../images/new_window.svg" alt="데이터보기"></a></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box line no_chart"><!-- 차트 없을 때, class추가 : no_chart -->
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>신규수주 목표대비</strong>
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                    <div class="result">
+                      <strong>96</strong><span>%</span>
+                    </div>
+                    <div class="chart_area">차트영역</div>
+                </div>
+                <span href="javascript:" class="con_data"><a href="javascript:" class="btn_data">데이터보기<img src="../../images/new_window.svg" alt="데이터보기"></a></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box line warning">
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>채권현황</strong>
+                  <span>2020년 1/4분기</span>
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                  <div class="result">
+                    <strong>2</strong><span>개사</span>
+                  </div>
+                  <div class="chart_area">차트영역</div>
+                </div>
+                <span href="javascript:" class="con_data"><a href="javascript:" class="btn_data">데이터보기<img src="../../images/new_window.svg" alt="데이터보기"></a></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box line warning">
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>부킹 정시성</strong>
+                  <span>총 157건</span>
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                  <div class="result">
+                    <strong>96</strong><span>%</span>
+                  </div>
+                  <div class="chart_area">차트영역</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box line bell">
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>해상 물동량/이익</strong>
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                  <div class="chart_area">차트영역</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box line">
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>상위 5개 기업 매출/이익</strong>
+                  <!-- <span>총 157건</span> -->
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                  <div class="result">
+                    <strong>96</strong><span>%</span>
+                  </div>
+                  <div class="chart_area">차트영역</div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- // 서브 타일-->
+      </div>
+      <div class="main_right">
+        <div class="sub_main_box box shadow"><!-- 데이터가 없는 경우 nodata 클래스 추가 -->
+
+          <!-- CUST004.html -->
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
