@@ -14,9 +14,6 @@
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script src="../../script/ui_common.js"></script>
-    <!-- 구글맵 테스트. 개발시 삭제 -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwlNqAEil52XRPHmSVb4Luk18qQG9GqcM&sensor=false&language=ko"></script>
-
     <script type="text/javascript">
         $(function() {
             //input
@@ -28,74 +25,6 @@
                 format: 'yyyy-mm-dd'
             };
             $(".ip_date input").datetimepicker($.extend(uiCommon.datepickerOption, dateOption)).icoTrigger();
-
-            // 정렬
-            $(".sort_list").on("click", function(e) {
-                $(this).toggleClass("desc");
-                e.preventDefault();
-            });
-
-            // 아코디언
-            $(".view_item .btn_toggle").on("click", function(e) {
-                $(this).parent().toggleClass("open");
-                e.preventDefault();
-            });
-
-            $(".cont_tab a").on("click", function() {
-                $(this).parent().parent().find("a.on").removeClass("on").end().end().end().addClass("on");
-            });
-
-            // 스크롤바
-            $(".pop_con, .cont_list_wrap>.left").mCustomScrollbar();
-
-            // 상세 팝업
-            $(".track_list .track_box").on("click", function(e) {
-                $("#popDetail").show();
-            });
-
-            // 트래킹맵 팝업
-            $(".btn.ico_view_map").on("click", function(e) {
-                $("#popMap").show();
-            });
-
-            // 팝업 닫기
-            $("#popDetail .btn_closed").on("click", function(e) {
-                $("#popDetail").hide();
-                e.preventDefault();
-            });
-
-            // 팝업 닫기
-            $("#popMap .btn_closed").on("click", function(e) {
-                $("#popMap").hide();
-            });
-
-            //viewmap, download 선택
-            $(".btns_area a").on("click", function(e) {
-                console.log("클릭");
-                e.preventDefault();
-                e.stopPropagation();
-            });
-
-            // 구글 맵 테스트. 개발시 삭제
-            function initialize() {
-                var myLatlng = new google.maps.LatLng(37.562760, 126.970874); // 좌표값
-
-                var mapOptions = {
-                    zoom: 4,
-                    center: myLatlng,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    title: "순화빌딩"
-                });
-
-            }
-
-            window.onload = initialize;
-
         });
     </script>
 </head>
@@ -107,15 +36,21 @@
             <div class="tit_left">
                 <h2>Cargo Tracking</h2>
             </div>
+            <div class="tit_right">
+                <div class="btn_list">
+                    <a href="javascript:" class="btn line ico_view_map">view map all</a>
+                    <a href="javascript:" class="btn line ico_excel">Excel</a>
+                </div>
+            </div>
         </div>
 
         <!-- 검색 -->
         <div class="search_wrap">
             <ul class="search_form">
                 <li>
-                    <label for="" class="lb_txt">Date</label>
+                    <label for="" class="lb_txt">Period</label>
                     <select class="select" name="" style="width:100px;">
-                        <option value="">ETD</option>
+                        <option value="">ETA</option>
                         <option value="">ABC</option>
                     </select>
                     <div class="inblock">
@@ -127,32 +62,37 @@
                     </div>
                 </li>
                 <li>
-                    <label for="" class="lb_txt">Booking No.</label>
-                    <select class="select" name="" style="width:100px;">
+                    <label for="" class="lb_txt"></label>
+                    <select class="select" name="" style="width:120px;">
                         <option value="">H.B/L</option>
                         <option value="">type1</option>
                     </select>
-                    <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt" placeholder="Booking No."><a href="#" class="btn_txt_del">삭제</a></span>
+                </li>
+                <li>
+                    <label for="" class="lb_txt">Order by</label>
+                    <select class="select" name="" style="width:120px;">
+                        <option value="">POL</option>
+                        <option value="">type1</option>
+                    </select>
+                    <div class="inblock">
+                        <select class="select" name="" style="width:120px;">
+                            <option value="">ascent</option>
+                            <option value="">type1</option>
+                        </select>
+                    </div>
                 </li>
                 <li class="btns">
-                    <a href="#" class="btn lg line ico_search">검색</a>
+                    <a href="javascript:" class="btn lg line ico_search">검색</a>
                 </li>
             </ul>
         </div>
         <!-- //검색 -->
 
         <!-- 리스트 타이틀 -->
-        <div class="tit_wrap tit_list">
+        <div class="tit_wrap tit_track">
             <div class="tit_left">
                 <span class="total_items indent">Total <span>9</span> Items</span>
-            </div>
-            <div class="tit_right">
-                <ul class="list_opt">
-                    <li>
-                        <span>Order By</span>
-                        <a href="#" class="sort_list desc">Modify Date</a>
-                    </li>
-                </ul>
             </div>
         </div>
         <!-- //리스트 타이틀 -->
@@ -164,47 +104,46 @@
                 <div class="track_info">
                     <div class="tit_area">
                         <strong class="tit">Book-9981475</strong>
-                        <span class="sub">Skin care cosmetics </span>
                     </div>
                     <div class="status building">
                         <!-- 아이콘 클래스 building | airplane | truck | container | ship  -->
                         <div class="txt">
                             <strong>SHPR</strong>
-                            <span> • Weather delay : Air Busan ABL8809</span>
+                            <span>INNISFREE CO., LTD / ETD</span>
                         </div>
                     </div>
                     <ul class="detail">
                         <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
-                        <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
-                        <li><span class="tit">Container # </span><span class="txt">2517712</span><span class="sup">+10</span></li>
+                        <li><span class="tit">PO. # </span><span class="txt">CJL988D253886</span></li>
+                        <li><span class="tit">Container # </span><span class="txt">CAPUS517712</span><span class="sup">+10</span></li>
                         <li><span class="tit">Package : </span><span class="txt">29</span></li>
                     </ul>
                 </div>
                 <div class="track_step step0">
-                    <!-- 단계 클래스 step0~7  -->
+                    <!-- 단계 클래스 step0~6  -->
                     <ul class="step_list">
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">Innispree Corporation</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">SHANGHAI, CHINA</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Shanghai Pudong International Airport (CNPVG)</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Long Beach Airport(LGB)</strong>
+                                <span class="txt">ETA <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">AMOREPACIFIC SINGAPORE</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">LONG BEACH, USA</strong>
+                                <span class="txt">ETA <em>2020-03-25</em></span>
                             </div>
                         </li>
                     </ul>
@@ -214,7 +153,7 @@
                 </div>
                 <div class="btns_area">
                     <a href="javascript:" class="btn sm line ico_view_map">View map</a>
-                    <a href="javascript:" class="btn sm line ico_download">download</a>
+                    <a href="javascript:" class="btn sm line ico_download">document</a>
                 </div>
             </div>
             <!--  //반복 -->
@@ -223,55 +162,52 @@
                 <div class="track_info">
                     <div class="tit_area">
                         <strong class="tit">Book-9981475</strong>
-                        <span class="sub">Skin care cosmetics </span>
                     </div>
-                    <div class="status airplane">
+                    <div class="status truck">
                         <div class="txt">
-                            <strong>In transit arrival airport</strong>
-                            <span> • Weather delay : Air Busan ABL8809</span>
+                            <strong>Trucking</strong>
+                            <span>Pickup at 20-03-18 16:10</span>
                         </div>
                     </div>
                     <ul class="detail">
                         <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
-                        <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
-                        <li><span class="tit">Container # </span><span class="txt">2517712</span><span class="sup">+10</span></li>
+                        <li><span class="tit">PO. # </span><span class="txt">CJL988D253886</span></li>
+                        <li><span class="tit">Container # </span><span class="txt">CAPUS517712</span><span class="sup">+10</span></li>
                         <li><span class="tit">Package : </span><span class="txt">29</span></li>
                     </ul>
                 </div>
-                <div class="track_step step3">
+                <div class="track_step step1">
                     <ul class="step_list">
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">Innispree Corporation</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">SHANGHAI, CHINA</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Shanghai Pudong International Airport (CNPVG)</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Long Beach Airport(LGB)</strong>
+                                <span class="txt">ETA <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">AMOREPACIFIC SINGAPORE</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">LONG BEACH, USA</strong>
+                                <span class="txt">ETA <em>2020-03-25</em></span>
                             </div>
                         </li>
                     </ul>
-                    <div class="bar airplane">
-                        <span class="txt">25%</span>
-                    </div>
+                    <div class="bar truck"></div>
                 </div>
                 <div class="btns_area">
                     <a href="javascript:" class="btn sm line ico_view_map">View map</a>
-                    <a href="javascript:" class="btn sm line ico_download">download</a>
+                    <a href="javascript:" class="btn sm line ico_download">document</a>
                 </div>
             </div>
 
@@ -279,18 +215,17 @@
                 <div class="track_info">
                     <div class="tit_area">
                         <strong class="tit">Book-9981475</strong>
-                        <span class="sub">Skin care cosmetics </span>
                     </div>
                     <div class="status container">
                         <div class="txt">
                             <strong>POL</strong>
-                            <span> • Package is arrived <span class="bold">CNSHA</span> at 20-03-25 16:15</span>
+                            <span>arrived <em class="bold">KRBUS</em> at 20-03-25 16:15</span>
                         </div>
                     </div>
                     <ul class="detail">
                         <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
-                        <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
-                        <li><span class="tit">Container # </span><span class="txt">2517712</span><span class="sup">+10</span></li>
+                        <li><span class="tit">PO. # </span><span class="txt">CJL988D253886</span></li>
+                        <li><span class="tit">Container # </span><span class="txt">CAPUS517712</span><span class="sup">+10</span></li>
                         <li><span class="tit">Package : </span><span class="txt">29</span></li>
                     </ul>
                 </div>
@@ -298,35 +233,34 @@
                     <ul class="step_list">
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">Innispree Corporation</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">SHANGHAI, CHINA</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Shanghai Pudong International Airport (CNPVG)</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Long Beach Airport(LGB)</strong>
+                                <span class="txt">ETA <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">AMOREPACIFIC SINGAPORE</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">LONG BEACH, USA</strong>
+                                <span class="txt">ETA <em>2020-03-25</em></span>
                             </div>
                         </li>
                     </ul>
-                    <div class="bar container">
-                    </div>
+                    <div class="bar container"></div>
                 </div>
                 <div class="btns_area">
                     <a href="javascript:" class="btn sm line ico_view_map">View map</a>
-                    <a href="javascript:" class="btn sm line ico_download">download</a>
+                    <a href="javascript:" class="btn sm line ico_download">document</a>
                 </div>
             </div>
 
@@ -334,17 +268,16 @@
                 <div class="track_info">
                     <div class="tit_area">
                         <strong class="tit">Book-9981475</strong>
-                        <span class="sub">Skin care cosmetics </span>
                     </div>
                     <div class="status ship">
                         <div class="txt">
-                            <strong>Trucking</strong>
-                            <span> • Weather delay : Air Busan ABL8809</span>
+                            <strong>In transit by vessel</strong>
+                            <span>SIRI BHUM  1906S </span>
                         </div>
                     </div>
                     <ul class="detail">
                         <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
-                        <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
+                        <li><span class="tit">PO. # </span><span class="txt">1253886CJL98</span></li>
                         <li><span class="tit">Container # </span><span class="txt">2517712</span><span class="sup">+10</span></li>
                         <li><span class="tit">Package : </span><span class="txt">29</span></li>
                     </ul>
@@ -353,35 +286,35 @@
                     <ul class="step_list">
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">Innispree Corporation</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Busan, KOREA</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Busan Port (KRBUS)</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Governador André Franco</strong>
+                                <span class="txt">ETA <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">AMOREPACIFIC SINGAPORE</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">SHANGHAI, CHINA</strong>
+                                <span class="txt">ETA <em>2020-03-25</em></span>
                             </div>
                         </li>
                     </ul>
                     <div class="bar ship">
-                        <span class="txt">80%</span>
+                        <span class="txt">50%</span>
                     </div>
                 </div>
                 <div class="btns_area">
-                    <a href="#" class="btn sm line ico_download">download</a>
+                    <a href="javascript:" class="btn sm line ico_download">document</a>
                 </div>
             </div>
 
@@ -389,17 +322,70 @@
                 <div class="track_info">
                     <div class="tit_area">
                         <strong class="tit">Book-9981475</strong>
-                        <span class="sub">Skin care cosmetics </span>
                     </div>
-                    <div class="status truck">
+                    <div class="status ship">
                         <div class="txt">
-                            <strong>In transit arrival airport</strong>
-                            <span> • Weather delay : Air Busan ABL8809</span>
+                            <strong>In transit by vessel</strong>
+                            <span>SIRI BHUM  1906S </span>
                         </div>
                     </div>
                     <ul class="detail">
                         <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
+                        <li><span class="tit">PO. # </span><span class="txt">1253886CJL98</span></li>
+                        <li><span class="tit">Container # </span><span class="txt">2517712</span><span class="sup">+10</span></li>
+                        <li><span class="tit">Package : </span><span class="txt">29</span></li>
+                    </ul>
+                </div>
+                <div class="track_step step3">
+                    <ul class="step_list">
+                        <li>
+                            <div class="txt_area">
+                                <strong class="tit">SHANGHAI, CHINA</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt_area">
+                                <strong class="tit">Sheikh Sultan Bin Khalifa bin Zayed Al Nahyan palace</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt_area">
+                                <strong class="tit">Long Beach Airport(LGB)</strong>
+                                <span class="txt">ETA <em>2020-03-20 20:10</em></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt_area">
+                                <strong class="tit">LONG BEACH, USA</strong>
+                                <span class="txt">ETA <em>2020-03-25</em></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="bar airplane">
+                        <span class="txt">50%</span>
+                    </div>
+                </div>
+                <div class="btns_area">
+                    <a href="javascript:" class="btn sm line ico_download">document</a>
+                </div>
+            </div>
+
+            <div class="track_box">
+                <div class="track_info">
+                    <div class="tit_area">
+                        <strong class="tit">Book-9981475</strong>
+                    </div>
+                    <div class="status truck">
+                        <div class="txt">
+                            <strong>In transit by air</strong>
+                            <span>Weather delay : Air Busan ABL8809</span>
+                        </div>
+                    </div>
+                    <ul class="detail">
                         <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
+                        <li><span class="tit">PO. # </span><span class="txt">1253886CJL98</span></li>
                         <li><span class="tit">Container # </span><span class="txt">2517712</span><span class="sup">+10</span></li>
                         <li><span class="tit">Package : </span><span class="txt">29</span></li>
                     </ul>
@@ -408,26 +394,79 @@
                     <ul class="step_list">
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">Innispree Corporation</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">SHANGHAI, CHINA</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Shanghai Pudong International Airport (CNPVG)</strong>
+                                <span class="txt">ETD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Long Beach Airport(LGB)</strong>
+                                <span class="txt">ETA <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">AMOREPACIFIC SINGAPORE</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">LONG BEACH, USA</strong>
+                                <span class="txt">ETA <em>2020-03-25</em></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="bar container"></div>
+                </div>
+                <div class="btns_area">
+                    <a href="javascript:" class="btn sm line ico_view_map">View map</a>
+                    <a href="javascript:" class="btn sm line ico_download">document</a>
+                </div>
+            </div>
+
+            <div class="track_box">
+                <div class="track_info">
+                    <div class="tit_area">
+                        <strong class="tit">Book-9981475</strong>
+                    </div>
+                    <div class="status building">
+                        <div class="txt">
+                            <strong>Trucking</strong>
+                            <span>Weather delay : Air Busan ABL8809</span>
+                        </div>
+                    </div>
+                    <ul class="detail">
+                        <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
+                        <li><span class="tit">PO. # </span><span class="txt">1253886CJL98</span></li>
+                        <li><span class="tit">Container # </span><span class="txt">2517712</span><span class="sup">+10</span></li>
+                        <li><span class="tit">Package : </span><span class="txt">29</span></li>
+                    </ul>
+                </div>
+                <div class="track_step step5">
+                    <ul class="step_list">
+                        <li>
+                            <div class="txt_area">
+                                <strong class="tit">SHANGHAI, CHINA</strong>
+                                <span class="txt">ATD <em>2020-03-20 20:10</em></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt_area">
+                                <strong class="tit">Shanghai Pudong International Airport (CNPVG)</strong>
+                                <span class="txt">ATD <em>2020-03-20 20:10</em></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt_area">
+                                <strong class="tit">Long Beach Airport(LGB)</strong>
+                                <span class="txt">ATA <em>2020-03-20 20:10</em></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt_area">
+                                <strong class="tit">LONG BEACH, USA</strong>
+                                <span class="txt">ATA <em>2020-03-25</em></span>
                             </div>
                         </li>
                     </ul>
@@ -436,7 +475,7 @@
                 </div>
                 <div class="btns_area">
                     <a href="javascript:" class="btn sm line ico_view_map">View map</a>
-                    <a href="javascript:" class="btn sm line ico_download">download</a>
+                    <a href="javascript:" class="btn sm line ico_download">document</a>
                 </div>
             </div>
 
@@ -444,17 +483,16 @@
                 <div class="track_info">
                     <div class="tit_area">
                         <strong class="tit">Book-9981475</strong>
-                        <span class="sub">Skin care cosmetics </span>
                     </div>
                     <div class="status building">
                         <div class="txt">
                             <strong>CNEE</strong>
-                            <span> • Weather delay : Air Busan ABL8809</span>
+                            <span>Weather delay : Air Busan ABL8809</span>
                         </div>
                     </div>
                     <ul class="detail">
                         <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
-                        <li><span class="tit">H.B/L # </span><span class="txt">1253886CJL98</span></li>
+                        <li><span class="tit">PO. # </span><span class="txt">1253886CJL98</span></li>
                         <li><span class="tit">Container # </span><span class="txt">2517712</span><span class="sup">+10</span></li>
                         <li><span class="tit">Package : </span><span class="txt">29</span></li>
                     </ul>
@@ -463,26 +501,26 @@
                     <ul class="step_list">
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">Innispree Corporation</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">SHANGHAI, CHINA</strong>
+                                <span class="txt">ATD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Shanghai Pudong International Airport (CNPVG)</strong>
+                                <span class="txt">ATD <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">CNSHA</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">Long Beach Airport(LGB)</strong>
+                                <span class="txt">ATA <em>2020-03-20 20:10</em></span>
                             </div>
                         </li>
                         <li>
                             <div class="txt_area">
-                                <strong class="tit">AMOREPACIFIC SINGAPORE</strong>
-                                <span class="txt">ATD 2020-03-20 20:10</span>
+                                <strong class="tit">LONG BEACH, USA</strong>
+                                <span class="txt">ATA <em>2020-03-25</em></span>
                             </div>
                         </li>
                     </ul>
@@ -491,7 +529,7 @@
                 </div>
                 <div class="btns_area">
                     <a href="javascript:" class="btn sm line ico_view_map">View map</a>
-                    <a href="javascript:" class="btn sm line ico_download">download</a>
+                    <a href="javascript:" class="btn sm line ico_download">document</a>
                 </div>
             </div>
 
@@ -500,198 +538,5 @@
 
     </div>
 
-    <!-- tracking map -->
-    <div class="layer_popup pop_map" id="popMap" style="display:none;">
-        <div class="map_wrap">
-            <a href="javascript:" class="btn_closed">닫기</a>
-            <div class="pop_tit">
-                <p>H.B/L No.</p>
-                <h2>KMTCPNC3273874</h2>
-            </div>
-            <div class="pop_canvas">
-                <!-- 구글 맵 테스트. 개발시 삭제 -->
-                <div id="map_canvas" style="width: 100%; height: 600px; margin:0px;"></div>
-                <!-- as_is의 이미지를 각 해당 이미지로 교체 -->
-                <!-- <img src="../../images/ico_map_arr.svg" alt="arrival">
-                <img src="../../images/ico_map_pin.svg" alt="pin">
-                <img src="../../images/ico_map_ship.svg" alt="shipping">
-                <img src="../../images/ico_map_dep.svg" alt="departure"> -->
-            </div>
-        </div>
-    </div>
-    <!-- //tracking map -->
-
-
-    <!-- layer -->
-    <div class="layer_pop_wrap pop_tracking" id="popDetail" style="display:none;">
-        <a href="#" class="btn_closed">닫기</a>
-        <div class="pop_header">
-            <div class="tit">
-                Book-9981475
-            </div>
-            <div class="book_btns">
-                <a href="#" class="btn_view_map">view map</a>
-            </div>
-        </div>
-        <div class="pop_con">
-
-            <div class="view_list">
-                <!-- 반복 -->
-                <div class="view_item open">
-                    <a href="#" class="btn_toggle">열기/닫기</a>
-                    <ul class="row">
-                        <li class="tit">Shipper</li>
-                        <li class="txt"><span class="bold">Innispree Corporation</span></li>
-                    </ul>
-                    <div class="view_sub">
-                        <div class="addr">111-520, Mapo-gu, Seoul, South Korea</div>
-                        <div class="tel">+82 2 5879 5784</div>
-                    </div>
-                </div>
-                <!-- //반복 -->
-                <div class="view_item open">
-                    <a href="#" class="btn_toggle">열기/닫기</a>
-                    <ul class="row">
-                        <li class="tit">Consignee </li>
-                        <li class="txt"><span class="bold">Amorepacific, Singapore</span></li>
-                    </ul>
-                    <div class="view_sub">
-                        <div class="addr">111-520, Mapo-gu, Seoul, South Korea</div>
-                        <div class="tel">+82 2 5879 5784</div>
-                    </div>
-                </div>
-                <div class="view_item">
-                    <a href="#" class="btn_toggle">열기/닫기</a>
-                    <ul class="row">
-                        <li class="tit">Notify</li>
-                        <li class="txt"><span class="bold">Amorepacific, Seoul</span></li>
-                    </ul>
-                    <div class="view_sub">
-                        <div class="addr">111-520, Mapo-gu, Seoul, South Korea</div>
-                        <div class="tel">+82 2 5879 5784</div>
-                    </div>
-                </div>
-                <div class="view_item">
-                    <ul class="row">
-                        <li class="tit">Operator</li>
-                        <li class="txt">
-                            <span class="bold">Air Busan</span>
-                            <span class="sub">ABL8809</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="view_item">
-                    <ul class="row">
-                        <li class="tit">Commodity</li>
-                        <li class="txt">
-                            <span>Skin care cosmetics</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="view_item">
-                    <ul class="row">
-                        <li class="tit">Package</li>
-                        <li class="txt">
-                            <span>49</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="view_item">
-                    <ul class="row">
-                        <li class="tit">Weight</li>
-                        <li class="txt">
-                            <span>68,247</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="view_item">
-                    <ul class="row">
-                        <li class="tit">Container</li>
-                    </ul>
-                    <div class="cont_list_wrap">
-                        <div class="left">
-                            <ul class="cont_tab">
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#" class="on">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                                <li><a href="#">CKLR474517882</a></li>
-                            </ul>
-                        </div>
-                        <!-- right -->
-                        <div class="right">
-
-                            <div class="cont_detail">
-                                <div class="tit_area">
-                                    <strong class="tit">Container # 474517882</strong>
-                                    <ul class="detail">
-                                        <li><span class="tit">Type : </span><span class="txt">F</span></li>
-                                        <li><span class="tit">Quantity : </span><span class="txt">30</span></li>
-                                        <li><span class="tit">Weight : </span><span class="txt">6,159,000</span></li>
-                                        <li><span class="tit">CBM : </span><span class="txt">36,000</span></li>
-                                    </ul>
-                                </div>
-                                <div class="con_area">
-                                    <ul class="cont_step">
-                                        <li>
-                                            <span class="date">2020-01-02 12:00</span>
-                                            <div class="loc">
-                                                <span class="addr">CNSHA Shanghai, China</span>
-                                                <span class="result">Arrive to POL</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span class="date">2020-01-02 12:00</span>
-                                            <div class="loc">
-                                                <span class="addr">CNSHA Shanghai, China</span>
-                                                <span class="result">Arrive to POL</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span class="date">2020-01-02 12:00</span>
-                                            <div class="loc">
-                                                <span class="addr">CNSHA Shanghai, China</span>
-                                                <span class="result">Arrive to POL</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span class="date">2020-01-02 12:00</span>
-                                            <div class="loc">
-                                                <span class="addr">CNSHA Shanghai, China</span>
-                                                <span class="result">Arrive to POL</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span class="date">2020-01-02 12:00</span>
-                                            <div class="loc">
-                                                <span class="addr">CNSHA Shanghai, China</span>
-                                                <span class="result">Arrive to POL</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- //right -->
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    <!-- //layer -->
-
-
 </body>
-
 </html>

@@ -296,7 +296,7 @@ input:-webkit-autofill:active {font-family: 'Gotham';-webkit-box-shadow: 0 0 0px
 .login_wrap.normal .step_list:before {content: "";position: absolute;top:-30px;left:-30px;width: 1px;height:310px;background:rgba(139, 145, 156, 0.4);}
 .login_wrap .step_list:after {content: "";position: absolute;top: 0;left:-0.5px;width: 0px;height:calc(100% - 48px);border-left: dotted 3px #5f6c7a;}
 .login_wrap.bright .step_list:after {border-left: dotted 3px #dde2ea;}
-.login_wrap .step_list>li {display:block;width:100%;background:none;}
+.login_wrap .step_list>li {display:block;width:100%;min-height: 50px;background:none;}
 .login_wrap .step_list>li + li {margin-top:15px;}
 .login_wrap .step_list>li:nth-child(3) {margin-top:50px;}
 .login_wrap .step_list>li:before {z-index: 3;left:-7px !important;top:-8px;width: 17px;height: 17px;border: 3px solid #5f6c7a;border-radius:50%;background: #313c49;box-sizing:border-box;}
@@ -339,7 +339,7 @@ input:-webkit-autofill:active {font-family: 'Gotham';-webkit-box-shadow: 0 0 0px
 .login_wrap .track_step.step6 .step_list>li:nth-child(3):before, .login_wrap .track_step.step6 .step_list>li:nth-child(4):before
 {z-index: 4;border-color:#fff;}
 
-.login_wrap .step_list .txt_area {width:280px;left:16px;top:-7px;text-align: left !important;}
+.login_wrap .step_list .txt_area {width:280px;left:16px;top:-7px;text-align: left !important;padding-top: 0;position: relative;}
 .login_wrap .step_list .txt_area .tit{font-size:18px;color:#fff;max-width: 100%;font-weight: 500;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 .login_wrap .step_list .txt_area .txt{font-size:13px;color:#8b919c;max-width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 

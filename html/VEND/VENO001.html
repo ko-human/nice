@@ -32,14 +32,23 @@
                 $(this).parent().find(".on").removeClass("on").end().end().addClass("on");
             });
 
+            // showhide box
+            $(".btn_door").on("click", function(e){
+              $(this).parents(".tit_box.type").toggleClass("open");
+              $(this).parents(".detail_info.flexible").toggleClass("open");
+            });
+
             // category별 shipment detail
             $('.detail_pick').each(function() {
                 $('.ip_check').find('input').on('click', function() {
-                    if ($("input:checkbox[id='check01']").is(":checked")) {
-                        console.log('체크');
-                    } else {
-                        console.log('취소함');
-                    }
+                    $("input:checkbox[id='check01']").is(":checked") ? $('li.ship').show() : $('li.ship').hide();
+                    $("input:checkbox[id='check02']").is(":checked") ? $('li.cfs ').show() : $('li.cfs ').hide();
+                    $("input:checkbox[id='check03']").is(":checked") ? $('li.shor').show() : $('li.shor').hide();
+                    $("input:checkbox[id='check04']").is(":checked") ? $('li.insu').show() : $('li.insu').hide();
+                    $("input:checkbox[id='check05']").is(":checked") ? $('li.pack').show() : $('li.pack').hide();
+                    $("input:checkbox[id='check06']").is(":checked") ? $('li.entr').show() : $('li.entr').hide();
+                    $("input:checkbox[id='check07']").is(":checked") ? $('li.stor').show() : $('li.stor').hide();
+                    $("input:checkbox[id='check08']").is(":checked") ? $('li.quar').show() : $('li.quar').hide();
                 });
             });
 
@@ -395,7 +404,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible ship" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>Trucking - OCEAN EXPORT <span>(운송 - 해상수출)</span></h3>
                                 </div>
@@ -436,7 +446,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible ship" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>Trucking - OCEAN IMPORT <span>(운송 - 해상수입)</span></h3>
                                 </div>
@@ -477,7 +488,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible ship" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>Trucking - AIR EXPORT <span>(운송 - 항공수출)</span></h3>
                                 </div>
@@ -520,7 +532,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible ship" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>Trucking - AIR IMPORT <span>(운송 - 항공수입)</span></h3>
                                 </div>
@@ -561,7 +574,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible cfs" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>CFS <span>(컨테이너화물 집화소)</span></h3>
                                 </div>
@@ -612,7 +626,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible shor" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>Shoring</h3>
                                 </div>
@@ -645,7 +660,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible stor" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>보관</h3>
                                 </div>
@@ -696,7 +712,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible pack" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>포장</h3>
                                 </div>
@@ -737,7 +754,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible insu" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>보험</h3>
                                 </div>
@@ -764,7 +782,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible entr" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>통관</h3>
                                 </div>
@@ -791,7 +810,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="detail_info">
+                            <li class="detail_info flexible quar" style="display:none;">
+                                <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
                                     <h3>검역</h3>
                                 </div>
@@ -886,20 +906,12 @@
             <!--  //타이틀 박스 -->
 
             <!-- 화물상세 -->
-            <div class="tit_box">
+            <div class="tit_box type">
                 <div class="tit_area">
                     <div class="tit_left">
                         <span class="tit">화물상세 ( DG / RF / LCL / FR / OT / FB )</span>
                     </div>
-                    <div class="tit_right">
-                        <div class="btn_list">
-                            <a href="javascript:" class="btn sm w100">Save</a>
-                            <a href="javascript:" class="btn sm line w100">Print</a>
-                            <a href="javascript:" class="btn sm line w100">EDMS</a>
-                            <a href="javascript:" class="btn sm line w100">CNFM</a>
-                            <a href="javascript:" class="btn sm gray w100">Send</a>
-                        </div>
-                    </div>
+                    <a href="javascript:" class="btn_door">open/close</a>
                 </div>
                 <div class="con_area">
                     <div class="shipment_list">
@@ -957,7 +969,7 @@
             <!-- //화물상세 -->
 
             <!-- 컨테이너 정보 -->
-            <div class="tit_box">
+            <div class="tit_box type">
                 <div class="tit_area">
                     <div class="tit_left">
                         <span class="tit">컨테이너 / 차량정보 / Invoice 입력</span>
