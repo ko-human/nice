@@ -652,7 +652,7 @@ a.ui-datepicker-title {padding:0;}
 .step_list .txt_area .txt {margin:9px 0 0 0; display:block; color:#727679; font-size:11px;}
 .step_list .txt_area.final {right:0; text-align:right;}
 .track_step .bar {position:absolute; top:0; left:0; z-index:2; width:0; height:2px; background-color:#0080c6; transition:width 0.5s;}
-.track_step .bar .txt {padding:4px 0; width:42px; text-align:center; font-size:13px; color:#fff; font-weight:500; position:absolute; right:-20px; top:16px; z-index:10; background-color:#0080c6; border-radius:4px; box-sizing:border-box;}
+.track_step .bar .txt {padding:4px 0; width:42px; text-align:center; font-size:13px; color:#fff; font-weight:500; position:absolute; right:-21px; top:16px; z-index:10; background-color:#0080c6; border-radius:4px; box-sizing:border-box;}
 .track_step .bar .txt:before {content:""; position:absolute; top:-15px; left:50%; margin-left:-5px; display:block; border-width:10px 5px; border-style:solid; border-color:transparent transparent #0080c6 transparent;}
 .track_step .bar:before {content:""; position:absolute; left:-6px; top:-6px; z-index:0; display:inline-block; width:14px; height:14px; border:2px solid #0080c6; background-color:#fff; border-radius:50%; box-sizing:border-box;}
 .track_step .bar:after {content:""; position:absolute; right:-16px; top:-6px; z-index:3; display:inline-block; width:14px; height:14px; border:2px solid #0080c6; background-color:#fff; border-radius:50%; box-sizing:border-box;}
@@ -679,6 +679,42 @@ a.ui-datepicker-title {padding:0;}
 .pop_tracking {top:80px; right:0; bottom:0; width:655px; }
 
 .search_wrap+.tit_wrap.tit_track {margin-top:0;height:40px;}
+.tit_wrap.tit_bl {padding:17px 20px;}
+.tit_wrap.tit_bl .tit_left p {font-size: 20px;color: #13161a;}
+.tit_cate {width:100%;padding:14px 17px;background-color: #e6ebf1;}
+.tit_cate .status {padding-left:37px; position:relative; line-height:19px; font-size:13px; color: #13161a; background-size:16px;}
+.tit_cate .status strong {font-size: 22px;font-weight:500;}
+.tit_cate .status span {position: relative;font-size:13px;padding-left: 36px;}
+.tit_cate .status span:before {content:'•';position: absolute;left:23px;padding-top:3px;}
+
+.tit_cate .status.airplane {background-size:24px; background-image:url(../images/ico_airplane_s.svg); background-position:left center ; background-repeat:no-repeat;}
+.tit_cate .status.container {background-size:24px; background-image:url(../images/ico_container_s.svg); background-position:left center ; background-repeat:no-repeat;}
+.tit_cate .status.building {background-size:24px; background-image:url(../images/ico_building_s.svg); background-position:left center ; background-repeat:no-repeat;}
+.tit_cate .status.truck {background-size:24px; background-image:url(../images/ico_truck_s.svg); background-position:left center ; background-repeat:no-repeat;}
+.tit_cate .status.ship {background-size:24px; background-image:url(../images/ico_ship_s.svg); background-position:left center ; background-repeat:no-repeat;}
+
+.desc_box {display:table;}
+.desc_box .left_box {float:left;width:1080px;padding:30px 0;box-sizing: border-box;border-right:1px solid #dde2ea;}
+.desc_box .left_box .chk_form .box_port {background-color: #f6f8fa;border: 0;}
+.desc_box .left_box .chk_form .box_port .port_info {display: table;min-height: 62px;padding: 10px;box-sizing: border-box;}
+.desc_box .left_box .chk_form .box_port p {display: table-cell;vertical-align: middle;font-size: 14px;font-weight: 500;line-height: 1.29;}
+
+.select.chk_sel {font-weight: 500;padding: 0 45px 0 20px;box-sizing: border-box;border: 0;background: #f6f8fa url(../../images/ico_select.svg) no-repeat;background-size: 28px;background-position: 99% center;}
+.uni_form .ip_address {position: relative;display:inline-block;width:100%;border-top:1px solid #dde2ea;}
+.desc_box .list_form_wrap {width:830px;padding-left: 30px;padding-bottom: 40px;border-bottom:1px solid #dde2ea;}
+
+.desc_box .container_box {width:830px;padding:40px 0 20px 35px;}
+.desc_box .container_box h3 {font-size: 14px;font-weight: 500;line-height: 1.5;margin-bottom:16px;}
+.desc_box .container_box .container_list {display:table;table-layout: fixed;width:800px;padding-bottom:1px;}
+.desc_box .container_box .container_list li {position: relative;float:left;width:200px;height: 40px;margin-right:-1px;margin-bottom:-1px;border: solid 1px #dde2ea;}
+.desc_box .container_box .container_list li .num_cont {position: absolute;left:0;top:0;width:100%;height:100%;font-size: 14px;color:#0080c6;padding: 12px 15px;box-sizing: border-box;background: url(../images/ico_arrow_40.svg) no-repeat right center;background-size: 24px;}
+
+.desc_box .right_box {float:right;width:687px;padding: 40px 35px 35px;}
+.right_box.shipment_list .desc_clause {display: table;width:100%;padding-bottom: 35px;border-bottom: 1px solid #dde2ea;}
+.right_box.shipment_list .desc_clause .port {width:50%;}
+.right_box.shipment_list .desc_clause .box_port .port_info {min-height: 82px;}
+.desc_box .route_wrap {margin-top:35px;background-color: #f6f8fa;}
+
 
 /* tracking popup */
 .pop_map .map_wrap {position:relative;height:700px; box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);background-color: #fff;}

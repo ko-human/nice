@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Cargo Tracking</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js" charset="UTF-8"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            // 스크롤바
+            $(".pop_con, .cont_list_wrap>.left").mCustomScrollbar();
+        });
+    </script>
+</head>
+<body>
+
+    <div class="detail_wrap">
+
+        <div class="tit_wrap tit_h1">
+            <div class="tit_left">
+                <h2>Cargo Tracking</h2>
+            </div>
+        </div>
+
+        <div class="tit_box">
+            <!-- 제목 -->
+            <div class="tit_wrap tit_bl">
+                <div class="tit_left">
+                    <p>H.B/L #CKLR474517882</p>
+                </div>
+                <div class="tit_right">
+                    <div class="btn_list">
+                        <a href="javascript:" class="btn line ico_download">Download</a>
+                        <a href="javascript:" class="btn line ico_view_map">view map</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //제목 -->
+            <!-- 현재상태 -->
+            <div class="tit_cate">
+                <div class="status ship">
+                    <!-- 아이콘 클래스 building | airplane | truck | container | ship  -->
+                    <div class="txt">
+                        <strong>In transit arrival airport</strong>
+                        <span>Weather delay : Air Busan ABL8809</span>
+                    </div>
+                </div>
+            </div>
+            <!-- //현재상태 -->
+
+            <div class="desc_box">
+                <div class="left_box">
+                    <!-- 상단 내용 -->
+                    <div class="list_form_wrap">
+                        <ul class="list_form chk_form">
+                            <li class="port">
+                                <label for="" class="lb_txt">CJ Logistics Origin</label>
+                                <div class="box_port">
+                                    <div class="port_info">
+                                        <p>INNISFREE CORPORATION</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="port">
+                                <label for="" class="lb_txt">CJ Logistics Destination</label>
+                                <div class="box_port">
+                                    <div class="port_info">
+                                        <p>US AMOREPACIFIC WAREHOUSE US AMOREPACIFIC WAREHOUSE</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list_form chk_form">
+                            <li>
+                                <label for="" class="lb_txt">Shipper</label>
+                                <div class="uni_form">
+                                    <span class="ip_date">
+                                        <select class="select chk_sel">
+                                            <option value="">Innispree Corporation</option>
+                                            <option value="">ABC</option>
+                                            <option value="">ABC</option>
+                                            <option value="">ABC</option>
+                                        </select>
+                                    </span>
+                                    <span class="ip_address"><div class="ip_txt"></div></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list_form chk_form">
+                            <li>
+                                <label for="" class="lb_txt">Consignee</label>
+                                <div class="uni_form">
+                                    <span class="ip_date">
+                                        <select class="select chk_sel">
+                                            <option value="">Amorepacific, Singapore</option>
+                                            <option value="">ABC</option>
+                                            <option value="">ABC</option>
+                                            <option value="">ABC</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list_form chk_form">
+                            <li>
+                                <label for="" class="lb_txt">Notify</label>
+                                <div class="uni_form">
+                                    <span class="ip_date">
+                                        <select class="select chk_sel">
+                                            <option value="">Amorepacific, Seoul</option>
+                                            <option value="">ABC</option>
+                                            <option value="">ABC</option>
+                                            <option value="">ABC</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list_form chk_form">
+                            <li>
+                                <label for="" class="lb_txt">Carrier</label>
+                                <div class="ip_txt"></div>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Vessel</label>
+                                <div class="ip_txt"></div>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Flight / Voyage</label>
+                                <div class="ip_txt"></div>
+                            </li>
+                        </ul>
+                        <ul class="list_form chk_form">
+                            <li>
+                                <label for="" class="lb_txt">Peices</label>
+                                <div class="ip_txt"></div>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Weight</label>
+                                <div class="ip_txt"></div>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Volume</label>
+                                <div class="ip_txt"></div>
+                            </li>
+                        </ul>
+                        <ul class="list_form chk_form">
+                            <li style="width:256px;display:inline-block;">
+                                <label for="" class="lb_txt">PO No.</label>
+                                <div class="ip_txt"></div>
+                            </li>
+                        </ul>
+                        <ul class="list_form chk_form">
+                            <li>
+                                <label for="" class="lb_txt">Remark</label>
+                                <div class="ip_txt" style="min-height:80px;"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //상단 내용 -->
+                    <!-- 컨테이너 -->
+                    <div class="container_box">
+                        <h3>Container</h3>
+                        <ul class="container_list">
+                            <li><a href="javascript:" class="num_cont">CKLR474517882</a></li>
+                            <li><a href="javascript:" class="num_cont">CKLR474517882</a></li>
+                            <li><a href="javascript:" class="num_cont">CKLR474517882</a></li>
+                            <li><a href="javascript:" class="num_cont">CKLR474517882</a></li>
+                            <li><a href="javascript:" class="num_cont">CKLR474517882</a></li>
+                            <li><a href="javascript:" class="num_cont">CKLR474517882</a></li>
+                        </ul>
+                    </div>
+                    <!-- //컨테이너 -->
+                </div>
+                <div class="right_box shipment_list">
+                    <h3>Tracking</h3>
+                    <ul class="list_form desc_clause">
+                        <li class="port">
+                            <label for="" class="lb_txt"></label>
+                            <div class="box_port">
+                                <div class="port_info">
+                                    <p>Incheon national Airport, South Korea - long long long long long long test <span class="abbr">ICN</span></p>
+                                </div>
+                                <div class="date_info">
+                                    <span class="est_date">2020-04-05<i class="on">ETD</i></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="port">
+                            <label for="" class="lb_txt"></label>
+                            <div class="box_port">
+                                <div class="port_info">
+                                    <p>ITacoma, Wa, USA<span class="abbr">USLAX</span></p>
+                                </div>
+                                <div class="date_info">
+                                    <span class="est_date">2020-04-10<i class="on">ETA</i></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="route_wrap">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
