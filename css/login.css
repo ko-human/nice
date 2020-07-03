@@ -299,7 +299,7 @@ input:-webkit-autofill:active {font-family: 'Gotham';-webkit-box-shadow: 0 0 0px
 .login_wrap .step_list>li {display:block;width:100%;min-height: 50px;background:none;}
 .login_wrap .step_list>li + li {margin-top:15px;}
 .login_wrap .step_list>li:nth-child(3) {margin-top:50px;}
-.login_wrap .step_list>li:before {z-index: 3;left:-7px !important;top:-8px;width: 17px;height: 17px;border: 3px solid #5f6c7a;border-radius:50%;background: #313c49;box-sizing:border-box;}
+.login_wrap .step_list>li:before {z-index: 3;left:-7px !important;top:-7px;width: 17px;height: 17px;border: 3px solid #5f6c7a;border-radius:50%;background: #313c49;box-sizing:border-box;}
 .login_wrap.bright .step_list>li:before {border: 3px solid #dde2ea;}
 
 /* bright mode */

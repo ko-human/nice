@@ -16,8 +16,11 @@
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
-            // 스크롤바
-            $(".pop_con, .cont_list_wrap>.left").mCustomScrollbar();
+            // route_list 활성화
+            $('.route_list li.on').each(function(){
+                var obj = $(this);
+                $(obj).nextAll("li").addClass('on');
+            });
         });
     </script>
 </head>
@@ -59,7 +62,7 @@
 
             <div class="desc_box">
                 <div class="left_box">
-                    <!-- 상단 내용 -->
+                    <!-- B/L 정보 -->
                     <div class="list_form_wrap">
                         <ul class="list_form chk_form">
                             <li class="port">
@@ -166,7 +169,7 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- //상단 내용 -->
+                    <!-- //B/L 정보 -->
                     <!-- 컨테이너 -->
                     <div class="container_box">
                         <h3>Container</h3>
@@ -207,9 +210,52 @@
                             </div>
                         </li>
                     </ul>
+                    <!-- 운송현황 -->
                     <div class="route_wrap">
-
+                        <ul class="route_list"><!-- 시간흐름 역순 -->
+                            <li>
+                                <div class="date_inner"><!-- data 없어도, span태그 남겨주세요. --><span>2020-01-12 12:00</span></div>
+                                <div class="txt_inner"><p>LONG BEACH, USA</p><span>CNEE</span></div>
+                            </li>
+                            <li>
+                                <div class="date_inner"><span>2020-01-06 16:00</span></div>
+                                <div class="txt_inner"><p>LONG BEACH, USA</p><span>Trucking</span></div>
+                            </li>
+                            <li>
+                                <div class="date_inner"><span>2020-01-05 16:00</span></div>
+                                <div class="txt_inner"><p>LONG BEACH, USA</p><span>Trucking</span></div>
+                            </li>
+                            <li class="on red"><!-- 활성화 class추가 : on -->
+                                <div class="date_inner"><span>2020-01-04 16:22</span></div>
+                                <div class="txt_inner"><p>LONG BEACH, USA</p><span>Trucking</span></div>
+                            </li>
+                            <li>
+                                <div class="date_inner"><span>2020-01-03 16:22</span></div>
+                                <div class="txt_inner"><p>LONG BEACH, USA</p><span>Trucking</span></div>
+                            </li>
+                            <li>
+                                <div class="date_inner"><span>2020-01-03 16:22</span></div>
+                                <div class="txt_inner"><p>LONG BEACH, USA</p><span>Trucking</span></div>
+                            </li>
+                            <li>
+                                <div class="date_inner"><span>2020-01-02 10:22</span></div>
+                                <div class="txt_inner"><p>LONG BEACH, USA</p><span>Trucking</span></div>
+                            </li>
+                            <li class="orange"><!-- 구분점 class : red / orange / blue -->
+                                <div class="date_inner"><span>2020-01-02 10:22</span></div>
+                                <div class="txt_inner"><p>Shanghai Pudong International Airport (CNPVG)</p><span>Arrive to POL</span></div>
+                            </li>
+                            <li>
+                                <div class="date_inner"><span>2020-01-02 10:22</span></div>
+                                <div class="txt_inner"><p>LONG BEACH, USA</p><span>Trucking</span></div>
+                            </li>
+                            <li class="blue">
+                                <div class="date_inner"><span>2020-01-02 10:22</span></div>
+                                <div class="txt_inner"><p>Shanghai China, CNSHA </p><span>SHPR</span></div>
+                            </li>
+                        </ul>
                     </div>
+                    <!-- //운송현황 -->
                 </div>
             </div>
         </div>
