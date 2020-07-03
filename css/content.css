@@ -700,7 +700,7 @@ a.ui-datepicker-title {padding:0;}
 .desc_box .left_box .chk_form .box_port .port_info {display: table;min-height: 62px;padding: 10px;box-sizing: border-box;}
 .desc_box .left_box .chk_form .box_port p {display: table-cell;vertical-align: middle;font-size: 14px;font-weight: 500;line-height: 1.29;}
 
-.select.chk_sel {font-weight: 500;padding: 0 45px 0 20px;box-sizing: border-box;border: 0;background: #f6f8fa url(../../images/ico_select.svg) no-repeat;background-size: 25px;background-position: 99% center;}
+.select.chk_sel {font-weight: 500;padding: 0 45px 0 20px;box-sizing: border-box;border: 0;background: #f6f8fa url(../images/ico_select.svg) no-repeat;background-size: 25px;background-position: 99% center;}
 .uni_form .ip_address {position: relative;display:inline-block;width:100%;border-top:1px solid #dde2ea;}
 .uni_form .ip_address .ip_txt{color:#8b919c;}
 .desc_box .list_form_wrap {width:830px;padding-left: 30px;padding-bottom: 40px;border-bottom:1px solid #dde2ea;}
