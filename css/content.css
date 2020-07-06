@@ -722,7 +722,7 @@ a.ui-datepicker-title {padding:0;}
 .route_wrap .route_list li {position: relative;display:table;min-height: 67px;}
 
 .route_wrap .route_list .date_inner {position: relative;display:table-cell;width:155px;border-right:dotted 3px #dde2ea;}
-.route_wrap .route_list .txt_inner {position:relative;display:table-cell;width:379px;padding-left: 30px;}
+.route_wrap .route_list .txt_inner {position:relative;display:table-cell;width:379px;padding-left: 25px;}
 .route_wrap .route_list .txt_inner:before {content:'';position: absolute;left:-8px;top:0;width: 13px;height: 13px;border-radius: 9.8px;border: solid 3px #dde2ea;background-color: #ffffff;box-sizing: border-box;}
 
 .route_wrap .route_list li.on .date_inner {border-right: solid 3px #13161a;}
@@ -736,7 +736,7 @@ a.ui-datepicker-title {padding:0;}
 
 .route_wrap .route_list .txt_inner p {font-size: 16px;font-weight: 500;line-height: 1.13;margin-bottom:8px;}
 .route_wrap .route_list .txt_inner span {display: block;font-size: 13px;font-weight: 500;color: #8b919c;margin-bottom: 23px;}
-.route_wrap .route_list .date_inner span {display: block;min-width: 149px;font-size: 13px;color: #8b919c;}
+.route_wrap .route_list .date_inner span {display: block;min-width: 149px;text-align: right;font-size: 13px;color: #8b919c;padding-right:25px;}
 
 .pop_con .cont_pop {width:100%;padding:15px 20px;background-color: #f6f8fa;}
 .pop_con .cont_pop .detail_list {width:100%;}
@@ -749,8 +749,7 @@ a.ui-datepicker-title {padding:0;}
 .pop_con .cont_pop .num_seal p span {font-weight: 500;}
 
 .route_wrap.pop_route {margin-top:0;padding:50px 20px 20px;box-sizing: border-box;background: #fff;}
-.route_wrap.pop_route .route_list .date_inner {width:160px;text-align: right;padding-right:20px;}
-.route_wrap.pop_route .route_list .txt_inner {padding-left:20px;}
+.route_wrap.pop_route .route_list .date_inner {width:160px;text-align: right;}
 .route_wrap.pop_route .route_list .txt_inner:before {border: solid 3px #0080c6;background-color: #0080c6;}
 .route_wrap.pop_route .route_list .date_inner {border-right: solid 3px #0080c6;}
 .route_wrap.pop_route .route_list .txt_inner p {font-size:14px;margin-bottom:5px;}
