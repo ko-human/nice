@@ -1038,7 +1038,9 @@ a.ui-datepicker-title {padding:0;}
 .humidity_inner .hum_calender .classify_list {display: inline-block;width: 73%;}
 .humidity_inner .hum_calender .classify_list li {line-height: 1.2;}
 .humidity_inner .hum_calender .classify_list li+li {margin-top:5px;}
-.humidity_inner .hum_calender .classify_list li a {display: inline-block;font-size: 14px;font-weight: 500;margin-right:8px;}
+.humidity_inner .hum_calender .classify_list li a {position: relative;display: inline-block;font-size: 14px;font-weight: 500;margin-right:6px;}
+.humidity_inner .hum_calender .classify_list li a:after {content:',';position: absolute;right:-4px;bottom:0;}
+.humidity_inner .hum_calender .classify_list li a:nth-last-child(1):after {display:none;}
 .humidity_inner .hum_calender .classify_list li a:hover {text-decoration: underline;}
 .humidity_inner .hum_calender .classify_list li .invoice {color:#0080c6;}
 .humidity_inner .hum_calender .classify_list li .port {color: #ec8922;}
