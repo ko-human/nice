@@ -60,7 +60,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .radio_group.type_box>li input:checked+label {color:#fff; border-color:#0080c6; background-color:#0080c6;}
 .radio_group.type_freight {}
 .radio_group.type_freight>li+li {margin-left:10px;padding-left: 0;}
-.radio_group.type_freight>li label {padding:51px 0 0 0; width:180px; height:80px; line-height:1; font-size:14px; text-align:center; border:solid 1px #dde2ea; background-color:#fff; background-repeat:no-repeat; background-position:center 13px; background-size:28px;}
+.radio_group.type_freight>li label {padding:51px 0 0 0; width:180px; height:80px; line-height:1; font-size:14px; text-align:center; border:solid 1px #dde2ea; background-color:#fff; background-repeat:no-repeat; background-position:center 13px; background-size:28px; cursor: pointer;}
 .radio_group.type_freight>li:nth-child(3) {margin-left:60px;}
 .radio_group.type_freight>li:nth-child(3):before {content:'';position: absolute;left:-30px;top:0;width:1px;height:100%;background: #dde2ea;}
 .radio_group.type_freight>li.air label {background-image:url(../images/ico_airplane_g.svg);}
@@ -298,6 +298,8 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .tit_box .tit_area .tit_right {padding:10px 15px; display:table-cell; text-align:right; height:50px; box-sizing:border-box;}
 .tit_box .tit_area .tit_left .tit {font-size: 16px; font-weight:500; color:#000;}
 .tit_box .con_area {}
+.tit_box .con_area .grid_piece {border-bottom:1px solid #dde2ea;}
+.tit_box .con_area .grid_piece:nth-last-child(1) {border-bottom:0;}
 .tit_box .foot_area {position: relative;height:50px; border-top:1px solid #dde2ea; box-sizing:border-box;}
 
 .sub_box {height:198px; position:relative; padding:22px 20px; box-sizing:border-box;}
@@ -688,8 +690,9 @@ a.ui-datepicker-title {padding:0;}
 .pop_tracking {top:80px; right:0; bottom:0; width:655px; }
 
 .search_wrap+.tit_wrap.tit_track {margin-top:0;height:40px;}
-.tit_wrap.tit_bl {padding:17px 20px;}
+.tit_wrap.tit_bl {padding:17px 20px;border-bottom: 1px solid #dde2ea;}
 .tit_wrap.tit_bl .tit_left p {font-size: 20px;color: #13161a;}
+.tit_wrap.tit_bl .tit_left p span {font-weight: 500;line-height: 36px;}
 .tit_cate {width:100%;padding:14px 17px;background-color: #e6ebf1;}
 .tit_cate .status {padding-left:37px; position:relative; line-height:19px; font-size:13px; color: #13161a; background-size:16px;}
 .tit_cate .status strong {font-size: 22px;font-weight:500;}
@@ -838,7 +841,7 @@ a.ui-datepicker-title {padding:0;}
 .vendor_main_wrap .main_cols_4>li+li {margin-left:30px;}
 
 .tab_wrapper+.vendor_con_wrap {margin-top:30px;}
-.vendor_con_wrap {width:1770px; box-sizing:border-box;}
+.vendor_con_wrap {width:1770px; box-sizing:border-box;margin-top: 50px;}
 .vendor_con_wrap:after {content:""; display:block; clear:both; width:100%;}
 .vendor_con_wrap>.left {width:960px; float:left;}
 .vendor_con_wrap>.right {width:760px; float:right;}
@@ -982,7 +985,7 @@ a.ui-datepicker-title {padding:0;}
 .btn_join {display: block;text-align: center;position: absolute;right: 0;top: 1px;width: 40px;height: 40px;}
 .btn_join img {margin-top:10px;}
 .list_form.chk_form.num_blue .ip_txt {font-size: 18px;letter-spacing: 0.8px;color:#0080c6;}
-.list_form.chk_form .ip_txt {min-height: 42px;height:auto;line-height: 1.8;padding: 10px 20px;box-sizing: border-box;background: #f6f8fa;border:none;}
+.list_form.chk_form .ip_txt {display: block;min-height: 42px;height:auto;line-height: 1.8;padding: 10px 20px;box-sizing: border-box;background: #f6f8fa;border:none;}
 .list_form.chk_form .chk_div {line-height: 1.8;padding:15px;box-sizing: border-box;background: #f6f8fa;border:none;overflow: hidden;word-break: break-all;}
 
 .event_pop>div.btns {padding:0 14px;}
@@ -1042,8 +1045,8 @@ a.ui-datepicker-title {padding:0;}
 .humidity_inner .hum_calender .classify_list li a:after {content:',';position: absolute;right:-4px;bottom:0;}
 .humidity_inner .hum_calender .classify_list li a:nth-last-child(1):after {display:none;}
 .humidity_inner .hum_calender .classify_list li a:hover {text-decoration: underline;}
-.humidity_inner .hum_calender .classify_list li .invoice {color:#0080c6;}
-.humidity_inner .hum_calender .classify_list li .port {color: #ec8922;}
+.humidity_inner .hum_calender .classify_list li .expect {color:#0080c6;}
+.humidity_inner .hum_calender .classify_list li .finish {color: #ec8922;}
 
 .del_line:before {content: '';position: absolute;left: 17px;top: 50%;width: 12px;height: 2px;background: #0080c6;}
 .manage_wrap {padding:80px 10px 30px 120px; width:1900px; box-sizing:border-box;}
@@ -1157,7 +1160,11 @@ a.ui-datepicker-title {padding:0;}
 .cate_guide li .cate_expect {display:inline-block;font-size: 14px;color: #ec8922;}
 .cate_guide li .cate_finish {display:inline-block;font-size: 14px;color: #0080c6;;}
 
-
+/* booking */
+.grid_piece .chk_list {padding:20px 30px;box-sizing: border-box;}
+.grid_piece .chk_list li {display:inline-block;margin-right:50px;}
+.grid_piece .chk_list li span {display:inline-block;font-size: 14px;color: #8b919c;margin-right:10px;}
+.grid_piece .chk_list .chk_info {display: inline-block;height: 32px;padding: 5px 20px;box-sizing: border-box;background-color: #f6f8fa;vertical-align: middle;}
 
 
 /* partner portal */
@@ -1178,7 +1185,7 @@ a.ui-datepicker-title {padding:0;}
 .shipment_list .desc_clause .list_form .ip_txt .inner_list li + li {padding-left:20px;}
 .shipment_list .desc_clause .list_form .ip_txt .inner_list li p {display: inline-block;margin-right:7px;font-size: 14px;color: #8b919c;}
 .shipment_list .desc_clause .list_form .ip_txt .inner_list li em {display: inline-block;}
-.shipment_list .desc_clause .list_form .ip_fixed.pr34 .ip_txt {padding-right: 34px;}
+.shipment_list .desc_clause .list_form .ip_fixed.pr34 .ip_txt {padding: 8px 34px 8px 10px;}
 
 .shipment_list .desc_clause .box_port {border: none;background-color: #f6f8fa;}
 .shipment_list .desc_clause .box_port .port_info {display:table;min-height: 62px;padding: 10px;}
@@ -1213,6 +1220,10 @@ a.ui-datepicker-title {padding:0;}
 .detail_info.flexible.open .btn_door {transform: rotate(0deg);background-position: calc(100% - 20px);}
 .detail_info.flexible .clause h3 span {display: none;}
 .detail_info.flexible.open .clause h3 span {display: block;font-weight: 300;color: #6b6e72;}
+.detail_info .clause h3 span {display: block;font-weight: 300;color: #6b6e72;}
+
+.list_form.chk_form .ip_txt.ship {padding-left: 45px;background-size: 28px;background-image: url(../images/ico_ship.svg);background-position: 10px center;background-repeat: no-repeat;}
+.list_form.chk_form .ip_txt.airplane {padding-left: 45px;background-size: 28px;background-image: url(../images/ico_airplane.svg);background-position: 10px 58%;background-repeat: no-repeat;}
 
 /* sales portal */
 .search_wrap.sales {margin:20px 0;}
