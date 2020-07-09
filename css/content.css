@@ -775,6 +775,7 @@ a.ui-datepicker-title {padding:0;}
 .pop_map .pop_tit {padding-top:20px;padding-left:30px;}
 .pop_map .pop_tit p {font-size: 12px;font-weight: 500;color: #8b919c;}
 .pop_map .pop_tit h2 {font-size: 22px;font-weight: 500;color: #45474e;padding-top:4px;box-sizing: border-box;}
+.pop_map .pop_tit .ip_tit {font-size: 22px;font-weight: 500;margin-top: 2px;padding-left: 0;color: #45474e;background: transparent;}
 .pop_map .pop_canvas {height:600px;margin:12px 30px 30px;background: #f1f1f1;overflow: hidden;}
 
 /* view_list */
