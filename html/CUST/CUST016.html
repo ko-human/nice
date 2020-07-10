@@ -36,6 +36,9 @@
                 }
             }).icoTrigger();
 
+            // summary 높이
+            var leftH = $(".left").innerHeight();
+                $(".summary_wrap").css({"minHeight": leftH});
 
             // 파일추가
             $(".file_upload_wrap .btn_cir.ico_add").on("click", function(e) {
@@ -82,22 +85,21 @@
             //cargo
             $(".add_cargo").on("click", function(e) {
                 var rowHtml = '<li><ul class="list_form">' +
-                    '<li><select class="select bold" name=""><option value="">20</option><option value="">ABC</option></select></li>' +
-                    '<li><select class="select bold" name=""><option value="">dry</option><option value="">type1</option></select></li>' +
+                    '<li><select class="select bold" name=""><option value="">20RF</option><option value="">ABC</option></select></li>' +
                     '<li><span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
                     '<li style="width:20px;"><span class="middle_bar"></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">ton</span></span></li></ul>' +
+                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span></li></ul>' +
                     '<ul class="list_form">' +
                     '<li><span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
                     '</ul><a href="javascript:" class="btn_cir ico_del"></a></li>';
 
                 var rowHtml2 = '<li><ul class="list_form">' +
-                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
                     '<li><span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
                     '<li style="width:20px;"><span class="middle_bar"></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">ton</span></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span></li>' +
                     '</ul><ul class="list_form">' +
                     '<li><span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
                     '</ul><a href="javascript:" class="btn_cir ico_del"></a></li>';
@@ -163,10 +165,7 @@
                                     <input type="radio" name="radioEbook" value="" id="radio06"><label for="radio06">Ocean Freight</label>
                                 </li>
                                 <li class="radio_item radio">
-                                    <input type="radio" name="radiobook" value="" id="radio07"><label for="radio07">Export</label>
-                                </li>
-                                <li class="radio_item radio">
-                                    <input type="radio" name="radiobook" value="" id="radio08"><label for="radio08">Import</label>
+                                    <input type="radio" name="radiobook" value="" id="radio07" checked="true"><label for="radio07">Export</label>
                                 </li>
                             </ul>
                         </li>
@@ -180,7 +179,7 @@
                     </ul>
                     <ul class="list_form sch_select">
                         <li>
-                            <a href="javascript:" class="btn btn_schedule">Schedule Select</a>
+                            <a href="javascript:" class="btn btn_schedule">Select Shipping Schedule</a>
                             <em>* 선사 스페이스 여력에 따라 Booking이 되지 않는 스케줄이 있을 수 있습니다.</em>
                         </li>
                     </ul>
@@ -190,7 +189,7 @@
                             <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                         </li>
                         <li>
-                            <label for="" class="lb_txt">VSL/VOY, Flight No.</label>
+                            <label for="" class="lb_txt">Vessel & Voyage / Flight & No.</label>
                             <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                         </li>
                     </ul>
@@ -318,12 +317,16 @@
                         </li>
                     </ul>
                     <ul class="list_form">
-                        <li>
+                        <li style="width:400px;">
                             <label for="" class="lb_txt">Door</label>
                             <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                         </li>
                         <li>
-                            <label for="" class="lb_txt">담당자</label>
+                            <label for="" class="lb_txt">Name of PIC at door</label>
+                            <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                        </li>
+                        <li>
+                            <label for="" class="lb_txt">Trucker</label>
                             <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                         </li>
                     </ul>
@@ -363,11 +366,10 @@
 
                     <div class="con_area">
                         <div class="cargo_wrap">
-                            <h4>FCL</h4>
+                            <h4>Container</h4>
                             <div class="cargo_list">
                                 <ul class="cargo_hd">
-                                    <li>Size</li>
-                                    <li>Type</li>
+                                    <li>Size & Type</li>
                                     <li class="qty">Qty.</li>
                                     <li class="wei">Total G.Weight</li>
                                 </ul>
@@ -376,13 +378,7 @@
                                         <ul class="list_form">
                                             <li>
                                                 <select class="select bold" name="">
-                                                    <option value="">20</option>
-                                                    <option value="">ABC</option>
-                                                </select>
-                                            </li>
-                                            <li>
-                                                <select class="select bold" name="">
-                                                    <option value="">dry</option>
+                                                    <option value="">20DC</option>
                                                     <option value="">type1</option>
                                                 </select>
                                             </li>
@@ -393,7 +389,7 @@
                                                 <span class="middle_bar"></span>
                                             </li>
                                             <li>
-                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">ton</span></span>
+                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
                                             </li>
                                         </ul>
                                         <ul class="list_form">
@@ -403,11 +399,11 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                <a href="javascript:" class="btn_cir ico_add add_cargo"><span>Add another row </span></a>
+                                <a href="javascript:" class="btn_cir ico_add add_cargo"><span>Add another row</span></a>
                             </div>
                         </div>
                         <div class="cargo_wrap">
-                            <h4>General Cargo</h4>
+                            <h4>Dimension</h4>
                             <div class="cargo_list">
                                 <ul class="cargo_hd">
                                     <li>Length</li>
@@ -420,13 +416,13 @@
                                     <li>
                                         <ul class="list_form">
                                             <li>
-                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span>
+                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
                                             </li>
                                             <li>
-                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span>
+                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
                                             </li>
                                             <li>
-                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span>
+                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
                                             </li>
                                             <li>
                                                 <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
@@ -435,7 +431,7 @@
                                                 <span class="middle_bar"></span>
                                             </li>
                                             <li>
-                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">ton</span></span>
+                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
                                             </li>
                                         </ul>
                                         <ul class="list_form">
@@ -532,17 +528,21 @@
                 <div class="list_form_wrap w800">
                     <ul class="list_form">
                         <li>
-                            <label for="" class="lb_txt req">PIC at CJ Logistics</label>
-                            <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                            <label for="" class="lb_txt req">Name of PIC at CJ Logistics</label>
+                            <select class="select" name="">
+                              <option value="">Radcliffe</option>
+                              <option value="">Jenny</option>
+                              <option value="">Susan</option>
+                            </select>
                         </li>
                         <li>
                             <label for="" class="lb_txt">E-mail</label>
-                            <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                            <input type="text" name="" value="" class="ip_txt readonly" readonly="readonly">
                         </li>
                     </ul>
                     <ul class="list_form">
                         <li>
-                            <label for="" class="lb_txt req">PIC at Your Company</label>
+                            <label for="" class="lb_txt req">Name of PIC at your company</label>
                             <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                         </li>
                         <li>
@@ -551,7 +551,7 @@
                         </li>
                     </ul>
                     <ul class="list_form">
-                        <li>
+                        <li style="width: 390px;display: inline-block;">
                             <label for="" class="lb_txt">E-mail</label>
                             <span class="ip_del"><input type="text" class="ip_txt bold"><a href="#" class="btn_txt_del">삭제</a></span>
                         </li>
@@ -560,7 +560,7 @@
 
                 <div class="tit_wrap tit_h2 mt80">
                     <div class="tit_left">
-                        <h4>SHIPPER / CNEE</h4>
+                        <h4>SHIPPER / CNEE / PO No.</h4>
                     </div>
                 </div>
 
@@ -595,6 +595,12 @@
                             <span class="ip_del"><input type="text" placeholder="Address" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                         </li>
                     </ul>
+                    <ul class="list_form">
+                        <li>
+                            <label for="" class="lb_txt">PO No.</label>
+                            <span class="ip_del"><input type="text" placeholder="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="tit_wrap tit_h2 mt80">
@@ -613,6 +619,7 @@
 
                 <div class="btn_bottom">
                     <div class="left">
+                        <a href="javascript:" class="btn line act">Preview</a>
                         <a href="javascript:" class="btn act">Submit</a>
                         <a href="javascript:" class="btn black act">Discard</a>
                     </div>
@@ -653,7 +660,7 @@
                                 </li>
                                 <li>
                                     <dl>
-                                        <dt>VSL/VOY, Flight No.</dt>
+                                        <dt>Vessel & Voyage / <br>Flight & No.</dt>
                                         <dd>OZ 2006S</dd>
                                     </dl>
                                 </li>
@@ -719,11 +726,17 @@
                                 </li>
                                 <li>
                                     <dl>
-                                        <dt>담당자 / 연락처 / E-mail</dt>
+                                        <dt>Name of PIC at door</dt>
                                         <dd>
                                             <p>Loso Kim / 010-2222-3300</p>
                                             <p>email@cj.net</p>
                                         </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>Trucker</dt>
+                                        <dd>Loso</dd>
                                     </dl>
                                 </li>
                                 <li>
@@ -739,35 +752,31 @@
                         <h3>Cargo Detail</h3>
                         <div class="box_person tbl_cargo">
                             <div class="cargo_info">
-                                <h3>FCL</h3>
+                                <h3>Container</h3>
                                 <table>
                                     <colgroup>
-                                       <col width="18%">
-                                       <col width="18%">
-                                       <col width="18%">
-                                       <col width="18%">
+                                       <col width="24%">
+                                       <col width="20%">
+                                       <col width="21%">
                                        <col width="*">
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th>Size</th>
-                                            <th>Type</th>
+                                            <th class="tal">Size & Type</th>
                                             <th>Qty.</th>
-                                            <th>Total<br>G.Weight</th>
+                                            <th>Total <br> G.Weight</th>
                                             <th class="tal">Remark</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>77</td>
-                                            <td>550</td>
+                                            <td class="tal">20DC</td>
                                             <td>35</td>
                                             <td class="ton pr27">550</td>
-                                            <td class="tal"></td>
+                                            <td class="tal">small box</td>
                                         </tr>
                                         <tr>
-                                            <td>25</td>
-                                            <td>30</td>
+                                            <td class="tal">20RF</td>
                                             <td>55</td>
                                             <td class="ton pr27">30</td>
                                             <td class="tal">small box</td>
@@ -776,7 +785,7 @@
                                 </table>
                             </div>
                             <div class="cargo_info">
-                                <h3>General Cargo</h3>
+                                <h3>Dimension</h3>
                                 <table>
                                     <colgroup>
                                        <col width="15.2%">
@@ -883,7 +892,7 @@
                         </div>
                     </div>
                     <div class="sum_inner">
-                        <h3>SHIPPER / CNEE</h3>
+                        <h3>SHIPPER / CNEE / PO No.</h3>
                         <div class="box_person">
                             <ul class='sum_list'>
                                 <li>
@@ -896,11 +905,19 @@
                                         </dd>
                                     </dl>
                                 </li>
-                            </ul>
-                            <ul class='sum_list'>
                                 <li>
                                     <dl>
                                         <dt>Consignee</dt>
+                                        <dd>
+                                            100110<br>
+                                            AMOREPACIFIC CORPORATION<br>
+                                            Address AMOREPACIFIC CORPORATION
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>PO No.</dt>
                                         <dd>
                                             100110<br>
                                             AMOREPACIFIC CORPORATION<br>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
-
 <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
@@ -40,7 +39,6 @@
         });
     </script>
 </head>
-
 <body>
 
     <div class="detail_wrap">
@@ -64,7 +62,9 @@
             <div class="tit_box">
                 <div class="tit_wrap tit_bl">
                     <div class="tit_left">
+                        <p>Job No. <span class="num_bl">#98765432</span></p>
                         <p>C. Bkg No. <span class="num_bl">#98765432</span></p>
+                        <p>PO No. <span class="num_bl">#98765432</span></p>
                     </div>
                 </div>
                 <div class="con_area">
@@ -77,33 +77,26 @@
                                 </div>
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
+                                        <!-- case에 따라 Airline or Shipline 한 종류만 노출되는지 확인 -->
                                         <ul class="list_form chk_form">
-                                            <li>
-                                                <label for="" class="lb_txt">Shipline / FLT & FLT No. (선사명/선명&항차)</label>
+                                            <li class="space20">
+                                                <label for="" class="lb_txt">Shippingline / Vessel & Voyage (선사/선명&항차)</label>
                                                 <!-- ip_txt에 class추가 : ship / airplane -->
                                                 <div class="ip_txt ship"></div>
                                             </li>
-                                            <li>
+                                            <li class="space20">
                                                 <label for="" class="lb_txt">카고마감일시</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li>
+                                            <li class="space20">
                                                 <label for="" class="lb_txt">서류마감일시</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
                                         <ul class="list_form chk_form">
-                                            <li>
-                                                <label for="" class="lb_txt">Airline / FLT & FLT No. (선사명/선명&항차)</label>
+                                            <li style="width:442px;display:inline-block;" class="space20">
+                                                <label for="" class="lb_txt">Airline / Flight No. (항공사/선명&편명)</label>
                                                 <div class="ip_txt airplane"></div>
-                                            </li>
-                                            <li>
-                                                <label for="" class="lb_txt">카고마감일시</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li>
-                                                <label for="" class="lb_txt">서류마감일시</label>
-                                                <div class="ip_txt"></div>
                                             </li>
                                         </ul>
                                         <ul class="list_form chk_form">
@@ -155,20 +148,25 @@
                                                 <label for="" class="lb_txt">DATE / TIME (작업일시)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li style="width:695px;">
-                                                <label for="" class="lb_txt">작업지 주소</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
                                             <li>
                                                 <label for="" class="lb_txt">Contact Person (담당자)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                        </ul>
-                                        <ul class="list_form chk_form">
                                             <li>
                                                 <label for="" class="lb_txt">Tel. (연락처)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
+                                            <li>
+                                                <label for="" class="lb_txt">계근여부</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                        </ul>
+                                        <ul class="list_form chk_form">
+                                            <li style="width:694px;">
+                                                <label for="" class="lb_txt">작업지 주소</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
+
                                             <li>
                                                 <label for="" class="lb_txt">컨테이너 픽업지</label>
                                                 <div class="ip_txt"></div>
@@ -177,10 +175,7 @@
                                                 <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li>
-                                                <label for="" class="lb_txt">계근여부</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -197,8 +192,8 @@
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">입고일시 (Date/Time)</label>
-                                                <div class="ip_txt tar"></div>
+                                                <label for="" class="lb_txt">반입마감일시 (Date/Time)</label>
+                                                <div class="ip_txt"></div>
                                             </li>
                                             <li>
                                                 <label for="" class="lb_txt">Contact Person (담당자)</label>
@@ -212,17 +207,17 @@
                                         <ul class="list_form chk_form">
                                             <li>
                                                 <label for="" class="lb_txt">픽업지 (출하지, 작업지)</label>
-                                                <div class="ip_txt tar"></div>
+                                                <div class="ip_txt"></div>
                                             </li>
                                             <li>
                                                 <label for="" class="lb_txt">반입지</label>
-                                                <div class="ip_txt tar"></div>
+                                                <div class="ip_txt"></div>
                                             </li>
                                         </ul>
                                         <ul class="list_form chk_form">
                                             <li style="width:340px;display:inline-block;">
                                                 <label for="" class="lb_txt">차량 종류 및 톤수</label>
-                                                <div class="ip_txt tar"></div>
+                                                <div class="ip_txt"></div>
                                             </li>
                                         </ul>
                                     </div>
@@ -236,33 +231,123 @@
                                     <div class="list_form_wrap">
                                         <ul class="list_form chk_form">
                                             <li>
-                                                <label for="" class="lb_txt">Container Type</label>
-                                                <div class="ip_txt tar"></div>
-                                            </li>
-                                            <li>
-                                                <label for="" class="lb_txt">Container Qty.</label>
-                                                <div class="ip_txt tar"></div>
-                                            </li>
-                                            <li style="width:520px;">
                                                 <label for="" class="lb_txt">ITEM</label>
-                                                <div class="ip_txt tar"></div>
+                                                <div class="ip_txt"></div>
                                             </li>
                                             <li>
                                                 <label for="" class="lb_txt">HS Code</label>
-                                                <div class="ip_txt tar"></div>
-                                            </li>
-                                            <li>
-                                                <label for="" class="lb_txt">PKG QTY (총수량)</label>
-                                                <div class="ip_txt tar"></div>
-                                            </li>
-                                            <li>
-                                                <label for="" class="lb_txt">G. WEIGHT (총중량)</label>
-                                                <span class="ip_fixed pr34">
-                                                    <em class="ip_txt tar">2</em>
-                                                    <span class="ftxt">kg</span>
-                                                </span>
+                                                <div class="ip_txt"></div>
                                             </li>
                                         </ul>
+                                        <div class="list_pair">
+                                            <ul class="list_form chk_form">
+                                                <li style="width:350px;">
+                                                    <label for="" class="lb_txt">Container Size & Type</label>
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Qty.</label>
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Total G.Weight</label>
+                                                    <span class="ip_fixed pr34">
+                                                        <em class="ip_txt tar">2</em>
+                                                        <span class="ftxt">kg</span>
+                                                    </span>
+                                                </li>
+                                                <li style="width:694px;">
+                                                    <label for="" class="lb_txt">Remark</label>
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                            </ul>
+                                            <ul class="list_form chk_form">
+                                                <li style="width:350px;"><div class="ip_txt tar"></div></li>
+                                                <li><div class="ip_txt tar"></div></li>
+                                                <li>
+                                                    <span class="ip_fixed pr34">
+                                                        <em class="ip_txt tar">2</em>
+                                                        <span class="ftxt">kg</span>
+                                                    </span>
+                                                </li>
+                                                <li style="width:694px;">
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="list_pair">
+                                            <ul class="list_form chk_form">
+                                                <li>
+                                                    <label for="" class="lb_txt">Length</label>
+                                                    <span class="ip_fixed pr34">
+                                                        <em class="ip_txt tar">2</em>
+                                                        <span class="ftxt">cm</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Width</label>
+                                                    <span class="ip_fixed pr34">
+                                                        <em class="ip_txt tar">2</em>
+                                                        <span class="ftxt">cm</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Height</label>
+                                                    <span class="ip_fixed pr34">
+                                                        <em class="ip_txt tar">2</em>
+                                                        <span class="ftxt">cm</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">CBM</label>
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Total G.Weight</label>
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">PKG Qty.</label>
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                                <li style="width:347px;">
+                                                    <label for="" class="lb_txt">Remark</label>
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                            </ul>
+                                            <ul class="list_form chk_form">
+                                                <li>
+                                                    <span class="ip_fixed pr34">
+                                                        <em class="ip_txt tar">2</em>
+                                                        <span class="ftxt">cm</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_fixed pr34">
+                                                        <em class="ip_txt tar">2</em>
+                                                        <span class="ftxt">cm</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_fixed pr34">
+                                                        <em class="ip_txt tar">2</em>
+                                                        <span class="ftxt">cm</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                                <li>
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                                <li>
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                                <li style="width:347px;">
+                                                    <div class="ip_txt tar"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -286,124 +371,9 @@
                 </div>
             </div>
             <!--  //타이틀 박스 -->
-
-            <!-- 화물 정보 -->
-            <div class="tit_box shipping" style="display:none;">
-                <div class="tit_area">
-                    <div class="tit_left">
-                        <span class="tit">화물정보 (Cargo Detail)</span>
-                    </div>
-                </div>
-                <div class="con_area">
-                    <!-- grid piece -->
-                    <div class="grid_piece">
-                        <div class="tit_wrap tit_inner">
-                            <div class="tit_left">
-                                <h4>Container List</h4>
-                            </div>
-                        </div>
-                        <div class="" style="height:250px;">
-                            그리드영역 height: 250px
-                        </div>
-                        <div class="foot_area">
-                            <!-- result -->
-                            <div class="grid_result">
-                                <p>Count :<span>21</span></p>
-                            </div>
-                            <!--// result -->
-                        </div>
-                    </div>
-                    <!-- //grid piece -->
-                    <div class="grid_piece">
-                        <div class="tit_wrap tit_inner">
-                            <div class="tit_left">
-                                <h4>Item List</h4>
-                            </div>
-                        </div>
-                        <div class="" style="height:250px;">
-                            그리드영역 height: 250px
-                        </div>
-                        <div class="foot_area">
-                            <!-- result -->
-                            <div class="grid_result">
-                                <p>Count :<span>1</span></p>
-                            </div>
-                            <!--// result -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //화물 정보 -->
-
-            <!-- 화물 정보 -->
-            <div class="tit_box air01" style="display:none;">
-                <div class="tit_area">
-                    <div class="tit_left">
-                        <span class="tit">화물정보 (Cargo Detail)</span>
-                    </div>
-                </div>
-                <div class="con_area">
-                    <!-- grid piece -->
-                    <div class="grid_piece">
-                        <ul class="chk_list">
-                            <li>
-                                <span>차량번호</span>
-                                <div class="chk_info" style="width:170px;"></div>
-                            </li>
-                            <li>
-                                <span>연락처</span>
-                                <div class="chk_info" style="width:170px;"></div>
-                            </li>
-                            <li>
-                                <span>기사님</span>
-                                <div class="chk_info" style="width:170px;"></div>
-                            </li>
-                        </ul>
-                        <div class="" style="height:300px;">
-                            그리드영역 height: 300px
-                        </div>
-                        <div class="foot_area">
-                            <!-- result -->
-                            <div class="grid_result">
-                                <p>Count :<span>21</span></p>
-                            </div>
-                            <!--// result -->
-                        </div>
-                    </div>
-                    <!-- //grid piece -->
-                </div>
-            </div>
-            <!-- //화물 정보 -->
-
-            <!-- 화물 정보 -->
-            <div class="tit_box air02" style="display:none;">
-                <div class="tit_area">
-                    <div class="tit_left">
-                        <span class="tit">화물정보 (Cargo Detail)</span>
-                    </div>
-                </div>
-                <div class="con_area">
-                    <!-- grid piece -->
-                    <div class="grid_piece">
-                        <div class="" style="height:300px;">
-                            그리드영역 height: 300px
-                        </div>
-                        <div class="foot_area">
-                            <!-- result -->
-                            <div class="grid_result">
-                                <p>Count :<span>21</span></p>
-                            </div>
-                            <!--// result -->
-                        </div>
-                    </div>
-                    <!-- //grid piece -->
-                </div>
-            </div>
-            <!-- //화물 정보 -->
-
         </div>
         <!-- //내용 -->
     </div>
-</body>
 
+</body>
 </html>

@@ -5,11 +5,14 @@
     <meta name="format-detection" content="telephone=no" />
     <title>Cargo Tracking</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
-    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-3.4.1.min.js" charset="UTF-8"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script src="../../script/ui_common.js"></script>
     <title></title>
     <script type="text/javascript">
@@ -28,7 +31,7 @@
       <a href="#" class="btn_closed">닫기</a>
       <div class="pop_header">
         <div class="tit">
-          Search Web Booking No.
+          Search E-Booking No.
         </div>
       </div>
       <div class="pop_con">
@@ -37,17 +40,29 @@
         <div class="search_wrap">
           <ul class="search_form">
             <li>
-              <span class="ip_filter" style="width:350px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+              <span class="ip_del" style="width:350px;"><input type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
             </li>
+            <li>
+            <a href="javascript:" class="btn lg line ico_search">검색</a>
+          </li>
           </ul>
         </div>
         <!-- //검색 -->
 
-        <div class="grid_wrap type_sm">
-          그리드영역 height:365px
+        <div class="tit_box">
+            <div class="con_area">
+                <div class="grid_wrap type_sm" style="height:460px">
+                    그리드영역 height : 460px;
+                </div>
+            </div>
+            <div class="foot_area">
+                <!-- result -->
+                <div class="grid_result">
+                    <p>Count :<span>201</span></p>
+                </div>
+                <!--// result -->
+            </div>
         </div>
-
-
 
       </div>
     </div>
