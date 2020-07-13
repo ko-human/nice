@@ -666,7 +666,7 @@
                             <li class="detail_info flexible stor" style="display:none;">
                                 <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
-                                    <h3>보관</h3>
+                                    <h3>보관</h3><!-- OI -->
                                 </div>
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
@@ -675,22 +675,22 @@
                                                 <label for="" class="lb_txt">작업일시 (입고일)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li style="width:700px;">
-                                                <label for="" class="lb_txt">작업지 주소</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
                                             <li>
                                                 <label for="" class="lb_txt">Contact Person (담당자)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                        </ul>
-                                        <ul class="list_form chk_form">
                                             <li>
                                                 <label for="" class="lb_txt">Tel. (연락처)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
                                                 <label for="" class="lb_txt">화물관리번호</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                        </ul>
+                                        <ul class="list_form chk_form">
+                                            <li style="width:50%;">
+                                                <label for="" class="lb_txt">작업지 주소</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
@@ -702,23 +702,13 @@
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
-                                        <ul class="list_form chk_form">
-                                            <li style="width:340px;">
-                                                <label for="" class="lb_txt">컨테이너 픽업지</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li style="width:340px;display:inline-block;">
-                                                <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </li>
                             <li class="detail_info flexible pack" style="display:none;">
                                 <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
-                                    <h3>포장</h3>
+                                    <h3>포장</h3><!-- AE / OE -->
                                 </div>
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
@@ -727,30 +717,30 @@
                                                 <label for="" class="lb_txt">작업일시 (입고일)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li style="width:700px;">
-                                                <label for="" class="lb_txt">작업지 주소</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
                                             <li>
                                                 <label for="" class="lb_txt">Contact Person (담당자)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                        </ul>
-                                        <ul class="list_form chk_form">
                                             <li>
                                                 <label for="" class="lb_txt">Tel. (연락처)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">포장타입</label>
+                                                <label for="" class="lb_txt">포장재질 / 포장타입</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                        </ul>
+                                        <ul class="list_form chk_form">
+                                            <li style="width:700px;">
+                                                <label for="" class="lb_txt">작업지 주소</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">컨테이너 픽업지</label>
+                                                <label for="" class="lb_txt">컨테이너 픽업지</label><!-- OE만 -->
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label>
+                                                <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label>- OI
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
@@ -760,7 +750,7 @@
                             <li class="detail_info flexible insu" style="display:none;">
                                 <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
-                                    <h3>보험</h3>
+                                    <h3>보험</h3><!-- AI / AE / OI / OE -->
                                 </div>
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
@@ -770,11 +760,11 @@
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">Sales Team</label>
+                                                <label for="" class="lb_txt">Total Invoice Value</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">Invoice Value</label>
+                                                <label for="" class="lb_txt">Sales Team</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
@@ -788,7 +778,7 @@
                             <li class="detail_info flexible entr" style="display:none;">
                                 <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
-                                    <h3>통관</h3>
+                                    <h3>통관</h3><!-- AI / AE / OI / OE -->
                                 </div>
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
@@ -798,11 +788,11 @@
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">Sales Team</label>
+                                                <label for="" class="lb_txt">Total Invoice Value</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">Invoice Value</label>
+                                                <label for="" class="lb_txt">Sales Team</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
@@ -816,7 +806,7 @@
                             <li class="detail_info flexible quar" style="display:none;">
                                 <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
-                                    <h3>검역</h3>
+                                    <h3>검역</h3><!-- AI / AE / OI / OE -->
                                 </div>
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
@@ -825,16 +815,10 @@
                                                 <label for="" class="lb_txt">작업일시 (입고일)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li style="width:700px;">
-                                                <label for="" class="lb_txt">작업지 주소</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
                                             <li>
                                                 <label for="" class="lb_txt">Contact Person (담당자)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                        </ul>
-                                        <ul class="list_form chk_form">
                                             <li>
                                                 <label for="" class="lb_txt">Tel. (연락처)</label>
                                                 <div class="ip_txt"></div>
@@ -843,17 +827,35 @@
                                                 <label for="" class="lb_txt">포장타입</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li>
-                                                <label for="" class="lb_txt">컨테이너 픽업지</label>
+                                        </ul>
+                                        <ul class="list_form chk_form">
+                                            <li style="width:50%;">
+                                                <label for="" class="lb_txt">작업지 주소</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label>
+                                                <label for="" class="lb_txt">컨테이너 픽업지</label><!-- OE만 -->
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                            <li>
+                                                <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label><!-- OE만 -->
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
                                         <ul class="list_form chk_form">
-                                            <li style="width:340px;display:inline-block;">
+                                            <li>
+                                                <label for="" class="lb_txt">화물관리번호</label><!-- OI만 -->
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                            <li>
+                                                <label for="" class="lb_txt">통관구분</label><!-- OI만 -->
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                            <li>
+                                                <label for="" class="lb_txt">하선장소 / 장치장 CODE</label><!-- OI만 -->
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                            <li>
                                                 <label for="" class="lb_txt">검역종류</label>
                                                 <div class="ip_txt"></div>
                                             </li>
@@ -861,116 +863,19 @@
                                     </div>
                                 </div>
                             </li>
-
                         </ul>
                     </div>
                 </div>
             </div>
             <!--  //타이틀 박스 -->
 
-            <!-- 화물상세 -->
-            <div class="tit_box type">
-                <div class="tit_area">
-                    <div class="tit_left">
-                        <span class="tit">화물상세 ( DG / RF / LCL / FR / OT / FB )</span>
-                    </div>
-                    <a href="javascript:" class="btn_door">open/close</a>
-                </div>
-                <div class="con_area">
-                    <div class="shipment_list">
-                        <ul>
-                            <li class="detail_info">
-                                <div class="clause">
-                                    <h3>Customer <span>(고객정보)</span></h3>
-                                </div>
-                                <div class="desc_clause">
-                                    <div class="list_form_wrap">
-                                        <ul class="list_form chk_form">
-                                            <li style="width:350px;">
-                                                <label for="" class="lb_txt">SHIPPER Name / PJT Name (고객명/PJT명)</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li style="width:350px;">
-                                                <label for="" class="lb_txt">Consignee (수하인)</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li>
-                                                <label for="" class="lb_txt">Door (작업지 주소)</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="detail_info">
-                                <div class="clause">
-                                    <h3>Customer <span>(고객정보)</span></h3>
-                                </div>
-                                <div class="desc_clause">
-                                    <div class="list_form_wrap">
-                                        <ul class="list_form chk_form">
-                                            <li style="width:350px;">
-                                                <label for="" class="lb_txt">SHIPPER Name / PJT Name (고객명/PJT명)</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li style="width:350px;">
-                                                <label for="" class="lb_txt">Consignee (수하인)</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li>
-                                                <label for="" class="lb_txt">Door (작업지 주소)</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- //화물상세 -->
-
-            <!-- 컨테이너 정보 -->
-            <div class="tit_box type">
-                <div class="tit_area">
-                    <div class="tit_left">
-                        <span class="tit">컨테이너 / 차량정보 / Invoice 입력</span>
-                    </div>
-                    <a href="javascript:" class="btn_door">open/close</a>
-                </div>
-                <div class="con_area">
-                    <div class="tit_wrap tit_inner">
-                        <div class="tit_left">
-                            <h4>수출운송 정보입력 / Freight 관리</h4>
-                        </div>
-                        <div class="tit_right">
-                            <div class="btn_list">
-                                <a href="javascript:" class="btn line">Set Date 변경</a>
-                                <a href="javascript:" class="btn line ico_simple">Simple Down</a>
-                                <a href="javascript:" class="btn line ico_pdf">pdf</a>
-                                <a href="javascript:" class="btn line ico_ex">excel</a>
-                                <a href="javascript:" class="btn sm line ico_add">추가</a>
-                                <a href="javascript:" class="btn sm line ico_remove">삭제</a>
-                                <a href="javascript:" class="btn w100">Save</a>
-                                <a href="javascript:" class="btn gray w100">Send</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="" style="height:270px;">
-                        그리드영역 height: 270px
-                    </div>
-                </div>
-            </div>
-            <!-- //컨테이너 정보 -->
-
-
-            <!-- 화물 정보 -->
-            <div class="tit_box shipping">
+            <!-- 화물정보(해상) -->
+            <div class="tit_box type shipping">
                 <div class="tit_area">
                     <div class="tit_left">
                         <span class="tit">화물정보 (Cargo Detail)</span>
                     </div>
+                    <a href="javascript:" class="btn_door">open/close</a>
                 </div>
                 <div class="con_area">
                     <!-- grid piece -->
@@ -979,6 +884,14 @@
                             <div class="tit_left">
                                 <h4>Container List</h4>
                             </div>
+                            <div class="tit_right">
+                                <div class="btn_list">
+                                    <a href="javascript:" class="btn sm line ico_add">추가</a>
+                                    <a href="javascript:" class="btn sm line ico_remove">삭제</a>
+                                    <a href="javascript:" class="btn w100">Save</a>
+                                    <a href="javascript:" class="btn gray w100">Send</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="" style="height:250px;">
                             그리드영역 height: 250px
@@ -986,16 +899,25 @@
                         <div class="foot_area">
                             <!-- result -->
                             <div class="grid_result">
-                                <p>Count :<span>21</span></p>
+                                <em class="foot_info">* 정확한 정보 입력 바랍니다.</em>
                             </div>
                             <!--// result -->
                         </div>
                     </div>
                     <!-- //grid piece -->
+                    <!-- grid piece -->
                     <div class="grid_piece">
                         <div class="tit_wrap tit_inner">
                             <div class="tit_left">
                                 <h4>Item List</h4>
+                            </div>
+                            <div class="tit_right">
+                                <div class="btn_list">
+                                    <a href="javascript:" class="btn sm line ico_add">추가</a>
+                                    <a href="javascript:" class="btn sm line ico_remove">삭제</a>
+                                    <a href="javascript:" class="btn w100">Save</a>
+                                    <a href="javascript:" class="btn gray w100">Send</a>
+                                </div>
                             </div>
                         </div>
                         <div class="" style="height:250px;">
@@ -1004,37 +926,39 @@
                         <div class="foot_area">
                             <!-- result -->
                             <div class="grid_result">
-                                <p>Count :<span>1</span></p>
+                                <em class="foot_info">* 정확한 정보 입력 바랍니다.</em>
                             </div>
                             <!--// result -->
                         </div>
                     </div>
+                    <!-- //grid piece -->
                 </div>
             </div>
-            <!-- //화물 정보 -->
+            <!-- //화물정보(해상) -->
 
-            <!-- 화물 정보 -->
-            <div class="tit_box air01">
+            <!-- 화물정보(항공) -->
+            <div class="tit_box type airplane">
                 <div class="tit_area">
                     <div class="tit_left">
                         <span class="tit">화물정보 (Cargo Detail)</span>
                     </div>
+                    <a href="javascript:" class="btn_door">open/close</a>
                 </div>
                 <div class="con_area">
                     <!-- grid piece -->
                     <div class="grid_piece">
                         <ul class="chk_list">
                             <li>
-                                <span>차량번호</span>
-                                <div class="chk_info" style="width:170px;"></div>
+                                <p>차량번호</p>
+                                <span class="ip_del"><input style="width:170px;" type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                             </li>
                             <li>
-                                <span>연락처</span>
-                                <div class="chk_info" style="width:170px;"></div>
+                                <p>연락처</p>
+                                <span class="ip_del"><input style="width:170px;" type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                             </li>
                             <li>
-                                <span>기사님</span>
-                                <div class="chk_info" style="width:170px;"></div>
+                                <p>기사님</p>
+                                <span class="ip_del"><input style="width:170px;" type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                             </li>
                         </ul>
                         <div class="" style="height:300px;">
@@ -1043,7 +967,7 @@
                         <div class="foot_area">
                             <!-- result -->
                             <div class="grid_result">
-                                <p>Count :<span>21</span></p>
+                                <em class="foot_info">* 정확한 정보 입력 바랍니다.</em>
                             </div>
                             <!--// result -->
                         </div>
@@ -1051,25 +975,39 @@
                     <!-- //grid piece -->
                 </div>
             </div>
-            <!-- //화물 정보 -->
+            <!-- //화물 정보(항공) -->
 
-            <!-- 화물 정보 -->
-            <div class="tit_box air02">
+            <!-- Freight 정보(해상) -->
+            <div class="tit_box type shipping">
                 <div class="tit_area">
                     <div class="tit_left">
-                        <span class="tit">화물정보 (Cargo Detail)</span>
+                        <span class="tit">Freight</span>
                     </div>
+                    <a href="javascript:" class="btn_door">open/close</a>
                 </div>
                 <div class="con_area">
                     <!-- grid piece -->
                     <div class="grid_piece">
-                        <div class="" style="height:300px;">
-                            그리드영역 height: 300px
+                        <div class="tit_wrap tit_inner">
+                            <div class="tit_left">
+                                <h4></h4>
+                            </div>
+                            <div class="tit_right">
+                                <div class="btn_list">
+                                    <a href="javascript:" class="btn sm line ico_add">추가</a>
+                                    <a href="javascript:" class="btn sm line ico_remove">삭제</a>
+                                    <a href="javascript:" class="btn w100">Save</a>
+                                    <a href="javascript:" class="btn gray w100">Send</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="" style="height:270px;">
+                            그리드영역 height: 270px
                         </div>
                         <div class="foot_area">
                             <!-- result -->
                             <div class="grid_result">
-                                <p>Count :<span>21</span></p>
+                                <em class="foot_info">* 정확한 정보 입력 바랍니다.</em>
                             </div>
                             <!--// result -->
                         </div>
@@ -1077,9 +1015,47 @@
                     <!-- //grid piece -->
                 </div>
             </div>
-            <!-- //화물 정보 -->
+            <!-- //Freight 정보(해상) -->
 
-
+            <!-- Freight 정보(항공) -->
+            <div class="tit_box type airplane">
+                <div class="tit_area">
+                    <div class="tit_left">
+                        <span class="tit">Freight</span>
+                    </div>
+                    <a href="javascript:" class="btn_door">open/close</a>
+                </div>
+                <div class="con_area">
+                    <!-- grid piece -->
+                    <div class="grid_piece">
+                        <div class="tit_wrap tit_inner">
+                            <div class="tit_left">
+                                <h4></h4>
+                            </div>
+                            <div class="tit_right">
+                                <div class="btn_list">
+                                    <a href="javascript:" class="btn sm line ico_add">추가</a>
+                                    <a href="javascript:" class="btn sm line ico_remove">삭제</a>
+                                    <a href="javascript:" class="btn w100">Save</a>
+                                    <a href="javascript:" class="btn gray w100">Send</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="" style="height:270px;">
+                            그리드영역 height: 270px
+                        </div>
+                        <div class="foot_area">
+                            <!-- result -->
+                            <div class="grid_result">
+                                <em class="foot_info">* 정확한 정보 입력 바랍니다.</em>
+                            </div>
+                            <!--// result -->
+                        </div>
+                    </div>
+                    <!-- //grid piece -->
+                </div>
+            </div>
+            <!-- //Freight 정보(항공) -->
         </div>
         <!-- //내용 -->
     </div>

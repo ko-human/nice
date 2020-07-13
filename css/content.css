@@ -1205,7 +1205,7 @@ a.ui-datepicker-title {padding:0;}
 
 .tit_box .tit_area .btn_door {position: absolute;left:0;top:0;width: 100%;height: 100%;font-size: 0;background: url(../images/arr_bg_40.svg) no-repeat;background-size: 40px;background-position: 20px;transform: rotate(180deg);}
 .tit_box.type.open .tit_area .btn_door {transform: rotate(0deg);background-position: calc(100% - 20px);}
-.tit_box .tit_wrap.tit_inner {padding:34px 30px 20px;box-sizing: border-box;}
+.tit_box .tit_wrap.tit_inner {padding:20px 30px;box-sizing: border-box;}
 .tit_box .tit_wrap.tit_inner .tit_left h4 {font-size: 16px;font-weight: 500;line-height: 1.19;color: #000;}
 .tit_box.type .con_area {display: none;}
 .tit_box.type .tit_area {border-bottom:0;}
@@ -1226,10 +1226,15 @@ a.ui-datepicker-title {padding:0;}
 .list_form.chk_form .ip_txt.ship {padding-left:50px;background-size: 28px;background-image: url(../images/ico_ship.svg);background-position: 10px center;background-repeat: no-repeat;}
 .list_form.chk_form .ip_txt.airplane {padding-left:50px;background-size: 28px;background-image: url(../images/ico_airplane.svg);background-position: 12px 55%;background-repeat: no-repeat;}
 
+.grid_piece + .grid_piece {margin-top:30px;}
 .grid_piece .chk_list {padding:20px 30px;box-sizing: border-box;}
 .grid_piece .chk_list li {display:inline-block;margin-right:50px;}
-.grid_piece .chk_list li span {display:inline-block;font-size: 14px;color: #8b919c;margin-right:10px;}
-.grid_piece .chk_list .chk_info {display: inline-block;height: 32px;padding: 5px 20px;box-sizing: border-box;background-color: #f6f8fa;vertical-align: middle;}
+.grid_piece .chk_list li p {display:inline-block;font-size: 14px;color: #8b919c;margin-right:10px;}
+.grid_piece .chk_list li .ip_del {display: inline-block;width: auto;height: 32px;vertical-align: middle;}
+.grid_piece .chk_list li .ip_del .ip_txt {height:32px;}
+.grid_piece .chk_list .chk_info {display: inline-block;height: 32px;padding: 5px 20px;box-sizing: border-box;border:1px solid #dde2ea;vertical-align: middle;}
+
+.grid_piece .foot_area .foot_info {margin-left: 0;}
 
 
 /* sales portal */
