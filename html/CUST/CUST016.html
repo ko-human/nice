@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
-    <title></title>
+    <title>E-booking</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
@@ -36,7 +36,7 @@
                 }
             }).icoTrigger();
 
-            // summary 높이
+            // summary 높이 ()
             var leftH = $(".left").innerHeight();
                 $(".summary_wrap").css({"minHeight": leftH});
 
@@ -63,43 +63,44 @@
                 $(this).parents(".tog_box").toggleClass("open");
                 e.preventDefault();
             });
+
             // 자동완성
-            $(".inp_port").on("change keyup paste focusin", function() {
-                if ($(this).val() == '') {
-                    $(this).siblings(".box_auto").removeClass("open");
-                } else {
-                    $(this).siblings(".box_auto").addClass("open");
-                }
-            });
+            // $(".inp_port").on("change keyup paste focusin", function() {
+            //     if ($(this).val() == '') {
+            //         $(this).siblings(".box_auto").removeClass("open");
+            //     } else {
+            //         $(this).siblings(".box_auto").addClass("open");
+            //     }
+            // });
 
-            $(".inp_port").on("focusin", function() {
-                $(this).siblings(".box_auto").addClass("open");
-            });
+            // $(".inp_port").on("focusin", function() {
+            //     $(this).siblings(".box_auto").addClass("open");
+            // });
 
-            $(".box_auto li").on("click", function(e) {
-                var $port = $(this).parents(".box_port");
-                $port.find(".result").show();
-                $port.find(".box_auto").removeClass("open");
-            });
+            // $(".box_auto li").on("click", function(e) {
+            //     var $port = $(this).parents(".box_port");
+            //     $port.find(".result").show();
+            //     $port.find(".box_auto").removeClass("open");
+            // });
 
             //cargo
             $(".add_cargo").on("click", function(e) {
                 var rowHtml = '<li><ul class="list_form">' +
                     '<li><select class="select bold" name=""><option value="">20RF</option><option value="">ABC</option></select></li>' +
-                    '<li><span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
+                    '<li><span class="ip_del"><input type="number" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
                     '<li style="width:20px;"><span class="middle_bar"></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span></li></ul>' +
+                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span></li></ul>' +
                     '<ul class="list_form">' +
                     '<li><span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
                     '</ul><a href="javascript:" class="btn_cir ico_del"></a></li>';
 
                 var rowHtml2 = '<li><ul class="list_form">' +
-                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
-                    '<li><span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
+                    '<li><span class="ip_del"><input number="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
                     '<li style="width:20px;"><span class="middle_bar"></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span></li>' +
                     '</ul><ul class="list_form">' +
                     '<li><span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
                     '</ul><a href="javascript:" class="btn_cir ico_del"></a></li>';
@@ -197,74 +198,15 @@
                         <li class="port">
                             <label for="" class="lb_txt req">Origin</label>
                             <div class="box_port">
-                                <!-- 자동완성 결과 -->
-                                <div class="result port_info" style="display:none;">
-                                    <p>Los Angeles CA, USA<span class="abbr">USLAX</span></p>
-                                </div>
-                                <!-- //자동완성 결과 -->
-                                <input type="text" name="" value="" placeholder="Loading Port" class="ip_txt inp_port bold">
+                                <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Loading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
                                 <span class="ip_date"><input type="text" placeholder="YYYY-MM-DD" class="ip_txt inp_date bold"><i>ETD</i><em class="ico_trig"></em></span>
-                                <!-- 자동완성창 예시 -->
-                                <div class="box_auto">
-                                    <ul>
-                                        <li>
-                                            <a href="javascript:" class="status airplane">
-                                                <span><i>IC</i>N</span>
-                                                <em>Incheon national Airport, South Korea</em>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:" class="status ship">
-                                                <span>KR<i>IC</i>N</span>
-                                                <em>Incheon Port, South Korea</em>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:" class="status ship">
-                                                <span>USLAP</span>
-                                                <em>N<i>IC</i>OIOOKI, USA</em>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- //자동완성창 예시 -->
                             </div>
                         </li>
                         <li class="port">
                             <label for="" class="lb_txt req">Destination</label>
                             <div class="box_port">
-                                <!-- 자동완성 결과 -->
-                                <div class="result port_info">
-                                    <p>Incheon national Airport, Reperblic of South Korea<span class="abbr">ICN</span></p>
-                                </div>
-                                <!-- //자동완성 결과 -->
-                                <input type="text" name="" value="" placeholder="Loading Port" class="ip_txt inp_port bold">
-                                <span class="ip_date"><input type="text" placeholder="YYYY-MM-DD" class="ip_txt inp_date bold"><i>ETA</i></span>
-                            </div>
-                            <div class="box_auto">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:">
-                                            <img src="../../images/ico_airplane_g.svg" alt="Air Freight">
-                                            <span><i>IC</i>N</span>
-                                            <em>Incheon national Airport, South Korea</em>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:">
-                                            <img src="../../images/ico_ship_g.svg" alt="Ocean Freight">
-                                            <span>KR<i>IC</i>N</span>
-                                            <em>Incheon Port, South Korea</em>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:">
-                                            <img src="../../images/ico_ship_g.svg" alt="Ocean Freight">
-                                            <span>USLAP</span>
-                                            <em>N<i>IC</i>OIOOKI, USA</em>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Unloading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
+                                <span class="ip_date"><input type="text" placeholder="YYYY-MM-DD" class="ip_txt inp_date bold"><i>ETA</i><em class="ico_trig"></em></span>
                             </div>
                         </li>
                     </ul>
@@ -318,7 +260,7 @@
                     </ul>
                     <ul class="list_form">
                         <li style="width:400px;">
-                            <label for="" class="lb_txt">Door</label>
+                            <label for="" class="lb_txt">Door Address</label>
                             <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                         </li>
                         <li>
@@ -385,11 +327,9 @@
                                             <li>
                                                 <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                                             </li>
-                                            <li style="width:20px;">
-                                                <span class="middle_bar"></span>
-                                            </li>
+                                            <li style="width:20px;"><span class="middle_bar"></span></li>
                                             <li>
-                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
                                             </li>
                                         </ul>
                                         <ul class="list_form">
@@ -416,22 +356,20 @@
                                     <li>
                                         <ul class="list_form">
                                             <li>
-                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
                                             </li>
                                             <li>
-                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
                                             </li>
                                             <li>
-                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
                                             </li>
                                             <li>
                                                 <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                                             </li>
-                                            <li style="width:20px;">
-                                                <span class="middle_bar"></span>
-                                            </li>
+                                            <li style="width:20px;"><span class="middle_bar"></span></li>
                                             <li>
-                                                <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
                                             </li>
                                         </ul>
                                         <ul class="list_form">
@@ -720,7 +658,7 @@
                                 </li>
                                 <li>
                                     <dl>
-                                        <dt>Door</dt>
+                                        <dt>Door Address</dt>
                                         <dd>Pusan, Korea</dd>
                                     </dl>
                                 </li>

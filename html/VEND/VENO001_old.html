@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
-    <title>Order Management</title>
+    <title></title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
@@ -358,57 +358,58 @@
                                 </div>
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
-                                        <ul class="list_form chk_form">
-                                            <li><div class="ip_txt"></div></li>
+                                        <ul class="remark_list">
+                                            <li>
+                                                <dl>
+                                                    <dt>운송</dt>
+                                                    <dd>서류마감일 14시 까지 컨테이너 / 씰 넘버 전달 부탁드립니다.</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>위험물(DG) 운송</dt>
+                                                    <dd>DG CERTI 보내드리며, 직반입 요청드립니다.</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>CFS 작업</dt>
+                                                    <dd>CLP, Stuffing List, Tally sheet, </dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>Special Container</dt>
+                                                    <dd>SHORING/ LASHING/ TARPAULIN 요청드립니다.</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>포장요청</dt>
+                                                    <dd>Wooden Box로 요청드립니다.</dd>
+                                                </dl>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                             </li>
                             <li class="detail_info">
                                 <div class="clause">
-                                    <h3>담당자</h3>
+                                    <h3>Person in charge <span>(담당자 정보)</span></h3>
                                 </div>
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
                                         <ul class="list_form chk_form">
-                                            <li>
-                                                <label for="" class="lb_txt">부킹담당자</label>
+                                            <li style="width:350px;">
+                                                <label for="" class="lb_txt">Contact Person (담당자)</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                            <li style="width:350px;">
+                                                <label for="" class="lb_txt">Tel (연락처)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">Phone</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li style="width:50%;">
-                                                <label for="" class="lb_txt">E-Mail</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                        </ul>
-                                        <ul class="list_form chk_form">
-                                            <li>
-                                                <label for="" class="lb_txt">B/L & INVOICE 담당자</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li>
-                                                <label for="" class="lb_txt">Phone</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li style="width:50%;">
-                                                <label for="" class="lb_txt">E-Mail</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                        </ul>
-                                        <ul class="list_form chk_form">
-                                            <li>
-                                                <label for="" class="lb_txt">운송사 담당자</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li>
-                                                <label for="" class="lb_txt">Phone</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li style="width:50%;">
-                                                <label for="" class="lb_txt">E-Mail</label>
+                                                <label for="" class="lb_txt">E-Mail (이메일)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
@@ -423,24 +424,20 @@
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
                                         <ul class="list_form chk_form">
-                                            <li>
+                                            <li style="width:340px;">
                                                 <label for="" class="lb_txt">DATE / TIME (작업일시)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li style="width:50%;">
+                                            <li>
                                                 <label for="" class="lb_txt">작업지 주소</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li>
-                                                <label for="" class="lb_txt">계근여부</label>
+                                            <li style="width:340px;">
+                                                <label for="" class="lb_txt">Contact Person (담당자)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
                                         <ul class="list_form chk_form">
-                                            <li>
-                                                <label for="" class="lb_txt">Contact Person (담당자)</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
                                             <li>
                                                 <label for="" class="lb_txt">Tel. (연락처)</label>
                                                 <div class="ip_txt"></div>
@@ -451,6 +448,10 @@
                                             </li>
                                             <li>
                                                 <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                            <li>
+                                                <label for="" class="lb_txt">계근여부</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
@@ -525,7 +526,7 @@
                                             </li>
                                         </ul>
                                         <ul class="list_form chk_form">
-                                            <li style="width:50%;">
+                                            <li>
                                                 <label for="" class="lb_txt">픽업지 (출하지, 작업지)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
@@ -533,7 +534,9 @@
                                                 <label for="" class="lb_txt">반입지</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li>
+                                        </ul>
+                                        <ul class="list_form chk_form">
+                                            <li style="width:340px;display:inline-block;">
                                                 <label for="" class="lb_txt">차량 종류 및 톤수</label>
                                                 <div class="ip_txt"></div>
                                             </li>
@@ -550,7 +553,7 @@
                                     <div class="list_form_wrap">
                                         <ul class="list_form chk_form">
                                             <li>
-                                                <label for="" class="lb_txt">출고일시 (Date/Time)</label>
+                                                <label for="" class="lb_txt">픽업일시 (Date/Time)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
@@ -586,7 +589,7 @@
                             <li class="detail_info flexible cfs" style="display:none;">
                                 <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
-                                    <h3>CFS <span>(컨테이너화물 집화소)</span></h3><!-- OI / OE -->
+                                    <h3>CFS <span>(컨테이너화물 집화소)</span></h3>
                                 </div>
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
@@ -595,40 +598,40 @@
                                                 <label for="" class="lb_txt">작업일시 (입고일)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
+                                            <li style="width:700px;">
+                                                <label for="" class="lb_txt">작업지 주소</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
                                             <li>
                                                 <label for="" class="lb_txt">Contact Person (담당자)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
+                                        </ul>
+                                        <ul class="list_form chk_form">
                                             <li>
                                                 <label for="" class="lb_txt">Tel. (연락처)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">화물관리번호</label><!-- OI 만 있음 -->
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                        </ul>
-                                        <ul class="list_form chk_form">
-                                            <li style="width:50%;">
-                                                <label for="" class="lb_txt">작업지 주소</label>
+                                                <label for="" class="lb_txt">화물관리번호</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">통관구분</label><!-- OI 만 있음 -->
+                                                <label for="" class="lb_txt">컨테이너 픽업지</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">하선장소 / 장치장 CODE</label><!-- OI 만 있음 -->
+                                                <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
                                         <ul class="list_form chk_form">
                                             <li style="width:347px;">
-                                                <label for="" class="lb_txt">컨테이너 픽업지</label>
+                                                <label for="" class="lb_txt">통관구분</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li style="width:347px;display:inline-block;">
-                                                <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label>
+                                                <label for="" class="lb_txt">하선장소 / 장치장 CODE</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
@@ -638,7 +641,7 @@
                             <li class="detail_info flexible shor" style="display:none;">
                                 <a href="javascript:" class="btn_door">open/close</a>
                                 <div class="clause">
-                                    <h3>Shoring</h3><!-- OE -->
+                                    <h3>Shoring</h3>
                                 </div>
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
@@ -647,7 +650,7 @@
                                                 <label for="" class="lb_txt">작업일시 (입고일)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li>
+                                            <li style="width:700px;">
                                                 <label for="" class="lb_txt">작업지 주소</label>
                                                 <div class="ip_txt"></div>
                                             </li>
@@ -655,8 +658,14 @@
                                                 <label for="" class="lb_txt">Contact Person (담당자)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
-                                            <li>
+                                        </ul>
+                                        <ul class="list_form chk_form">
+                                            <li style="width:340px;">
                                                 <label for="" class="lb_txt">Tel. (연락처)</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                            <li style="width:340px;display:inline-block;">
+                                                <label for="" class="lb_txt">Shoring / Lashing</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>

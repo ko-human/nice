@@ -921,19 +921,18 @@ a.ui-datepicker-title {padding:0;}
 .list_form .port .box_port .ip_date i {position: absolute;left: 120px;top:50%;margin-top:-6px;padding:1px 3px;line-height: 11.5px;text-align: center;font-size: 9px;color:#fff;background: #cad0d7;border-radius: 3px;}
 .list_form .port .box_port .ip_date i.on {background: #ec8922;}
 .list_form .port .box_port .inp_port {font-weight:500; height:62px;border-bottom:1px solid #dde2ea;}
+.list_form .port .box_port .ip_search .btn_ip_search {height:100%;}
+.list_form .port .box_port .ip_search:after {content: '';position: absolute;right: 40px;top: 0;width: 40px;height: 99%;background: linear-gradient(to right, transparent 0%, #fff 70%);}
 .list_form .port + .port:after {content:'';position: absolute;left:-6px;top:55%;width:13px;height:13px;background: url(../images/ico_arr_cir.svg) no-repeat;background-size: 100%;}
+.list_form .port.space20 + .port.space20:after {content:'';position: absolute;left:-12px;top:52%;width:22px;height:22px;background: url(../images/ico_arr_cir.svg) no-repeat;background-size: 100%;}
 .list_form .port .result {position:absolute; width:100%; top:10px; left:0; height:40px; line-height:40px; background-color:#fff;overflow: hidden;display: table;}
 .list_form .port .result.port_info p {display: table-cell;vertical-align: middle;font-size: 16px;font-weight: 500;line-height: 1.13;max-width: 410px;line-height: 1.5;padding: 0 15px;}
 .list_form .port .result.port_info p span {position: relative;display: inline-block;margin-left: 16px;font-size: 14px;line-height: 1.5;color: #8b919c;}
 .list_form .port .result.port_info p span:before {content:""; display:inline-block; position:absolute; top:50%;margin-top:-6px; left:-9px; width:1px; height:11px; background-color:#cad0d7;}
 
-/* 자동완성 결과 */
-/* .list_form .port .result>strong {display:inline-block; position:relative;max-width: 100%;padding:0 15px; font-size: 16px;font-weight: 500;line-height: 1.13;}
-.list_form .port .result>strong span {position: relative;display:inline-block; vertical-align: middle;line-height: 32px;margin-left: 20px;height:32px; color:#8b919c; font-size:13px; white-space:nowrap;}
-.list_form .port .result>strong span:before {content:""; display:inline-block; position:absolute; top:10px; left:-10px; width:1px; height:11px; background-color:#cad0d7;}
-.list_form .port .result>strong:after{content:""; display:block; position:absolute; top:0; right:0; width:20px; height:32px; background-image:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 53%, rgba(255,255,255,1) 100%);} */
 
-.box_auto {display: none;z-index: 1;position: absolute;left: 5px;top: 70px;width: 380px;box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.1);border: solid 1px #e6ebf1;background: #fff;}
+/* 자동완성예시 */
+/* .box_auto {display: none;z-index: 1;position: absolute;left: 5px;top: 70px;width: 380px;box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.1);border: solid 1px #e6ebf1;background: #fff;}
 .box_auto.open {display: block;}
 .box_auto li {position: relative;height:40px;border-bottom:1px solid #e6ebf1;box-sizing: border-box;}
 .box_auto li a {position: absolute;left:0;top:0;width:100%;height:100%;padding-left: 32px;font-family: 'Noto Sans KR';}
@@ -944,7 +943,7 @@ a.ui-datepicker-title {padding:0;}
 .box_auto li a em:before {content:'';position: absolute;left:0;top:0;width:1px;height:100%;background: #8b919c;}
 .box_auto li a em:after {content: '';position: absolute;right: 0;top: 0;width: 30px;height: 100%;background: linear-gradient(to right, transparent 5%, #fff 100%);}
 .box_auto li .status.airplane {background-size: 18px;background-image: url(../images/ico_airplane.svg);background-position: 15px 60%;background-repeat: no-repeat;}
-.box_auto li .status.ship {background-size: 18px;background-image: url(../images/ico_ship.svg);background-position: 15px center;background-repeat: no-repeat;}
+.box_auto li .status.ship {background-size: 18px;background-image: url(../images/ico_ship.svg);background-position: 15px center;background-repeat: no-repeat;} */
 
 
 /* alarm */
