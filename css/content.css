@@ -535,22 +535,6 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .calendar_btns .btn_prev_month {background:url(../images/btn_prev_40.svg) no-repeat;}
 .calendar_btns .btn_next_month {background:url(../images/btn_next_40.svg) no-repeat;}
 
-/* calender month year */
-/* .ui-datepicker-select-month table {width: 100%;text-align: center;}
-.ui-datepicker-select-month table td {line-height: 4.2em !important;}
-.ui-datepicker-select-month table a.ui-state-default {width: 40px;height: 40px;padding-top: 12px;box-sizing: border-box;font-size: 1.1em;line-height: 1.1em;}
-
-.ui-datepicker-select-year table {width: 100%;text-align: center;}
-.ui-datepicker-select-year table td {line-height: 4.2em !important;}
-
-.ui-datepicker .ui-datepicker-select-month td span,
-.ui-datepicker .ui-datepicker-select-month td a,
-.ui-datepicker .ui-datepicker-select-year td span,
-.ui-datepicker .ui-datepicker-select-year td a {width: 45px;height: 45px;padding-top: 15px;box-sizing: border-box;font-size: 1.1em !important;line-height: 1.1em;}
-
-a.ui-datepicker-title {padding:0;}
-.ui-datepicker-title a {color:#000;} */
-
 
 /* popup */
 .pop_wrap {position:absolute;z-index:10001; }
@@ -931,21 +915,6 @@ a.ui-datepicker-title {padding:0;}
 .list_form .port .result.port_info p span:before {content:""; display:inline-block; position:absolute; top:50%;margin-top:-6px; left:-9px; width:1px; height:11px; background-color:#cad0d7;}
 
 
-/* 자동완성예시 */
-/* .box_auto {display: none;z-index: 1;position: absolute;left: 5px;top: 70px;width: 380px;box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.1);border: solid 1px #e6ebf1;background: #fff;}
-.box_auto.open {display: block;}
-.box_auto li {position: relative;height:40px;border-bottom:1px solid #e6ebf1;box-sizing: border-box;}
-.box_auto li a {position: absolute;left:0;top:0;width:100%;height:100%;padding-left: 32px;font-family: 'Noto Sans KR';}
-.box_auto li a img {padding-left: 15px;vertical-align: middle;}
-.box_auto li a span {display: inline-block;font-size: 14px;line-height:40px;color: #45474e;font-weight: 500;margin-left: 7px;}
-.box_auto li a i{display: inline-block;color: #ec8922;}
-.box_auto li a em {position: absolute;left: 100px;top: 50%;margin-top: -8.5px;font-size: 13px;padding:2px 0 2px 5px;color: #8b919c;width: 255px;overflow: hidden;white-space: nowrap;}
-.box_auto li a em:before {content:'';position: absolute;left:0;top:0;width:1px;height:100%;background: #8b919c;}
-.box_auto li a em:after {content: '';position: absolute;right: 0;top: 0;width: 30px;height: 100%;background: linear-gradient(to right, transparent 5%, #fff 100%);}
-.box_auto li .status.airplane {background-size: 18px;background-image: url(../images/ico_airplane.svg);background-position: 15px 60%;background-repeat: no-repeat;}
-.box_auto li .status.ship {background-size: 18px;background-image: url(../images/ico_ship.svg);background-position: 15px center;background-repeat: no-repeat;} */
-
-
 /* alarm */
 .alarm_wrap>.inner {padding:35px 0 0 0; height:145px; text-align:center; background-color:#f6f8fa; box-sizing:border-box;}
 .alarm_wrap .alarm_input {margin:10px auto 0; width:200px;}
@@ -1138,7 +1107,6 @@ a.ui-datepicker-title {padding:0;}
 .whole_box .tit_wrap>div.tit_right {width:60%;}
 .whole_box .tit_wrap>div.tit_left {vertical-align: middle;}
 
-.search_wrap .search_form li .radio_group.type1>li {height: 42px;}
 .search_wrap .search_form li .radio_group.type1>li label {font-weight: 400;}
 
 .report_box {position:relative;margin-top:10px;padding:10px 40px 10px 30px;box-sizing: border-box;width:100%;border: 1px solid  #dde2ea;background: #fff;}
@@ -1226,7 +1194,7 @@ a.ui-datepicker-title {padding:0;}
 .list_form.chk_form .ip_txt.ship {padding-left:50px;background-size: 28px;background-image: url(../images/ico_ship.svg);background-position: 10px center;background-repeat: no-repeat;}
 .list_form.chk_form .ip_txt.airplane {padding-left:50px;background-size: 28px;background-image: url(../images/ico_airplane.svg);background-position: 12px 55%;background-repeat: no-repeat;}
 
-.grid_piece + .grid_piece {margin-top:30px;}
+.grid_piece + .grid_piece {margin-top:20px;}
 .grid_piece .chk_list {padding:20px 30px;box-sizing: border-box;}
 .grid_piece .chk_list li {display:inline-block;margin-right:50px;}
 .grid_piece .chk_list li p {display:inline-block;font-size: 14px;color: #8b919c;margin-right:10px;}

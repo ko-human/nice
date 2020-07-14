@@ -52,7 +52,8 @@
                 });
             });
 
-
+            // (해상 or 항공) 화물정보, Freight
+            $(".vendor_con_wrap").hasClass("shipping") ? $(".tit_box.shipping").show() : $(".tit_box.airplane").show();
         });
     </script>
 </head>
@@ -139,8 +140,8 @@
         </div>
         <!-- //vendor tab -->
 
-        <!-- 내용 -->
-        <div class="vendor_con_wrap">
+        <!-- 내용 vendor_con_wrap에 class 추가 (해상 : shipping / 항공 : airplane) -->
+        <div class="vendor_con_wrap airplane">
             <!--  그리드영역 -->
             <div class="tit_box">
                 <div class="con_area">
@@ -372,7 +373,7 @@
                                     <div class="list_form_wrap">
                                         <ul class="list_form chk_form">
                                             <li>
-                                                <label for="" class="lb_txt">부킹담당자</label>
+                                                <label for="" class="lb_txt">부킹 담당자</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
@@ -740,7 +741,7 @@
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label>- OI
+                                                <label for="" class="lb_txt">컨테이너 반입지 / 장치장코드</label><!-- OI -->
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
@@ -870,7 +871,7 @@
             <!--  //타이틀 박스 -->
 
             <!-- 화물정보(해상) -->
-            <div class="tit_box type shipping">
+            <div class="tit_box type shipping" style="display:none;">
                 <div class="tit_area">
                     <div class="tit_left">
                         <span class="tit">화물정보 (Cargo Detail)</span>
@@ -937,7 +938,7 @@
             <!-- //화물정보(해상) -->
 
             <!-- 화물정보(항공) -->
-            <div class="tit_box type airplane">
+            <div class="tit_box type airplane" style="display:none;">
                 <div class="tit_area">
                     <div class="tit_left">
                         <span class="tit">화물정보 (Cargo Detail)</span>
@@ -977,8 +978,8 @@
             </div>
             <!-- //화물 정보(항공) -->
 
-            <!-- Freight 정보(해상) -->
-            <div class="tit_box type shipping">
+            <!-- Freight(해상) -->
+            <div class="tit_box type shipping" style="display:none;">
                 <div class="tit_area">
                     <div class="tit_left">
                         <span class="tit">Freight</span>
@@ -1015,10 +1016,10 @@
                     <!-- //grid piece -->
                 </div>
             </div>
-            <!-- //Freight 정보(해상) -->
+            <!-- //Freight(해상) -->
 
-            <!-- Freight 정보(항공) -->
-            <div class="tit_box type airplane">
+            <!-- Freight(항공) -->
+            <div class="tit_box type airplane" style="display:none;">
                 <div class="tit_area">
                     <div class="tit_left">
                         <span class="tit">Freight</span>
@@ -1055,7 +1056,7 @@
                     <!-- //grid piece -->
                 </div>
             </div>
-            <!-- //Freight 정보(항공) -->
+            <!-- //Freight(항공) -->
         </div>
         <!-- //내용 -->
     </div>
