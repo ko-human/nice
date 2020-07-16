@@ -191,6 +191,7 @@ html, body {height:100%; width:100%;}
 html {margin:0; padding:0;}
 body {margin:0; padding:0; font-family:'Gotham', 'Noto Sans KR','dotum'; font-size:14px; line-height:1; font-weight:400; color:#45474e; background-color:#f0f4f8;}
 input, select, textarea {font-family:'Gotham','Noto Sans KR','dotum'; vertical-align:middle;  border-radius:0; -webkit-appearance:none;outline: none;border: none;}
+textarea::placeholder {color: #aeb2b9;}
 button{background: inherit; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer;}
 select::-ms-expand {display: none;}
 input::-ms-clear, input::-ms-reveal {display: none;}
@@ -199,7 +200,8 @@ ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
 iframe {display:block; }
 img {border:0;}
 a,i,em {text-decoration:none;font-style:normal;}
-table {border-collapse:collapse; border-spacing:0; }
+table {border-collapse:collapse; border-spacing:0;}
+fieldset {border:0;}
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}
 

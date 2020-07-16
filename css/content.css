@@ -70,12 +70,14 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .radio_group.type_freight>li.air input:checked+label {background-image:url(../images/ico_airplane.svg);}
 .radio_group.type_freight>li.ocean input:checked+label {background-image:url(../images/ico_ship.svg);}
 .radio_group.type_freight>li.radio input:checked+label {background-image:url(../images/btn_check_b.svg);}
-.radio_group.type1>li {padding:12px 0; }
+.radio_group.type1>li {padding:12px 0;}
 .radio_group.type1>li label {padding-left:24px; font-size:14px; line-height:18px; background:url(../images/radio.svg) no-repeat 0 center;}
 .radio_group.type1>li input:checked+label {background-image:url(../images/radio_checked_g.svg); background-color:transparent;}
 .radio_group.type1>li+li {margin-left:20px;}
-
-
+.radio_group.type2>li {padding:12px 0;}
+.radio_group.type2>li label {padding-left:24px; font-size:14px; line-height:18px; background: url(../images/radio.svg) no-repeat 0 center;}
+.radio_group.type2>li input:checked+label {background-image:url(../images/btn_check_b.svg); background-color:transparent;background-size: 16px;}
+.radio_group.type2>li+li {margin-left:20px;}
 
 .check_group {display:block; font-size:0; }
 .check_group>li {display:inline-block; vertical-align:middle; position:relative; font-size:14px;}
@@ -863,7 +865,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .cargo_list .cbm {width:120px;}
 .cargo_form>li {padding-left:35px; position:relative;}
 .cargo_form>li+li {margin-top:30px;}
-.cargo_form+.ico_add {margin-top:20px;}
+.cargo_form+.ico_add, .list_form+.ico_add {margin-top:20px;}
 .cargo_form, .cargo_form .ip_txt {font-weight:500;}
 .cargo_form .ip_group {margin-bottom:10px;}
 .cargo_form>li .btn_cir.ico_del {position:absolute; left:0; top:12px;}
@@ -902,12 +904,14 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .list_form .port {position: relative;}
 .list_form .port .box_port {position: relative; padding:0 5px;border: 1px solid #dde2ea;background: #fff;}
 .list_form .port .box_port .ip_txt {border:0;}
+.list_form .port .box_port .ip_date {border-top:1px solid #dde2ea;}
 .list_form .port .box_port .ip_date i {position: absolute;left: 120px;top:50%;margin-top:-6px;padding:1px 3px;line-height: 11.5px;text-align: center;font-size: 9px;color:#fff;background: #cad0d7;border-radius: 3px;}
 .list_form .port .box_port .ip_date i.on {background: #ec8922;}
-.list_form .port .box_port .inp_port {font-weight:500; height:62px;border-bottom:1px solid #dde2ea;}
+.list_form .port .box_port .inp_port {font-weight:500; height:62px;}
 .list_form .port .box_port .ip_search .btn_ip_search {height:100%;}
-.list_form .port .box_port .ip_search:after {content: '';position: absolute;right: 40px;top: 0;width: 40px;height: 99%;background: linear-gradient(to right, transparent 0%, #fff 70%);}
+.list_form .port .box_port .ip_search:after {content: '';position: absolute;right: 40px;top: 0;width: 40px;height: 99%;background: linear-gradient(to right, transparent 0%, #fff 75%);}
 .list_form .port + .port:after {content:'';position: absolute;left:-6px;top:55%;width:13px;height:13px;background: url(../images/ico_arr_cir.svg) no-repeat;background-size: 100%;}
+.list_form .port_g + .port_g:after {content:'';position: absolute;left:-6px;top:60%;width:13px;height:13px;background: url(../images/ico_arr_cir_g.svg) no-repeat;background-size: 100%;}
 .list_form .port.space20 + .port.space20:after {content:'';position: absolute;left:-12px;top:52%;width:22px;height:22px;background: url(../images/ico_arr_cir.svg) no-repeat;background-size: 100%;}
 .list_form .port .result {position:absolute; width:100%; top:10px; left:0; height:40px; line-height:40px; background-color:#fff;overflow: hidden;display: table;}
 .list_form .port .result.port_info p {display: table-cell;vertical-align: middle;font-size: 16px;font-weight: 500;line-height: 1.13;max-width: 410px;line-height: 1.5;padding: 0 15px;}
@@ -1032,7 +1036,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .tit_box .con_area .chart_area + .grid_wrap {margin-top:30px;}
 
 .manage_wrap.horizon_box .tit_box {display: inline-block;vertical-align: top;}
-.manage_wrap.horizon_box .tit_box+.tit_box {margin-left:20px;margin-top:20px;}
+.manage_wrap.horizon_box .tit_box+.tit_box {margin-left:20px;margin-top:8px;}
 
 /* ecopro */
 .foot_area .foot_info .btn.line.ico_search {width: 20px;height: 20px;padding: 0;margin: -3px 0 0 5px;background-size: 10px;}
@@ -1210,9 +1214,24 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .search_wrap.sales ul {display: table;width:100%;}
 .search_wrap.sales ul li {display: table-cell;}
 
+/* Quotation */
+.list_form + .radio_group {margin:18px 0;}
+.cargo_wrap+.list_form_wrap {margin-top: 30px;}
+.cargo_box {margin-top:80px;}
+.cargo_box .con_area {margin-top:25px;}
+.cargo_hd>li.typ {padding-left: 5px;}
+.list_form li .ip_fixed.vol {position: relative;display: table;width:100%;height: 42px;background-color: #e6ebf1;border: solid 1px #dde2ea;padding-left: 40px;padding-right: 10px;line-height: 41px;}
+.list_form li .ip_fixed.vol:before {content:'Vol.';position: absolute;left:10px;top:0;font-size:14px;color: #8b919c;}
 
-
-
+.cargo_list.w800 {position: relative;width: 800px;}
+#dropZone{width:100%;height:60px;color: #45474e;font-size:14px;padding:13px 15px;margin-bottom:10px;border: solid 1px #dde2ea;background: #fff;}
+.upload_list li {position: relative;height: 35px;font-size: 14px;line-height: 35px;color: #45474e;padding:0 20px; }
+.upload_list li:hover {background-color: #e6ebf1;}
+.upload_list li .btn_upload {position: absolute;right:15px;top:0;width:18px;height:100%;font-size: 0;background: url(../images/ico_closed.svg) no-repeat center;background-size: contain;}
+.add_file {margin-top:20px;}
+.ico_del.remove_file {position: absolute;margin-top: 20px;right: 20px;color: #8b919c;}
+.list_form_wrap.under {position: relative;margin-bottom:60px;}
+.list_form_wrap.under:after {content:'';position:absolute;left:0;bottom:-35px;width:100%;height:1px;background:#dde2ea;}
 
 
 /* ########################################### DARK ############################################### */
