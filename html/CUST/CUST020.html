@@ -14,14 +14,12 @@
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script src="../../script/ui_common.js"></script>
+    <script src="../../script/multiupload.js"></script>
     <script type="text/javascript">
         $(function() {
 
             //input
             $(".ip_del").inputTextFocus();
-
-            // 파일명
-            $(".ip_file").fileReady();
 
             // 캘린더
             var dateOption = {
@@ -30,41 +28,16 @@
                 maxView: 4,
                 format: 'yyyy-mm-dd'
             };
-            $(".ip_date input").datetimepicker($.extend(uiCommon.datepickerOption, dateOption)).on('changeDate', function(selected) {
-                if ($(this).siblings("i").length > 0) {
-                    $(this).siblings("i").addClass("on");
-                }
-            }).icoTrigger();
+            $(".ip_date input").datetimepicker($.extend(uiCommon.datepickerOption, dateOption)).icoTrigger();
 
-            // summary 높이 ()
-            var leftH = $(".left").innerHeight();
-                $(".summary_wrap").css({"minHeight": leftH});
-
-            // 파일추가
-            $(".file_upload_wrap .btn_cir.ico_add").on("click", function(e) {
-                var fileHtml = '<li><div class="ip_file">' +
-                    '<input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">' +
-                    '<span class="bn_up">file..<input type="file" name="" value=""></span>' +
-                    '</div> <a href="#" class="btn_cir ico_del"></a></li>';
-                var $file = $(fileHtml);
-
-                //삭제 이벤트추가
-                $file.find(".btn_cir.ico_del").on("click", function(e) {
-                    $(this).parent().remove();
-                    e.preventDefault();
-                });
-                $file.fileReady();
-                $(this).parent().parent().append($file);
-                e.preventDefault();
-            });
-
+            // 파일삭제
             $('.remove_file').on("click",function () {
                 $(this).parent().find('#fileTableTbody').children('li').not('#dropZone').remove();
             });
 
             //cargo
             $(".add_cargo").on("click", function(e) {
-                var rowHtml = '<li><ul class="list_form">' +
+                var rowHtml3 = '<li><ul class="list_form">' +
                     '<li><select class="select bold" name=""><option value="">20RF</option><option value="">ABC</option></select></li>' +
                     '<li><select class="select bold" name=""><option value="">dry</option><option value="">ABC</option></select></li>' +
                     '<li><span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
@@ -74,7 +47,7 @@
                     '<li><span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
                     '</ul><a href="javascript:" class="btn_cir ico_del"></a></li>';
 
-                var rowHtml2 = '<li><ul class="list_form">' +
+                var rowHtml4 = '<li><ul class="list_form">' +
                     '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
                     '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
                     '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
@@ -87,26 +60,70 @@
                     '<li style="width:122px;"><div class="ip_fixed tar vol"></div></li>' +
                     '</ul><a href="javascript:" class="btn_cir ico_del"></a></li>';
 
-                var $row = $(rowHtml);
-                var $row2 = $(rowHtml2);
+                var rowHtml5 = '<li><ul class="list_form">' +
+                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
+                    '<li><span class="ip_del"><input number="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
+                    '<li><span class="ip_del"><input number="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
+                    '<li style="width: 1px;padding: 0;"><span class="middle_bar"></span></li>' +
+                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span></li>' +
+                    '</ul><ul class="list_form">' +
+                    '<li style="width:50%;"><span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
+                    '<li style="width:122px;"><div class="ip_fixed tar vol"></div></li>' +
+                    '<li><div class="ip_fixed tar wt"></li>' +
+                    '</ul><a href="javascript:" class="btn_cir ico_del"></a></li>';
+
+                var rowHtml6 = '<li><ul class="list_form">' +
+                    '<li class="port"><label for="" class="lb_txt req">Origin</label><div class="box_port"><span class="ip_search"><span class="ip_del">' +
+                    '<input type="text" value="" placeholder="Loading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span></div></li>' +
+                    '<li class="port"><label for="" class="lb_txt req">Destination</label><div class="box_port"><span class="ip_search"><span class="ip_del">' +
+                    '<input type="text" value="" placeholder="Unloading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span></div></li></ul>' +
+                    '<ul class="list_form">' +
+                    '<li><label for="" class="lb_txt req">Service Scope</label><select class="select bold"><option value="">CY</option><option value="">CY</option></select></li>' +
+                    '<li><label for="" class="lb_txt"></label><select class="select bold"><option value="">DOOR</option><option value="">DOOR</option></select></li>' +
+                    '<li style="width:50%;"><label for="" class="lb_txt">Incoterms</label><select class="select bold"><option value="">CIF</option><option value="">CFR</option></select></li></ul>' +
+                    '<ul class="list_form">' +
+                    '<li class="port_g"><label for="" class="lb_txt">Door Origin</label><span class="ip_del"><input type="text" value="" placeholder="Nation/City" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
+                    '<li class="port_g"><label for="" class="lb_txt">Door Dest.</label><span class="ip_del"><input type="text" value="" placeholder="Nation/City" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li></ul>' +
+                    '<a href="javascript:" class="btn_cir ico_del"></a></li>';
+
+                var $row3 = $(rowHtml3);
+                var $row4 = $(rowHtml4);
+                var $row5 = $(rowHtml5);
+                var $row6 = $(rowHtml6);
 
                 //삭제 이벤트추가
-                $row.find(".btn_cir.ico_del").on("click", function(e) {
+                $row3.find(".btn_cir.ico_del").on("click", function(e) {
                     $(this).parent().remove();
                     e.preventDefault();
                 });
-                $row2.find(".btn_cir.ico_del").on("click", function(e) {
+                $row4.find(".btn_cir.ico_del").on("click", function(e) {
+                    $(this).parent().remove();
+                    e.preventDefault();
+                });
+                $row5.find(".btn_cir.ico_del").on("click", function(e) {
+                    $(this).parent().remove();
+                    e.preventDefault();
+                });
+                $row6.find(".btn_cir.ico_del").on("click", function(e) {
                     $(this).parent().remove();
                     e.preventDefault();
                 });
 
-                $(this).prev(".cargo_form.fcl").append($row);
-                $(this).prev(".cargo_form.general").append($row2);
+                $(this).prev(".cargo_form.ocean1").append($row3);
+                $(this).prev(".cargo_form.ocean2").append($row4);
+                $(this).prev(".cargo_form.air").append($row5);
+                $(this).prev(".cargo_form.info").append($row6);
 
                 e.preventDefault();
 
                 $(".ip_del").inputTextFocus();
             });
+
+            // summary Height
+            var leftH = $(".left").innerHeight();
+            $(".summary_wrap").css({"minHeight": leftH});
 
         });
     </script>
@@ -117,7 +134,7 @@
 
         <div class="ebook_wrap">
             <!-- input list -->
-            <div class="left">
+            <div class="left amend"><!-- amend일 경우, class추가 : amend -->
 
                 <div class="tit_wrap tit_h1">
                     <div class="tit_left">
@@ -164,44 +181,46 @@
                 <!-- Contract information -->
                 <div class="cargo_wrap">
                     <div class="cargo_list">
-                        <ul class="list_form cargo_hd">
-                            <li class="port">
-                                <label for="" class="lb_txt req">Origin</label>
-                                <div class="box_port">
-                                    <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Loading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
-                                </div>
-                            </li>
-                            <li class="port">
-                                <label for="" class="lb_txt req">Destination</label>
-                                <div class="box_port">
-                                    <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Unloading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="list_form cargo_hd">
+                        <ul class="cargo_form info">
                             <li>
-                                <label for="" class="lb_txt req">Service Scope</label>
-                                <select class="select bold">
-                                    <option value="">CY</option>
-                                    <option value="">CY</option>
-                                </select>
-                            </li>
-                            <li>
-                                <label for="" class="lb_txt"></label>
-                                <select class="select bold">
-                                    <option value="">DOOR</option>
-                                    <option value="">DOOR</option>
-                                </select>
-                            </li>
-                            <li style="width:50%;">
-                                <label for="" class="lb_txt">Incoterms</label>
-                                <select class="select bold">
-                                    <option value="">CIF</option>
-                                    <option value="">CFR</option>
-                                </select>
-                            </li>
-                        </ul>
-                        <ul class="list_form cargo_hd">
+                                <ul class="list_form">
+                                    <li class="port">
+                                        <label for="" class="lb_txt req">Origin</label>
+                                        <div class="box_port">
+                                            <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Loading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
+                                        </div>
+                                    </li>
+                                    <li class="port">
+                                        <label for="" class="lb_txt req">Destination</label>
+                                        <div class="box_port">
+                                            <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Unloading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list_form">
+                                    <li>
+                                        <label for="" class="lb_txt req">Service Scope</label>
+                                        <select class="select bold">
+                                            <option value="">CY</option>
+                                            <option value="">CY</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="" class="lb_txt"></label>
+                                        <select class="select bold">
+                                            <option value="">DOOR</option>
+                                            <option value="">DOOR</option>
+                                        </select>
+                                    </li>
+                                    <li style="width:50%;">
+                                        <label for="" class="lb_txt">Incoterms</label>
+                                        <select class="select bold">
+                                            <option value="">CIF</option>
+                                            <option value="">CFR</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <ul class="list_form">
                             <li class="port_g">
                                 <label for="" class="lb_txt">Door Origin</label>
                                 <span class="ip_del"><input type="text" value="" placeholder="Nation/City" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
@@ -209,6 +228,8 @@
                             <li class="port_g">
                                 <label for="" class="lb_txt">Door Dest.</label>
                                 <span class="ip_del"><input type="text" value="" placeholder="Nation/City" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                            </li>
+                        </ul>
                             </li>
                         </ul>
                         <a href="javascript:" class="btn_cir ico_add add_cargo"><span>Add another row</span></a>
@@ -243,8 +264,8 @@
                 </div>
                 <!-- //Contract information -->
 
-                <!-- Ocean인 경우, container & cargo info 모두 있음 -->
-                <div class="cargo_box">
+                <!-- Ocean Freight인 경우, container & cargo info 모두 있음 -->
+                <div class="cargo_box ocean">
                     <div class="tit_area">
                         <div class="tit_wrap">
                             <div class="tit_left">
@@ -263,7 +284,7 @@
                                     <li class="qty">Qty.</li>
                                     <li class="wei">Total G.Weight</li>
                                 </ul>
-                                <ul class="cargo_form fcl">
+                                <ul class="cargo_form ocean1">
                                     <li>
                                         <ul class="list_form">
                                             <li>
@@ -307,7 +328,7 @@
                                     <li>PKG Unit</li>
                                     <li class="wei">Total G.Weight</li>
                                 </ul>
-                                <ul class="cargo_form general">
+                                <ul class="cargo_form ocean2">
                                     <li>
                                         <ul class="list_form">
                                             <li>
@@ -346,8 +367,8 @@
                     </div>
                 </div>
                 <!-- //Ocean -->
-                <!-- Air인 경우, cargo Info만 있음 -->
-                <div class="cargo_box">
+                <!-- Air Freight인 경우, cargo Info만 있음 -->
+                <div class="cargo_box air">
                     <div class="tit_area">
                         <div class="tit_wrap">
                             <div class="tit_left">
@@ -368,7 +389,7 @@
                                     <li>PKG Unit</li>
                                     <li class="wei">Total G.Weight</li>
                                 </ul>
-                                <ul class="cargo_form general">
+                                <ul class="cargo_form air">
                                     <li>
                                         <ul class="list_form">
                                             <li>
@@ -392,11 +413,14 @@
                                             </li>
                                         </ul>
                                         <ul class="list_form">
-                                            <li>
+                                            <li style="width:50%;">
                                                 <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                                             </li>
                                             <li style="width:122px;">
                                                 <div class="ip_fixed tar vol"></div>
+                                            </li>
+                                            <li>
+                                                <div class="ip_fixed tar wt"></div>
                                             </li>
                                         </ul>
                                     </li>
@@ -427,7 +451,8 @@
                                     </ul>
                                 </fieldset>
                             </form>
-                            <a href="javascript:" class="btn_cir ico_add add_file"><span>Add file</span></a>
+                            <!-- 탐색창 열어서 파일 선택하면, 상단 <ul>에 li 추가 -->
+                            <div class="add_file ico_add btn_cir"><span>Add file</span><input type="file" name="" value=""></div>
                             <a href="javascript:" class="btn_cir ico_del remove_file"><span>Delete all files</span></a>
                         </div>
                     </div>
@@ -446,7 +471,7 @@
                     </ul>
                 </div>
                 <!-- //Remark -->
-                
+
                 <!-- Person in charge -->
                 <div class="tit_wrap tit_h2 mt80">
                     <div class="tit_left">
@@ -486,8 +511,8 @@
                 <div class="btn_bottom">
                     <div class="left">
                         <a href="javascript:" class="btn line act">Save</a>
-                        <a href="javascript:" class="btn act">Amend</a>
-                        <a href="javascript:" class="btn act">Submit</a>
+                        <a href="javascript:" class="btn act amend">Amend</a><!-- amend일 경우만 노출 -->
+                        <a href="javascript:" class="btn act submit">Submit</a><!-- amend일 경우 비노출 -->
                         <a href="javascript:" class="btn black act">Discard</a>
                     </div>
                 </div>
@@ -497,7 +522,7 @@
 
             <!-- Summary -->
             <div class="right">
-                <!-- ebooking summary -->
+                <!-- Quotation summary -->
                 <div class="summary_wrap">
                     <h2>Summary</h2>
                     <div class="sum_inner">
@@ -509,107 +534,62 @@
                                         <dt>Transpotation Mode</dt>
                                         <dd>
                                             <p>Ocean Freight</p>
-                                            <p>Export</p>
+                                            <p>Export / Spot</p>
                                         </dd>
                                     </dl>
                                 </li>
                                 <li>
+                                    <table>
+                                        <colgroup>
+                                           <col width="18%">
+                                           <col width="18%">
+                                           <col width="20%">
+                                           <col width="15%">
+                                           <col width="*">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="tal">Origin</th>
+                                                <th class="tal">Destination</th>
+                                                <th class="tal">Service Scope</th>
+                                                <th class="tal">Incoterms</th>
+                                                <th class="tal">Door Address</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tal">KOREA</td>
+                                                <td class="tal">USA</td>
+                                                <td class="tal">CY-CY</td>
+                                                <td class="tal">CIF</td>
+                                                <td class="tal">PUSAN - NEWYORK</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tal">KOREA</td>
+                                                <td class="tal">USA</td>
+                                                <td class="tal">CY-CY</td>
+                                                <td class="tal">CFR</td>
+                                                <td class="tal">PUSAN - NEWYORK</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
                                     <dl>
-                                        <dt>Cargo Ready Date</dt>
+                                        <dt>Estinated Shipping Date</dt>
                                         <dd>2020-04-04</dd>
                                     </dl>
                                 </li>
                                 <li>
                                     <dl>
-                                        <dt>Line / Carrier</dt>
-                                        <dd>Asiana</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Vessel & Voyage / <br>Flight & No.</dt>
-                                        <dd>OZ 2006S</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Origin</dt>
-                                        <dd>
-                                            <p>INC | Incheon National Airport, South Korea</p>
-                                            <p>ETA : 2020-04-05</p>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Destination</dt>
-                                        <dd>
-                                            <p>USLAX | Los Angeles CA, USA</p>
-                                            <p>ETD : 2020-04-05</p>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Service Scope</dt>
-                                        <dd>CY - CY</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Payment term</dt>
-                                        <dd>Prepaid</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Incoterms</dt>
-                                        <dd>CIF</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
                                         <dt>Commodity</dt>
-                                        <dd>aaa</dd>
+                                        <dd></dd>
                                     </dl>
                                 </li>
                                 <li>
                                     <dl>
                                         <dt>Cargo Type</dt>
-                                        <dd>Prepaid</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Origin Trucking</dt>
-                                        <dd>Own</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Door Address</dt>
-                                        <dd>Pusan, Korea</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Name of PIC at door</dt>
-                                        <dd>
-                                            <p>Loso Kim / 010-2222-3300</p>
-                                            <p>email@cj.net</p>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Trucker</dt>
-                                        <dd>Loso</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Remark</dt>
-                                        <dd>Loso</dd>
+                                        <dd>Nor</dd>
                                     </dl>
                                 </li>
                             </ul>
@@ -622,14 +602,16 @@
                                 <h3>Container</h3>
                                 <table>
                                     <colgroup>
-                                       <col width="24%">
-                                       <col width="20%">
-                                       <col width="21%">
+                                       <col width="14%">
+                                       <col width="14%">
+                                       <col width="14%">
+                                       <col width="17%">
                                        <col width="*">
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th class="tal">Size & Type</th>
+                                            <th>Size</th>
+                                            <th>Type</th>
                                             <th>Qty.</th>
                                             <th>Total <br> G.Weight</th>
                                             <th class="tal">Remark</th>
@@ -637,14 +619,16 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="tal">20DC</td>
+                                            <td>20</td>
+                                            <td>350</td>
                                             <td>35</td>
                                             <td class="ton pr27">550</td>
                                             <td class="tal">small box</td>
                                         </tr>
                                         <tr>
-                                            <td class="tal">20RF</td>
-                                            <td>55</td>
+                                            <td>20</td>
+                                            <td>550</td>
+                                            <td>25</td>
                                             <td class="ton pr27">30</td>
                                             <td class="tal">small box</td>
                                         </tr>
@@ -655,38 +639,50 @@
                                 <h3>Dimension</h3>
                                 <table>
                                     <colgroup>
-                                       <col width="15.2%">
-                                       <col width="15.2%">
-                                       <col width="15.2%">
-                                       <col width="11%">
-                                       <col width="15.2%">
+                                       <col width="4%">
+                                       <col width="4%">
+                                       <col width="4%">
+                                       <col width="4%">
+                                       <col width="4%">
+                                       <col width="8%">
+                                       <col width="4%">
+                                       <col width="6%">
                                        <col width="*">
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th>Length</th>
-                                            <th>Width</th>
-                                            <th>Height</th>
+                                            <th>L(cm)</th>
+                                            <th>W(cm)</th>
+                                            <th>H(cm)</th>
                                             <th>Qty.</th>
-                                            <th>Total<br>G.Weight</th>
+                                            <th>PKG Unit</th>
+                                            <th>Total G.Weight</th>
+                                            <th>Vol.</th>
+                                            <th>Chargable WT</th>
                                             <th class="tal">Remark</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="meter">77</td>
-                                            <td class="meter">550</td>
-                                            <td class="meter">35</td>
+                                            <td>77</td>
+                                            <td>550</td>
+                                            <td>35</td>
+                                            <td>35</td>
                                             <td>35</td>
                                             <td class="ton">550</td>
+                                            <td></td>
+                                            <td></td>
                                             <td class="tal"></td>
                                         </tr>
                                         <tr>
-                                            <td class="meter">25</td>
-                                            <td class="meter">30</td>
-                                            <td class="meter">55</td>
+                                            <td>25</td>
+                                            <td>30</td>
+                                            <td>55</td>
+                                            <td>55</td>
                                             <td>55</td>
                                             <td class="ton">30</td>
+                                            <td></td>
+                                            <td></td>
                                             <td class="tal">small box</td>
                                         </tr>
                                     </tbody>
@@ -697,26 +693,13 @@
                     <div class="sum_inner">
                         <h3>Document</h3>
                         <div class="box_person">
-                            <ul class='sum_list'>
-                                <li>
-                                    <dl>
-                                        <dt>S/R	 (C/I & P/L)</dt>
-                                        <dd>file</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>수출신고필증</dt>
-                                        <dd>file</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>화물 MDS, DGD, CERTI</dt>
-                                        <dd>file</dd>
-                                    </dl>
-                                </li>
-                            </ul>
+                            <p>Remark contents</p>
+                        </div>
+                    </div>
+                    <div class="sum_inner">
+                        <h3>REMARK (Request)</h3>
+                        <div class="box_person">
+                            <p>Remark contents</p>
                         </div>
                     </div>
                     <div class="sum_inner">
@@ -739,7 +722,7 @@
                             <ul class='sum_list'>
                                 <li>
                                     <dl>
-                                        <dt>Name of PIC at your company</dt>
+                                        <dt>Requested by</dt>
                                         <dd>Loso Kim</dd>
                                     </dl>
                                 </li>
@@ -756,49 +739,6 @@
                                     </dl>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="sum_inner">
-                        <h3>SHIPPER / CNEE / PO No.</h3>
-                        <div class="box_person">
-                            <ul class='sum_list'>
-                                <li>
-                                    <dl>
-                                        <dt>Shipper</dt>
-                                        <dd>
-                                            100110<br>
-                                            AMOREPACIFIC CORPORATION<br>
-                                            Address AMOREPACIFIC CORPORATION
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Consignee</dt>
-                                        <dd>
-                                            100110<br>
-                                            AMOREPACIFIC CORPORATION<br>
-                                            Address AMOREPACIFIC CORPORATION
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>PO No.</dt>
-                                        <dd>
-                                            100110<br>
-                                            AMOREPACIFIC CORPORATION<br>
-                                            Address AMOREPACIFIC CORPORATION
-                                        </dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="sum_inner">
-                        <h3>REMARK (Request)</h3>
-                        <div class="box_person">
-                            <p>Remark contents</p>
                         </div>
                     </div>
                 </div>

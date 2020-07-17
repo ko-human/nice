@@ -99,7 +99,7 @@
                     </select>
                 </li>
                 <li>
-                    <label for="" class="lb_txt">EX/IM</label>
+                    <label for="" class="lb_txt">Export/Import</label>
                     <select class="select" name="" style="width:180px;">
                         <option value="">Export</option>
                         <option value="">type1</option>
@@ -131,7 +131,6 @@
         <div class="tab_wrapper">
             <ul class='tab_list'>
                 <li class="on"><a href="javascript:">Total<span>20</span></a></li>
-                <li><a href="javascript:">Quotation<span>20</span></a></li>
                 <li><a href="javascript:">Ocean Export<span>20</span></a></li>
                 <li><a href="javascript:">Ocean Import<span>20</span></a></li>
                 <li><a href="javascript:">Air Export<span>20</span></a></li>
@@ -162,10 +161,11 @@
                     <div class="tit_right">
                         <div class="btn_list">
                             <a href="javascript:" class="btn sm w100">Save</a>
+                            <a href="javascript:" class="btn sm w100">CNFM</a>
                             <a href="javascript:" class="btn sm line w100">Print</a>
                             <a href="javascript:" class="btn sm line w100">EDMS</a>
-                            <a href="javascript:" class="btn sm line w100">CNFM</a>
-                            <a href="javascript:" class="btn sm gray w100">Send</a>
+                            <a href="javascript:" class="btn sm line w100">Send</a>
+                            <a href="javascript:" class="btn sm gray w100">Reject</a>
                         </div>
                     </div>
                 </div>
@@ -219,12 +219,16 @@
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
                                         <ul class="list_form chk_form">
-                                            <li>
+                                            <li style="width:50%;">
                                                 <label for="" class="lb_txt">SHIPPER Name / PJT Name (고객명/PJT명)</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
                                                 <label for="" class="lb_txt">Consignee (수하인)</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                            <li>
+                                                <label for="" class="lb_txt">Door Address</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
@@ -267,17 +271,9 @@
                                             </li>
                                         </ul>
                                         <ul class="list_form chk_form">
-                                            <li class="space20">
+                                            <li class="space20" style="width:442px;display:inline-block;">
                                                 <label for="" class="lb_txt">Airline / Flight No. (항공사/선명&편명)</label>
                                                 <div class="ip_txt airplane"></div>
-                                            </li>
-                                            <li class="space20">
-                                                <label for="" class="lb_txt">카고마감일시</label>
-                                                <div class="ip_txt"></div>
-                                            </li>
-                                            <li class="space20">
-                                                <label for="" class="lb_txt">서류마감일시</label>
-                                                <div class="ip_txt"></div>
                                             </li>
                                         </ul>
                                         <ul class="list_form chk_form">
@@ -326,14 +322,18 @@
                                     <div class="list_form_wrap">
                                         <ul class="list_form chk_form">
                                             <li>
-                                                <label for="" class="lb_txt">Container Type</label>
+                                                <label for="" class="lb_txt">Cargo Type</label>
                                                 <div class="ip_txt"></div>
                                             </li>
                                             <li>
-                                                <label for="" class="lb_txt">Container Qty.</label>
-                                                <div class="ip_txt tar"></div>
+                                                <label for="" class="lb_txt">Ship Mode</label>
+                                                <div class="ip_txt"></div>
                                             </li>
-                                            <li style="width:530px;">
+                                            <li>
+                                                <label for="" class="lb_txt">Container Type & Qty</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                            <li style="width:350px;">
                                                 <label for="" class="lb_txt">ITEM</label>
                                                 <div class="ip_txt"></div>
                                             </li>
@@ -745,6 +745,12 @@
                                                 <div class="ip_txt"></div>
                                             </li>
                                         </ul>
+                                        <ul class="list_form chk_form">
+                                            <li style="width: 337px;display: inline-block;">
+                                                <label for="" class="lb_txt">창고</label>
+                                                <div class="ip_txt"></div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </li>
@@ -756,6 +762,10 @@
                                 <div class="desc_clause">
                                     <div class="list_form_wrap">
                                         <ul class="list_form chk_form">
+                                            <li>
+                                                <label for="" class="lb_txt">Policy No.</label>
+                                                <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                            </li>
                                             <li>
                                                 <label for="" class="lb_txt">Incoterms</label>
                                                 <div class="ip_txt"></div>
