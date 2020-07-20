@@ -1207,6 +1207,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .grid_piece .chk_list .chk_info {display: inline-block;height: 32px;padding: 5px 20px;box-sizing: border-box;border:1px solid #dde2ea;vertical-align: middle;}
 
 .grid_piece .foot_area .foot_info {margin-left: 0;}
+.list_form.chk_form .ip_txt.avoid {height: 42px;background: #fff;border: solid 1px #dde2ea;padding-right: 35px;}
 
 
 /* sales portal */
@@ -1241,6 +1242,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 
 .detail_wrap .left>.btn_bottom .btn.amend, .detail_wrap .left.amend>.btn_bottom .btn.submit {display:none;}
 .detail_wrap .left.amend>.btn_bottom .btn.amend {display:inline-block;}
+
 
 
 
