@@ -1199,12 +1199,11 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .list_form.chk_form .ip_txt.airplane {padding-left:50px;background-size: 28px;background-image: url(../images/ico_airplane.svg);background-position: 12px 55%;background-repeat: no-repeat;}
 
 .grid_piece + .grid_piece {margin-top:20px;}
-.grid_piece .chk_list {padding:20px 30px;box-sizing: border-box;}
-.grid_piece .chk_list li {display:inline-block;margin-right:50px;}
-.grid_piece .chk_list li p {display:inline-block;font-size: 14px;color: #8b919c;margin-right:10px;}
-.grid_piece .chk_list li .ip_del {display: inline-block;width: auto;height: 32px;vertical-align: middle;}
-.grid_piece .chk_list li .ip_del .ip_txt {height:32px;}
-.grid_piece .chk_list .chk_info {display: inline-block;height: 32px;padding: 5px 20px;box-sizing: border-box;border:1px solid #dde2ea;vertical-align: middle;}
+.tit_box .tit_wrap .chk_list li {display:inline-block;margin-right:50px;}
+.tit_box .tit_wrap .chk_list li p {display:inline-block;font-size: 14px;color: #8b919c;margin-right:10px;}
+.tit_box .tit_wrap .chk_list li .ip_del {display: inline-block;width: auto;height: 32px;vertical-align: middle;}
+.tit_box .tit_wrap .chk_list li .ip_del .ip_txt {height:32px;}
+.tit_box .tit_wrap .chk_list .chk_info {display: inline-block;height: 32px;padding: 5px 20px;box-sizing: border-box;border:1px solid #dde2ea;vertical-align: middle;}
 
 .grid_piece .foot_area .foot_info {margin-left: 0;}
 .list_form.chk_form .ip_txt.avoid {height: 42px;background: #fff;border: solid 1px #dde2ea;padding-right: 35px;}
