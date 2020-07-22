@@ -1139,7 +1139,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .print_table + .print_table {margin-top:10px;}
 .print_table.top table tr td {padding-top:18px;padding-bottom:17px;}
 .print_table.top table tr td p {font-weight: 500;margin-bottom: 6px;}
-.print_table.top table tr td span {line-height: 1.43;}
+.print_table.top table tr td span {display: block;font-weight: 400;line-height: 1.43;}
 .print_table table tr td {border-bottom: 1px solid #dde2ea;}
 .print_table tr {height:40px;}
 .print_table tr th {font-size: 14px;font-weight: 500;color: #6b6e72;border-bottom:1px solid #dde2ea;border-right: 1px solid #dde2ea;}
@@ -1152,22 +1152,19 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
     .for_print .btn_closed {display: none;}
     .for_print .pop_header {display: none;}
     .print_table {page-break-after:auto;}
-    .print_table thead {color:#6b6e72;font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', '돋움', 'Dotum', Sans-serif;background-color: #f6f8fa !important;-webkit-print-color-adjust: exact;printer-colors: exact;color-adjust: exact;}
+    .print_table thead {display:table-header-group;color:#6b6e72;background-color: #f6f8fa !important;-webkit-print-color-adjust: exact;printer-colors: exact;color-adjust: exact;}
     .print_table th {height:40px;}
-
-    body, article {width: 100%;height: 100%;margin: 0;padding: 0;max-width: 100% !important;background: #fff !important;overflow: visible;}
+    body {table-layout: fixed;width: 100%;height: 100%;margin: 0;padding: 0;max-width: 100% !important;background: #fff !important;overflow: visible;}
     @page{size:auto; margin : 10mm 6mm;}
 }
 
-
 /* Landscape mode */
 @media only print and (orientation: landscape) {
-    body { min-width:1440px; }
+    body { min-width:1370px; }
 }
-
 /* Portrait mode */
 @media only print and (orientation: portrait) {
-    body { min-width:1270px; }
+    body { min-width:1200px; }
 }
 
 /* 선적일정 */
