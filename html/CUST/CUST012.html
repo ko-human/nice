@@ -16,6 +16,11 @@
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
+            // 스크롤바
+            $(".track_list").mCustomScrollbar({
+                scrollInertia : 250
+            });
+
             //input
             $(".ip_del").inputTextFocus();
             var dateOption = {
