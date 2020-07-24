@@ -221,6 +221,7 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;margin
 .ml30 {margin-left:30px !important;}
 
 .mb20 {margin-bottom:20px !important;}
+.mr0 {margin-right:0 !important;}
 
 /* font */
 .bold {font-weight:500 !important;}

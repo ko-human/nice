@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>popup</title>
+    <title>booking popup</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
@@ -31,7 +31,7 @@
         <a href="#" class="btn_closed">닫기</a>
         <div class="pop_header">
             <div class="tit">
-                Port List
+                User Information
             </div>
         </div>
         <div class="pop_con">
@@ -40,21 +40,17 @@
             <div class="search_wrap">
                 <ul class="search_form">
                     <li>
-                        <label for="" class="lb_txt">Name</label>
-                        <span class="ip_del" style="width:240px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                        <label for="" class="lb_txt">User Name</label>
+                        <span class="ip_del" style="width:200px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                     </li>
                     <li>
-                        <label for="" class="lb_txt">Code</label>
-                        <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                        <label for="" class="lb_txt">Office Code</label>
+                        <span class="ip_del" style="width:200px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                     </li>
                     <li>
-                        <label for="" class="lb_txt">Zip Code</label>
-                        <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
-                    </li>
-                    <li>
-                        <label for="" class="lb_txt">Type</label>
-                        <select class="select" style="width:150px;">
-                            <option value="">All</option>
+                        <label for="" class="lb_txt">Status</label>
+                        <select class="select" style="width:120px;">
+                            <option value="">Enable</option>
                             <option value="">바나나</option>
                             <option value="">딸기</option>
                         </select>
@@ -68,8 +64,8 @@
 
             <div class="tit_box">
                 <div class="con_area">
-                    <div class="grid_wrap type_sm" style="height:445px;">
-                        그리드영역 height : 445px;
+                    <div class="grid_wrap type_sm" style="height:450px;">
+                        그리드영역 height : 450px;
                     </div>
                 </div>
                 <div class="foot_area">
@@ -80,7 +76,6 @@
                     <!--// result -->
                 </div>
             </div>
-
         </div>
     </div>
     <!-- //layer -->

@@ -148,7 +148,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .search_wrap {font-size:0;}
 .search_form>li {margin-right:15px; margin-bottom:10px;padding:0; display:inline-block; position:relative; box-sizing:border-box;vertical-align: middle;}
 .search_form>li .lb_txt {display:block; height:21px; margin:0; }
-.search_form>li .ip_txt+.ip_txt, .search_form>li .select+.ip_txt, .search_form>li .select+.ip_from_to, .search_form>li .select+.ip_del, .search_form>li .ip_del+.ip_del, .search_form>li .ip_del+.ip_txt, .ip_del+.select, .select+.inblock, .select+.select, .ip_del+.inblock {margin-left:10px;}
+.search_form>li .ip_txt+.ip_txt, .search_form>li .select+.ip_txt, .search_form>li .select+.ip_from_to, .search_form>li .select+.ip_del, .search_form>li .ip_del+.ip_del, .search_form>li .ip_del+.ip_txt, .ip_del+.select, .select+.inblock, .select+.select, .ip_search+.inblock {margin-left:10px;}
 .search_form>li.btns {padding-top:21px;margin-right:0;}
 .search_form>li.btns .btn.lg+.btn.lg {margin-left:15px;}
 
