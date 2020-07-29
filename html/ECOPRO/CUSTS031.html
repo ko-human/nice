@@ -3,21 +3,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECOPRO</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-    <link href="../../script/lib/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
-    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-3.4.1.min.js" charset="UTF-8"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../script/lib/bootstrap-datepicker.js"></script>
+    <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
         $(function() {
-            $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption).icoTrigger();
             $(".ip_del").inputTextFocus();
             $(".ip_file").fileReady();
+            $(".tag_box").find(".btn_del").on("click", function(){
+                $(this).parent().remove();
+            });
         });
     </script>
 </head>
@@ -43,34 +47,45 @@
                 <ul class="list_form">
                     <li>
                         <span class="lb_txt">내용</span>
-                        <div class="editor_wrap" style="height:410px;">
-                            에디터영역 height: 410px
+                        <div class="editor_wrap" style="height:400px;">
+                            에디터영역 height: 400px;
                         </div>
                     </li>
                 </ul>
                 <ul class="list_form">
-                    <li style="width:240px;">
-                        <label for="" class="lb_txt">Department</label>
-                        <select class="select" name="" style="width:240px;">
-                            <option value="">주식회사에코프로</option>
-                            <option value="">에코</option>
-                            <option value="">프로</option>
-                        </select>
-                    </li>
                     <li>
-                        <label for="" class="lb_txt">첨부파일 (최대 100MB)</label>
+                        <label for="" class="lb_txt">첨부파일 (최대 10MB)</label>
                         <div class="ip_file">
                             <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt">
                             <span class="bn_up">file..<input type="file" name="" value=""></span>
                         </div>
                     </li>
+                    <li style="width:240px;">
+                        <label for="" class="lb_txt">Department</label>
+                        <select class="select" name="">
+                            <option value="">주식회사에코프로</option>
+                            <option value="">에코</option>
+                            <option value="">프로</option>
+                        </select>
+                    </li>
                 </ul>
+            </div>
+
+            <div class="pop_tag">
+                <div class="tag_box">
+                    <div class="item"><span>수출지서류.pdf</span><a href="javascript:" class="btn_del">삭제</a></div>
+                    <div class="item"><span>통관서류.pdf</span><a href="javascript:" class="btn_del">삭제</a></div>
+                    <div class="item"><span>서류.pdf</span><a href="javascript:" class="btn_del">삭제</a></div>
+                    <div class="item"><span>수출.pdf</span><a href="javascript:" class="btn_del">삭제</a></div>
+                    <div class="item"><span>수출지통관.pdf</span><a href="javascript:" class="btn_del">삭제</a></div>
+                    <div class="item"><span>수입통관.pdf</span><a href="javascript:" class="btn_del">삭제</a></div>
+                </div>
             </div>
 
             <div class="btn_pop_bottom">
                 <div class="btn_list">
-                    <a href="#" class="btn sm">Save</a>
-                    <a href="#" class="btn gray sm">Cancel</a>
+                    <a href="javascript:" class="btn sm">Save</a>
+                    <a href="javascript:" class="btn gray sm">Cancel</a>
                 </div>
             </div>
 
