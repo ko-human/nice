@@ -396,11 +396,10 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .indicator_wrap {margin-top:20px;}
 .indicator_wrap .bx-wrapper {margin:0; box-shadow:none; border:0; background:transparent;}
 .indicator_wrap .bx-viewport {height:110px !important;}
-.indicator_wrap .indicator_list {display:table;width:100%;height:110px;}
-.indicator_wrap .indicator_list>li {display:table-cell;width:225px;padding-right:20px;}
+.indicator_wrap .indicator_list {display:table;width:calc(100% + 20px);height:110px;table-layout: fixed;overflow: hidden;}
+.indicator_wrap .indicator_list>li {display:table-cell;padding-right:20px;}
 .indicator_wrap .indicator_list.slide li {padding:0;}
 .indicator_wrap .indicator_list>li>a {display:block;}
-.indicator_wrap .indicator_list>li:nth-last-child(1) {padding-right:0;}
 .indicator_wrap .bx-wrapper .bx-controls-direction a {width:40px; height:40px; margin-top:-20px;}
 .indicator_wrap .bx-controls-direction .bx-prev {left:-40px; background:url(../images/ico_arr_prev.svg) no-repeat; background-size:cover;}
 .indicator_wrap .bx-controls-direction .bx-next {right:-40px; background:url(../images/ico_arr_next.svg) no-repeat; background-size:cover;}
@@ -435,9 +434,9 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .main_cols_2>li {width:530px; vertical-align:middle; display:inline-block; font-size:14px;}
 .main_cols_2>li+li {margin-left:20px;}
 
-.indi_tile {padding-left:38.62%; padding-top:25px; height:110px; position:relative; box-sizing:border-box;}
-.indi_tile .img_indi {position:absolute; top:16px; left:16px; width:48px; height:48px;}
-.indi_tile .num {display:block; line-height:1.25; font-family:'CJONLYONENEWtitle';font-weight: 500;font-size:32px; color:#0d1327;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.indi_tile {padding-left:30px; padding-top:25px; height:110px; position:relative; box-sizing:border-box;}
+.indi_tile .img_indi {position:absolute; top:16px; right:16px; width:48px; height:48px;}
+.indi_tile .num {display:block; line-height:1.25; font-family:'CJONLYONENEWtitle';font-weight: 500;font-size:32px; color:#0d1327;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 70%;}
 .indi_tile .txt {margin-top:4px; width:150px; overflow:hidden; display:block; font-size:16px; color:#45474e; white-space:nowrap;padding-bottom:5px;box-sizing: border-box;}
 
 .live_tile {height:313px; position:relative;}
