@@ -167,18 +167,58 @@
                             </ul>
                         </li>
                     </ul>
-                    <ul class="radio_group type2">
-                      <li class="radio_item">
-                        <input type="radio" name="radio0" value="" id="radio0" checked="true"><label for="radio0">SPOT</label>
-                      </li>
-                      <li class="radio_item">
-                        <input type="radio" name="radio0" value="" id="radio1"><label for="radio1">REGULAR</label>
-                      </li>
+                    <!-- import일 때, class추가 : show -->
+                    <ul class="quot_radio show">
+                        <li>
+                            <ul class="radio_group type2">
+                                <li class="radio_item">
+                                    <input type="radio" name="radio0" value="" id="radio0" checked="true"><label for="radio0">SPOT</label>
+                                </li>
+                                <li class="radio_item">
+                                    <input type="radio" name="radio0" value="" id="radio1"><label for="radio1">REGULAR</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="radio_group type2">
+                                <li class="radio_item">
+                                    <input type="radio" name="radio1" value="" id="radio2" checked="true"><label for="radio2">CONTAINER</label>
+                                </li>
+                                <li class="radio_item">
+                                    <input type="radio" name="radio1" value="" id="radio3"><label for="radio3">LCL</label>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <!-- //Shipping information -->
 
                 <!-- Contract information -->
+                <div class="list_form_wrap w800">
+                    <ul class="list_form">
+                        <li>
+                            <label for="" class="lb_txt">Estimated Shipping Date</label>
+                            <span class="ip_date" style="width:390px;"><input type="text" class="ip_txt bold"><i class="ico_trig"></i></span>
+                            <span class="ip_check type1 ml40"><input type="checkbox" name="customs" value="" id="check01"><label for="check01">Not fixed</label></span>
+                            <span class="ip_check type1 ml40"><input type="checkbox" name="customs" value="" id="check02"><label for="check02">통관여부</label></span>
+                        </li>
+                    </ul>
+                    <!-- Incoterms의 경우, class추가 : icterms -->
+                    <ul class="list_form icterms">
+                        <li style="width:50%;">
+                            <label for="" class="lb_txt req">Incoterms</label>
+                            <select class="select bold" name="">
+                                <option value="">CIF</option>
+                                <option value="">바나나</option>
+                                <option value="">딸기</option>
+                            </select>
+                        </li>
+                        <li class="active" style="width:50%;"><!-- 보일 때, class : active -->
+                            <label for="" class="lb_txt">HS Code</label>
+                            <span class="ip_search"><input type="text" name="" value="" class="ip_txt"><a href="javascript:" class="btn_ip_search">검색</a></span>
+                        </li>
+                    </ul>
+                </div>
                 <div class="cargo_wrap">
                     <div class="cargo_list">
                         <ul class="cargo_form info">
@@ -234,33 +274,6 @@
                         </ul>
                         <a href="javascript:" class="btn_cir ico_add add_cargo"><span>Add another row</span></a>
                     </div>
-                </div>
-                <div class="list_form_wrap w800">
-                    <ul class="list_form">
-                        <li>
-                            <label for="" class="lb_txt">Estinated Shipping Date</label>
-                            <span class="ip_date" style="width:312px;"><input type="text" class="ip_txt bold"><i class="ico_trig"></i></span>
-                            <span class="ip_check type1 ml30"><input type="checkbox" name="" value="" id="check01"><label for="check01">Not fixed</label></span>
-                        </li>
-                    </ul>
-                    <ul class="list_form">
-                        <li style="width:50%;">
-                            <label for="" class="lb_txt req">Commodity</label>
-                            <span class="ip_del"><input type="text" class="ip_txt bold"><a href="#" class="btn_txt_del">삭제</a></span>
-                        </li>
-                        <li>
-                            <label for="" class="lb_txt">HS Code</label>
-                            <span class="ip_del"><input type="text" class="ip_txt bold"><a href="#" class="btn_txt_del">삭제</a></span>
-                        </li>
-                        <li>
-                            <label for="" class="lb_txt req">Cargo Type</label>
-                            <select class="select bold" name="">
-                                <option value="">Nor</option>
-                                <option value="">바나나</option>
-                                <option value="">딸기</option>
-                            </select>
-                        </li>
-                    </ul>
                 </div>
                 <!-- //Contract information -->
 
