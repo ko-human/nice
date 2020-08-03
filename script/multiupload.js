@@ -108,6 +108,7 @@ function addFileList(fIndex, fileName, fileSize){
    html += "</li>"
 
    $('#fileTableTbody').append(html);
+   $('.remove_file').show();
 }
 
 
@@ -124,6 +125,11 @@ function deleteFile(fIndex){
 
    // 업로드 파일 테이블 목록에서 삭제
    $("#fileTr_" + fIndex).remove();
+
+   // 리스트 없으면 (Delete all)버튼 삭제
+   if($(".upload_list li").length < 2){
+       $('.remove_file').hide();
+   }
 }
 
 // 파일 등록

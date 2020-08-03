@@ -31,94 +31,8 @@
             $(".ip_date input").datetimepicker($.extend(uiCommon.datepickerOption, dateOption)).icoTrigger();
 
             // 파일삭제
-            $('.remove_file').on("click",function () {
+            $('.remove_file').on("click", function() {
                 $(this).parent().find('#fileTableTbody').children('li').not('#dropZone').remove();
-            });
-
-            //cargo
-            $(".add_cargo").on("click", function(e) {
-                var rowHtml3 = '<li><ul class="list_form">' +
-                    '<li><select class="select bold" name=""><option value="">20RF</option><option value="">ABC</option></select></li>' +
-                    '<li><select class="select bold" name=""><option value="">dry</option><option value="">ABC</option></select></li>' +
-                    '<li><span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
-                    '<li style="width:20px;"><span class="middle_bar"></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span></li></ul>' +
-                    '<ul class="list_form">' +
-                    '<li><span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
-                    '</ul><a href="javascript:" class="btn_cir ico_del"></a></li>';
-
-                var rowHtml4 = '<li><ul class="list_form">' +
-                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
-                    '<li><span class="ip_del"><input number="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
-                    '<li><span class="ip_del"><input number="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
-                    '<li style="width: 1px;padding: 0;"><span class="middle_bar"></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span></li>' +
-                    '</ul><ul class="list_form">' +
-                    '<li><span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
-                    '<li style="width:122px;"><div class="ip_fixed tar vol"></div></li>' +
-                    '</ul><a href="javascript:" class="btn_cir ico_del"></a></li>';
-
-                var rowHtml5 = '<li><ul class="list_form">' +
-                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span></li>' +
-                    '<li><span class="ip_del"><input number="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
-                    '<li><span class="ip_del"><input number="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
-                    '<li style="width: 1px;padding: 0;"><span class="middle_bar"></span></li>' +
-                    '<li><span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span></li>' +
-                    '</ul><ul class="list_form">' +
-                    '<li style="width:50%;"><span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
-                    '<li style="width:122px;"><div class="ip_fixed tar vol"></div></li>' +
-                    '<li><div class="ip_fixed tar wt"></li>' +
-                    '</ul><a href="javascript:" class="btn_cir ico_del"></a></li>';
-
-                var rowHtml6 = '<li><ul class="list_form">' +
-                    '<li class="port"><label for="" class="lb_txt req">Origin</label><div class="box_port"><span class="ip_search"><span class="ip_del">' +
-                    '<input type="text" value="" placeholder="Loading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span></div></li>' +
-                    '<li class="port"><label for="" class="lb_txt req">Destination</label><div class="box_port"><span class="ip_search"><span class="ip_del">' +
-                    '<input type="text" value="" placeholder="Unloading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span></div></li></ul>' +
-                    '<ul class="list_form">' +
-                    '<li><label for="" class="lb_txt req">Service Scope</label><select class="select bold"><option value="">CY</option><option value="">CY</option></select></li>' +
-                    '<li><label for="" class="lb_txt"></label><select class="select bold"><option value="">DOOR</option><option value="">DOOR</option></select></li>' +
-                    '<li style="width:50%;"><label for="" class="lb_txt">Incoterms</label><select class="select bold"><option value="">CIF</option><option value="">CFR</option></select></li></ul>' +
-                    '<ul class="list_form">' +
-                    '<li class="port_g"><label for="" class="lb_txt">Door Origin</label><span class="ip_del"><input type="text" value="" placeholder="Nation/City" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>' +
-                    '<li class="port_g"><label for="" class="lb_txt">Door Dest.</label><span class="ip_del"><input type="text" value="" placeholder="Nation/City" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li></ul>' +
-                    '<a href="javascript:" class="btn_cir ico_del"></a></li>';
-
-                var $row3 = $(rowHtml3);
-                var $row4 = $(rowHtml4);
-                var $row5 = $(rowHtml5);
-                var $row6 = $(rowHtml6);
-
-                //삭제 이벤트추가
-                $row3.find(".btn_cir.ico_del").on("click", function(e) {
-                    $(this).parent().remove();
-                    e.preventDefault();
-                });
-                $row4.find(".btn_cir.ico_del").on("click", function(e) {
-                    $(this).parent().remove();
-                    e.preventDefault();
-                });
-                $row5.find(".btn_cir.ico_del").on("click", function(e) {
-                    $(this).parent().remove();
-                    e.preventDefault();
-                });
-                $row6.find(".btn_cir.ico_del").on("click", function(e) {
-                    $(this).parent().remove();
-                    e.preventDefault();
-                });
-
-                $(this).prev(".cargo_form.ocean1").append($row3);
-                $(this).prev(".cargo_form.ocean2").append($row4);
-                $(this).prev(".cargo_form.air").append($row5);
-                $(this).prev(".cargo_form.info").append($row6);
-
-                e.preventDefault();
-
-                $(".ip_del").inputTextFocus();
             });
 
             // summary Height
@@ -131,10 +45,11 @@
 <body>
 
     <div class="detail_wrap">
-
-        <div class="ebook_wrap">
+        <!-- ebook_wrap에 class 추가: air / ocean / lcl -->
+        <div class="ebook_wrap air">
             <!-- input list -->
-            <div class="left amend"><!-- amend일 경우, class추가 : amend -->
+            <div class="left amend">
+                <!-- amend일 경우, class추가 : amend -->
 
                 <div class="tit_wrap tit_h1">
                     <div class="tit_left">
@@ -167,7 +82,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <!-- import일 때, class추가 : show -->
+                    <!-- 노출되는 경우, class추가 : show -->
                     <ul class="quot_radio show">
                         <li>
                             <ul class="radio_group type2">
@@ -190,11 +105,7 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
-                <!-- //Shipping information -->
 
-                <!-- Contract information -->
-                <div class="list_form_wrap w800">
                     <ul class="list_form">
                         <li>
                             <label for="" class="lb_txt">Estimated Shipping Date</label>
@@ -209,241 +120,504 @@
                             <label for="" class="lb_txt req">Incoterms</label>
                             <select class="select bold" name="">
                                 <option value="">CIF</option>
-                                <option value="">바나나</option>
-                                <option value="">딸기</option>
+                                <option value="">CFR</option>
+                                <option value="">EXW</option>
                             </select>
                         </li>
-                        <li class="active" style="width:50%;"><!-- 보일 때, class : active -->
+                        <!-- 보이는 경우 class 추가 : active -->
+                        <li class="active" style="width:50%;">
                             <label for="" class="lb_txt">HS Code</label>
                             <span class="ip_search"><input type="text" name="" value="" class="ip_txt"><a href="javascript:" class="btn_ip_search">검색</a></span>
                         </li>
                     </ul>
                 </div>
-                <div class="cargo_wrap">
-                    <div class="cargo_list">
-                        <ul class="cargo_form info">
-                            <li>
-                                <ul class="list_form">
-                                    <li class="port">
-                                        <label for="" class="lb_txt req">Origin</label>
-                                        <div class="box_port">
-                                            <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Loading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
-                                        </div>
-                                    </li>
-                                    <li class="port">
-                                        <label for="" class="lb_txt req">Destination</label>
-                                        <div class="box_port">
-                                            <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Unloading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul class="list_form">
-                                    <li>
-                                        <label for="" class="lb_txt req">Service Scope</label>
-                                        <select class="select bold">
-                                            <option value="">CY</option>
-                                            <option value="">CY</option>
-                                        </select>
-                                    </li>
-                                    <li>
-                                        <label for="" class="lb_txt"></label>
-                                        <select class="select bold">
-                                            <option value="">DOOR</option>
-                                            <option value="">DOOR</option>
-                                        </select>
-                                    </li>
-                                    <li style="width:50%;">
-                                        <label for="" class="lb_txt">Incoterms</label>
-                                        <select class="select bold">
-                                            <option value="">CIF</option>
-                                            <option value="">CFR</option>
-                                        </select>
-                                    </li>
-                                </ul>
-                                <ul class="list_form">
-                            <li class="port_g">
-                                <label for="" class="lb_txt">Door Origin</label>
-                                <span class="ip_del"><input type="text" value="" placeholder="Nation/City" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
-                            </li>
-                            <li class="port_g">
-                                <label for="" class="lb_txt">Door Dest.</label>
-                                <span class="ip_del"><input type="text" value="" placeholder="Nation/City" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
-                            </li>
-                        </ul>
-                            </li>
-                        </ul>
-                        <a href="javascript:" class="btn_cir ico_add add_cargo"><span>Add another row</span></a>
-                    </div>
-                </div>
-                <!-- //Contract information -->
+                <!-- //Shipping information -->
 
-                <!-- Ocean Freight인 경우, container & cargo info 모두 있음 -->
-                <div class="cargo_box ocean">
-                    <div class="tit_area">
-                        <div class="tit_wrap">
-                            <div class="tit_left">
-                                <h4>Cargo Detail</h4>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Copy 영역 -->
+                <div class="copy_box">
+                    <div class="cargo_wrap">
+                        <!-- copy되는 리스트 -->
+                        <div class="cargo_list">
+                            <ul class="cargo_form">
+                                <li class="comm">
+                                    <ul class="list_form">
+                                        <li class="port">
+                                            <label for="" class="lb_txt req">Origin</label>
+                                            <div class="box_port">
+                                                <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Loading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a
+                                                        href="javascript:" class="btn_ip_search">검색</a></span>
+                                            </div>
+                                        </li>
+                                        <li class="port">
+                                            <label for="" class="lb_txt req">Destination</label>
+                                            <div class="box_port">
+                                                <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Unloading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a
+                                                        href="javascript:" class="btn_ip_search">검색</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list_form">
+                                        <li>
+                                            <label for="" class="lb_txt req">Cargo Type</label>
+                                            <select class="select bold">
+                                                <option value="">Nor</option>
+                                                <option value="">Nor</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label for="" class="lb_txt req">Commodity</label>
+                                            <span class="ip_del"><input type="text" value="" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                        </li>
+                                    </ul>
+                                    <ul class="list_form">
+                                        <li>
+                                            <label for="" class="lb_txt req">Service Scope</label>
+                                            <ul class="ip_group ip_from_to">
+                                                <li>
+                                                    <select class="select bold">
+                                                        <option value="">CY</option>
+                                                        <option value="">CY</option>
+                                                    </select>
+                                                </li>
+                                                <li class="line" style="width:20px;">&#45;</li>
+                                                <li>
+                                                    <select class="select bold">
+                                                        <option value="">DOOR</option>
+                                                        <option value="">DOOR</option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="list_form">
+                                        <li class="port_g">
+                                            <label for="" class="lb_txt">Door Origin</label>
+                                            <span class="ip_search" style="width:120px;"><input type="text" name="" value="" placeholder="Code" class="ip_txt"><a href="javascript:" class="btn_ip_search">검색</a></span>
+                                            <div class="inblock">
+                                                <span class="ip_del"><input type="text" class="ip_txt" placeholder="Country/City"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                            </div>
+                                        </li>
+                                        <li class="port_g">
+                                            <label for="" class="lb_txt">Door Destination</label>
+                                            <span class="ip_search" style="width:120px;"><input type="text" name="" value="" placeholder="Code" class="ip_txt"><a href="javascript:" class="btn_ip_search">검색</a></span>
+                                            <div class="inblock">
+                                                <span class="ip_del"><input type="text" class="ip_txt" placeholder="Country/City"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
 
-                    <div class="con_area">
-                        <div class="cargo_wrap">
-                            <h4>Container</h4>
-                            <div class="cargo_list">
-                                <ul class="cargo_hd">
-                                    <li>Size</li>
-                                    <li class="typ">Type</li>
-                                    <li class="qty">Qty.</li>
-                                    <li class="wei">Total G.Weight</li>
-                                </ul>
-                                <ul class="cargo_form ocean1">
-                                    <li>
-                                        <ul class="list_form">
-                                            <li>
-                                                <select class="select bold" name="">
-                                                    <option value="">20DC</option>
-                                                    <option value="">type1</option>
-                                                </select>
-                                            </li>
-                                            <li>
-                                                <select class="select bold" name="">
-                                                    <option value="">dry</option>
-                                                    <option value="">type1</option>
-                                                </select>
-                                            </li>
-                                            <li>
-                                                <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
-                                            </li>
-                                            <li style="width:20px;"><span class="middle_bar"></span></li>
-                                            <li>
-                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
-                                            </li>
-                                        </ul>
-                                        <ul class="list_form">
-                                            <li>
-                                                <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <a href="javascript:" class="btn_cir ico_add add_cargo"><span>Add another row</span></a>
-                            </div>
-                        </div>
-                        <div class="cargo_wrap">
-                            <h4>Cargo Info</h4>
-                            <div class="cargo_list">
-                                <ul class="cargo_hd">
-                                    <li>Length</li>
-                                    <li>Width</li>
-                                    <li>Height</li>
-                                    <li class="qty">Qty.</li>
-                                    <li>PKG Unit</li>
-                                    <li class="wei">Total G.Weight</li>
-                                </ul>
-                                <ul class="cargo_form ocean2">
-                                    <li>
-                                        <ul class="list_form">
-                                            <li>
-                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
-                                            </li>
-                                            <li>
-                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
-                                            </li>
-                                            <li>
-                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
-                                            </li>
-                                            <li>
-                                                <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
-                                            </li>
-                                            <li>
-                                                <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
-                                            </li>
-                                            <li style="width: 1px;padding: 0;"><span class="middle_bar"></span></li>
-                                            <li>
-                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
-                                            </li>
-                                        </ul>
-                                        <ul class="list_form">
-                                            <li>
-                                                <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
-                                            </li>
-                                            <li style="width:122px;">
-                                                <div class="ip_fixed tar vol"></div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <a href="javascript:" class="btn_cir ico_add add_cargo"><span>Add another row </span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- //Ocean -->
-                <!-- Air Freight인 경우, cargo Info만 있음 -->
-                <div class="cargo_box air">
-                    <div class="tit_area">
-                        <div class="tit_wrap">
-                            <div class="tit_left">
-                                <h4>Cargo Detail</h4>
-                            </div>
-                        </div>
-                    </div>
+                                <!-- Air Freight일 때 -->
+                                <li class="case case_air">
+                                    <ul class="cargo_hd lbel">
+                                        <li>Length</li>
+                                        <li>Width</li>
+                                        <li>Height</li>
+                                        <li class="qty">Qty.</li>
+                                        <li>PKG Unit</li>
+                                        <li class="wei req">Total G.Weight</li>
+                                    </ul>
+                                    <ul class="list_form">
+                                        <li>
+                                            <ul class="list_form">
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width: 1px;padding: 0;"><span class="middle_bar"></span></li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list_form">
+                                                <li style="width:50%;">
+                                                    <span class="ip_del"><input type="text" class="ip_txt bold" placeholder="Cargo info."><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width:122px;">
+                                                    <div class="ip_fixed tar vol"></div>
+                                                </li>
+                                                <li>
+                                                    <div class="ip_fixed tar wt"></div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="case case_air">
+                                    <ul class="list_form">
+                                        <li>
+                                            <ul class="list_form">
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width: 1px;padding: 0;"><span class="middle_bar"></span></li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list_form">
+                                                <li style="width:50%;">
+                                                    <span class="ip_del"><input type="text" class="ip_txt bold" placeholder="Cargo info."><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width:122px;">
+                                                    <div class="ip_fixed tar vol"></div>
+                                                </li>
+                                                <li>
+                                                    <div class="ip_fixed tar wt"></div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <a href="javascript:" class="btn_cir ico_del"></a>
+                                </li>
+                                <!-- //Air Freight일 때 -->
 
-                    <div class="con_area">
-                        <div class="cargo_wrap">
-                            <h4>Cargo Info</h4>
-                            <div class="cargo_list">
-                                <ul class="cargo_hd">
-                                    <li>Length</li>
-                                    <li>Width</li>
-                                    <li>Height</li>
-                                    <li class="qty">Qty.</li>
-                                    <li>PKG Unit</li>
-                                    <li class="wei">Total G.Weight</li>
-                                </ul>
-                                <ul class="cargo_form air">
-                                    <li>
-                                        <ul class="list_form">
-                                            <li>
-                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
-                                            </li>
-                                            <li>
-                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
-                                            </li>
-                                            <li>
-                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
-                                            </li>
-                                            <li>
-                                                <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
-                                            </li>
-                                            <li>
-                                                <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
-                                            </li>
-                                            <li style="width: 1px;padding: 0;"><span class="middle_bar"></span></li>
-                                            <li>
-                                                <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
-                                            </li>
-                                        </ul>
-                                        <ul class="list_form">
-                                            <li style="width:50%;">
-                                                <span class="ip_del"><input type="text" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
-                                            </li>
-                                            <li style="width:122px;">
-                                                <div class="ip_fixed tar vol"></div>
-                                            </li>
-                                            <li>
-                                                <div class="ip_fixed tar wt"></div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <a href="javascript:" class="btn_cir ico_add add_cargo"><span>Add another row </span></a>
-                            </div>
+                                <!-- Ocean Freight일 때 -->
+                                <li class="case case_ocean">
+                                    <h5>Container</h5>
+                                    <ul class="cargo_hd lbel">
+                                        <li style="width:340px;">Size & Type</li>
+                                        <li class="qty">Qty.</li>
+                                        <li class="wei">Total G.Weight</li>
+                                    </ul>
+                                    <ul class="list_form">
+                                        <li>
+                                            <ul class="list_form">
+                                                <li style="width:330px;">
+                                                    <select class="select bold" name="">
+                                                        <option value="">20' 8' High General</option>
+                                                        <option value="">type1</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width:20px;"><span class="middle_bar"></span></li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list_form">
+                                                <li>
+                                                    <span class="ip_del"><input type="text" placeholder="Cargo info." class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="case case_ocean">
+                                    <ul class="list_form">
+                                        <li>
+                                            <ul class="list_form">
+                                                <li style="width:330px;">
+                                                    <select class="select bold" name="">
+                                                        <option value="">20' 8' High General</option>
+                                                        <option value="">type1</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width:20px;"><span class="middle_bar"></span></li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list_form">
+                                                <li>
+                                                    <span class="ip_del"><input type="text" placeholder="Cargo info." class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <a href="javascript:" class="btn_cir ico_del"></a>
+                                </li>
+                                <!-- //Ocean Freight일 때 -->
+
+                                <!-- LCL일 때 -->
+                                <li class="case case_lcl">
+                                    <h5>LCL</h5>
+                                    <ul class="list_form">
+                                        <li>
+                                            <ul class="list_form">
+                                                <li><span class="ip_del"><input type="text" placeholder="Cargo info." class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- //LCL일 때 -->
+                            </ul>
+                            <!-- LCL일 때만, 아래 버튼(btn_cir) hide -->
+                            <a href="javascript:" class="btn_cir ico_add add_cargo"><span>Add another row</span></a>
                         </div>
+                        <!-- //copy되는 리스트 -->
+
+                        <!-- copy되는 리스트 -->
+                        <div class="cargo_list">
+                            <ul class="cargo_form">
+                                <li class="comm">
+                                    <ul class="list_form">
+                                        <li class="port">
+                                            <label for="" class="lb_txt req">Origin</label>
+                                            <div class="box_port">
+                                                <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Loading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a
+                                                        href="javascript:" class="btn_ip_search">검색</a></span>
+                                            </div>
+                                        </li>
+                                        <li class="port">
+                                            <label for="" class="lb_txt req">Destination</label>
+                                            <div class="box_port">
+                                                <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Unloading Port" readonly="readonly" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span><a
+                                                        href="javascript:" class="btn_ip_search">검색</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list_form">
+                                        <li>
+                                            <label for="" class="lb_txt req">Cargo Type</label>
+                                            <select class="select bold">
+                                                <option value="">Nor</option>
+                                                <option value="">Nor</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label for="" class="lb_txt req">Commodity</label>
+                                            <span class="ip_del"><input type="text" value="" class="ip_txt inp_port bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                        </li>
+                                    </ul>
+                                    <ul class="list_form">
+                                        <li>
+                                            <label for="" class="lb_txt req">Service Scope</label>
+                                            <ul class="ip_group ip_from_to">
+                                                <li>
+                                                    <select class="select bold">
+                                                        <option value="">CY</option>
+                                                        <option value="">CY</option>
+                                                    </select>
+                                                </li>
+                                                <li class="line" style="width:20px;">&#45;</li>
+                                                <li>
+                                                    <select class="select bold">
+                                                        <option value="">DOOR</option>
+                                                        <option value="">DOOR</option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="list_form">
+                                        <li class="port_g">
+                                            <label for="" class="lb_txt">Door Origin</label>
+                                            <span class="ip_search" style="width:120px;"><input type="text" name="" value="" placeholder="Code" class="ip_txt"><a href="javascript:" class="btn_ip_search">검색</a></span>
+                                            <div class="inblock">
+                                                <span class="ip_del"><input type="text" class="ip_txt" placeholder="Country/City"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                            </div>
+                                        </li>
+                                        <li class="port_g">
+                                            <label for="" class="lb_txt">Door Destination</label>
+                                            <span class="ip_search" style="width:120px;"><input type="text" name="" value="" placeholder="Code" class="ip_txt"><a href="javascript:" class="btn_ip_search">검색</a></span>
+                                            <div class="inblock">
+                                                <span class="ip_del"><input type="text" class="ip_txt" placeholder="Country/City"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!-- Air Freight일 때 -->
+                                <li class="case case_air">
+                                    <ul class="cargo_hd lbel">
+                                        <li>Length</li>
+                                        <li>Width</li>
+                                        <li>Height</li>
+                                        <li class="qty">Qty.</li>
+                                        <li>PKG Unit</li>
+                                        <li class="wei req">Total G.Weight</li>
+                                    </ul>
+                                    <ul class="list_form">
+                                        <li>
+                                            <ul class="list_form">
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width: 1px;padding: 0;"><span class="middle_bar"></span></li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list_form">
+                                                <li style="width:50%;">
+                                                    <span class="ip_del"><input type="text" class="ip_txt bold" placeholder="Cargo info."><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width:122px;">
+                                                    <div class="ip_fixed tar vol"></div>
+                                                </li>
+                                                <li>
+                                                    <div class="ip_fixed tar wt"></div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="case case_air">
+                                    <ul class="list_form">
+                                        <li>
+                                            <ul class="list_form">
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">cm</span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width: 1px;padding: 0;"><span class="middle_bar"></span></li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list_form">
+                                                <li style="width:50%;">
+                                                    <span class="ip_del"><input type="text" class="ip_txt bold" placeholder="Cargo info."><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width:122px;">
+                                                    <div class="ip_fixed tar vol"></div>
+                                                </li>
+                                                <li>
+                                                    <div class="ip_fixed tar wt"></div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <a href="javascript:" class="btn_cir ico_del"></a>
+                                </li>
+                                <!-- //Air Freight일 때 -->
+
+                                <!-- Ocean Freight일 때 -->
+                                <li class="case case_ocean">
+                                    <h5>Container</h5>
+                                    <ul class="cargo_hd lbel">
+                                        <li style="width:340px;">Size & Type</li>
+                                        <li class="qty">Qty.</li>
+                                        <li class="wei">Total G.Weight</li>
+                                    </ul>
+                                    <ul class="list_form">
+                                        <li>
+                                            <ul class="list_form">
+                                                <li style="width:330px;">
+                                                    <select class="select bold" name="">
+                                                        <option value="">20' 8' High General</option>
+                                                        <option value="">type1</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width:20px;"><span class="middle_bar"></span></li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list_form">
+                                                <li>
+                                                    <span class="ip_del"><input type="text" placeholder="Cargo info." class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="case case_ocean">
+                                    <ul class="list_form">
+                                        <li>
+                                            <ul class="list_form">
+                                                <li style="width:330px;">
+                                                    <select class="select bold" name="">
+                                                        <option value="">20' 8' High General</option>
+                                                        <option value="">type1</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <span class="ip_del"><input type="text" class="ip_txt tar bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li style="width:20px;"><span class="middle_bar"></span></li>
+                                                <li>
+                                                    <span class="ip_fixed pr34"><input type="number" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list_form">
+                                                <li>
+                                                    <span class="ip_del"><input type="text" placeholder="Cargo info." class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <a href="javascript:" class="btn_cir ico_del"></a>
+                                </li>
+                                <!-- //Ocean Freight일 때 -->
+
+                                <!-- LCL일 때 -->
+                                <li class="case case_lcl">
+                                    <h5>LCL</h5>
+                                    <ul class="list_form">
+                                        <li>
+                                            <ul class="list_form">
+                                                <li><span class="ip_del"><input type="text" placeholder="Cargo info." class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- //LCL일 때 -->
+                            </ul>
+                            <a href="javascript:" class="btn_cir ico_add add_cargo"><span>Add another row</span></a>
+                            <!-- 2번째 cargo_list 부터 delete 버튼 노출 -->
+                            <a href="javascript:" class="btn_delete"><span>Delete row</span></a>
+                        </div>
+                        <!-- //copy되는 리스트 -->
                     </div>
+                    <a href="javascript:" class="btn_copy"><span>Copy row</span></a>
                 </div>
-                <!-- //Air -->
+                <!-- //Copy 영역 -->
 
                 <!-- file upload -->
                 <div class="cargo_box">
@@ -460,13 +634,15 @@
                             <form name="uploadForm" id="uploadForm" enctype="multipart/form-data" method="post">
                                 <fieldset>
                                     <ul id="fileTableTbody" class="upload_list">
-                                        <li id="dropZone"><p>이곳에 파일을 드래그 하세요. 또는 ‘Add file’을 클릭하여 파일을 선택하세요.</p></li>
+                                        <li id="dropZone">
+                                            <p>이곳에 파일을 드래그 하세요. 또는 ‘Add file’을 클릭하여 파일을 선택하세요.</p>
+                                        </li>
                                     </ul>
                                 </fieldset>
                             </form>
-                            <!-- 탐색창 열어서 파일 선택하면, 위와 같이 <ul>에 첨부목록 li 추가해주세요. -->
+                            <!-- 파일 선택시, upload_list에 첨부목록 li 추가 -->
                             <div class="add_file ico_add btn_cir"><span>Add file</span><input type="file" name="" value=""></div>
-                            <a href="javascript:" class="btn_cir ico_del remove_file"><span>Delete all files</span></a>
+                            <a href="javascript:" class="btn_cir ico_del remove_file" style="display:none;"><span>Delete all files</span></a>
                         </div>
                     </div>
                 </div>
@@ -495,7 +671,11 @@
                     <ul class="list_form">
                         <li>
                             <label for="" class="lb_txt req">PIC at CJ Logistics</label>
-                            <span class="ip_search"><input type="text" name="" value="" class="ip_txt"><a href="javascript:" class="btn_ip_search">검색</a></span>
+                            <select class="select bold" name="">
+                                <option value="">김여경</option>
+                                <option value="">현진서</option>
+                                <option value="">최영기</option>
+                            </select>
                         </li>
                         <li>
                             <label for="" class="lb_txt">E-mail</label>
@@ -548,55 +728,46 @@
                                         <dd>
                                             <p>Ocean Freight</p>
                                             <p>Export / Spot</p>
+                                            <p>Container / LCL</p>
                                         </dd>
                                     </dl>
                                 </li>
                                 <li>
-                                    <table>
-                                        <colgroup>
-                                           <col width="18%">
-                                           <col width="18%">
-                                           <col width="20%">
-                                           <col width="15%">
-                                           <col width="*">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th class="tal">Origin</th>
-                                                <th class="tal">Destination</th>
-                                                <th class="tal">Service Scope</th>
-                                                <th class="tal">Incoterms</th>
-                                                <th class="tal">Door Address</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="tal">KOREA</td>
-                                                <td class="tal">USA</td>
-                                                <td class="tal">CY-CY</td>
-                                                <td class="tal">CIF</td>
-                                                <td class="tal">PUSAN - NEWYORK</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="tal">KOREA</td>
-                                                <td class="tal">USA</td>
-                                                <td class="tal">CY-CY</td>
-                                                <td class="tal">CFR</td>
-                                                <td class="tal">PUSAN - NEWYORK</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </li>
-                                <li>
                                     <dl>
-                                        <dt>Estinated Shipping Date</dt>
-                                        <dd>2020-04-04</dd>
+                                        <dt>Estimated Shipping Date</dt>
+                                        <dd>
+                                            <p>2020-04-04</p>
+                                            <p>Not Fixed</p>
+                                            <p>통관</p>
+                                        </dd>
                                     </dl>
                                 </li>
                                 <li>
                                     <dl>
-                                        <dt>Commodity</dt>
-                                        <dd></dd>
+                                        <dt>Incoterms</dt>
+                                        <dd>
+                                            <p>Incoterms</p>
+                                            <p>HScode</p>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sum_inner">
+                        <h3>Cargo Detail</h3>
+                        <div class="box_person tbl_cargo air">
+                            <ul class='sum_list'>
+                                <li>
+                                    <dl>
+                                        <dt>Origin</dt>
+                                        <dd>Incheon national Airport, South Korea</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>Destination</dt>
+                                        <dd>Los Angeles CA, USA</dd>
                                     </dl>
                                 </li>
                                 <li>
@@ -605,62 +776,44 @@
                                         <dd>Nor</dd>
                                     </dl>
                                 </li>
+                                <li>
+                                    <dl>
+                                        <dt>Commodity</dt>
+                                        <dd>Nor</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>Service Scope</dt>
+                                        <dd>CY - Door</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>Door Origin</dt>
+                                        <dd>Nor</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>Door Destination</dt>
+                                        <dd></dd>
+                                    </dl>
+                                </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="sum_inner">
-                        <h3>Cargo Detail</h3>
-                        <div class="box_person tbl_cargo">
-                            <div class="cargo_info">
-                                <h3>Container</h3>
+                            <div class="cargo_info case air">
+                                <h3>Cargo Info</h3>
                                 <table>
                                     <colgroup>
-                                       <col width="14%">
-                                       <col width="14%">
-                                       <col width="14%">
-                                       <col width="17%">
-                                       <col width="*">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>Size</th>
-                                            <th>Type</th>
-                                            <th>Qty.</th>
-                                            <th>Total <br> G.Weight</th>
-                                            <th class="tal">Remark</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>20</td>
-                                            <td>350</td>
-                                            <td>35</td>
-                                            <td class="ton pr27">550</td>
-                                            <td class="tal">small box</td>
-                                        </tr>
-                                        <tr>
-                                            <td>20</td>
-                                            <td>550</td>
-                                            <td>25</td>
-                                            <td class="ton pr27">30</td>
-                                            <td class="tal">small box</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="cargo_info">
-                                <h3>Dimension</h3>
-                                <table>
-                                    <colgroup>
-                                       <col width="4%">
-                                       <col width="4%">
-                                       <col width="4%">
-                                       <col width="4%">
-                                       <col width="4%">
-                                       <col width="8%">
-                                       <col width="4%">
-                                       <col width="6%">
-                                       <col width="*">
+                                        <col width="4%">
+                                        <col width="4%">
+                                        <col width="4%">
+                                        <col width="4%">
+                                        <col width="4%">
+                                        <col width="8%">
+                                        <col width="4%">
+                                        <col width="6%">
+                                        <col width="*">
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -701,12 +854,59 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <div class="cargo_info case ocean">
+                                <h3>Container</h3>
+                                <table>
+                                    <colgroup>
+                                        <col width="14%">
+                                        <col width="14%">
+                                        <col width="14%">
+                                        <col width="17%">
+                                        <col width="*">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>Size</th>
+                                            <th>Type</th>
+                                            <th>Qty.</th>
+                                            <th>Total <br> G.Weight</th>
+                                            <th class="tal">Remark</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>350</td>
+                                            <td>35</td>
+                                            <td class="ton pr27">550</td>
+                                            <td class="tal">small box</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>550</td>
+                                            <td>25</td>
+                                            <td class="ton pr27">30</td>
+                                            <td class="tal">small box</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cargo_info case lcl">
+                                <h3 class="mb20">LCL</h3>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div class="sum_inner">
                         <h3>Document</h3>
                         <div class="box_person">
-                            <p>Remark contents</p>
+                            <p>ducoment_2020-07-10_01.pdf</p>
                         </div>
                     </div>
                     <div class="sum_inner">
