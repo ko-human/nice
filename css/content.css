@@ -1294,6 +1294,9 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .copy_box {margin-top:40px;}
 .copy_box .cargo_form li.case {display: none;}
 .copy_box .cargo_form li.case h5 {font-size: 14px;font-weight: 500;line-height: 1.5;color: #45474e;margin-bottom:20px;}
+
+.list_form li .entry {display:none;}
+.list_form.entry li .entry {display:inline-block;}
 /* case별 */
 .ebook_wrap.air .copy_box .cargo_form li.case_air,
 .ebook_wrap.ocean .copy_box .cargo_form li.case_ocean,
@@ -1302,7 +1305,6 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 
 .box_person .cargo_info.case {display: none;margin-top: 20px;padding-top: 20px;border-top: 1px solid #dde2ea;}
 .ebook_wrap.air .cargo_info.air, .ebook_wrap.ocean .cargo_info.ocean, .ebook_wrap.lcl .cargo_info.lcl {display: block;}
-
 
 .copy_box .btn_copy {display: inline-block;position: relative;left:35%;margin-top: 18px;height: 32px;font-size: 14px;color:#0080c6;font-weight: 500;vertical-align: middle;padding-left: 42px;background: url(../images/ico_add_30.svg) no-repeat 0 center;}
 .copy_box .btn_copy span {display: inline-block;line-height: 32px;}
