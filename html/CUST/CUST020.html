@@ -33,6 +33,7 @@
             // 파일삭제
             $('.remove_file').on("click", function() {
                 $(this).parent().find('#fileTableTbody').children('li').not('#dropZone').remove();
+                $(this).hide();
             });
 
             // summary Height
