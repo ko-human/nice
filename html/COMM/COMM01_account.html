@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js" charset="UTF-8"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script src="../../script/ui_common.js"></script>
+    <title></title>
+    <script type="text/javascript">
+        $(function() {
+
+            $(".ip_del").inputTextFocus();
+
+        });
+    </script>
+</head>
+<body>
+
+    <!-- layer -->
+    <div class="layer_pop_wrap type1" style="">
+        <a href="#" class="btn_closed">닫기</a>
+        <div class="pop_header">
+            <div class="tit">
+                Account Request
+            </div>
+        </div>
+        <div class="pop_con">
+
+            <div class="list_form_wrap">
+                <ul class="list_form">
+                    <li>
+                        <label for="" class="lb_txt">Company</label>
+                        <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                    </li>
+                    <li>
+                        <label for="" class="lb_txt">User Name</label>
+                        <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                    </li>
+                    <li class="mr0">
+                        <label for="" class="lb_txt">User ID</label>
+                        <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                    </li>
+                </ul>
+                <ul class="list_form">
+                    <li>
+                        <label for="" class="lb_txt">E-Mail</label>
+                        <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                    </li>
+                    <li>
+                        <label for="" class="lb_txt">Telephone & Mobile</label>
+                        <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                    </li>
+                    <li>
+                        <label for="" class="lb_txt check"></label>
+                        <span class="ip_check"><input type="checkbox" name="" value="" id="chk"><label for="chk">신규고객 여부</label></span>
+                    </li>
+                </ul>
+                <ul class="list_form">
+                    <li>
+                        <label for="" class="lb_txt">Remark</label>
+                        <textarea rows="8" cols="80" style="height:286px;" placeholder="기타 요청사항을 입력하세요."></textarea>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn_pop_bottom">
+                <div class="btn_list">
+                    <a href="javascript:" class="btn sm">Save</a>
+                    <a href="javascript:" class="btn gray sm">Cancel</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- //layer -->
+
+</body>
+</html>

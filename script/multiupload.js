@@ -14,6 +14,8 @@ var maxUploadSize = 500;
 $(function (){
    // 파일 드롭 다운
    fileDropDown();
+
+   fileInputDown();
 });
 
 // 파일 드롭 다운
@@ -54,6 +56,23 @@ function fileDropDown(){
            alert("ERROR");
        }
    });
+}
+
+function fileInputDown() {
+    var upfiles = $("#upfiles");
+    upfiles.on('change', function(e) {
+        e.preventDefault();
+        var files = document.getElementById("upfiles").files;
+        if (files != null) {
+            if (files.length < 1) {
+                alert("폴더 업로드 불가");
+                return;
+            }
+            selectFile(files)
+        } else {
+            alert("ERROR");
+        }
+    });
 }
 
 // 파일 선택시
@@ -103,7 +122,7 @@ function selectFile(files){
 // 업로드 파일 목록 생성
 function addFileList(fIndex, fileName, fileSize){
    var html = "";
-   html += "<li id='fileTr_" + fIndex + "'>";
+   html += "<li data-fileName='' id='fileTr_" + fIndex + "'>";
    html +=         fileName + " (" + fileSize + "MB)"  + "<a href='javascript:' onclick='deleteFile(" + fIndex + "); return false;' class='btn_upload'>삭제</a>"
    html += "</li>"
 

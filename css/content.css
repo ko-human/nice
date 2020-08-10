@@ -178,15 +178,17 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .tit_wrap.tit_h3+.form_simple {margin-top:12px;}
 .form_simple>li+li {margin-top:10px}
 
-
-
 .txt_desc {margin-top:20px; padding-left:5px; font-weight:500;}
 
 /* button */
 .btn {vertical-align:middle; text-align:center; display:inline-block; text-decoration:none; line-height:36px; font-size:14px; font-weight:500; padding:0 22px; color:#fff; height:36px; background-color:#0080c6; box-sizing:border-box; border-radius: 0;}
+.btn:hover {background-color: #0466ad;}
 .btn.black {background-color:#45474e;}
+.btn.black:hover {background-color: #27292f;}
 .btn.gray {background-color:#8b919c;}
+.btn.gray:hover {background-color: #6b6e72;}
 .btn.line {border:1px solid #dde2ea; color:#0080c6; background-color:#fff;}
+.btn.line:hover {border: solid 1px #6eb0d7;}
 .btn.inact {background-color: #cad0d7;}
 .btn.sm {line-height:32px; padding:0 14px; font-size:13px;  height:32px; }
 .btn.sm.ico_add, .btn.sm.ico_remove, .btn.sm.ico_pdf {width:32px; padding:0; font-size:0; position:relative;}
@@ -211,6 +213,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .btn_cir.ico_add {background:url(../images/ico_add.svg) no-repeat 0 center;}
 
 .btn_load {padding:0 15px 0 37px; display:inline-block; height:32px; line-height:30px; font-size:13px; font-weight:500; color:#0080c6; border:1px solid #0080c6; background:#fff url(../images/ico_folder.svg) no-repeat 10px center; box-sizing:border-box;}
+.btn_load:hover {border: solid 1px #6eb0d7;}
 .btn.btn_schedule {padding:0 15px 0 37px; display:inline-block; height:32px; line-height:31px; font-size:13px; font-weight:500; color:#0080c6; border:1px solid #0080c6; background:#fff url(../images/ico_calendar_b.svg) no-repeat 9px center; box-sizing:border-box;}
 
 .btn_list {display:inline-block; font-size:0;}
@@ -219,6 +222,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 
 .btn.lg.ico_search {width:42px; font-size:0; background-image:url(../images/ico_search_w.svg); background-repeat:no-repeat; background-position:center center;}
 .btn.lg.line.ico_reset {width:42px; font-size:0; background-image:url(../images/ico_reset.svg); background-repeat:no-repeat; background-position:center center;}
+.btn.lg.line.ico_reset:hover {background-image:url(../images/ico_reset_b.svg);}
 .btn.lg.ico_name {width:42px; font-size:0; background: #8b919c url(../images/ico_name.svg) no-repeat;background-position: 12px 50%;background-size: 20px;}
 .btn.line.ico_search {width:42px; font-size:0; background-image:url(../images/ico_search_g.svg); background-repeat:no-repeat; background-position:center center;}
 .btn.line.add_line {background: #fff url(../images/ico_plus.svg) no-repeat;background-position: 12px 50%;background-size: 20px;padding:0 16px 0 37px;}
@@ -1146,6 +1150,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .print_area ul .li_left {float: left;}
 .print_area ul .li_right {float: right;}
 
+.grid_wrap {width:100%;overflow: hidden;}
 .print_table {color: #13161a;}
 .print_table + .print_table {margin-top:10px;}
 .print_table.top table tr td {padding-top:18px;padding-bottom:17px;}
@@ -1406,6 +1411,7 @@ body.dark .vendor_main_wrap .search_area {background-color: rgba(51, 60, 72, 0.5
 
 body.dark .welcome_wrap {background: #FFF url(../images/img_preference_d.svg) no-repeat left 145px;background-color:#313c49; box-shadow:2px 2px 10px 0 rgba(0, 0, 0, 0.15);}
 body.dark .welcome_wrap>.tit {color:#fff;}
+body.dark .welcome_wrap>.tit>em {color:#5fa9e2;}
 body.dark .welcome_wrap .lb_txt {color:#cad0d7;}
 body.dark .welcome_wrap .select {border-color:#8b919c;}
 body.dark .welcome_wrap .tbl_form:before {background:#555e69;}
