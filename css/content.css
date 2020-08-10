@@ -167,6 +167,8 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .list_form>li {font-size:14px; padding:0 10px; display:table-cell; vertical-align:top; position:relative; box-sizing:border-box;}
 .list_form>li:first-child {padding-left:0;}
 .list_form>li:last-child {padding-right:0;}
+.list_form>li.check {vertical-align: middle;color: #8b919c;}
+.list_form>li.check .ip_check {padding-left: 10px;}
 .list_form+.list_form {margin-top:25px;}
 .list_form.sch_select {margin-top:70px;}
 .list_form.sch_select li em {display:block;color: #8b919c; font-size: 12px;font-weight: 300;margin-top:10px;}
