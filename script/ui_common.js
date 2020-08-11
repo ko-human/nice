@@ -50,4 +50,18 @@ var uiCommon = {
 
   };
 
+  // 다른곳 클릭시 팝업 닫힘
+  $(document).click(function(e) {
+      if($(parent.document).find(".user_setting").css("display")=="block") {
+          if(!$(".user_setting, .user_name").has(e.target).length && !$(parent.document).find(".user_name").is(e.target)) {
+              $(parent.document).find(".user_setting").hide();
+          }
+      }
+
+      if($(parent.document).find(".user_alert").css("display")=="block") {
+          if(!$(parent.document).find(".hd_notice, .user_alert").has(e.target).length && !$(parent.document).find(".hd_notice").is(e.target)) {
+              $(parent.document).find(".user_alert").toggle();
+          }
+      }
+  });
 })(jQuery);
