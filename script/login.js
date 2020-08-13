@@ -1,9 +1,9 @@
 $(function(){
 
   // 메인 타입
-  // var mainClass = ["normal", "normal bright", "type1", "type1 bright"];
-  // var randomNumber = Math.floor(Math.random()*4);
-  // $(".login_wrap").addClass(mainClass[randomNumber]);
+  var mainClass = ["normal", "normal bright", "type1", "type1 bright"];
+  var randomNumber = Math.floor(Math.random()*4);
+  $(".login_wrap").addClass(mainClass[randomNumber]);
 
   openTab();
   inputIcon();
