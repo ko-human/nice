@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="532" viewBox="0 0 512 532">
     <defs>
-        <filter id="prefix__a" width="108.3%" height="108.3%" x="-3.3%" y="-3.3%" filterUnits="objectBoundingBox">
+        <filter id="jw190o1rga" width="108.3%" height="108%" x="-3.3%" y="-3.2%" filterUnits="objectBoundingBox">
             <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
             <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1"/>
             <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
@@ -9,15 +9,15 @@
                 <feMergeNode in="SourceGraphic"/>
             </feMerge>
         </filter>
-        <filter id="prefix__b" width="110.8%" height="110.8%" x="-4.6%" y="-4.6%" filterUnits="objectBoundingBox">
+        <filter id="zdvbl91pqb" width="110.8%" height="110.4%" x="-4.6%" y="-4.4%" filterUnits="objectBoundingBox">
             <feOffset dx="4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"/>
             <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
             <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"/>
         </filter>
-        <path id="prefix__c" d="M0 77.81L151.97 77.81 195.61 0 480 0 480 480 0 480z"/>
+        <path id="kzjodr1loc" d="M0 77.81L151.97 77.81 195.61 0 480 0 480 500 0 500z"/>
     </defs>
-    <g fill="none" fill-rule="evenodd" filter="url(#prefix__a)" transform="translate(12 12)">
-        <use fill="#000" filter="url(#prefix__b)" xlink:href="#prefix__c"/>
-        <use fill="#FFF" xlink:href="#prefix__c"/>
+    <g fill="none" fill-rule="evenodd" filter="url(#jw190o1rga)" transform="translate(12 12)">
+        <use fill="#000" filter="url(#zdvbl91pqb)" xlink:href="#kzjodr1loc"/>
+        <use fill="#FFF" xlink:href="#kzjodr1loc"/>
     </g>
 </svg>
