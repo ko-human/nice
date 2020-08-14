@@ -16,8 +16,8 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap.normal .login_bg1 {display:none;}
 .login_wrap .login_inner {width: 880px;height: 100%;padding-top:75px;box-sizing: border-box;margin:0 auto; position:relative; z-index:1;}
 .login_wrap .login_inner .logo{margin-left: 275px; font-size:0; width: 132px;height: 46px; position:relative; text-align:center; background:url(../images/logo_d.svg) no-repeat; background-size:cover;}
-.login_wrap .login_inner .qbridge {display: block;width: 221px;height: 46px;margin:0 auto;background: url(../../images/qbridge_wh.svg) no-repeat;background-size:contain;}
-.login_wrap.bright .login_inner .qbridge {background: url(../../images/qbridge.svg) no-repeat;background-size:contain;}
+.login_wrap .login_inner .qbridge {display: block;width: 221px;height: 46px;margin:0 auto;background: url(../images/qbridge_wh.svg) no-repeat;background-size:contain;}
+.login_wrap.bright .login_inner .qbridge {background: url(../images/qbridge.svg) no-repeat;background-size:contain;}
 
 .login_wrap .login_inner .box_login {position:relative; margin:20px auto 0; width:510px; height:530px;}
 .login_wrap .login_inner .box_login:before {content:""; z-index:0; position:absolute; top:20px; left:50%; margin-left:-228px; width:456px; height:400px; background:url(../images/login/bg_back.svg) no-repeat center top;}
