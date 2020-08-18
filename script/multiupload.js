@@ -14,7 +14,7 @@ var maxUploadSize = 500;
 $(function (){
    // 파일 드롭 다운
    fileDropDown();
-   
+
    fileInputDown();
 });
 
@@ -122,7 +122,7 @@ function selectFile(files){
 // 업로드 파일 목록 생성
 function addFileList(fIndex, fileName, fileSize){
    var html = "";
-   html += "<li data-fileName='' id='fileTr_" + fIndex + "'>";
+   html += "<li data-fileName='" + fileName + "' id='fileTr_" + fIndex + "'>";
    html +=         fileName + " (" + fileSize + "MB)"  + "<a href='javascript:' onclick='deleteFile(" + fIndex + "); return false;' class='btn_upload'>삭제</a>"
    html += "</li>"
 
