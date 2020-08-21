@@ -63,5 +63,14 @@ var uiCommon = {
               $(parent.document).find(".user_alert").toggle();
           }
       }
+
+      if($(parent.document).find("nav.nav").css("display")=="block") {
+          if(!$(parent.document).find(".btn_nav, .nav.on, .nav_list .sub_list").has(e.target).length && !$(parent.document).find(".nav_list, .nav.on").is(e.target)) {
+              $(parent.document).find("nav.nav").removeClass("on");
+              $(parent.document).find(".wrap").removeClass("open_nav");
+          }
+      }
+
+
   });
 })(jQuery);
