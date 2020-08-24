@@ -464,7 +464,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .market_update .more {display:inline-block; padding-right:15px; position:absolute; right:30px; bottom:30px; font-weight:bold; font-size:13px; color:#7e8184; background:url(../images/ico_arr_more.svg) no-repeat right center;}
 
 .st_tile {padding-top:156px; height:250px; position:relative; color:#313c49; font-size:20px; font-weight:500;  text-decoration:none; text-align:center; box-sizing:border-box;}
-.st_tile:hover {box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.1);}
+.st_tile:hover {box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.2);}
 .st_tile.bg_type2, .st_tile.bg_type3, .st_tile.bg_type4 {color:#fff;}
 .st_tile>.img {position:absolute; top:50px; left:50%; margin-left:-50px; display:inline-block; width:100px; height:100px;}
 .st_tile>.img img {width:100%; }
@@ -564,7 +564,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .layer_pop_wrap .pop_header {padding:60px 30px 0;  height:101px; box-sizing:border-box;}
 .layer_pop_wrap .pop_header .tit {font-size:25px; color:#13161a; font-weight:500;}
 .layer_pop_wrap .pop_con {padding:0 30px 50px; position:absolute; top:101px; bottom:0; left:0; width:100%; box-sizing:border-box; overflow:auto;}
-.btn_pop_bottom {margin:17px 0 0 0; text-align:right;}
+.btn_pop_bottom {margin:17px 0 0 0; text-align:right; position: absolute;right:30px;bottom:30px;}
 .btn_pop_bottom .btn.sm {min-width:90px; }
 .btn_pop_bottom .btn.sm+.btn.sm {margin-left:10px;}
 
