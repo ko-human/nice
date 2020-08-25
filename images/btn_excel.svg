@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+    <defs>
+        <filter id="4qsfxukc3a">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.270588 0 0 0 0 0.278431 0 0 0 0 0.305882 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g filter="url(#4qsfxukc3a)" transform="translate(4 3.333)">
+            <path fill="#FFF" fill-rule="nonzero" d="M7.408 0c.173 0 .34.055.474.157l.077.066 3.646 3.557c.122.12.2.274.222.438l.006.1-.004 7.495c0 .706-.494 1.295-1.163 1.466-.084.02-.17.038-.258.047l-.135.007h-8.55c-.819 0-1.49-.617-1.552-1.401l-.004-.119V1.531c0-.132.021-.257.054-.38C.384.537.924.063 1.588.006L1.723 0h5.685zm-.084 1H1.723c-.253 0-.473.172-.535.407-.01.039-.016.068-.02.092l-.001.032v10.282c0 .256.201.477.472.515l.084.005h8.55c.033 0 .08-.006.145-.023.219-.056.374-.224.405-.422l.006-.075.004-7.389L7.324 1z"/>
+        </g>
+        <text fill="#45474E" font-family="GothamBold, Gotham Bold" font-size="9" font-weight="bold">
+            <tspan x="6.706" y="13.833">X</tspan>
+        </text>
+    </g>
+</svg>

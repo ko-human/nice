@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <path id="4laovk5pya" d="M5.915 10.358c-2.455 0-4.444-1.989-4.444-4.444 0-2.453 1.989-4.444 4.444-4.444 2.454 0 4.443 1.99 4.443 4.445s-1.99 4.443-4.443 4.443m0-10.357C2.648 0 0 2.648 0 5.914c0 3.267 2.648 5.915 5.915 5.915 3.266 0 5.914-2.649 5.914-5.915S9.18.002 5.915.002"/>
+        <path id="oyygwze6sb" d="M7.955 5.179H6.649V3.874c0-.221-.178-.4-.4-.4h-.67c-.221 0-.4.179-.4.4v1.305H3.875c-.221 0-.4.18-.4.4v.67c0 .222.179.4.4.4H5.18v1.306c0 .22.178.4.399.4h.67c.222 0 .4-.18.4-.4V6.65h1.306c.222 0 .4-.18.4-.401v-.67c0-.22-.178-.4-.4-.4"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" fill-opacity="0" d="M0 0H20V20H0z"/>
+        <g transform="translate(4 4)">
+            <use fill="#727679" xlink:href="#4laovk5pya"/>
+            <use fill="#0080C6" xlink:href="#4laovk5pya"/>
+            <g>
+                <use fill="#727679" xlink:href="#oyygwze6sb"/>
+                <use fill="#0080C6" xlink:href="#oyygwze6sb"/>
+            </g>
+        </g>
+    </g>
+</svg>
