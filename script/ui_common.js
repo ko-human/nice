@@ -71,6 +71,12 @@ var uiCommon = {
           }
       }
 
+      if($(parent.document).find(".hd_search_wrap").css("display")=="inline-block") {
+          if(!$(parent.document).find(".hd_btns").has(e.target).length && !$(parent.document).find(".hd_btns").is(e.target)) {
+              $(parent.document).find(".hd_search_wrap").removeClass("on");
+          }
+      }
+
 
   });
 })(jQuery);
