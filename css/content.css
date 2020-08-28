@@ -463,10 +463,11 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .indi_tile .num {display:block; line-height:1.25; font-family:'CJONLYONENEWtitle';font-weight: 500;font-size:32px; color:#0d1327;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 70%;}
 .indi_tile .txt {margin-top:4px; width:90%; text-overflow: ellipsis; overflow:hidden; display:block; font-size:16px; color:#45474e; white-space:nowrap;padding-bottom:5px;box-sizing: border-box;}
 
-.live_tile {height:313px; position:relative;}
+.live_tile {height:313px; position:relative; cursor: pointer;}
 .live_tile .tit_area {padding:30px 30px 0;}
 .live_tile .tit_area .tit {font-size:22px; font-weight:500; color: #13161a; line-height: 1.1; display:inline-block; max-width:100%; overflow:hidden; white-space:nowrap;}
 .live_tile .con {padding:27px 30px 0;}
+.live_tile .con .rMate5__rMateChart {cursor: pointer;}
 .market_update {overflow:hidden;}
 .market_update>img {float:left; width:180px; height:139px; }
 .market_update>.txt {float:right; width:272px; height:146px; font-size:16px; line-height:1.38; color:#7e8184;}
