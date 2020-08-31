@@ -329,6 +329,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .tit_box .con_area {}
 .tit_box .con_area .grid_piece {border-bottom:1px solid #dde2ea;}
 .tit_box .con_area .grid_piece:nth-last-child(1) {border-bottom:0;}
+.tit_box .con_area .grid_piece .grid_wrap {border-top:1px solid #dde2ea;}
 .tit_box .foot_area {position: relative;height:50px; border-top:1px solid #dde2ea; box-sizing:border-box;}
 
 .sub_box {height:198px; position:relative; padding:22px 20px; box-sizing:border-box;}
