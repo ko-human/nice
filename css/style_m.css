@@ -239,7 +239,7 @@ a {color:#fff;}
 
 .sub_box {height:210px; position:relative; padding:20px; box-sizing:border-box; background-color: #313c49;}
 .sub_box .tit {color:#45474e;}
-.sub_box .tit strong {display:block; width:260px; overflow:hidden; font-size:20px; font-weight:500; color: #fff; white-space:nowrap; padding-bottom:2px;}
+.sub_box .tit strong {display:block; width:100%; overflow: hidden;text-overflow:ellipsis; font-size:20px; font-weight:500; color: #fff; white-space:nowrap; padding-bottom:2px;}
 .sub_box .tit span {display:block; margin-top:8px;font-size:12px;font-weight: 300;color: #fff;}
 .sub_box .con {display:table; table-layout:fixed;height:130px;width:100%; position: absolute;left: 0;bottom: 0;top: 68px;padding: 0 20px 20px;box-sizing: border-box;cursor: default;}
 .sub_box .con>div {display:table-cell; vertical-align:middle;height: 122px;}
