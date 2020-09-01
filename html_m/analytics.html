@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>모바일</title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js?"></script>
+    <script src="../script/ui_common_m.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            //메뉴
+            $(".btn_nav").on("click", function(e) {
+                $(".m_nav").addClass("open");
+                e.preventDefault();
+            });
+
+            $(".m_nav .btn_close").on("click", function(e) {
+                $(".m_nav").removeClass("open");
+                e.preventDefault();
+            });
+
+            $('.m_nav').bind("mouseup touchend", function(e) {
+                if ($(this).has(e.target).length === 0) {
+                    $('.m_nav').removeClass('open');
+                }
+            });
+
+
+            // scroll
+            var lastScrollTop = 0,
+                delta = 15;
+            $(".m_wrap").scroll(function(event) {
+                var st = $(this).scrollTop();
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+                if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+                    $(".m_header").css("top", "-50px");
+                } else {
+                    $(".m_header").css("top", "0px");
+                }
+                lastScrollTop = st;
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="m_wrap">
+        <!-- header -->
+        <header class="m_header">
+            <h1 class="tit_header"><a href="javascript:">Analytics</a></h1>
+            <div class="left">
+                <a href="javascript:" class="back">이전 화면</a>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- 내용 -->
+        <div class="m_content">
+            <div class="main_wrap">
+
+                <ul class="list_sub">
+                    <!-- 반복 -->
+                    <li>
+                        <div class="box">
+                            <div class="sub_box">
+                                <div class="tit">
+                                    <strong>Air & Ocean Analytics</strong>
+                                    <span>총 157건</span>
+                                </div>
+                                <div class="con">
+                                    <div class="result">
+                                        <strong>96</strong><span>%</span>
+                                    </div>
+                                    <div class="chart_area">차트영역</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- //반복 -->
+                    <li>
+                        <div class="box no_chart"><!-- 차트 없을 때, class추가 : no_chart -->
+                            <div class="sub_box">
+                                <div class="tit">
+                                    <strong>Container Analytics</strong>
+                                </div>
+                                <div class="con">
+                                    <div class="result">
+                                        <strong>96</strong><span>%</span>
+                                    </div>
+                                    <div class="chart_area">차트영역</div>
+                                </div>
+                                <span href="javascript:" class="con_data"><a href="javascript:" class="btn_data">데이터보기<img src="../../images/ico_copy_w.svg" alt="데이터보기"></a></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="sub_box">
+                                <div class="tit">
+                                    <strong>Ocean Carrier</strong>
+                                </div>
+                                <div class="con">
+                                    <div class="result">
+                                        <strong>96</strong><span>건</span>
+                                    </div>
+                                    <div class="chart_area">차트영역</div>
+                                </div>
+                                <span href="javascript:" class="con_data"><a href="javascript:" class="btn_data">데이터보기<img src="../../images/ico_copy_w.svg" alt="데이터보기"></a></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="sub_box">
+                                <div class="tit">
+                                    <strong>Shipment Analytics</strong>
+                                    <span>총 13건</span>
+                                </div>
+                                <div class="con">
+                                    <div class="result">
+                                        <strong>103</strong><span>%</span>
+                                    </div>
+                                    <div class="chart_area">차트영역</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- //내용 -->
+        <!-- footer -->
+        <footer class="footer">
+            <p>© 2020 CJ Logistics</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>
