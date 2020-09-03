@@ -24,6 +24,11 @@
             };
             $(".ip_date input").datetimepicker($.extend(uiCommon.datepickerOption, dateOption)).icoTrigger();
             $(".ip_del").inputTextFocus();
+
+            $(".btn_togg").click(function(){
+                $(".search_form.togg").toggleClass("open");
+                $(this).toggleClass("open");
+            });
         });
     </script>
 </head>
@@ -47,6 +52,9 @@
         <!-- 검색 -->
         <div class="search_wrap">
             <ul class="search_form">
+                <li class="togg"><!-- 열었을 때 class추가 : open -->
+                    <a href="javascript:" class="btn_togg"></a>
+                </li>
                 <li>
                     <label for="" class="lb_txt check">Period</label>
                     <select class="select" name="" style="width:100px">
@@ -70,9 +78,14 @@
                         <option value="">OO No.</option>
                     </select>
                 </li>
+                <li class="btns">
+                    <a href="javascript:" class="btn lg ico_search">검색</a>
+                </li>
+            </ul>
+            <ul class="search_form togg">
                 <li>
                     <label for="" class="lb_txt">ABR. Center</label>
-                    <select class="select" name="" style="width:300px">
+                    <select class="select" name="" style="width:200px">
                         <option value="">ALL</option>
                         <option value="">OO No.</option>
                         <option value="">OO No.</option>
@@ -80,7 +93,7 @@
                 </li>
                 <li>
                     <label for="" class="lb_txt">Origin Issued</label>
-                    <select class="select" name="" style="width:120px">
+                    <select class="select" name="" style="width:200px">
                         <option value="">ALL</option>
                         <option value="">OO No.</option>
                         <option value="">OO No.</option>
@@ -88,31 +101,29 @@
                 </li>
                 <li>
                     <label for="" class="lb_txt">H.B/L</label>
-                    <span class="ip_del" style="width:250px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                 </li>
                 <li>
                     <label for="" class="lb_txt">M.B/L</label>
-                    <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                 </li>
                 <li>
                     <label for="" class="lb_txt">CNTR. Invoice</label>
-                    <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                 </li>
                 <li>
                     <label for="" class="lb_txt">CNTR. No.</label>
-                    <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                 </li>
                 <li>
                     <label for="" class="lb_txt">Pallet No.</label>
-                    <span class="ip_del" style="width:270px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                 </li>
                 <li>
                     <label for="" class="lb_txt">Buyer</label>
-                    <span class="ip_del" style="width:150px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <span class="ip_del" style="width:180px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                 </li>
-                <li class="btns">
-                    <a href="javascript:" class="btn lg ico_search">검색</a>
-                </li>
+
             </ul>
         </div>
         <!-- //검색 -->

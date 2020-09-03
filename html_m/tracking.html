@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>모바일</title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js?"></script>
+    <script src="../script/ui_common_m.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            // search
+            $(".search_wrap input").on("focusin", function(e) {
+              $(this).parent().addClass("focus");
+            });
+            $(".search_wrap input").on("focusout", function(e) {
+              var val = $(this).val();
+              val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
+            });
+
+            // scroll
+            var lastScrollTop = 0,
+                delta = 15;
+            $(".m_wrap").scroll(function(event) {
+                var st = $(this).scrollTop();
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+                if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+                    $(".m_header").css("top", "-50px");
+                } else {
+                    $(".m_header").css("top", "0px");
+                }
+                lastScrollTop = st;
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="m_wrap">
+        <!-- header -->
+        <header class="m_header">
+            <h1 class="tit_header"><a href="javascript:">Cargo Tracking</a></h1>
+            <div class="left">
+                <a href="javascript:" class="back">이전 화면</a>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- 내용 -->
+        <div class="m_content">
+            <div class="main_wrap">
+
+                <div class="search_wrap">
+                    <ul class="ip_group">
+                      <li style="width:44%;">
+                        <select name="" class="select sm">
+                          <option value="">H.B/L No.</option>
+                          <option value="">Num.</option>
+                          <option value="">NoNoNo.</option>
+                        </select>
+                      </li>
+                      <li>
+                        <span class="ip_search"><input type="text" name="" value="" placeholder="Enter Number" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span>
+                      </li>
+                    </ul>
+                    <div class="track_box">
+                        <ul>
+                            <!-- 반복 -->
+                            <li>
+                                <div class="track_inner step0">
+                                    <div class="tit_area">
+                                        <h2 class="tit">Book-9981475</h2>
+                                        <p>H.B/L #123456CJL98</p>
+                                    </div>
+                                    <div class="status building">
+                                        <!-- 아이콘 class : building | airplane | truck | container | ship  -->
+                                        <div class="txt_area">
+                                            <strong>SHPR</strong>
+                                            <span>INNISFREE CO., LTD / ETD</span>
+                                        </div>
+                                    </div>
+                                    <div class="track_info">
+                                        <div class="bar"></div>
+                                        <span class="dep">BUSAN, KOREA</span>
+                                        <span class="arr">LONG BEACH, USA</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- //반복 -->
+                            <li>
+                                <div class="track_inner step1">
+                                    <div class="tit_area">
+                                        <h2 class="tit">Book-9981475</h2>
+                                        <p>H.B/L #123456CJL98</p>
+                                    </div>
+                                    <div class="status airplane">
+                                        <!-- 아이콘 class : building | airplane | truck | container | ship  -->
+                                        <div class="txt_area">
+                                            <strong>SHPR</strong>
+                                            <span>INNISFREE CO., LTD / ETD</span>
+                                        </div>
+                                    </div>
+                                    <div class="track_info">
+                                        <div class="bar"></div>
+                                        <span class="dep">BUSAN, KOREA</span>
+                                        <span class="arr">LONG BEACH, USA</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="track_inner step2">
+                                    <div class="tit_area">
+                                        <h2 class="tit">Book-9981475</h2>
+                                        <p>H.B/L #123456CJL98</p>
+                                    </div>
+                                    <div class="status airplane">
+                                        <!-- 아이콘 class : building | airplane | truck | container | ship  -->
+                                        <div class="txt_area">
+                                            <strong>SHPR</strong>
+                                            <span>INNISFREE CO., LTD / ETD</span>
+                                        </div>
+                                    </div>
+                                    <div class="track_info">
+                                        <div class="bar"></div>
+                                        <span class="dep">BUSAN, KOREA</span>
+                                        <span class="arr">LONG BEACH, USA</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="track_inner step3">
+                                    <div class="tit_area">
+                                        <h2 class="tit">Book-9981475</h2>
+                                        <p>H.B/L #123456CJL98</p>
+                                    </div>
+                                    <div class="status airplane">
+                                        <!-- 아이콘 class : building | airplane | truck | container | ship  -->
+                                        <div class="txt_area">
+                                            <strong>SHPR</strong>
+                                            <span>INNISFREE CO., LTD / ETD</span>
+                                        </div>
+                                    </div>
+                                    <div class="track_info">
+                                        <div class="bar"></div>
+                                        <span class="dep">BUSAN, KOREA</span>
+                                        <span class="arr">LONG BEACH, USA</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="track_inner step4">
+                                    <div class="tit_area">
+                                        <h2 class="tit">Book-9981475</h2>
+                                        <p>H.B/L #123456CJL98</p>
+                                    </div>
+                                    <div class="status airplane">
+                                        <!-- 아이콘 class : building | airplane | truck | container | ship  -->
+                                        <div class="txt_area">
+                                            <strong>SHPR</strong>
+                                            <span>INNISFREE CO., LTD / ETD</span>
+                                        </div>
+                                    </div>
+                                    <div class="track_info">
+                                        <div class="bar"></div>
+                                        <span class="dep">BUSAN, KOREA</span>
+                                        <span class="arr">LONG BEACH, USA</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- //내용 -->
+        <!-- footer -->
+        <footer class="m_footer">
+            <p>© 2020 CJ Logistics</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>
