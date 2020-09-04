@@ -31,7 +31,16 @@
                     $('.m_nav').removeClass('open');
                 }
             });
-            
+
+            // search
+            $(".ip_group input").on("focusin", function(e) {
+              $(this).parent().addClass("focus");
+            });
+            $(".ip_group input").on("focusout", function(e) {
+              var val = $(this).val();
+              val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
+            });
+
             slidePage();
             // 슬라이더
             $(".prospect_slider").bxSlider({
@@ -45,9 +54,6 @@
             });
 
         });
-
-
-
 
         function slidePage() {
             var width = $(document).width();
@@ -176,7 +182,7 @@
                         <!-- //title -->
 
                         <div class="list_options">
-                            <a href="#" class="btn_filter">Last 7 Days</a>
+                            <a href="javascript:" class="btn_filter">Last 7 Days</a>
                         </div>
 
                         <div class="dash_module">
@@ -186,36 +192,46 @@
                             <div class="dash_items type1">
                                 <ul>
                                     <li>
-                                        <div class="item_box type_on">
-                                            <span class="tit">Scheduled</span>
-                                            <strong class="num">11</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box type_on">
+                                                <span class="tit">Scheduled</span>
+                                                <strong class="num">11</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">Completed</span>
-                                            <strong class="num">3</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">Completed</span>
+                                                <strong class="num">3</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">Initial Call</span>
-                                            <strong class="num">11</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">Initial Call</span>
+                                                <strong class="num">11</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">Retention Call</span>
-                                            <strong class="num">3</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">Retention Call</span>
+                                                <strong class="num">3</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">New Call</span>
-                                            <strong class="num">3</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">New Call</span>
+                                                <strong class="num">3</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -228,30 +244,38 @@
                             <div class="dash_items type2">
                                 <ul>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">Assigned</span>
-                                            <strong class="num">11</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">Assigned</span>
+                                                <strong class="num">11</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">In progress</span>
-                                            <strong class="num">3</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">In progress</span>
+                                                <strong class="num">3</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">Completed</span>
-                                            <strong class="num">11</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">Completed</span>
+                                                <strong class="num">11</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="item_box type_on">
-                                            <span class="tit">In progress</span>
-                                            <strong class="num">3</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box type_on">
+                                                <span class="tit">In progress</span>
+                                                <strong class="num">3</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -264,30 +288,38 @@
                             <div class="dash_items type3">
                                 <ul>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">Compliment</span>
-                                            <strong class="num">11</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">Compliment</span>
+                                                <strong class="num">11</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="item_box type_on">
-                                            <span class="tit">Complaint</span>
-                                            <strong class="num">3</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box type_on">
+                                                <span class="tit">Complaint</span>
+                                                <strong class="num">3</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">Company News</span>
-                                            <strong class="num">11</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">Company News</span>
+                                                <strong class="num">11</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">OS & D</span>
-                                            <strong class="num">3</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">OS & D</span>
+                                                <strong class="num">3</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -300,41 +332,50 @@
                             <div class="dash_items type4">
                                 <ul>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">Active</span>
-                                            <strong class="num">11</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">Active</span>
+                                                <strong class="num">11</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">Completed</span>
-                                            <strong class="num">3</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">Completed</span>
+                                                <strong class="num">3</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <div class="item_box type_on">
-                                            <span class="tit">Pending</span>
-                                            <strong class="num">11</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box type_on">
+                                                <span class="tit">Pending</span>
+                                                <strong class="num">11</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="item_box">
-                                            <span class="tit">Lost Drop</span>
-                                            <strong class="num">3</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box">
+                                                <span class="tit">Lost Drop</span>
+                                                <strong class="num">3</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <div class="item_box type_on">
-                                            <span class="tit">Past Due</span>
-                                            <strong class="num">3</strong>
-                                        </div>
+                                        <a href="javascript:">
+                                            <div class="item_box type_on">
+                                                <span class="tit">Past Due</span>
+                                                <strong class="num">3</strong>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-
 
                         <div class="dash_module">
                             <div class="tit_dash">
@@ -401,20 +442,49 @@
 
                     </div>
                     <!-- //dashboard -->
+                    <!-- footer -->
+                    <footer class="m_footer">
+                        <p>© 2020 CJ Logistics</p>
+                    </footer>
+                    <!-- //footer -->
 
                 </div>
                 <div class="slide_page_item">
-                    음하하
+
+                    <!-- dashboard -->
+                    <div class="content_wrap">
+                        <!-- title -->
+                        <div class="tit_wrap type_special">
+                            <div class="tit_left">
+                                <span class="tit">Account</span>
+                            </div>
+                        </div>
+                        <!-- //title -->
+
+                        <div class="activity_wrap">
+                            <a href="javascript:" class="btn_activity">New Activity</a>
+                        </div>
+
+                        <div class="">
+                            <ul class="ip_group">
+                                <li>
+                                    <span class="ip_search"><input type="text" name="" value="" placeholder="Account Name" class="ip_txt"><a href="javascript:" class="btn_ip_search">검색</a></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- //dashboard -->
+                    <!-- footer -->
+                    <footer class="m_footer">
+                        <p>© 2020 CJ Logistics</p>
+                    </footer>
+                    <!-- //footer -->
+
                 </div>
             </div>
         </div>
 
-
-        <!-- footer -->
-        <footer class="m_footer">
-            <p>© 2020 CJ Logistics</p>
-        </footer>
-        <!-- //footer -->
     </div>
 
 </body>

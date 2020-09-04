@@ -16,10 +16,10 @@
         $(function() {
 
             // search
-            $(".search_wrap input").on("focusin", function(e) {
+            $(".ip_group input").on("focusin", function(e) {
               $(this).parent().addClass("focus");
             });
-            $(".search_wrap input").on("focusout", function(e) {
+            $(".ip_group input").on("focusout", function(e) {
               var val = $(this).val();
               val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
             });
