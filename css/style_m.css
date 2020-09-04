@@ -625,6 +625,6 @@ a {color:#fff;}
 
 
 /* slide page */
-.slide_page_wrap {width:100%; height:100%; overflow:hidden; position:relative;}
-.slide_page {height:100%; width:5000px; position:absolute; top:0; left:0;  transition:all 0.2s; }
+.slide_page_wrap {width:100%; height:auto; overflow:hidden; position:relative;}
+.slide_page {height:100%; width:5000px; position:relative;; top:0; left:0;  transition:all 0.2s; }
 .slide_page_item {float:left; height:100%; overflow:auto; position:relative;}
