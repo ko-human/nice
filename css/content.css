@@ -1333,6 +1333,15 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 
 .list_form li .entry {display:none;}
 .list_form.entry li .entry {display:inline-block;}
+
+.pop_quotation {padding: 50px;box-sizing: border-box;background-color: #f0f4f8;}
+.pop_quotation .list_form .port + .port:after {top:60%;}
+.pop_quotation .list_form .port .box_port {padding: 0;}
+.pop_quotation .list_form.case {display: none;}
+.pop_quotation.ocean .list_form.ocean {display: block;}
+.pop_quotation.air .list_form.air {display: block;}
+
+
 /* case별 */
 .ebook_wrap.air .copy_box .cargo_form li.case_air,
 .ebook_wrap.ocean .copy_box .cargo_form li.case_ocean,

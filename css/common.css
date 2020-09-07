@@ -226,6 +226,7 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;margin
 
 /* padding */
 .pl5 {padding-left:5px !important;}
+.pd0 {padding:0 !important;}
 
 /* font */
 .bold {font-weight:500 !important;}

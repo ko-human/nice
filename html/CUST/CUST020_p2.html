@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../script/lib/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js" charset="UTF-8"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script src="../../script/ui_common.js"></script>
+    <title></title>
+    <script type="text/javascript">
+        $(function() {
+
+            $(".ip_del").inputTextFocus();
+
+        });
+    </script>
+</head>
+<body>
+
+    <!-- layer -->
+    <div class="layer_pop_wrap type1" style="">
+        <a href="#" class="btn_closed">닫기</a>
+        <div class="pop_header">
+            <div class="tit">
+                Quick Quotation
+            </div>
+        </div>
+        <div class="pop_con">
+
+            <div class="pop_quotation air"><!-- case별 class추가 : ocean / air -->
+                <div class="list_form_wrap">
+                    <ul class="list_form">
+                        <li>
+                            <label for="" class="lb_txt req">Transpotation Mode</label>
+                            <ul class="radio_group type_freight">
+                                <li class="radio_item air">
+                                    <input type="radio" name="radioEbook" value="" checked="true" id="radio05"><label for="radio05">Air Freight</label>
+                                </li>
+                                <li class="radio_item ocean">
+                                    <input type="radio" name="radioEbook" value="" id="radio06"><label for="radio06">Ocean Freight</label>
+                                </li>
+                                <li class="radio_item radio">
+                                    <input type="radio" name="radiobook" value="" checked="true" id="radio07"><label for="radio07">Export</label>
+                                </li>
+                                <li class="radio_item radio">
+                                    <input type="radio" name="radiobook" value="" id="radio08"><label for="radio08">Import</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="list_form">
+                        <li class="port">
+                            <label for="" class="lb_txt req">Origin</label>
+                            <div class="box_port">
+                                <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Loading Port" readonly="readonly" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                <a href="javascript:" class="btn_ip_search">검색</a></span>
+                            </div>
+                        </li>
+                        <li class="port">
+                            <label for="" class="lb_txt req">Destination</label>
+                            <div class="box_port">
+                                <span class="ip_search"><span class="ip_del"><input type="text" value="" placeholder="Unloading Port" readonly="readonly" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                <a href="javascript:" class="btn_ip_search">검색</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list_form case air">
+                        <li>
+                            <ul class="list_form">
+                                <li style="width:400px;">
+                                    <label for="" class="lb_txt req">Commodity</label>
+                                    <span class="ip_del"><input type="text" value="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                </li>
+                                <li>
+                                    <label for="" class="lb_txt">Cargo Qty.</label>
+                                    <span class="ip_del"><input type="text" value="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                </li>
+                                <li class="pd0">
+                                    <label for="" class="lb_txt">PKG Unit</label>
+                                    <span class="ip_del"><input type="text" value="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                </li>
+                                <li>
+                                    <label for="" class="lb_txt req">Total G.Weight</label>
+                                    <span class="ip_del"><input type="text" value="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="list_form case ocean">
+                        <li>
+                            <ul class="list_form">
+                                <li style="width:400px;">
+                                    <label for="" class="lb_txt req">Commodity</label>
+                                    <span class="ip_del"><input type="text" value="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                </li>
+                                <li style="width:260px;">
+                                    <label for="" class="lb_txt">Container Size & Type</label>
+                                    <select class="select bold">
+                                        <option value="">20' 8' High General</option>
+                                        <option value="">10' 1' Low General</option>
+                                    </select>
+                                </li>
+                                <li class="pd0">
+                                    <label for="" class="lb_txt">Qty.</label>
+                                    <span class="ip_del"><input type="text" value="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="list_form">
+                        <li>
+                            <ul class="list_form">
+                                <li>
+                                    <label for="" class="lb_txt req">Remark</label>
+                                    <textarea name="" rows="4" placeholder="&#10;필요작업 및 요청사항을 기재 바랍니다. &#10;Please fill out the required tasks and requests."></textarea></li>
+                                </li>
+                            </ul>
+                            <ul class="list_form">
+                                <li>
+                                    <label for="" class="lb_txt req">Your Company</label>
+                                    <span class="ip_del"><input type="text" value="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                </li>
+                                <li>
+                                    <label for="" class="lb_txt">Name of PIC at Your Company</label>
+                                    <span class="ip_del"><input type="text" value="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="list_form">
+                        <li>
+                            <ul class="list_form">
+                                <li>
+                                    <label for="" class="lb_txt req">Phone</label>
+                                    <span class="ip_del"><input type="text" value="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                </li>
+                                <li>
+                                    <label for="" class="lb_txt">Email</label>
+                                    <span class="ip_del"><input type="text" value="" class="ip_txt bold"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_pop_bottom">
+                <div class="btn_list">
+                    <a href="javascript:" class="btn sm">Send</a>
+                    <a href="javascript:" class="btn gray sm">Cancel</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- //layer -->
+
+</body>
+</html>
