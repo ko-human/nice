@@ -14,6 +14,7 @@
     <script src="../script/ui_common_m.js"></script>
     <script type="text/javascript">
         $(function() {
+            $(".ip_del").inputTextFocus();
 
             //메뉴
             $(".btn_nav").on("click", function(e) {
@@ -39,6 +40,11 @@
             $(".ip_group input").on("focusout", function(e) {
               var val = $(this).val();
               val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
+            });
+
+            // profile 버튼
+            $(".btn_open").on("click", function() {
+                $(this).parent().toggleClass("open");
             });
 
             slidePage();
@@ -452,20 +458,20 @@
                 <div class="slide_page_item">
 
                     <!-- dashboard -->
-                    <div class="content_wrap">
-                        <!-- title -->
-                        <div class="tit_wrap type_special">
-                            <div class="tit_left">
-                                <span class="tit">Account</span>
+                    <div class="content_wrap account">
+                        <div class="top_wrap">
+                            <!-- title -->
+                            <div class="tit_wrap type_special">
+                                <div class="tit_left">
+                                    <span class="tit">Account</span>
+                                </div>
                             </div>
-                        </div>
-                        <!-- //title -->
+                            <!-- //title -->
 
-                        <div class="activity_wrap">
-                            <a href="javascript:" class="btn_activity">New Activity</a>
-                        </div>
+                            <div class="activity_wrap">
+                                <a href="javascript:" class="btn_activity">New Activity</a>
+                            </div>
 
-                        <div class="">
                             <ul class="ip_group">
                                 <li>
                                     <span class="ip_search"><input type="text" name="" value="" placeholder="Account Name" class="ip_txt"><a href="javascript:" class="btn_ip_search">검색</a></span>
@@ -474,16 +480,79 @@
                         </div>
 
                         <div class="content_inner">
-                            
+                            <h2>STARBUCKS KOREA</h2>
+                            <ul class="idnum_list">
+                                <li><span>GF ID : <em>TP1020102</em></span></li>
+                                <li><span>MDM ID : <em>10200001201</em></span></li>
+                                <li><span>MDG ID : <em>100-202-12331</em></span></li>
+                            </ul>
+
+                            <ul class="profile_list">
+                                <li>
+                                    <a href="javascript:" class="btn_open"><b>Profile</b></a>
+                                    <div class="desc_wrap">
+                                        <div class="list_form_wrap">
+                                            <ul class="list_form">
+                                                <li>
+                                                    <label for="" class="lb_txt req">English Name</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Language Name</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt req">Phone Number</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Type</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Industry</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Commodity</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Management Type</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Business Size</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Corporate ID</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">TAX ID</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Web Page</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                                <li>
+                                                    <label for="" class="lb_txt">Denied Party Screening</label>
+                                                    <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:" class="btn_open"><b>Contacts</b></a>
+                                </li>
+                            </ul>
                         </div>
 
                     </div>
                     <!-- //dashboard -->
-                    <!-- footer -->
-                    <footer class="m_footer">
-                        <p>© 2020 CJ Logistics</p>
-                    </footer>
-                    <!-- //footer -->
 
                 </div>
             </div>

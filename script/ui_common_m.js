@@ -21,6 +21,34 @@ var uiCommon = {
   }
 };
 
+
+(function($){
+
+  // 텍스트삭제
+  $.fn.inputTextFocus = function() {
+    this.each(function(i){
+      var $el = $(this);
+      var $ip = $el.find(".ip_txt");
+      valCheck($ip.val());
+      $ip.on("change keyup paste", function(e){
+        var val = $(this).val();
+        valCheck(val);
+      });
+      $el.find(".btn_txt_del").on("click", function(e){
+        $ip.val("");
+        $el.removeClass("focus");
+        e.preventDefault();
+      });
+      function valCheck(val){
+        val == "" ? $el.removeClass("focus") : $el.addClass("focus");
+      }
+    });
+
+  };
+
+
+})(jQuery);
+
 // 터치 스와이프
 // document.addEventListener('touchstart', handleTouchStart, false);
 // document.addEventListener('touchmove', handleTouchMove, false);

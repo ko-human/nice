@@ -644,9 +644,9 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 /* tracking */
 .track_list {height:650px;}
 .track_list .track_box+.track_box {margin-top:5px;}
-.track_box {padding:25px 40px 14px; border:solid 1px #e6ebf1; background-color:#fff; box-sizing:border-box; cursor: pointer;}
+.track_box {padding:20px 40px; border:solid 1px #e6ebf1; background-color:#fff; box-sizing:border-box; cursor: pointer;}
 .track_box:after {content:""; clear:both; display:block;}
-.track_box .track_info {width:580px; float:left;}
+.track_box .track_info {display: inline-block;width:580px;vertical-align: middle;}
 .track_box .tit_area .tit {font-size:18px; font-weight:500;}
 .track_box .tit_area .sub {font-size:13px; color:#8b919c;}
 .track_box .track_info .detail {margin-top:10px; display: inline-block;padding: 0 1px 0 9px;background-color: #f6f8fa;}
@@ -655,20 +655,20 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .track_box .track_info .detail>li .sup {position:relative;left:2px;top:-3px; font-size:10px;}
 .track_box .track_info .detail>li:after {content: "";position: absolute;top: 5px;right: 2px;width: 1px;height: 10px;background-color: #e6ebf1;}
 .track_box .track_info .detail>li:nth-last-child(1):after {display: none;}
-.track_box .track_info .status {padding-left:21px; position:relative; margin-top:12px; height:19px; line-height:19px; font-size:13px; color: #13161a; background-size:16px;}
+.track_box .track_info .status {position:relative;padding-left:21px; padding-right: 9px; margin-top:12px; line-height:19px; font-size:13px; color: #13161a; background-size:16px;}
 .track_box .track_info .status strong {font-size: 15px;font-weight:500;}
 .track_box .track_info .status span {position: relative;font-size:13px;padding-left: 20px;}
 .track_box .track_info .status span:before {content:'•';position: absolute;left:10px;}
-.track_box .btns_area {float:right;width:120px; height:69px; position:relative;}
+.track_box .btns_area {display: inline-block;vertical-align: middle;margin-left: 50px;width:120px; height:69px; position:relative;}
 .track_box .btns_area a.ico_view_map {position:absolute; top:0; left:0;}
 .track_box .btns_area a.ico_download {position:absolute; bottom:0; left:0;}
-.track_box .track_info .status.airplane {background-size:16px; background-image:url(../images/ico_airplane_s.svg); background-position:left center ; background-repeat:no-repeat;}
-.track_box .track_info .status.container {background-size:16px; background-image:url(../images/ico_container_s.svg); background-position:left center ; background-repeat:no-repeat;}
-.track_box .track_info .status.building {background-size:16px; background-image:url(../images/ico_building_s.svg); background-position:left center ; background-repeat:no-repeat;}
-.track_box .track_info .status.truck {background-size:16px; background-image:url(../images/ico_truck_s.svg); background-position:left center ; background-repeat:no-repeat;}
-.track_box .track_info .status.ship {background-size:16px; background-image:url(../images/ico_ship_s.svg); background-position:left center ; background-repeat:no-repeat;}
+.track_box .track_info .status.airplane {background-size:16px; background-image:url(../images/ico_airplane_s.svg); background-position:left 2px ; background-repeat:no-repeat;}
+.track_box .track_info .status.container {background-size:16px; background-image:url(../images/ico_container_s.svg); background-position:left 1px ; background-repeat:no-repeat;}
+.track_box .track_info .status.building {background-size:16px; background-image:url(../images/ico_building_s.svg); background-position:left 1px ; background-repeat:no-repeat;}
+.track_box .track_info .status.truck {background-size:16px; background-image:url(../images/ico_truck_s.svg); background-position:left top ; background-repeat:no-repeat;}
+.track_box .track_info .status.ship {background-size:16px; background-image:url(../images/ico_ship_s.svg); background-position:left top ; background-repeat:no-repeat;}
 
-.track_box .track_step {width:880px; float:left; position:relative; margin-top:15px;margin-left:45px;}
+.track_box .track_step {width:880px; display: inline-block; vertical-align: middle;position:relative; margin-top:15px;margin-left:45px;}
 .step_list {display:table; table-layout:fixed; width:100%; position:relative;}
 .step_list>li{display:table-cell; position:relative; height:auto; background:url(../images/bg_line_dash.svg) repeat-x;}
 .step_list>li:nth-child(1), .step_list>li:nth-child(4) {width:214px;}
@@ -1133,7 +1133,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 
 .btn_list .btn_personal {display: inline-block;margin-right: 30px;}
 .btn_list .btn_personal .select.opt_personal {height:36px;margin-right: 8px;}
-.search_form li .ip_check {display: inline-block;margin-left:10px;}
+.search_form li .ip_check {display: inline-block;margin-left:10px;vertical-align: middle;}
 .search_form li.chk_only {height:63px;}
 .search_form li.chk_only .ip_check {display: inline-block;margin-top: 13px;}
 

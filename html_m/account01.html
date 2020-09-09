@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../css/style_m.css?v=2" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js"></script>
+    <script src="../script/ui_common_m.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            //메뉴
+            $(".btn_nav").on("click", function(e) {
+                $(".m_nav").addClass("open");
+                e.preventDefault();
+            });
+
+            $(".m_nav .btn_close").on("click", function(e) {
+                $(".m_nav").removeClass("open");
+                e.preventDefault();
+            });
+
+            $('.m_nav').bind("mouseup touchend", function(e) {
+                if ($(this).has(e.target).length === 0) {
+                    $('.m_nav').removeClass('open');
+                }
+            });
+
+            // search
+            $(".ip_group input").on("focusin", function(e) {
+              $(this).parent().addClass("focus");
+            });
+            $(".ip_group input").on("focusout", function(e) {
+              var val = $(this).val();
+              val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
+            });
+
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <div class="m_wrap">
+
+        <header class="m_header">
+            <h1 class="logo"><a href="#">CJ LOGISTICS</a></h1>
+            <div class="left">
+                <a href="#" class="btn_nav">목록</a>
+            </div>
+            <div class="right">
+                <ul class="hd_btns">
+                    <li><a href="#" class="hd_notice on">공지</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <nav class="m_nav">
+            <div class="nav_inner">
+                <a href="#" class="btn_close">닫기</a>
+                <div class="user_info">
+                    <strong class="name">Loso Kim</strong>
+                    <span class="comp">Amore Pacific</span>
+                    <div class="search">
+                        <input type="text" name="" value="" placeholder="PO#, BKG# or B/L#">
+                        <a href="#" class="btn_search">검색</a>
+                    </div>
+                </div>
+                <ul class="nav_list">
+                    <li><a href="#customer_main" class="nav01" data-url="customer/customer_main.html">물동</a></li>
+                    <li><a href="#customer_sub_main" class="nav02" data-url="customer/customer_sub_main.html">금액</a></li>
+                    <li><a href="#" class="nav03">KPI</a></li>
+                    <li><a href="#" class="nav04">리포트</a></li>
+                    <li><a href="#" class="nav05">고객맞춤</a></li>
+                    <li><a href="#" class="nav06">미니WMS</a></li>
+                    <li><a href="#" class="nav07">대시보드</a></li>
+                    <li><span class="nav08">업무</span>
+                        <ul class="sub_list">
+                            <li><a href="#tab1">Booking</a></li>
+                            <li><a href="#tab2">Service Request</a></li>
+                            <li><a href="#tab3">EDMS</a></li>
+                            <li><a href="#tab4">B/L 출력</a></li>
+                            <li><a href="#tab5">정산</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav_bott">
+                    <a href="#" class="btn_signout">Sign Out</a>
+                </div>
+            </div>
+        </nav>
+
+
+    </div>
+
+</body>
+</html>
