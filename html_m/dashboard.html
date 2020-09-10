@@ -8,12 +8,25 @@
     <link href="../css/style_m.css?v=2" rel="stylesheet">
     <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
-    <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/lib/jquery-ui.js"></script>
     <script src="../script/lib/jquery.bxslider.js"></script>
     <script src="../script/ui_common_m.js"></script>
     <script type="text/javascript">
         $(function() {
+            // scroll
+            var lastScrollTop = 0,
+                delta = 15;
+            $(".slide_page_item").scroll(function(event) {
+                var st = $(this).scrollTop();
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+                if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+                    $(".m_header").css("top", "-50px");
+                } else {
+                    $(".m_header").css("top", "0px");
+                }
+                lastScrollTop = st;
+            });
+
             $(".ip_del").inputTextFocus();
 
             //메뉴
@@ -43,6 +56,7 @@
             });
 
             // profile 버튼
+            $(".contact_list").children("li:first-child").addClass("open");
             $(".btn_open").on("click", function() {
                 $(this).parent().toggleClass("open");
             });
@@ -474,7 +488,7 @@
 
                             <ul class="ip_group">
                                 <li>
-                                    <span class="ip_search"><input type="text" name="" value="" placeholder="Account Name" class="ip_txt"><a href="javascript:" class="btn_ip_search">검색</a></span>
+                                    <span class="ip_search"><span class="ip_del"><input type="text" class="ip_txt" placeholder="Account Name" value=""><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
                                 </li>
                             </ul>
                         </div>
@@ -547,6 +561,102 @@
                                 </li>
                                 <li>
                                     <a href="javascript:" class="btn_open"><b>Contacts</b></a>
+                                    <div class="desc_wrap">
+                                        <ul class="contact_list">
+                                            <li>
+                                                <a href="javascript:" class="btn_open"><p>Steven Stranger <span>Manager</span></p></a>
+                                                <div class="desc_inner">
+                                                    <dl>
+                                                        <dt>Phone</dt>
+                                                        <dd>+82-10-9876-5432</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>E-Mail</dt>
+                                                        <dd>james@starbugs.co.kr</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>Influence</dt>
+                                                        <dd>Advocate</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:" class="btn_open"><p>Tony Stark <span>General Manager</span></p></a>
+                                                <div class="desc_inner">
+                                                    <dl>
+                                                        <dt>Phone</dt>
+                                                        <dd>+82-10-9876-5432</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>E-Mail</dt>
+                                                        <dd>james@starbugs.co.kr</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>Influence</dt>
+                                                        <dd>Advocate</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:" class="btn_open"><p>James Dean <span>General Manager</span></p></a>
+                                                <div class="desc_inner">
+                                                    <dl>
+                                                        <dt>Phone</dt>
+                                                        <dd>+82-10-9876-5432</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>E-Mail</dt>
+                                                        <dd>james@starbugs.co.kr</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>Influence</dt>
+                                                        <dd>Advocate</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:" class="btn_open"><b>Correspondence</b></a>
+                                    <div class="desc_wrap">
+                                        <ul class="contact_list">
+                                            <li>
+                                                <a href="javascript:" class="btn_open"><p>James Dean<span>CJ Logistics Korea</span></p></a>
+                                                <div class="desc_inner">
+                                                    <dl>
+                                                        <dt>Phone</dt>
+                                                        <dd>+82-10-9876-5432</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>E-Mail</dt>
+                                                        <dd>james@starbugs.co.kr</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>Influence</dt>
+                                                        <dd>Advocate</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:" class="btn_open"><p>Anthony Hopkins<span>CJ Logistics Korea</span></p></a>
+                                                <div class="desc_inner">
+                                                    <dl>
+                                                        <dt>Phone</dt>
+                                                        <dd>+82-10-9876-5432</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>E-Mail</dt>
+                                                        <dd>james@starbugs.co.kr</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>Influence</dt>
+                                                        <dd>Advocate</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
