@@ -49,6 +49,33 @@ var uiCommon = {
 
 })(jQuery);
 
+function scrollTop(){
+    $("body").append("<a href=\"#none\" id=\"btnTop\" class=\"btn_top\">위로가기</a>");
+
+    $(window).on('scroll', function () {
+       var scT = $(this).scrollTop();
+       if (scT > 0) {
+          $("#btnTop").fadeIn("fast");
+       } else {
+          $("#btnTop").fadeOut("slow");
+       }
+   })
+
+   $('.btn_top').on('click', function(){
+       moveTop();
+   });
+
+    // MOVE TO TOP
+    function moveTop(){
+        moveScroll(0);
+    }
+
+    function moveScroll(scroll){
+        $("html, body").stop(true,true).animate({
+            "scrollTop":scroll
+        },500);
+    }
+}
 // 터치 스와이프
 // document.addEventListener('touchstart', handleTouchStart, false);
 // document.addEventListener('touchmove', handleTouchMove, false);

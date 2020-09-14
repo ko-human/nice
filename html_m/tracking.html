@@ -13,14 +13,17 @@
     <script src="../script/ui_common_m.js"></script>
     <script type="text/javascript">
         $(function() {
-
+            $(".ip_del").inputTextFocus();
             // search
             $(".ip_group input").on("focusin", function(e) {
-                $(this).parent().addClass("focus");
+                $(this).parent().parent().addClass("focus");
             });
             $(".ip_group input").on("focusout", function(e) {
                 var val = $(this).val();
-                val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
+                val == "" ? $(this).parent().parent().removeClass("focus") : $(this).parent().parent().addClass("focus");
+            });
+            $(".btn_txt_del").on("click", function(){
+                $(this).parent().parent().removeClass("focus");
             });
 
             // scroll
@@ -57,22 +60,22 @@
                 <div class="search_wrap">
                     <ul class="ip_group">
                         <li style="width:44%;">
-                            <select name="" class="select sm">
+                            <select name="" class="select">
                                 <option value="">H.B/L No.</option>
                                 <option value="">Num.</option>
                                 <option value="">NoNoNo.</option>
                             </select>
                         </li>
                         <li>
-                            <span class="ip_search"><input type="text" name="" value="" placeholder="Enter Number" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span>
+                            <span class="ip_search"><span class="ip_del"><input type="text" class="ip_txt" placeholder="Enter Number" value=""><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
                         </li>
                     </ul>
                     <div class="track_box">
                         <ul>
                             <!-- 반복 -->
                             <li>
-                                <div class="track_inner step0">
-                                    <div class="status building"><!-- 아이콘 class : building | airplane | truck | container | ship  --></div>
+                                <div class="track_inner step0 building"><!-- 아이콘 class : building | airplane | truck | container | ship  -->
+                                    <div class="status"></div>
                                     <div class="tit_area">
                                         <h2 class="tit">Book-9981475</h2>
                                         <p>H.B/L #123456CJL98</p>
@@ -91,8 +94,8 @@
                             </li>
                             <!-- //반복 -->
                             <li>
-                                <div class="track_inner step1">
-                                    <div class="status airplane"><!-- 아이콘 class : building | airplane | truck | container | ship  --></div>
+                                <div class="track_inner step1 airplane"><!-- 아이콘 class : building | airplane | truck | container | ship  -->
+                                    <div class="status"></div>
                                     <div class="tit_area">
                                         <h2 class="tit">Book-9981475</h2>
                                         <p>H.B/L #123456CJL98</p>
@@ -110,8 +113,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="track_inner step2">
-                                    <div class="status container"><!-- 아이콘 class : building | airplane | truck | container | ship  --></div>
+                                <div class="track_inner step2 container"><!-- 아이콘 class : building | airplane | truck | container | ship  -->
+                                    <div class="status"></div>
                                     <div class="tit_area">
                                         <h2 class="tit">Book-9981475</h2>
                                         <p>H.B/L #123456CJL98</p>
@@ -129,8 +132,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="track_inner step3">
-                                    <div class="status truck"><!-- 아이콘 class : building | airplane | truck | container | ship  --></div>
+                                <div class="track_inner step3 truck"><!-- 아이콘 class : building | airplane | truck | container | ship  -->
+                                    <div class="status"></div>
                                     <div class="tit_area">
                                         <h2 class="tit">Book-9981475</h2>
                                         <p>H.B/L #123456CJL98</p>
@@ -148,8 +151,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="track_inner step4">
-                                    <div class="status ship"><!-- 아이콘 class : building | airplane | truck | container | ship  --></div>
+                                <div class="track_inner step4 ship"><!-- 아이콘 class : building | airplane | truck | container | ship  -->
+                                    <div class="status"></div>
                                     <div class="tit_area">
                                         <h2 class="tit">Book-9981475</h2>
                                         <p>H.B/L #123456CJL98</p>

@@ -48,11 +48,14 @@
 
             // search
             $(".ip_group input").on("focusin", function(e) {
-              $(this).parent().addClass("focus");
+              $(this).parent().parent().addClass("focus");
             });
             $(".ip_group input").on("focusout", function(e) {
               var val = $(this).val();
-              val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
+              val == "" ? $(this).parent().parent().removeClass("focus") : $(this).parent().parent().addClass("focus");
+            });
+            $(".btn_txt_del").on("click", function(){
+                $(this).parent().parent().removeClass("focus");
             });
 
             // profile 버튼
@@ -102,15 +105,17 @@
                 var resultX = startX - endX;
                 var resultY = startY - endY;
 
-                if (Math.abs(resultY) < 100 && Math.abs(resultX) > 50) {
+                if (Math.abs(resultY) < 50 && Math.abs(resultX) > 50) {
                     if (resultX > 50 && index < size) {
                         // left
                         index++;
                         movePage();
+                        $(".bar_wrap").show(0);
                     } else if (resultX < -50 && index > 0) {
                         // right
                         index--;
                         movePage();
+                        $(".bar_wrap").hide(0);
                     }
                 }
 
@@ -121,6 +126,8 @@
                 var left = index * width * -1;
                 $(".slide_page").css("left", left + "px");
             }
+
+
 
             function refresh() {
                 width = $(document).width();
@@ -471,7 +478,7 @@
                 </div>
                 <div class="slide_page_item">
 
-                    <!-- dashboard -->
+                    <!-- account -->
                     <div class="content_wrap account">
                         <div class="top_wrap">
                             <!-- title -->
@@ -508,7 +515,7 @@
                                         <div class="list_form_wrap">
                                             <ul class="list_form">
                                                 <li>
-                                                    <label for="" class="lb_txt req">English Name</label>
+                                                    <label for="" class="lb_txt">English Name</label>
                                                     <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                                                 </li>
                                                 <li>
@@ -516,7 +523,7 @@
                                                     <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                                                 </li>
                                                 <li>
-                                                    <label for="" class="lb_txt req">Phone Number</label>
+                                                    <label for="" class="lb_txt">Phone Number</label>
                                                     <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
                                                 </li>
                                                 <li>
@@ -661,8 +668,16 @@
                             </ul>
                         </div>
 
+                        <div class="bar_wrap">
+                            <ul>
+                                <li><a href="javascript:" class="btn_act"><span>Activity</span></a></li>
+                                <li><a href="javascript:" class="btn_opp"><span>Opportunity</span></a></li>
+                                <li><a href="javascript:" class="btn_item"><span>Action Item</span></a></li>
+                                <li><a href="javascript:" class="btn_upt"><span>Key Update</span></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- //dashboard -->
+                    <!-- //account -->
 
                 </div>
             </div>

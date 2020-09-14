@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>모바일</title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js?"></script>
+    <script src="../script/ui_common_m.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            $(".ip_del").inputTextFocus();
+
+            // search
+            $(".ip_group input").on("focusin", function(e) {
+                $(this).parent().addClass("focus");
+            });
+            $(".ip_group input").on("focusout", function(e) {
+                var val = $(this).val();
+                val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
+            });
+
+            // scroll
+            var lastScrollTop = 0,
+                delta = 15;
+            $(".m_wrap").scroll(function(event) {
+                var st = $(this).scrollTop();
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+                if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+                    $(".m_header").css("top", "-50px");
+                } else {
+                    $(".m_header").css("top", "0px");
+                }
+                lastScrollTop = st;
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="m_wrap">
+        <!-- header -->
+        <header class="m_header">
+            <h1 class="tit_header"><a href="javascript:">Activity</a></h1>
+            <div class="left">
+                <a href="javascript:" class="back">이전 화면</a>
+            </div>
+            <div class="right">
+                <ul class="hd_btns">
+                    <li><a href="javascript:" class="hd_home">홈</a></li>
+                </ul>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- 내용 -->
+        <div class="m_content">
+            <div class="content_wrap">
+
+                <div class="tit_wrap">
+                    <div class="tit_left type_special">
+                        <span class="tit">New Activity</span>
+                    </div>
+                </div>
+                <div class="srm_sub">
+                    <div class="list_form_wrap">
+                        <ul class="list_form">
+                            <li>
+                                <label for="" class="lb_txt">Activity ID</label>
+                                <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Account</label>
+                                <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                            </select>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Date/Time</label>
+                                <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Status</label>
+                                <select name="" class="select">
+                                    <option value="">Scheduled</option>
+                                    <option value="">NoNo.</option>
+                                    <option value="">NoNoNo.</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Call Type</label>
+                                <select name="" class="select">
+                                    <option value="">Intial Call</option>
+                                    <option value="">NoNo.</option>
+                                    <option value="">NoNoNo.</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Method</label>
+                                <select name="" class="select">
+                                    <option value="">Face-to-Face</option>
+                                    <option value="">NoNo.</option>
+                                    <option value="">NoNoNo.</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Account Contact</label>
+                                <select name="" class="select">
+                                    <option value="">NoNo.</option>
+                                    <option value="">NoNoNo.</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Subject</label>
+                                <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Pre-Call Planner</label>
+                                <textarea name="" rows="6"></textarea>
+                            </li>
+                            <li>
+                                <label for="" class="lb_txt">Call Note</label>
+                                <textarea name="" rows="6"></textarea>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn_bottom">
+                        <a href="javascript:" class="btn_save">Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //내용 -->
+        <!-- footer -->
+        <footer class="m_footer">
+            <p>© 2020 CJ Logistics</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>
