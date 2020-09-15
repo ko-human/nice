@@ -27,6 +27,10 @@
                 $(this).parent().parent().removeClass("focus");
             });
 
+            // table height
+            var winH = $(window).innerHeight();
+            var dataH = $(".data").innerHeight();
+            $(".popup_wrap .pop_inner .table_wrap").css({height: winH - 262, maxHeight: dataH});
 
         });
     </script>
@@ -55,79 +59,105 @@
                         <span class="ip_search"><span class="ip_del"><input type="text" class="ip_txt" placeholder="Name" value=""><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
                     </li>
                 </ul>
-                <!-- search -->
-                <div class="table_wrap"><!-- data 없을 때 class 추가 : no_data -->
-                    <table class="table_inner">
-                        <thead>
-                            <tr>
-                                <th>Code</th>
-                                <th>Name</th>
-                            </tr>
-                        </thead>
+                <!-- //search -->
 
-                        <tbody class="data">
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle (Ballard Spah)</td>
-                            </tr>
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle</td>
-                            </tr>
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle (Park aven  allard Spah)</td>
-                            </tr>
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle (Park aveh)</td>
-                            </tr>
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle (allard Spah)</td>
-                            </tr>
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle (Ballard Spah)</td>
-                            </tr>
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle</td>
-                            </tr>
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle (Park aveh)</td>
-                            </tr>
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle (allard Spah)</td>
-                            </tr>
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle (Ballard Spah)</td>
-                            </tr>
-                            <tr>
-                                <td class="tac">CJCN20080146</td>
-                                <td>Start Nestle</td>
-                            </tr>
-                        </tbody>
+                <!-- table 전체 -->
+                <div class="box_table">
+                    <div class="theader">
+                        <ul>
+                            <li style="width:135px;"><p>Code</p></li>
+                            <li><p>Name</p></li>
+                        </ul>
+                    </div>
+                    <!-- contents -->
+                    <div class="table_wrap no_data"><!-- data 없을 때 class 추가 : no_data -->
+                        <table class="table_inner">
+                            <colgroup>
+                                <col style="width:fit-content;">
+                                <col style="">
+                            </colgroup>
+                            <tbody class="data">
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (Ballard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (Park aven allard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (Park aveh)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (allard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (allard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle Nestle long long (allard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (allard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (allard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle Nestle long long (allard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (Ballard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (Park aveh)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (allard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle (Ballard Spah)</td>
+                                </tr>
+                                <tr>
+                                    <td class="tac">CJCN20080146</td>
+                                    <td>Start Nestle</td>
+                                </tr>
+                            </tbody>
 
-                        <!-- data 없을 때 -->
-                        <tbody class="no_data">
-                            <tr>
-                                <td colspan="2">No Data Available.</td>
-                            </tr>
-                        </tbody>
-                        <!-- //data 없을 때 -->
-
-                        <tfoot>
-                            <tr>
-                                <td colspan="2">count : <span>23</span></td>
-                            </tr>
-                        </tfoot>
-                    </table>
+                            <!-- data 없을 때 -->
+                            <tbody class="no_data">
+                                <tr>
+                                    <td colspan="2">No Data Available.</td>
+                                </tr>
+                            </tbody>
+                            <!-- //data 없을 때 -->
+                        </table>
+                    </div>
+                    <!-- //contents -->
+                    <div class="tfooter">
+                        <p>count : <span>23</span></p>
+                    </div>
                 </div>
-
+                <!-- //table 전체 -->
             </div>
 
     </div>

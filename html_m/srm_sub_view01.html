@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>모바일</title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js?"></script>
+    <script src="../script/ui_common_m.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            $(".ip_del").inputTextFocus();
+
+            // search
+            $(".ip_group input").on("focusin", function(e) {
+                $(this).parent().addClass("focus");
+            });
+            $(".ip_group input").on("focusout", function(e) {
+                var val = $(this).val();
+                val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
+            });
+
+            // scroll
+            var lastScrollTop = 0,
+                delta = 15;
+            $(".m_wrap").scroll(function(event) {
+                var st = $(this).scrollTop();
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+                if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+                    $(".m_header").css("top", "-50px");
+                } else {
+                    $(".m_header").css("top", "0px");
+                }
+                lastScrollTop = st;
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="m_wrap">
+        <!-- header -->
+        <header class="m_header">
+            <h1 class="tit_header"><a href="javascript:">Action Item</a></h1>
+            <div class="left">
+                <a href="javascript:" class="back">이전 화면</a>
+            </div>
+            <div class="right">
+                <ul class="hd_btns">
+                    <li><a href="javascript:" class="hd_home">홈</a></li>
+                </ul>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- 내용 -->
+        <div class="m_content">
+            <div class="content_wrap">
+
+                <div class="tit_wrap">
+                    <div class="tit_left type_special">
+                        <span class="tit">Action item1</span>
+                    </div>
+                </div>
+                <div class="srm_sub">
+                    <ul class="action_list">
+                        <li>
+                            <dl>
+                                <dt>Action Item ID</dt>
+                                <dd>CJL987654321</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="javascript:">
+                                <dl>
+                                    <dt>Action Item ID</dt>
+                                </dl>
+                            </a>
+                            <div class="">
+
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!-- //내용 -->
+        <!-- footer -->
+        <footer class="m_footer">
+            <p>© 2020 CJ Logistics</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>
