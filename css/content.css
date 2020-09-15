@@ -467,7 +467,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .indi_tile .img_indi {position:absolute; top:16px; right:16px; width:48px; height:48px;}
 .indi_tile .num {display:block; line-height:1.25; font-family:'CJONLYONENEWtitle';font-weight: 500;font-size:32px; color:#0d1327;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 70%;}
 .indi_tile .txt {margin-top:4px; width:90%; text-overflow: ellipsis; overflow:hidden; display:block; font-size:16px; color:#45474e; white-space:nowrap;padding-bottom:5px;box-sizing: border-box;}
-.indi_tile .txt em {display: inline-block;float: right;font-size: 14px;text-align: right;color: #8b919c;}
+.indi_tile .txt em {display: inline-block;float: right;font-size: 17px;text-align: right;color: #8b919c;}
 .indi_tile .txt em::after {content: '';display:block;clear:both;}
 
 .live_tile {height:313px; position:relative; cursor: pointer;}
