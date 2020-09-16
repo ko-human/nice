@@ -25,6 +25,11 @@
                 val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
             });
 
+            // sub 버튼
+            $(".btn_open").on("click", function() {
+                $(this).parent().toggleClass("open");
+            });
+
             // scroll
             var lastScrollTop = 0,
                 delta = 15;
@@ -75,12 +80,11 @@
                             </dl>
                         </li>
                         <li>
-                            <a href="javascript:">
-                                <dl>
-                                    <dt>Action Item ID</dt>
-                                </dl>
-                            </a>
-                            <div class="">
+                            <dl>
+                                <dt>Activity List</dt>
+                            </dl>
+                            <a href="javascript:" class="btn_open">열기</a>
+                            <div class="sub_table">
 
                             </div>
                         </li>

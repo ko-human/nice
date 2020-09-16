@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>모바일</title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js?"></script>
+    <script src="../script/ui_common_m.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".ip_del").inputTextFocus();
+            //메뉴
+            $(".btn_nav").on("click", function(e) {
+                $(".m_nav").addClass("open");
+                e.preventDefault();
+            });
+
+            $(".m_nav .btn_close").on("click", function(e) {
+                $(".m_nav").removeClass("open");
+                e.preventDefault();
+            });
+
+            $('.m_nav').bind("mouseup touchend", function(e) {
+                if ($(this).has(e.target).length === 0) {
+                    $('.m_nav').removeClass('open');
+                }
+            });
+
+            // scroll
+            var lastScrollTop = 0,
+                delta = 15;
+            $(".m_wrap").scroll(function(event) {
+                var st = $(this).scrollTop();
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+                if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+                    $(".m_header").css("top", "-50px");
+                } else {
+                    $(".m_header").css("top", "0px");
+                }
+                lastScrollTop = st;
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="m_wrap">
+        <!-- header -->
+        <header class="m_header">
+            <h1 class="logo"><a href="#">CJ LOGISTICS</a></h1>
+            <div class="left">
+                <a href="#" class="btn_nav">목록</a>
+            </div>
+            <div class="right">
+                <ul class="hd_btns">
+                    <li><a href="#" class="hd_notice on">공지</a></li>
+                </ul>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- menu -->
+        <nav class="m_nav">
+            <div class="nav_inner">
+                <a href="#" class="btn_close">닫기</a>
+                <div class="user_info">
+                    <strong class="name">Loso Kim</strong>
+                    <span class="comp">Amore Pacific</span>
+                </div>
+                <div class="nav_bott">
+                    <a href="#" class="btn_signout">Sign Out</a>
+                </div>
+            </div>
+        </nav>
+        <!-- //menu -->
+        <!-- contents -->
+        <div class="m_content">
+            <div class="main_wrap">
+
+                <div class="partner_wrap">
+                    <div class="welcome">
+                        <span class="sub_txt">Welcome</span>
+                        <span class="name">Amore Pacific</span>
+                    </div>
+
+                    <div class="partner_inner">
+                        <label for="" class="lb_txt">Work Order No.</label>
+                        <span class="ip_del"><input type="text" value="" class="ip_txt"><a href="javascript:" class="btn_txt_del">삭제</a></span>
+
+                        <div class="attach_wrap">
+                            <a href="javascript:" class="btn_attach"><span>Document Attachments</span></a>
+                            <p>work_order_1_longlonglonglongname.png</p>
+                        </div>
+                        <div class="box_send"><a href="javascript:">Send</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- //contents -->
+        <!-- footer -->
+        <footer class="m_footer">
+            <p>© 2020 CJ Logistics</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>
