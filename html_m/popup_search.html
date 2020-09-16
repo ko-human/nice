@@ -29,9 +29,18 @@
 
             // table height
             var winH = $(window).innerHeight();
-            var dataH = $(".data").innerHeight();
-            $(".popup_wrap .pop_inner .table_wrap").css({height: winH - 262, maxHeight: dataH});
+            var dataH = $(".data").height();
+            $("#divBodyScroll, .no_data tr td").css({height: winH - 270, maxHeight: dataH});
 
+            // width 값이 서로 동일
+            $("#divBodyScroll, #divHeadScroll").css({width: 600});
+
+            $('#divBodyScroll').scroll(function () {
+                // divBodyScroll의 x좌표가 움직인 거리
+                var xPoint = $('#divBodyScroll').scrollLeft();
+                // 가져온 x좌표를 divHeadScroll에 적용
+                $('#divHeadScroll').scrollLeft(xPoint);
+            });
         });
     </script>
   </head>
@@ -63,85 +72,110 @@
 
                 <!-- table 전체 -->
                 <div class="box_table">
-                    <div class="theader">
-                        <ul>
-                            <li style="width:135px;"><p>Code</p></li>
-                            <li><p>Name</p></li>
-                        </ul>
-                    </div>
+
                     <!-- contents -->
-                    <div class="table_wrap no_data"><!-- data 없을 때 class 추가 : no_data -->
-                        <table class="table_inner">
-                            <colgroup>
-                                <col style="width:fit-content;">
-                                <col style="">
-                            </colgroup>
-                            <tbody class="data">
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (Ballard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (Park aven allard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (Park aveh)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (allard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (allard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle Nestle long long (allard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (allard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (allard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle Nestle long long (allard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (Ballard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (Park aveh)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (allard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle (Ballard Spah)</td>
-                                </tr>
-                                <tr>
-                                    <td class="tac">CJCN20080146</td>
-                                    <td>Start Nestle</td>
-                                </tr>
-                            </tbody>
+                    <div class="table_wrap"><!-- data 없을 때 class 추가 : no_data -->
+                        <table id="tblWrap" class="table_inner">
+                            <tr class="data">
+                                <td>
+                                    <div id="divHeadScroll">
+                                        <table id="tblHead" border="0">
+                                            <colgroup>
+                                                <col style="width:30%;">
+                                                <col style="width:;">
+                                            </colgroup>
+                                            <tr>
+                                                <td>Code</td>
+                                                <td>Name</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="divBodyScroll">
+                                        <table id="tblBody" border="0">
+                                            <colgroup>
+                                                <col style="width:30%;">
+                                                <col style="width:;">
+                                            </colgroup>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Star Aliza Bailtmore (And rews)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Spark Nestle Spark Nestle Spark Nestle (Ballard Spahe)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Start Nestle (Ballard Spahe)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Spark Nestle (Ballard Spahe)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Star Andra Sheyer (Ludck e)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Star Andra Sheyer Bailtmore (Ludck e)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Star Aliza Bailtmore (And rews)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Spark Nestle Spark Nestle Spark Nestle (Ballard Spahe)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Start Nestle (Ballard Spahe)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Spark Nestle (Ballard Spahe)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Star Andra Sheyer (Ludck e)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Star Andra Sheyer Bailtmore (Ludck e)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Star Andra Sheyer Bailtmore (Ludck e)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Star Aliza Bailtmore (And rews)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Spark Nestle Spark Nestle Spark Nestle (Ballard Spahe)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Start Nestle (Ballard Spahe)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Spark Nestle (Ballard Spahe)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Star Andra Sheyer (Ludck e)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td>Star Andra Sheyer Bailtmore (Ludck e)</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
 
                             <!-- data 없을 때 -->
                             <tbody class="no_data">
