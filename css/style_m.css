@@ -724,10 +724,13 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .srm_sub .action_list li a.btn_open {position: absolute;left:0;top:0;width:100%;height:100%;max-height: 68px;font-size: 0;background-size: 24px;background: url(../images/mo/arr_r_g.svg) no-repeat 98% center;}
 .srm_sub .action_list li.open a.btn_open {background: url(../images/mo/arr_r_wh.svg) no-repeat 98% center;}
 .srm_sub .action_list li .sub_table {display: none;}
-.srm_sub .action_list li.open .sub_table {display: block;margin-top: 27px;height: 100px;background: pink;}
+.srm_sub .action_list li.open .sub_table {display: block;margin-top: 28px;height: 100px;background: pink;}
 .srm_sub .action_list dl {display: table;width:100%;}
 .srm_sub .action_list dl dt {display: table-cell;font-size: 14px;font-weight: 500;color: #8b919c;width: 140px;padding-right: 7px;vertical-align: top;}
 .srm_sub .action_list dl dd {display: table-cell;font-size: 15px;font-weight: 400;text-align: right;}
+.srm_sub .action_list li.release dl {display: block;}
+.srm_sub .action_list li.release dl dt {display: block;}
+.srm_sub .action_list li.release dl dd {display: block;margin-top:10px;text-align: left;word-break: keep-all;line-height: 1.33;}
 
 /* popup */
 .popup_wrap {position: absolute;top: 0;left: 0;width: 100%;min-width: 100%;height: 100%;}
