@@ -473,8 +473,11 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .live_tile {height:313px; position:relative; cursor: pointer;}
 .live_tile .tit_area {padding:30px 30px 0;}
 .live_tile .tit_area .tit {font-size:22px; font-weight:500; color: #13161a; line-height: 1.1; display:inline-block; max-width:100%; overflow:hidden; white-space:nowrap;}
+.live_tile .chart_area {display: inline-block;width: 49%;height: 229px;margin-top: 27px;padding: 0 0 20px 20px;box-sizing: border-box;}
+.live_tile .chart_area + .chart_area {margin-left:1%;padding: 0 20px 20px 0;}
 .live_tile .con {padding:27px 30px 0;}
 .live_tile .con .rMate5__rMateChart {cursor: pointer;}
+
 .market_update {overflow:hidden;}
 .market_update>img {float:left; width:180px; height:139px; }
 .market_update>.txt {float:right; width:272px; height:146px; font-size:16px; line-height:1.38; color:#7e8184;}
@@ -626,6 +629,8 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .sub_main_box.nodata:before {content:""; position:absolute; top:50%; left:50%; margin:-45px 0 0 -130px; width:261px; height:91px; background:url(../images/logo_gray.svg) no-repeat;}
 .sub_main_box .fc_btns {margin:10px 0 20px; text-align:right;}
 .sub_main_box .chart_box {padding: 20px;box-sizing: border-box;margin-top:10px; margin-bottom:15px; background-color:#f1f1f1;}
+.sub_main_box .chart_box .chart_area {display: inline-block;width:49%;height:100%;background: pink;}
+.sub_main_box .chart_box .chart_area + .chart_area {margin-left:1%;}
 
 .sub_search_form {position:relative;padding-right: 48px;}
 .sub_search_form>.btn.ico_search {position:absolute; top:0; right:0; width:38px; height:100%;}
