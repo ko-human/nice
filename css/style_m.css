@@ -477,6 +477,8 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .live_tile_list .bx-wrapper .bx-prev {left:0;}
 .live_tile_list .bx-wrapper .bx-next {right:0;}
 
+.slide_wrap ul li {height:300px;}
+
 
 /* title */
 .tit_wrap {width:100%;}

@@ -629,8 +629,8 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .sub_main_box.nodata:before {content:""; position:absolute; top:50%; left:50%; margin:-45px 0 0 -130px; width:261px; height:91px; background:url(../images/logo_gray.svg) no-repeat;}
 .sub_main_box .fc_btns {margin:10px 0 20px; text-align:right;}
 .sub_main_box .chart_box {padding: 20px;box-sizing: border-box;margin-top:10px; margin-bottom:15px; background-color:#f1f1f1;}
-.sub_main_box .chart_box .chart_area {display: inline-block;width:49%;height:100%;background: pink;}
-.sub_main_box .chart_box .chart_area + .chart_area {margin-left:1%;}
+.sub_main_box .chart_box .chart_area {display: inline-block;width:49%;height:100%;}
+.sub_main_box .chart_box .chart_area + .chart_area {margin-left:1.1%;}
 
 .sub_search_form {position:relative;padding-right: 48px;}
 .sub_search_form>.btn.ico_search {position:absolute; top:0; right:0; width:38px; height:100%;}
