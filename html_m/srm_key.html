@@ -15,6 +15,7 @@
         $(function() {
             $(".btn_notice").on("click", function(){
                 $(this).toggleClass("open");
+                $(".box_notice").toggleClass("open");
             });
             // search
             $(".ip_group input").on("focusin", function(e) {
@@ -52,6 +53,38 @@
             </div>
         </header>
         <!-- //header -->
+        <!-- menu -->
+        <nav class="m_nav">
+            <div class="nav_inner">
+                <a href="#" class="btn_close">닫기</a>
+                <div class="user_info">
+                    <strong class="name">Loso Kim</strong>
+                    <span class="comp">Amore Pacific</span>
+                </div>
+                <ul class="nav_list">
+                    <li><a href="#customer_main" class="nav01" data-url="customer/customer_main.html">물동</a></li>
+                    <li><a href="#customer_sub_main" class="nav02" data-url="customer/customer_sub_main.html">금액</a></li>
+                    <li><a href="#" class="nav03">KPI</a></li>
+                    <li><a href="#" class="nav04">리포트</a></li>
+                    <li><a href="#" class="nav05">고객맞춤</a></li>
+                    <li><a href="#" class="nav06">미니WMS</a></li>
+                    <li><a href="#" class="nav07">대시보드</a></li>
+                    <li><span class="nav08">업무</span>
+                        <ul class="sub_list">
+                            <li><a href="#tab1">Booking</a></li>
+                            <li><a href="#tab2">Service Request</a></li>
+                            <li><a href="#tab3">EDMS</a></li>
+                            <li><a href="#tab4">B/L 출력</a></li>
+                            <li><a href="#tab5">정산</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav_bott">
+                    <a href="#" class="btn_signout">Sign Out</a>
+                </div>
+            </div>
+          </nav>
+        <!-- //menu -->
         <!-- 내용 -->
         <div class="m_content">
             <div class="content_wrap">
@@ -75,14 +108,15 @@
                         <li>
                             <select name="" class="select">
                                 <option value="">Period</option>
-                                <option value="">NoNo.</option>
-                                <option value="">NoNoNo.</option>
+                                <option value="">Last 7 Days</option>
+                                <option value="">Last 1 Months</option>
+                                <option value="">Last 3 Months</option>
                             </select>
                         </li>
                     </ul>
                 </div>
                 <!-- Select -->
-
+                <!-- list -->
                 <div class="items_wrap">
                     <p><a href="javascript:" class="btn_notice">Notice</a><span>11</span>items</p>
                     <ul class="items_list">
@@ -92,8 +126,10 @@
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
                                         <h2 class="tit">[CNW] Subject</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
-                                        <span>2020-09-14</span>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -104,8 +140,10 @@
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
                                         <h2 class="tit">[CPL] Subject</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
-                                        <span>2020-09-14</span>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -116,8 +154,10 @@
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
                                         <h2 class="tit">[CPM] Subject</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
-                                        <span>2020-09-14</span>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -128,8 +168,10 @@
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
                                         <h2 class="tit">[SPQ] Subject </h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
-                                        <span>2020-09-14</span>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -140,8 +182,10 @@
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
                                         <h2 class="tit">Subject long long long title</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
-                                        <span>2020-09-14</span>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -152,15 +196,59 @@
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
                                         <h2 class="tit">[OSD] Subject </h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
-                                        <span>2020-09-14</span>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </li>
                     </ul>
+                    <!-- Popup -->
+                    <div class="box_notice">
+                        <div class="notice_inner">
+                            <h2>Status</h2>
+                            <ul class="notice01">
+                                <li>
+                                    <span>A</span>
+                                    <p>Assigned</p>
+                                </li>
+                                <li>
+                                    <span>P</span>
+                                    <p>In Progress</p>
+                                </li>
+                                <li>
+                                    <span>C</span>
+                                    <p>Completed</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="notice_inner">
+                            <h2>Type</h2>
+                            <ul class="notice02">
+                                <li>
+                                    <span>[CNW]</span>
+                                    <p>Company News</p>
+                                </li>
+                                <li>
+                                    <span>[CPM]</span>
+                                    <p>Compliment</p>
+                                </li>
+                                <li>
+                                    <span>[CPL]</span>
+                                    <p>Complaint</p>
+                                </li>
+                                <li>
+                                    <span>[OSD]</span>
+                                    <p>OS & D</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //Popup -->
                 </div>
-
+                <!-- list -->
             </div>
         </div>
         <!-- //내용 -->

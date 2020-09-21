@@ -13,6 +13,10 @@
     <script src="../script/ui_common_m.js"></script>
     <script type="text/javascript">
         $(function() {
+            $(".btn_notice").on("click", function(){
+                $(this).toggleClass("open");
+                $(".box_notice").toggleClass("open");
+            });
 
             // search
             $(".ip_group input").on("focusin", function(e) {
@@ -50,86 +54,196 @@
             </div>
         </header>
         <!-- //header -->
+        <!-- menu -->
+        <nav class="m_nav">
+            <div class="nav_inner">
+                <a href="#" class="btn_close">닫기</a>
+                <div class="user_info">
+                    <strong class="name">Loso Kim</strong>
+                    <span class="comp">Amore Pacific</span>
+                </div>
+                <ul class="nav_list">
+                    <li><a href="#customer_main" class="nav01" data-url="customer/customer_main.html">물동</a></li>
+                    <li><a href="#customer_sub_main" class="nav02" data-url="customer/customer_sub_main.html">금액</a></li>
+                    <li><a href="#" class="nav03">KPI</a></li>
+                    <li><a href="#" class="nav04">리포트</a></li>
+                    <li><a href="#" class="nav05">고객맞춤</a></li>
+                    <li><a href="#" class="nav06">미니WMS</a></li>
+                    <li><a href="#" class="nav07">대시보드</a></li>
+                    <li><span class="nav08">업무</span>
+                        <ul class="sub_list">
+                            <li><a href="#tab1">Booking</a></li>
+                            <li><a href="#tab2">Service Request</a></li>
+                            <li><a href="#tab3">EDMS</a></li>
+                            <li><a href="#tab4">B/L 출력</a></li>
+                            <li><a href="#tab5">정산</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav_bott">
+                    <a href="#" class="btn_signout">Sign Out</a>
+                </div>
+            </div>
+          </nav>
+        <!-- //menu -->
         <!-- 내용 -->
         <div class="m_content">
             <div class="content_wrap">
-
-                <div class="tit_wrap">
-                    <div class="tit_left type_special">
-                        <span class="tit">Sales Activity</span>
-                    </div>
+                <!-- Select -->
+                <div class="list_form_wrap inblock">
+                    <ul class="list_form">
+                        <li>
+                            <select name="" class="select">
+                                <option value="">Status</option>
+                                <option value="">NoNo.</option>
+                                <option value="">NoNoNo.</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" class="select">
+                                <option value="">Type</option>
+                                <option value="">NoNo.</option>
+                                <option value="">NoNoNo.</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" class="select">
+                                <option value="">Period</option>
+                                <option value="">Last 7 Days</option>
+                                <option value="">Last 1 Months</option>
+                                <option value="">Last 3 Months</option>
+                            </select>
+                        </li>
+                    </ul>
                 </div>
+                <!-- Select -->
 
                 <div class="items_wrap">
-                    <p><span>11</span>items</p>
+                    <p><a href="javascript:" class="btn_notice">Notice</a><span>11</span>items</p>
                     <ul class="items_list">
                         <li>
                             <a href="javascript:" class="btn_sub">
-                                <div class="item_inner srm06"><!-- ico class 추가 : srm01 ~ srm14 -->
+                                <div class="item_inner srmA"><!-- case별 class 추가 : srmA / srmC / srmP / srmL / srmD / srmS -->
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
-                                        <h2 class="tit">Schedule Item</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                        <h2 class="tit">[CNW] Subject</h2>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:" class="btn_sub">
-                                <div class="item_inner srm07"><!-- ico class 추가 : srm01 ~ srm14 -->
+                                <div class="item_inner srmC">
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
-                                        <h2 class="tit">Company News Item1</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                        <h2 class="tit">[CPL] Subject</h2>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:" class="btn_sub">
-                                <div class="item_inner srm08"><!-- ico class 추가 : srm01 ~ srm14 -->
+                                <div class="item_inner srmP">
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
-                                        <h2 class="tit">Retention Call Item1</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                        <h2 class="tit">[CPM] Subject</h2>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:" class="btn_sub">
-                                <div class="item_inner srm09"><!-- ico class 추가 : srm01 ~ srm14 -->
+                                <div class="item_inner srmL">
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
-                                        <h2 class="tit">Compliment Item1</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                        <h2 class="tit">[SPQ] Subject </h2>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:" class="btn_sub">
-                                <div class="item_inner srm10"><!-- ico class 추가 : srm01 ~ srm14 -->
+                                <div class="item_inner srmD">
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
-                                        <h2 class="tit">Activities item default</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                        <h2 class="tit">Subject long long long title</h2>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:" class="btn_sub">
-                                <div class="item_inner srm10">
+                                <div class="item_inner srmS">
                                     <i class="ico_item"></i>
                                     <div class="tit_area">
-                                        <h2 class="tit">Activities item default</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                        <h2 class="tit">[OSD] Subject </h2>
+                                        <div class="txt">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+                                            <span>2020-09-14</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </li>
                     </ul>
+                    <!-- Popup -->
+                    <div class="box_notice">
+                        <div class="notice_inner">
+                            <h2>Status</h2>
+                            <ul class="notice01">
+                                <li>
+                                    <span>S</span>
+                                    <p>Schedule</p>
+                                </li>
+                                <li>
+                                    <span>C</span>
+                                    <p>Completed</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="notice_inner">
+                            <h2>Type</h2>
+                            <ul class="notice02">
+                                <li>
+                                    <span>[IC]</span>
+                                    <p>Initial Call</p>
+                                </li>
+                                <li>
+                                    <span>[RC]</span>
+                                    <p>Retention Call</p>
+                                </li>
+                                <li>
+                                    <span>[NC]</span>
+                                    <p>New Call</p>
+                                </li>
+                                <li>
+                                    <span>[CC]</span>
+                                    <p>Cold Call</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //Popup -->
                 </div>
 
             </div>
