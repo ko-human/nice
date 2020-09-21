@@ -473,8 +473,14 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .live_tile {height:313px; position:relative; cursor: pointer;}
 .live_tile .tit_area {padding:30px 30px 0;}
 .live_tile .tit_area .tit {font-size:22px; font-weight:500; color: #13161a; line-height: 1.1; display:inline-block; max-width:100%; overflow:hidden; white-space:nowrap;}
-.live_tile .chart_area {display: inline-block;width: 49%;height: 229px;margin-top: 27px;padding: 0 0 20px 20px;box-sizing: border-box;}
-.live_tile .chart_area + .chart_area {margin-left:1%;padding: 0 20px 20px 0;}
+.live_tile .chart_area {display: inline-block;vertical-align: top;text-align: center;width: 49%;height: 229px;margin-top: 17px;padding-left:20px;box-sizing: border-box;}
+.live_tile .chart_area .tit {display: inline-block;font-size: 14px;font-weight: 500;line-height: 1.29;border-bottom:1px solid #45474e;margin-bottom:8px;}
+.live_tile .chart_area .legend_wrap {text-align: right;margin-top:5px;}
+.live_tile .chart_area:nth-of-type(2) .legend_wrap {text-align: left;}
+.live_tile .chart_area .legend_wrap span {font-size: 12px;line-height: 0.83;color: #8b919c;}
+.live_tile .chart_area .legend_wrap span i {display: inline-block;font-size: 0;width: 6px;height: 6px;margin-right:5px;vertical-align: middle;}
+.live_tile .chart_area .legend_wrap span + span {margin-left:32px;}
+.live_tile .chart_area + .chart_area {margin-left:1%;padding-right: 20px;padding-left:0;}
 .live_tile .con {padding:27px 30px 0;}
 .live_tile .con .rMate5__rMateChart {cursor: pointer;}
 
@@ -629,8 +635,31 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .sub_main_box.nodata:before {content:""; position:absolute; top:50%; left:50%; margin:-45px 0 0 -130px; width:261px; height:91px; background:url(../images/logo_gray.svg) no-repeat;}
 .sub_main_box .fc_btns {margin:10px 0 20px; text-align:right;}
 .sub_main_box .chart_box {padding: 20px;box-sizing: border-box;margin-top:10px; margin-bottom:15px; background-color:#f1f1f1;}
-.sub_main_box .chart_box .chart_area {display: inline-block;width:49%;height:100%;}
-.sub_main_box .chart_box .chart_area + .chart_area {margin-left:1.1%;}
+
+/* 차트 2개 */
+.sub_main_box .chart_box.case2 .case2 {display: block;}
+.sub_main_box .chart_box .case2 {display: none;}
+.sub_main_box .chart_box .case2>.unit {font-family: "NotoSansCJKkr";font-size: 10px;line-height: 1.2;text-align: right;color: #8b919c;}
+.sub_main_box .chart_box .case2 .chart_area {position: relative;display: inline-block;width:270px;height:100%;text-align: center;}
+.sub_main_box .chart_box .case2 .chart_area + .chart_area {margin-left:45px;}
+.sub_main_box .chart_box .case2 .chart_area .tit {display: inline-block;font-size: 16px;font-weight: 500;border-bottom: 1px solid #45474e;line-height: 1.13;margin-bottom:20px;}
+.sub_main_box .chart_box .case2 .chart_area .legend_wrap {margin-top: 5px;text-align:left;}
+.sub_main_box .chart_box .case2 .chart_area:nth-last-child(1):after {content:'';position: absolute;left:-25px;top:0;width:0;height:245px;border-right:1px dotted #cad0d7;}
+.sub_main_box .chart_box .case2 .chart_area:nth-last-child(1) .legend_wrap {text-align: right;}
+.sub_main_box .chart_box .case2 .chart_area .legend_wrap span {display: inline-block;font-size: 12px;line-height: 0.83;color: #8b919c;}
+.sub_main_box .chart_box .case2 .chart_area .legend_wrap span + span {margin-left: 32px;}
+.sub_main_box .chart_box .case2 .chart_area .legend_wrap span i {display: inline-block;font-size: 0;width: 6px;height: 6px;margin-right: 5px;vertical-align: middle;}
+
+/* 차트 3개 */
+.sub_main_box .chart_box.case3 .case3 {display: block;}
+.sub_main_box .chart_box .case3 {display: none;}
+.sub_main_box .chart_box .case3 .chart {display: inline-block;width:200px;margin-top: 35px;}
+.sub_main_box .chart_box .case3 .chart + .chart {margin-left:20px;}
+.sub_main_box .chart_box .case3 .chart.small {display: inline-block;width:140px;margin-top: 5px;vertical-align: top;}
+.sub_main_box .chart_box .case3 .legend_wrap {text-align: center;margin-top:10px;}
+.sub_main_box .chart_box .case3 .legend_wrap span {display: inline-block;margin-left:20px;font-size: 10px;font-weight: 500;color: #8b919c;}
+.sub_main_box .chart_box .case3 .legend_wrap span i {display: inline-block;margin-right: 5px;width: 9px;height: 9px;font-size: 0;vertical-align: top;}
+
 
 .sub_search_form {position:relative;padding-right: 48px;}
 .sub_search_form>.btn.ico_search {position:absolute; top:0; right:0; width:38px; height:100%;}
