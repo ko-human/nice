@@ -342,7 +342,7 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .m_nav .user_info .search input {padding:0 35px 0 10px; width:100%; height:35px; color:#fff; font-size:15px; border:0; background-color:#30373e; box-sizing:border-box;}
 .m_nav .user_info .search .btn_search {font-size:0; position:absolute; right:0; top:0; width:35px; height:35px; background:url(../images/ico_search_g.svg) no-repeat center center; background-size:20px;}
 .m_nav .nav_list {padding:0 20px;}
-.m_nav .nav_list>li {main-width:200px; border-bottom:1px solid rgba(49,60,73,0.3);}
+.m_nav .nav_list>li {min-width:200px; border-bottom:1px solid rgba(49,60,73,0.3);}
 .m_nav .nav_list>li>a, .m_nav .nav_list>li>span {display:block; height:45px; line-height:45px; font-size:15px; font-family:'CJONLYONENEWbodyOTF'; color:#fff; }
 .m_nav .sub_list {border-top:1px solid rgba(49,60,73,0.3);}
 .m_nav .sub_list>li>a {padding-left:14px; display:block; height:45px; line-height:45px; font-size:15px; font-family:'CJONLYONENEWbodyOTF'; color:#8a919d;}
@@ -481,8 +481,25 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .live_tile_list .bx-wrapper .bx-prev {left:0;}
 .live_tile_list .bx-wrapper .bx-next {right:0;}
 
-.slide_wrap ul li {height:300px;}
+/* practice */
+.slide_wrap {margin:30px 0 0 16px;}
+.slide_wrap .main_slider {padding-right:16px;white-space:nowrap;overflow-x:scroll;}
+.slide_wrap .main_slider li {display: inline-block;width: 166px !important;height: 210px;}
+.slide_wrap .main_slider li + li {margin-left:5px;}
+.slide_wrap .main_slider>li>a {display:block;}
 
+.indi_tile {padding-left:16px; padding-top:16px; width:166px; height:210px; position:relative; box-sizing:border-box;background-color: #0080c6;}
+.indi_tile .img_indi {position:relative; width:48px; height:48px;}
+.indi_tile .txt {display: block;margin-top:7px;font-size: 14px;}
+.indi_tile .num {display: block;margin-top:50px;font-family: 'CJONLYONENEWtitleOTF';font-weight: 500;font-size: 40px;color: #fff;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 95%;}
+
+.market_wrap {position: relative;min-height:200px;padding:25px 16px;box-sizing: border-box;margin:20px 16px 20px;background-color: #13161a;}
+.market_wrap .tit_area .tit {font-size: 16px;font-weight: 500;line-height: 1.13;}
+.market_wrap .market_update {margin-top:13px;}
+.market_wrap .market_update .img {float: left;position: relative;display: inline-block;width: 150px;height: 115px;overflow: hidden;background: #000;}
+.market_wrap .market_update .img img {position: absolute;left: 50%;top: 50%;max-width: 100%;transform: translate(-50%, -50%);}
+.market_wrap .market_update .txt {float: left;width: calc(100% - 165px);margin-left: 12px;font-size: 1em;overflow: hidden;text-overflow: ellipsis;line-height: 1.15;height: 5.8em;color: #cbced4;word-wrap: break-word;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;vertical-align: top;}
+.market_wrap .market_update .more {display: inline-block;position: absolute;right: 16px;bottom: 25px;padding-right: 15px;font-weight: 500;font-size: 12px;color: #cad0d7;background: url(../images/ico_arr_more.svg) no-repeat right bottom;padding-top: 5px;}
 
 /* title */
 .tit_wrap {width:100%;}
@@ -541,9 +558,9 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .st_tile .img {top:25px; left:50%; margin-left:-35px; position:absolute; display:inline-block; width:70px; height:70px;}
 .st_tile .img img {width:100%;}
 
-.st_tile2 {position:relative; display:table; table-layout:fixed; width:100%; height:75px; font-size:13px; font-weight:500; line-height:1.2; text-decoration:none; box-sizing:border-box;}
-.st_tile2 .img {content:""; text-align:center; width:55px; vertical-align:middle; display:table-cell; background-repeat:no-repeat; background-size:40px; }
-.st_tile2 .img img {width:40px;}
+.st_tile2 {position:relative; display:table; table-layout:fixed; width:100%; height:80px; font-size:13px; font-weight:500; line-height:1.2; text-decoration:none; box-sizing:border-box;}
+.st_tile2 .img {content: "";text-align: right;width: 45%;vertical-align: middle;display: table-cell;background-repeat: no-repeat;background-size: 40px;padding-right: 10px;}
+.st_tile2 .img img {width:32px;}
 .st_tile2>span {display:table-cell; vertical-align:middle;}
 
 .main_cols_2>li .st_tile+.st_tile {margin-top:10px;}
