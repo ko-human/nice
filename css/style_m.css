@@ -485,7 +485,7 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .slide_wrap {margin:30px 0 0 16px;}
 .slide_wrap .main_slider {padding-right:16px;white-space:nowrap;overflow-x:scroll;}
 .slide_wrap .main_slider li {display: inline-block;width: 166px !important;height: 210px;}
-.slide_wrap .main_slider li + li {margin-left:5px;}
+.slide_wrap .main_slider li + li {margin-left:6px;}
 .slide_wrap .main_slider>li>a {display:block;}
 
 .indi_tile {padding-left:16px; padding-top:16px; width:166px; height:210px; position:relative; box-sizing:border-box;background-color: #0080c6;}
@@ -789,13 +789,12 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .table_wrap .table_inner .no_data {display: none;}
 .table_wrap.no_data .table_inner .data {display: none;}
 .table_wrap.no_data .table_inner .no_data {display: table-row-group;text-align: center;border: 1px solid #333c48;}
-.table_wrap.no_data .table_inner .no_data tr td {font-size: 13px;color: #8a919d;}
+.table_wrap.no_data .table_inner .no_data tr td {font-size: 13px;color: #8a919d;padding: 24px 0;}
 
 .table_wrap .table_inner th {font-size:14px;font-weight: 500;padding:15px 10px;box-sizing: border-box;border: solid 1px #333c48;background-color: #27303c;vertical-align:middle;}
 .table_wrap .table_inner tr {color:#fff;font-size:16px;border-bottom: 1px solid #333c48;}
 .table_wrap .table_inner tr:nth-child(even) {background-color: #000;}
 .table_wrap .table_inner tr:nth-child(odd) {background-color: #13161a;}
-.table_wrap .table_inner tr:nth-last-child(1) {border-bottom:0;}
 
 #tblWrap {margin-top: 20px;width: 100%;table-layout: fixed;}
 #divHeadScroll {width: 100%;overflow: hidden;}
@@ -806,7 +805,7 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 #tblHead td, #tblBody td {padding:14px 12px;vertical-align:middle;font-size:14px;white-space: nowrap;border-left: 1px solid #333c48;border-right: 1px solid #333c48;box-sizing: border-box;}
 #tblBody td {height: 44px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 
-.tfooter {padding:16px 17px;border: solid 1px #333c48;box-sizing: border-box;}
+.tfooter {padding:16px 17px;border: solid 1px #333c48;margin-top: -1px;box-sizing: border-box;}
 .tfooter p {font-size: 14px;}
 .tfooter p span {font-weight: 500;}
 
