@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js"></script>
+    <script src="../script/ui_common_m.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            $(".ip_del").inputTextFocus();
+
+            // class : act / off
+            $(".btn_alert").on("click", function(){
+                $(".alert_wrap ul").find(".act").removeClass("act");
+                $(this).parent().addClass("off").toggleClass("act");
+            });
+        });
+    </script>
+  </head>
+  <body>
+
+
+    <div class="popup_wrap">
+
+        <a href="#" class="btn_close">닫기</a>
+
+            <div class="pop_header">
+                <!-- title -->
+                <div class="tit_wrap">
+                    <div class="tit_left">
+                        <span class="tit">Alert</span>
+                    </div>
+                </div>
+                <!-- //title -->
+            </div>
+
+            <div class="pop_inner">
+                <!-- contents -->
+                <div class="alert_wrap">
+                    <ul>
+                        <li>
+                            <a href="javascript:" class="btn_alert">
+                                <b class="cate">KPI <span>by 2020.01.20 16:00</span></b>
+                                <p class="tit_alert">Send email to Loso Kim, Cyberlogitec.</p>
+                            </a>
+                            <div class="alert_desc">
+                                <p>Lorem Ipsum has been the industry's standard.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:" class="btn_alert">
+                                <b class="cate">KPI <span>by 2020.01.20 16:00</span></b>
+                                <p class="tit_alert">Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sed do eiusmod tem por incididunt.</p>
+                            </a>
+                            <div class="alert_desc">
+                                <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                            </div>
+                        </li>
+                        <li><!-- 현재 확인중인 li에만 class 추가 : act -->
+                            <a href="javascript:" class="btn_alert">
+                                <b class="cate">KPI <span>by 2020.01.20 16:00</span></b>
+                                <p class="tit_alert">Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sed do eiusmod tem por incididunt.</p>
+                            </a>
+                            <div class="alert_desc">
+                                <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                            </div>
+                        </li>
+                        <li class="off"><!-- 내용 확인한 li에 class 추가 : off -->
+                            <a href="javascript:" class="btn_alert">
+                                <b class="cate">KPI <span>by 2020.01.20 16:00</span></b>
+                                <p class="tit_alert">Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sed do eiusmod tem por incididunt.</p>
+                            </a>
+                            <div class="alert_desc">
+                                <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                            </div>
+                        </li>
+                        <li class="off"><!-- 내용 확인한 li에 class 추가 : off -->
+                            <a href="javascript:" class="btn_alert">
+                                <b class="cate">KPI <span>by 2020.01.20 16:00</span></b>
+                                <p class="tit_alert">Lorem ipsum dolor sit amet, consectet uer adipiscing</p>
+                            </a>
+                            <div class="alert_desc">
+                                <p>simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //contents -->
+            </div>
+
+    </div>
+
+
+  </body>
+</html>
