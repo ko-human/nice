@@ -238,7 +238,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .btn.line.add_line {background: #fff url(../images/ico_plus.svg) no-repeat;background-position: 12px 50%;background-size: 20px;padding:0 16px 0 37px;}
 .btn.del_line {position: relative;padding:0 16px 0 39px;}
 .btn.line.reset {background: #fff url(../images/ico_reset_b.svg) no-repeat 19px 11px;background-size: 12px;padding:0 16px 0 37px;}
-.btn.save, .btn.delete, .btn.mail, .btn.new, .btn.w100 {width:100px;}
+.btn.save, .btn.delete, .btn.mail, .btn.new, .btn.w100 {width:90px;}
 .btn_ico {line-height:20px; display:inline-block; font-size:14px; color:#45474e; background-repeat:no-repeat;}
 .btn_ico.excel {padding-left:22px; background-image:url(../images/ico_bn_file.svg);}
 
