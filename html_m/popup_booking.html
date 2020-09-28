@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js"></script>
+    <script src="../script/ui_common_m.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            $(".ip_del").inputTextFocus();
+            // search
+            $(".ip_group input").on("focusin", function(e) {
+              $(this).parent().parent().addClass("focus");
+            });
+            $(".ip_group input").on("focusout", function(e) {
+              var val = $(this).val();
+              val == "" ? $(this).parent().parent().removeClass("focus") : $(this).parent().parent().addClass("focus");
+            });
+            $(".btn_txt_del").on("click", function(){
+                $(this).parent().parent().removeClass("focus");
+            });
+
+            // table height
+            var winH = $(window).innerHeight();
+            var dataH = $(".data").height();
+            $("#divBodyScroll, .no_data tr td").css({height: winH - 270, maxHeight: dataH});
+
+            // width 값이 서로 동일
+            $("#divBodyScroll, #divHeadScroll").css({minWidth: 450});
+
+            $('#divBodyScroll').scroll(function () {
+                // divBodyScroll의 x좌표가 움직인 거리
+                var xPoint = $('#divBodyScroll').scrollLeft();
+                // 가져온 x좌표를 divHeadScroll에 적용
+                $('#divHeadScroll').scrollLeft(xPoint);
+            });
+        });
+    </script>
+  </head>
+  <body>
+
+
+    <div class="popup_wrap">
+
+        <a href="#" class="btn_close">닫기</a>
+
+            <div class="pop_header">
+                <!-- title -->
+                <div class="tit_wrap">
+                    <div class="tit_left">
+                        <span class="tit">Booking Status</span>
+                    </div>
+                </div>
+                <!-- //title -->
+            </div>
+
+            <div class="pop_inner">
+                <!-- search -->
+                <ul class="ip_group">
+                    <li>
+                        <span class="ip_search"><span class="ip_del"><input type="text" class="ip_txt" placeholder="PO#, BKG# or B/L#" value=""><a href="javascript:" class="btn_txt_del">삭제</a></span><a href="javascript:" class="btn_ip_search">검색</a></span>
+                    </li>
+                </ul>
+                <!-- //search -->
+
+                <!-- table 전체 -->
+                <div class="box_table">
+
+                    <!-- contents -->
+                    <div class="table_wrap"><!-- data 없을 때 class 추가 : no_data -->
+                        <table id="tblWrap" class="table_inner">
+                            <tr class="data">
+                                <td>
+                                    <div id="divHeadScroll">
+                                        <table id="tblHead" border="0">
+                                            <colgroup>
+                                                <col style="width:35%;">
+                                                <col style="width:;">
+                                                <col style="width:;">
+                                                <col style="width:25%;">
+                                            </colgroup>
+                                            <tr>
+                                                <td>Booking No.</td>
+                                                <td>POL</td>
+                                                <td>POD</td>
+                                                <td>ETA</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="divBodyScroll">
+                                        <table id="tblBody" border="0">
+                                            <colgroup>
+                                                <col style="width:35%;">
+                                                <col style="width:;">
+                                                <col style="width:;">
+                                                <col style="width:25%;">
+                                            </colgroup>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tac">CJCN20080146</td>
+                                                <td class="tac">KRPUS</td>
+                                                <td class="tac">CNSHA</td>
+                                                <td class="tac">2010-08-15</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- data 없을 때 -->
+                            <tbody class="no_data">
+                                <tr>
+                                    <td colspan="2">No Data Available.</td>
+                                </tr>
+                            </tbody>
+                            <!-- //data 없을 때 -->
+                        </table>
+                    </div>
+                    <!-- //contents -->
+                    <div class="tfooter">
+                        <p>count : <span>23</span></p>
+                    </div>
+                </div>
+                <!-- //table 전체 -->
+            </div>
+
+    </div>
+
+
+  </body>
+</html>

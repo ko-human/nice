@@ -16,11 +16,20 @@
 
             $(".ip_del").inputTextFocus();
 
-            // class : act / off
-            $(".btn_alert").on("click", function(){
-                $(".alert_wrap ul").find(".act").removeClass("act");
-                $(this).parent().addClass("off").toggleClass("act");
-            });
+            // click 이벤트
+            $(".btn_alert").click(function() {
+                var activeTab = $(this).attr("rel");
+                $(this).parent().addClass("off").removeClass("act");
+
+               if( $("#" + activeTab).is(":visible") ) {
+                   $(".alert_desc").fadeOut();
+                   $("#" + activeTab).fadeOut(100);
+               } else {
+                   $(".alert_desc").fadeOut(100);
+                   $("#" + activeTab).fadeIn();
+               }
+           });
+
         });
     </script>
   </head>
@@ -33,11 +42,11 @@
 
             <div class="pop_header">
                 <!-- title -->
-                <div class="tit_wrap">
+                <!-- <div class="tit_wrap">
                     <div class="tit_left">
                         <span class="tit">Alert</span>
                     </div>
-                </div>
+                </div> -->
                 <!-- //title -->
             </div>
 
@@ -46,47 +55,47 @@
                 <div class="alert_wrap">
                     <ul>
                         <li>
-                            <a href="javascript:" class="btn_alert">
+                            <a rel="alert1" href="javascript:" class="btn_alert">
                                 <b class="cate">KPI <span>by 2020.01.20 16:00</span></b>
                                 <p class="tit_alert">Send email to Loso Kim, Cyberlogitec.</p>
                             </a>
-                            <div class="alert_desc">
+                            <div id="alert1" class="alert_desc">
                                 <p>Lorem Ipsum has been the industry's standard.</p>
                             </div>
                         </li>
                         <li>
-                            <a href="javascript:" class="btn_alert">
+                            <a rel="alert2" href="javascript:" class="btn_alert">
                                 <b class="cate">KPI <span>by 2020.01.20 16:00</span></b>
                                 <p class="tit_alert">Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sed do eiusmod tem por incididunt.</p>
                             </a>
-                            <div class="alert_desc">
+                            <div id="alert2" class="alert_desc">
                                 <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
                             </div>
                         </li>
                         <li><!-- 현재 확인중인 li에만 class 추가 : act -->
-                            <a href="javascript:" class="btn_alert">
+                            <a rel="alert3" href="javascript:" class="btn_alert">
                                 <b class="cate">KPI <span>by 2020.01.20 16:00</span></b>
                                 <p class="tit_alert">Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sed do eiusmod tem por incididunt.</p>
                             </a>
-                            <div class="alert_desc">
+                            <div id="alert3" class="alert_desc">
                                 <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
                             </div>
                         </li>
                         <li class="off"><!-- 내용 확인한 li에 class 추가 : off -->
-                            <a href="javascript:" class="btn_alert">
+                            <a rel="alert4" href="javascript:" class="btn_alert">
                                 <b class="cate">KPI <span>by 2020.01.20 16:00</span></b>
                                 <p class="tit_alert">Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sed do eiusmod tem por incididunt.</p>
                             </a>
-                            <div class="alert_desc">
+                            <div id="alert4" class="alert_desc">
                                 <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
                             </div>
                         </li>
                         <li class="off"><!-- 내용 확인한 li에 class 추가 : off -->
-                            <a href="javascript:" class="btn_alert">
+                            <a rel="alert5" href="javascript:" class="btn_alert">
                                 <b class="cate">KPI <span>by 2020.01.20 16:00</span></b>
                                 <p class="tit_alert">Lorem ipsum dolor sit amet, consectet uer adipiscing</p>
                             </a>
-                            <div class="alert_desc">
+                            <div id="alert5" class="alert_desc">
                                 <p>simply dummy text of the printing and typesetting industry.</p>
                             </div>
                         </li>
