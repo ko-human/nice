@@ -256,13 +256,15 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 /* new button */
 .check_wrap {height: 28px;text-align: right;margin-bottom:3px;}
 .check_wrap .btn_list>a {display: inline-block;vertical-align: middle;line-height: 28px;font-size: 13px;margin-left:10px;padding-left:20px;}
-.check_wrap .btn_list>a:not(.btn_save):not(.btn_send):hover {text-decoration: underline;}
+.check_wrap .btn_list>a:not(.btn_save):not(.btn_send):not(.btn_remove):hover {text-decoration: underline;}
 .check_wrap .ico_copy {background: url(../images/ico_copy_b.svg) no-repeat; background-position: 0 center;}
 .check_wrap .ico_download {background: url(../images/btn_excel.svg) no-repeat; background-position: 0 center;}
 .check_wrap .btn_save {width: 70px;height: 28px;font-weight: 500;text-align: center;color: #fff;background-color: #0080c6;padding-left: 0 !important;line-height: 28px !important;}
 .check_wrap .btn_send {width: 70px;height: 28px;font-weight: 500;text-align: center;color: #fff;background-color: #8b919c;padding-left: 0 !important;line-height: 28px !important;}
+.check_wrap .btn_remove {width: 70px;height: 28px;font-weight: 500;text-align: center;color: #fff;background-color: #8b919c;padding-left: 0 !important;line-height: 28px !important;}
 .check_wrap .add_line {background: url(../images/btn_add.svg) no-repeat; background-position: 0 center;}
-.check_wrap .del_line, .check_wrap .del_lines {background: url(../images/btn_delete.svg) no-repeat; background-position: 0 center;}
+.check_wrap .del_line {background: url(../images/btn_delete.svg) no-repeat; background-position: 0 center;}
+.check_wrap .del_check {background: url(../images/btn_check.svg) no-repeat; background-position: 0 center;}
 .tit_wrap.tit_h3 .check_wrap {margin-bottom: 0;}
 /* icon */
 .ico {display:inline-block;}
