@@ -1035,7 +1035,8 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .list_form.chk_form.num_blue .ip_txt {font-size: 18px;letter-spacing: 0.8px;color:#0080c6;}
 .list_form.chk_form .ip_txt {display: block;min-height: 42px;height:auto;line-height: 1.8;padding: 10px 20px;box-sizing: border-box;background: #f6f8fa;border:none;overflow: hidden;word-wrap:break-word;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;max-height: 4.67em;}
 .list_form.chk_form .chk_div {color: #45474e;line-height: 1.8;padding:15px;box-sizing: border-box;background: #f6f8fa;border:none;overflow: hidden;word-break: break-all;}
-.list_form.chk_form .chk_div img {max-width: 100%;margin: 10px 0;}
+.list_form.chk_form .chk_div img {max-width: 100%;}
+.list_form.chk_form .chk_div .ql_editor {padding:10px 0 0 0 !important;}
 
 .event_pop>div.btns {padding:0 14px;}
 .event_pop .left {width:700px;}
