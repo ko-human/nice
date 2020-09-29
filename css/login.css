@@ -417,9 +417,10 @@ transition: background-color 5000s ease-in-out 0s;
 .login_wrap .change_wrap .change_left h2 {color:#fff;}
 .login_wrap.bright .change_wrap .change_left h2 {color:#000;}
 .login_wrap .change_wrap:before {background-color:rgba(139, 145, 156, 0.4);}
-.login_wrap .change_right .ip_txt {color:#fff;background-color:#313c49;border: 1px solid #8b919c;}
-.login_wrap.bright .change_right .ip_txt {color:#313c49;background-color:#fff;border: 1px solid  #dde2ea;}
-.login_wrap.normal .change_right .ip_txt {border-radius:8px;}
+.change_list .ip_txt {height:45px;}
+/* .login_wrap .change_right .ip_txt {color:#fff;background-color:#313c49;border: 1px solid #8b919c;} */
+/* .login_wrap.bright .change_right .ip_txt {color:#313c49;background-color:#fff;border: 1px solid  #dde2ea;} */
+/* .login_wrap.normal .change_right .ip_txt {border-radius:8px;} */
 
 /* find password */
 .login_wrap .find_wrap {position: relative;width: 880px;height: 430px;padding: 60px 80px;box-sizing: border-box;box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.15);background-color: #313c49;}
