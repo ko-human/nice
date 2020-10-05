@@ -5,66 +5,128 @@
     <meta name="format-detection" content="telephone=no" />
     <title>메인</title>
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/jquery.bxslider.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery.bxslider.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
-    $(function(){
+      $(function(){
 
-    });
+        // indicator 슬라이드
+        $("#indiSlider").bxSlider({
+          minSlides: 4,
+          maxSlides: 4,
+          moveSlides:1,
+          slideWidth: 255,
+          slideMargin:20,
+          pager : false,
+          infiniteLoop: false
+        });
+
+        // live 슬라이드
+        $("#liveSlider").bxSlider({
+          infiniteLoop: false
+        });
+
+        // 타일 로드 (개발시 삭제)
+        $(".indicator_wrap li").load("../tile/ic.html");
+        $(".live_slider li").load("../tile/live.html");
+        $(".main_right").load("../COMM/COMM005.html");
+
+      });
+
+
+
     </script>
   </head>
   <body>
 
-    <div class="vendor_main_wrap">
-      <div class="inner">
-
-        <div class="tit_area">
-          <strong class="logo">CJ LOGISTICS</strong>
-          <span class="sub_tit">PARTNER PORTAL</span>
-        </div>
-
-        <div class="search_area">
-          <div class="select_wrap">
-            <select name="">
-              <option value="">H.B/L No.</option>
-              <option value="">H.B/L No.</option>
-            </select>
+    <div class="main_wrap">
+      <div class="main_left partner">
+        <!-- title -->
+        <div class="tit_wrap tit_h1">
+          <div class="tit_left">
+            <h2>Partner Board</h2>
           </div>
-          <span class="ip_search"><input type="text" name="" value="" placeholder="PO#, BKG# or B/L#" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span>
         </div>
+        <!-- //title -->
 
-        <ul class="main_cols_4">
+        <!-- indicator -->
+        <div class="indicator_wrap"><!-- 슬라이드인 경우, indicator_list에 class 추가 : slide -->
+          <ul id="indiSlider" class="indicator_list slide">
+            <!--  반복 -->
+            <li>
+                <!-- ../tile/ic.html 파일 영역 -->
+            </li>
+            <!--  //반복 -->
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <!-- //indicator -->
+
+        <!-- Live Tiles -->
+        <ul class="live_wrap">
+          <li>
+            <div class="live_tile box bg_type1">
+              <div class="tit_area">
+                <strong class="tit">Market Update : March 18, 2020</strong>
+              </div>
+              <div class="con">
+
+                <div class="market_update">
+                  <img src="../../images/@img_market_update.png" alt="">
+                  <div class="txt">
+                    How will businesses recover from COVID-19?<br>
+                    When will factories start running again? And how can you ensure your cargo is moving when they do?
+                  </div>
+                  <a href="#" class="more">View More</a>
+                </div>
+
+              </div>
+            </div>
+          </li>
+          <li>
+            <ul class="live_slider" id="liveSlider">
+              <!-- 반복 -->
+              <li><!-- ../tile/live.html 파일 영역 --></li>
+              <!-- //반복 -->
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- //Live Tiles -->
+
+        <!-- Static Tiles -->
+        <ul class="main_cols_4 mt20">
           <li>
             <a href="#" class="st_tile box bg_type2">
-              <span class="img"><img src="../../images/ico_static_tracking.svg" alt=""></span>
-              <span class="txt">Tracking</span>
+              <span class="img"><img src="../../images/ico_static_order.svg" alt=""></span>
+              <span class="txt">Order Management</span>
             </a>
           </li>
           <li>
             <a href="#" class="st_tile box bg_type3">
-              <span class="img"><img src="../../images/ico_static_order.svg" alt=""></span>
-              <span class="txt">Order <br>Management</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="st_tile box bg_type4">
-              <span class="img"><img src="../../images/ico_static_kpi_w.svg" alt=""></span>
-              <span class="txt">KPI</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="st_tile box">
-              <span class="img"><img src="../../images/ico_static_report.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_report.svg" alt=""  class="img_d"></span>
-              <span class="txt">report</span>
+              <span class="img"><img src="../../images/ico_static_analytics.svg" alt=""></span>
+              <span class="txt">Analytics</span>
             </a>
           </li>
         </ul>
+        <!-- //Static Tiles -->
 
       </div>
+
+      <div class="main_right">
+        <!-- ../COMM05/COMM05.html 파일 영역 -->
+      </div>
+
     </div>
 
   </body>
