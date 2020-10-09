@@ -807,7 +807,7 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 #tblHead td, #tblBody td {padding:14px 12px;vertical-align:middle;font-size:14px;white-space: nowrap;border-left: 1px solid #333c48;border-right: 1px solid #333c48;box-sizing: border-box;}
 #tblBody td {height: 44px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 
-.tfooter {position: sticky;padding:16px 17px;border: solid 1px #333c48;margin-top: -2px;box-sizing: border-box; background: #181d23;}
+.tfooter {position: -webkit-sticky;position: sticky;padding:16px 17px;border: solid 1px #333c48;margin-top: -2px;box-sizing: border-box; background: #181d23;}
 .tfooter p {font-size: 14px;}
 .tfooter p span {font-weight: 500;}
 
