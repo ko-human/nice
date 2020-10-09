@@ -29,7 +29,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .ip_date {width:100%; display:inline-block; position:relative; }
 .ip_date .ip_txt {width:100%;}
 .ip_date .ui-datepicker-trigger {position:absolute; top:13px; right:13px;}
-.select {padding:0 33px 0 11px; width:100%; height:30px; color:#45474e; font-size:14px; border:solid 1px #dde2ea; background:#fff url(../images/ip_select.svg) no-repeat right 15px center; box-sizing:border-box; appearance:none; -webkit-appearance:none;}
+.select {padding:0 33px 0 11px; width:100%; height:30px; color:#45474e; font-size:14px; border:solid 1px #dde2ea; background:#fff url(../images/ip_select.svg) no-repeat right 12px center; box-sizing:border-box; appearance:none; -webkit-appearance:none;}
 /* ibsheet select */
 .MAINCTL_DIV {position:relative;}
 .MAINCTL_DIV:after {content:'';position:absolute;right:15px;top:50%;margin-top:-3.5px;width:9px;height:7px;background: url(../images/ip_select.svg) no-repeat;}
@@ -236,10 +236,10 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .btn.lg.line.ico_reset:hover {background-image:url(../images/ico_reset_b.svg);}
 .btn.lg.ico_name {width:28px; font-size:0; background: #8b919c url(../images/ico_name.svg) no-repeat;background-position: 50%;background-size: 16px;}
 .btn.line.ico_search {width:28px; font-size:0; background-image:url(../images/ico_search_g.svg); background-repeat:no-repeat; background-position:center center;}
-.btn.line.add_line {height:30px;background: #fff url(../images/ico_plus.svg) no-repeat;background-position: 12px 50%;background-size: 20px;padding:0 16px 0 37px;}
+.btn.line.add_line {height:34px;background: #fff url(../images/ico_plus.svg) no-repeat;background-position: 12px 50%;background-size: 20px;padding:0 16px 0 37px;}
 .btn.del_line {position: relative;padding:0 16px 0 39px;}
 .btn.line.reset {background: #fff url(../images/ico_reset_b.svg) no-repeat 15px 11px;background-size: 12px;padding:0 11px 0 37px;}
-.btn.save, .btn.delete, .btn.mail, .btn.new, .btn.w100 {width:90px;padding:0;text-align: center;}
+.btn.save, .btn.delete, .btn.mail, .btn.new, .btn.w100 {width:90px;padding:0;text-align: center;height: 33px;line-height: 32px;}
 .btn_ico {line-height:20px; display:inline-block; font-size:14px; color:#45474e; background-repeat:no-repeat;}
 .btn_ico.excel {padding-left:22px; background-image:url(../images/ico_bn_file.svg);}
 
@@ -1180,7 +1180,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .glyphicon.icon-arrow-right {display: inline-block;width: 25px;height: 25px;background: url(../images/ico_arr_24.svg) no-repeat;background-size: contain;transform: rotate(180deg);vertical-align: middle;}
 
 /* CTR */
-.btn.lg.add_line {padding: 0 16px 0 37px;}
+.btn.lg.add_line {height:30px;padding: 0 16px 0 37px;}
 
 .btn_list .btn_scan {width: 100px;height: 33px;margin: 0 8px;font-size: 14px;font-weight: 500;vertical-align: middle;color: #fff;background: #0080c6;cursor: pointer;}
 .btn_list .btn_scan + .btn_scan {margin-left: 0;}
@@ -1189,8 +1189,8 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .btn_list .btn_personal {display: inline-block;margin-right: 30px;}
 .btn_list .btn_personal .select.opt_personal {height:36px;margin-right: 8px;}
 .search_form li .ip_check {display: inline-block;margin-left:10px;vertical-align: middle;}
-.search_form li.chk_only {height:63px;}
-.search_form li.chk_only .ip_check {display: inline-block;margin-top: 13px;}
+.search_form li.chk_only {height:49px;}
+.search_form li.chk_only .ip_check {display: inline-block;margin-top: 6px;}
 
 .tit_right + .tit_box {margin-top: 10px;}
 .tit_wrap.tit_h4 {margin-top:30px;}
