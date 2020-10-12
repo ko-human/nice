@@ -501,6 +501,15 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .market_wrap .market_update .txt {float: left;width: calc(100% - 165px);margin-left: 12px;font-size: 1em;overflow: hidden;text-overflow: ellipsis;line-height: 1.15;height: 5.8em;color: #cbced4;word-wrap: break-word;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;vertical-align: top;}
 .market_wrap .market_update .more {display: inline-block;position: absolute;right: 16px;bottom: 25px;padding-right: 15px;font-weight: 500;font-size: 12px;color: #cad0d7;background: url(../images/ico_arr_more.svg) no-repeat right bottom;padding-top: 5px;}
 
+.market_slider_wrap {margin-top:15px;}
+.market_slider_wrap .bx-wrapper {margin-bottom:20px; background:none; border:0; box-shadow:none;}
+.market_slider_wrap .bx-wrapper .bx-pager {bottom:5px;padding-top:0;}
+.market_slider_wrap .bx-wrapper .bx-pager-item {margin:0 1px 0 2px;}
+.market_slider_wrap .bx-wrapper .bx-pager.bx-default-pager a {margin:0; width:5px; height:3px; border-radius:3px; background-color:#45474e;}
+.market_slider_wrap .bx-wrapper .bx-pager.bx-default-pager a.active {width:9px; background-color:#fff;}
+.market_slider_wrap .bx-wrapper .bx-controls-direction {display: none;}
+
+
 /* title */
 .tit_wrap {width:100%;}
 .tit_wrap:after {content:""; display:block; clear:both; width:100%;}
