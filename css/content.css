@@ -151,7 +151,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 
 .tit_wrap+.search_wrap {margin-top:5px;}
 .search_wrap+.contents {margin-top:20px;}
-.search_wrap {font-size:0;}
+.search_wrap {width:100%;font-size:0;}
 .search_form.togg {display:none;}
 .search_form.togg.open {display:block;}
 .search_form>li {margin-right:10px; margin-bottom:5px;padding:0; display:inline-block; position:relative; box-sizing:border-box;vertical-align: middle;}
@@ -1127,8 +1127,8 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 
 .tit_box .con_area .chart_area + .grid_wrap {margin-top:30px;}
 
-.manage_wrap.horizon_box .tit_box {display: inline-block;vertical-align: top;}
-.manage_wrap.horizon_box .tit_box+.tit_box {margin-left:20px;margin-top:0;}
+.main_wrap.horizon_box .tit_box {display: inline-block;vertical-align: top;}
+.main_wrap.horizon_box .tit_box+.tit_box {margin-left:30px;margin-top:0;}
 
 /* ecopro */
 .pop_tag .tag_box {max-width: 780px;}
@@ -1443,6 +1443,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 
 .vendor_con_wrap .tit_box.type .tit_area .tit_left {padding:26px 15px;}
 
+/* error */
 .error_wrap {position: relative;width: 500px;height:544px;margin: 35px auto;text-align: center;background: url(../images/img_error.svg) no-repeat;}
 .error_wrap h2 {position: absolute;bottom: 155px;width: 100%;font-size: 45px;font-weight: 500;color: #13161a;}
 .error_wrap p {position: absolute;bottom: 105px;width: 100%;font-size: 20px;color: #13161a;}
@@ -1450,6 +1451,13 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .error_wrap .box_error a {display: inline-block;width: 140px;height: 45px;font-size: 16px;line-height: 44px;font-weight: 500;color:#fff;}
 .error_wrap .box_error .btn_home {background: #0080c6;}
 .error_wrap .box_error .btn_back {background: #8b919c;margin-left:20px;}
+
+
+/* report */
+.horizon_chart {display: table;margin-top:10px;width:calc(100% + 30px);margin-left: -30px;table-layout: fixed;}
+.horizon_chart .con_area {display: table-cell;padding-left:30px;}
+.horizon_chart .con_area .chart_box {padding:20px 30px;box-sizing: border-box;border: solid 1px #dde2ea;background-color: #fff;white-space: nowrap;}
+.horizon_chart .con_area .chart_box h2 {font-size: 20px;font-weight: 500;margin-bottom: 10px;}
 
 
 /* ########################################### DARK ############################################### */
