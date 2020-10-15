@@ -1127,9 +1127,6 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 
 .tit_box .con_area .chart_area + .grid_wrap {margin-top:30px;}
 
-.main_wrap.horizon_box .tit_box {display: inline-block;vertical-align: top;}
-.main_wrap.horizon_box .tit_box+.tit_box {margin-left:30px;margin-top:0;}
-
 /* ecopro */
 .pop_tag .tag_box {max-width: 780px;}
 .foot_area .foot_info .btn.line.ico_search {width: 20px;height: 20px;padding: 0;margin: -3px 0 0 5px;background-size: 10px;}
@@ -1199,8 +1196,9 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .tit_wrap.tit_h3 .tit_left h3 {font-size: 20px;font-weight: 500;color: #13161a;}
 
 .whole_box {display:table;padding-top:5px;}
-.whole_box .inner_box {display: table-cell;}
-.whole_box .inner_box + .inner_box {padding-left:30px;}
+.whole_box .inner_box {display: table-cell;padding-right:15px;}
+.whole_box .inner_box:nth-child(2) {padding-left:15px;padding-right:0;}
+.whole_box .inner_box .tit_wrap.tit_h3 .tit_left h3 {line-height: 28px;}
 .whole_box .tit_wrap>div.tit_right {width:60%;}
 .whole_box .tit_wrap>div.tit_left {vertical-align: middle;}
 
@@ -1413,7 +1411,6 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .cargo_wrap .cargo_list > .btn_delete span {display: inline-block;font-size: 13px;color: #8b919c;font-weight: 400;line-height: 32px;}
 
 
-
 #dropZone{width:100%;height:60px;color: #45474e;font-size:14px;padding:15px;margin-bottom:10px;border: solid 1px #dde2ea;background: #fff;}
 .upload_list li {position: relative;height: 30px;font-size: 14px;line-height: 30px;color: #45474e;padding:0 20px; }
 .upload_list li:hover {cursor: default;background-color: #e6ebf1;}
@@ -1452,12 +1449,16 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .error_wrap .box_error .btn_home {background: #0080c6;}
 .error_wrap .box_error .btn_back {background: #8b919c;margin-left:20px;}
 
-
 /* report */
-.horizon_chart {display: table;margin-top:10px;width:calc(100% + 30px);margin-left: -30px;table-layout: fixed;}
+.horizon_chart {display: table;margin-top:30px;width:calc(100% + 30px);margin-left: -30px;table-layout: fixed;}
 .horizon_chart .con_area {display: table-cell;padding-left:30px;}
 .horizon_chart .con_area .chart_box {padding:20px 30px;box-sizing: border-box;border: solid 1px #dde2ea;background-color: #fff;white-space: nowrap;}
 .horizon_chart .con_area .chart_box h2 {font-size: 20px;font-weight: 500;margin-bottom: 10px;}
+
+.horizon_grid {display: table;width:100%;}
+.horizon_grid .tit_box {display: table-cell;padding-right:15px;border:none;}
+.horizon_grid .tit_box:nth-child(2) {padding-left:15px;padding-right:0;}
+.horizon_grid .tit_box .con_area {border: solid 1px #dde2ea;}
 
 
 /* ########################################### DARK ############################################### */
