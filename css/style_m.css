@@ -495,13 +495,16 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 
 .market_wrap {position: relative;min-height:200px;padding:25px 16px;box-sizing: border-box;margin:20px 16px 20px;background-color: #13161a;}
 .market_wrap .tit_area .tit {font-size: 16px;font-weight: 500;line-height: 1.13;}
-.market_wrap .market_update {margin-top:13px;}
-.market_wrap .market_update .img {float: left;position: relative;display: inline-block;width: 150px;height: 115px;overflow: hidden;background: #000;}
+.market_wrap .market_update {margin-top:15px;}
+.market_wrap .market_update .img {float: left;position: relative;display: inline-block;width: 150px;height: 125px;overflow: hidden;background: #13161a;}
 .market_wrap .market_update .img img {position: absolute;left: 50%;top: 50%;max-width: 100%;transform: translate(-50%, -50%);}
-.market_wrap .market_update .txt {float: left;width: calc(100% - 165px);margin-left: 12px;font-size: 1em;overflow: hidden;text-overflow: ellipsis;line-height: 1.15;height: 5.8em;color: #cbced4;word-wrap: break-word;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;vertical-align: top;}
+.market_wrap .market_update .txt {float: left;width: calc(100% - 165px);margin-left: 12px;font-size: 1em;overflow: hidden;text-overflow: ellipsis;line-height: 1.15;height:9.2em;color: #cbced4;word-wrap: break-word;display: -webkit-box;-webkit-line-clamp: 8;-webkit-box-orient: vertical;vertical-align: top;}
 .market_wrap .market_update .more {display: inline-block;position: absolute;right: 16px;bottom: 25px;padding-right: 15px;font-weight: 500;font-size: 12px;color: #cad0d7;background: url(../images/ico_arr_more.svg) no-repeat right bottom;padding-top: 5px;}
 
 .market_slider_wrap {margin-top:15px;}
+.market_slider_wrap .market_wrap {min-height: 258px;}
+.market_slider_wrap .market_wrap .chart_area {margin-top:10px;}
+.market_slider_wrap .bx-viewport {height:300px;}
 .market_slider_wrap .bx-wrapper {margin-bottom:20px; background:none; border:0; box-shadow:none;}
 .market_slider_wrap .bx-wrapper .bx-pager {bottom:5px;padding-top:0;}
 .market_slider_wrap .bx-wrapper .bx-pager-item {margin:0 1px 0 2px;}
@@ -850,9 +853,9 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 
 /* maket update */
 .pop_update {margin-top:15px;padding-top:10px;border-top:1px solid #1f262f;box-sizing: border-box;}
-.update_desc {}
+.update_desc {text-align: center;}
 .pop_update h2 {margin-bottom:20px;font-size: 20px;font-weight: 400;line-height: 1.4;}
-.pop_update .update_desc img {width:100%;}
+.pop_update .update_desc img {width:100%;max-width: 500px;}
 .pop_update p {margin-top:10px;font-size: 16px;line-height: 1.5;text-align: justify;color: #cbced4;}
 
 
