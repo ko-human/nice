@@ -261,6 +261,7 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 
 .list_form_wrap {font-size:0;}
 .list_form_wrap .list_form>li {display:block;position:relative;font-size:14px; vertical-align:top;}
+.list_form_wrap .list_form>li.half .ip_del {display:inline-block;width:49%;vertical-align: top;}
 .list_form_wrap.inblock .list_form {display:table;width:100%;}
 .list_form_wrap.inblock .list_form>li {display:table-cell;position:relative;font-size:14px;}
 .list_form_wrap.inblock .list_form>li + li {padding-left:2px;}
@@ -268,9 +269,9 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .list_form_wrap .list_form>li + li {margin-top:20px;}
 
 .ip_del {width:100%; display:inline-block; position:relative;}
-.ip_filter .btn_txt_del, .ip_del .btn_txt_del {display:none; width:24px; height:24px; margin-top:-12px; font-size:0; position:absolute; top:50%; right:10px; background:url(../images/mo/ico_txt_del.svg) no-repeat;}
+.ip_filter .btn_txt_del, .ip_del .btn_txt_del {display:none; width:24px; height:24px; margin-top:-12px; font-size:0; position:absolute; top:50%; right:6px; background:url(../images/mo/ico_txt_del.svg) no-repeat;}
 .ip_filter.focus .btn_txt_del, .ip_del.focus .btn_txt_del {display:inline-block;}
-.lb_txt {display: inline-block;margin-bottom:10px;font-size: 14px;color: #8b919c;font-weight: 500;}
+.lb_txt {display:block;margin-bottom:10px;font-size: 14px;color: #8b919c;font-weight: 500;}
 
 /* Analytics */
 .list_sub {font-size:0; padding:0 16px; box-sizing: border-box;}
