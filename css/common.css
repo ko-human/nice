@@ -185,8 +185,8 @@
        url('font/noto/noto-sans-kr-v12-korean-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
 }
 
-:lang(zh) {font-family: Arial, "Microsoft Yahei", sans-serif;}
-
+/* 중국어 */
+:lang(zh) {font-family: "Noto Sans KR", "Microsoft Yahei", sans-serif;}
 
 html, body {height:100%; width:100%;}
 html {margin:0; padding:0;}

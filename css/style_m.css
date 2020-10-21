@@ -217,7 +217,7 @@ a {color:#fff;}
 .tal {text-align:left;}
 .tac {text-align:center;}
 
-.select {width:100%; height:48px; padding:0 33px 0 11px;font-size:15px; color:#fff; text-overflow: ellipsis; border:0; outline:0; background:#333c48 url(../images/ico_select.svg) no-repeat right 15px center; box-sizing:border-box; appearance:none; -webkit-appearance:none;}
+.select {width:100%; height:48px; padding:0 33px 0 11px;font-size:15px; color:#fff; text-overflow: ellipsis; border:0; outline:0; background:#333c48 url(../images/ico_select.svg) no-repeat right 10px center; box-sizing:border-box; appearance:none; -webkit-appearance:none;}
 textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outline: 0;background-color: #1f262f;box-sizing: border-box;margin: 0px;resize: none;}
 .ip_group {display:table; table-layout:fixed; width:100%; font-size:15px; color:#fff;}
 .ip_group>li {display:table-cell;}
@@ -261,7 +261,10 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 
 .list_form_wrap {font-size:0;}
 .list_form_wrap .list_form>li {display:block;position:relative;font-size:14px; vertical-align:top;}
-.list_form_wrap .list_form>li.half .ip_del {display:inline-block;width:49%;vertical-align: top;}
+.list_form_wrap .list_form>li.half {display: table;padding-top: 0;width: 100%;}
+.list_form_wrap .list_form>li.half .lb_txt {display: table-caption;}
+.list_form_wrap .list_form>li.half .ip_del {display:table-cell;width:49%;vertical-align: top;}
+.list_form_wrap .list_form>li.half .ip_del + .ip_del {padding-left:1%;}
 .list_form_wrap.inblock .list_form {display:table;width:100%;}
 .list_form_wrap.inblock .list_form>li {display:table-cell;position:relative;font-size:14px;}
 .list_form_wrap.inblock .list_form>li + li {padding-left:2px;}
@@ -789,6 +792,9 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .srm_sub .action_list li.release dl {display: block;}
 .srm_sub .action_list li.release dl dt {display: block;width:100%;}
 .srm_sub .action_list li.release dl dd {display: block;margin-top:10px;text-align: left;word-break: keep-all;line-height: 1.33;}
+
+.tit_wrap>.tit_right .btn_edit {display: inline-block;border: 1px solid #8b919c;padding: 2px 13px 4px;height: 22px;margin-top:-1px;box-sizing: border-box;}
+.tit_wrap>.tit_right .btn_edit span {display: inline-block;font-size: 14px;}
 
 /* popup */
 .popup_wrap {position: absolute;top: 0;left: 0;width: 100%;min-width: 100%;height: 100%;}
