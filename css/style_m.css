@@ -865,7 +865,12 @@ textarea {width: 100%;padding: 10px;color: #fff;font-size: 15px;border: 0;outlin
 .pop_update .update_desc img {width:100%;max-width: 500px;}
 .pop_update p {margin-top:10px;font-size: 16px;line-height: 1.5;text-align: justify;color: #cbced4;}
 
-
-
-
-/* 작업중 */
+/* error */
+.error_wrap {position: relative;width:100%;text-align: center;max-width: 500px;margin: 0 auto;}
+.error_wrap img {width:90%;}
+.error_wrap h2 {position: absolute;top: 60%;width: 100%;font-size: 40px;font-weight: 500;color: #fff;}
+.error_wrap p {position: absolute;top: 80%;width: 100%;font-size: 17px;color: #fff;line-height: 1.2;}
+.error_wrap .box_error {position:absolute;bottom:-15%;width:100%;}
+.error_wrap .box_error a {display: inline-block;width: 45%;height: 45px;font-size: 16px;line-height: 45px;font-weight: 500;color:#fff;}
+.error_wrap .box_error .btn_home {background: #0080c6;}
+.error_wrap .box_error .btn_back {background: #8b919c;margin-left:2%;}
